@@ -1,0 +1,174 @@
+<!-- build configuration -->
+<project name="jme-bui" default="compile" basedir=".">
+
+    <property name="lib.name" value="jme-bui"/>
+    <property name="src.dir" value="src/java"/>
+    <property name="res.dir" value="rsrc"/>
+    <property name="test.dir" value="test/java"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="dist.jar" value="${lib.name}.jar"/>
+    <property name="classes.dir" value="build"/>
+
+    <!-- javadoc bits -->
+    <property name="javadoc.dir" value="docs"/>
+    <property name="doc.packages" value="com.jme.bui.*"/>
+    <property name="copyright.holder" value="Michael Bayne"/>
+
+    <!-- import some targets to enumerate library dependencies -->
+    <property name="libs.dir" value="lib"/>
+    <!--<import file="libs-incl.xml"/>-->
+
+    <fileset dir="${libs.dir}" id="jme-bui.libs">
+        <!--<include name="junit-4.jar"/>-->
+        <!--<include name="jme.jar"/>-->
+        <!--<include name="jme-awt.jar"/>-->
+        <!--<include name="lwjgl.jar"/>-->
+        <!--<include name="groovy-all-1.5.4.jar"/>-->
+        <!--<include name="strategichandler.jar"/>-->
+        <!--<include name="mouseManager_r1_jme2.jar"/>-->
+        <!--<include name="bumpMapping_a4.jar"/>-->
+        <!--<include name="shaderFactoryBloom_r1.jar"/>-->
+        <!--<include name="jme*.jar"/>-->
+    </fileset>
+
+    <!-- declare our classpath -->
+    <path id="classpath">
+        <pathelement location="${classes.dir}"/>
+        <fileset refid="jme-bui.libs"/>
+    </path>
+
+    <!-- prepares the application directories -->
+    <target name="prepare">
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${classes.dir}/rsrc"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${javadoc.dir}"/>
+    </target>
+
+    <!-- copy media and properties into the build directory -->
+    <target name="resourcecopy">
+        <copy todir="${classes.dir}/rsrc">
+            <fileset dir="rsrc" includes="**/*"/>
+        </copy>
+    </target>
+
+    <!-- cleans out the intermediate build files -->
+    <target name="clean">
+        <delete dir="${classes.dir}/"/>
+        <delete dir="${javadoc.dir}"/>
+    </target>
+
+    <!-- cleans out the built application -->
+    <target name="distclean">
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <path id="groovy.classpath">
+        <pathelement path="${libs.dir}"/>
+        <fileset refid="jme-bui.libs"/>
+    </path>
+
+    <taskdef name="groovyc"
+             classname="org.codehaus.groovy.ant.Groovyc"
+             classpathref="groovy.classpath"/>
+
+    <!-- build the java class files -->
+    <target name="compile" depends="prepare"><!--, resourcecopy-->
+        <javac srcdir="${src.dir}"
+               destdir="${classes.dir}"
+               includeAntRuntime="false"
+               debug="on"
+               optimize="on"
+               deprecation="on"
+               classpathref="classpath">
+            <compilerarg value="-Xlint"/>
+            <compilerarg value="-Xlint:-serial"/>
+        </javac>
+    </target>
+
+    <target name="compile-tests" depends="compile">
+        <groovyc srcdir="${test.dir}:test/groovy"
+                 destdir="${classes.dir}">
+            <javac srcdir="${test.dir}"
+                   destdir="${classes.dir}"
+                   includeAntRuntime="false"
+                   debug="on" optimize="on"
+                   deprecation="on"
+                   classpathref="classpath">
+                <compilerarg value="-Xlint"/>
+                <compilerarg value="-Xlint:-serial"/>
+            </javac>
+        </groovyc>
+    </target>
+
+    <!-- build the javadoc documentation -->
+    <target name="javadoc" depends="prepare">
+        <tstamp>
+            <format property="year" pattern="yyyy"/>
+        </tstamp>
+        <javadoc windowtitle="BUI API" doctitle="BUI API"
+                 destdir="${javadoc.dir}" additionalparam="-breakiterator">
+            <packageset dir="${src.dir}"/>
+            <bottom>Copyright &#169; ${year} ${copyright.holder}.
+                All Rights Reserved.
+            </bottom>
+            <classpath refid="classpath"/>
+            <link href="http://java.sun.com/j2se/1.5/docs/api/"/>
+            <link href="http://www.jmonkeyengine.com/doc/"/>
+        </javadoc>
+    </target>
+
+    <!-- runs our unit tests -->
+    <target name="tests" depends="compile-tests" description="Runs unit tests.">
+        <junit printsummary="no" haltonfailure="yes" fork="false">
+            <classpath refid="classpath"/>
+            <formatter type="brief" usefile="false"/>
+            <classpath>
+                <pathelement location="test/groovy"/>
+                <pathelement location="test/java"/>
+                <pathelement location="${src.dir}"/>
+                <fileset dir="${libs.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <batchtest>
+                <fileset dir="test/groovy">
+
+                </fileset>
+
+                <fileset dir="test/java">
+
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+
+    <!-- builds our distribution files (war and jar) -->
+    <target name="dist" depends="prepare,resourcecopy,compile">
+        <jar destfile="${dist.dir}/${dist.jar}"
+             basedir="${classes.dir}">
+            <include name="**/*.class"/>
+        </jar>
+        <!-- copy native libraries into dist/lib -->
+        <copy todir="${dist.dir}/lib">
+            <fileset dir="lib/" includes="**/*.so"/>
+            <fileset dir="lib/" includes="**/*.jnilib"/>
+            <fileset dir="lib/" includes="**/*.dylib"/>
+            <fileset dir="lib/" includes="**/*.jar"/>
+        </copy>
+    </target>
+
+    <target name="distsrc">
+        <jar destfile="${dist.dir}/jme-bui-src.jar"
+             basedir="${src.dir}"/>
+    </target>
+
+    <target name="dist-rsrc" depends="prepare">
+        <jar destfile="${dist.dir}/rsrc.jar" basedir="." includes="${res.dir}/**"/>
+    </target>
+
+    <target name="disttests" depends="dist-rsrc">
+        <jar destfile="${dist.dir}/jme-bui-tests.jar"
+             basedir="test"/>
+    </target>
+</project>

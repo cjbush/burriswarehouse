@@ -1,0 +1,12 @@
+racksDouble61,racks/racksDouble61/,,,,,,,,,
+xml,,,,,,,,,,
+X,Neg Z,Y,Rot X,Rot Y,Rot Z,Aisle,Label (left_right_or_none),Bin# (leftmost),Bin#,
+4.83,29.755,0,0,-90,0,B,left,4B085,,4B-R
+,,,,,,,,,,
+7.77,29.755,0,0,-90,0,C,left,4C085,,4C-R
+,,,,,,,,,,
+8.83,29.755,0,0,90,0,D,right,4D086,,4D
+,,,,,,,,,,
+11.07,29.755,0,0,-90,0,D,left,4D085,,4D-R
+,,,,,,,,,,
+11.07,40.725,0,0,-90,0,D,right,4D127,,4D-R (cont)

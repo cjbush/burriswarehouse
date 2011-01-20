@@ -1,0 +1,5 @@
+stackedPallets,pallets/main/,,,,,
+obj,,,,,,
+X,Neg Z,Y,Rot X,Rot Y,Rot Z,Stack Size
+5,7,0,0,0,0,5
+5,4,0,0,0,0,7

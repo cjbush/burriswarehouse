@@ -1,0 +1,48 @@
+add implementation for multiple stylesheets
+
+try different styles for buttons, etc
+
+a multiple select list box -- sfera impl
+
+wrapper for inputbox so that you can return the value directly instead of having to
+have another listener for it.
+
+
+I agree about the navigation.  Once I saw your NavigationListener, I began
+rethinking the BuiSystem navigation.  I like what you did and am working on revising it.
+
+I had the sf.net cvs version of moenia and went off of that for push and pop,
+so that's why the "degraded" look...
+
+You're right BuiSystem is designed with only one BStyleSheet implementation in mind.
+
+Do you think extending it to contain multiple stylesheets in a map would be better?
+Then, you could define different window displays with different bss stylesheets,
+and load them up then say getStyle("grayWindow") or something and it gets you the
+styleSheet for the gray window.
+
+I agree about generating a list at runtime, however, there are those people who work
+off of adding everything to a list... that was my only thought.  Since I've done the
+loading via a separate file, I don't think that the list is necessary.  I'll just
+remove it then.
+
+"import" in bss... interesting idea.  Let me think about that a little more as well...
+that would give you the ability to define a group of styles  and include a bunch of
+other style sheets that you want to use... e.g. defining different window BSS, etc.
+
+I like the dialog emit as well (which I've read:-)).
+
+Thanx for the suggestions.  As I've said before, I write code, if it's wrong or could
+be different I'm open to anything.
+
+I'll get started looking at these changes and trying to get them in.
+
+I also relooked at the multiple scrolling list you wrote.  Leave the BtoggleButton...
+there's no other way to do it without rewriting the BComponent to do the same thing,
+then the BComponent implementation is pretty much extended beyond it's purpose.
+
+Actual unit tests
+
+Build files
+
+More Groovy way of doing things
