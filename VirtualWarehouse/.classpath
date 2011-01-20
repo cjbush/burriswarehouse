@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="code/autoplay/WarehouseWriter_back.java|code/autoplay/WarehouseReader_back.java" kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jme"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/GBui"/>
+	<classpathentry kind="lib" path="lib/AppleJavaExtensions.jar"/>
+	<classpathentry kind="lib" path="lib/commons-cli.jar"/>
+	<classpathentry kind="lib" path="lib/jinput-dx8_64.dll"/>
+	<classpathentry kind="lib" path="lib/jinput-dx8.dll"/>
+	<classpathentry kind="lib" path="lib/jinput-raw_64.dll"/>
+	<classpathentry kind="lib" path="lib/jinput-raw.dll"/>
+	<classpathentry kind="lib" path="lib/jinput-test.jar"/>
+	<classpathentry kind="lib" path="lib/jinput-wintab.dll"/>
+	<classpathentry kind="lib" path="lib/jinput.jar"/>
+	<classpathentry kind="lib" path="lib/libjinput-osx.jnilib"/>
+	<classpathentry kind="lib" path="lib/logback-classic.jar"/>
+	<classpathentry kind="lib" path="lib/logback-core.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl_test.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl_util_applet.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl_util.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl-debug.jar"/>
+	<classpathentry kind="lib" path="lib/lwjgl.jar"/>
+	<classpathentry kind="lib" path="lib/lzma.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="lib/xuggle-xuggler-test.jar"/>
+	<classpathentry kind="lib" path="lib/xuggle-xuggler.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

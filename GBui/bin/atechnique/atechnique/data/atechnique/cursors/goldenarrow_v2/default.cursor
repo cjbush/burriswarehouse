@@ -1,0 +1,43 @@
+# The DEFAULT cursor descriptor file must be named default.cursor.
+# This file is used when when loading the .car file without specifying
+# a particular descriptor file.
+#
+# Format:
+#	everything after # is ignored
+#	property entry: property=value
+#	frame entry: time=value, image=value
+#	lines that do not match any properties or frames are ignored
+#
+# All the referenced image files must be in the same directory
+# (or the same zip file) as this file.
+
+
+# hotspotOffset should be specified relevant to the bottom left corner of the image
+hotSpotOffset.x=19
+hotSpotOffset.y=52
+
+
+# List your frames in order of appearance, where time (in milliseconds)
+# specifies how long the frame should be drawn for.
+# If there is only one frame, the time element should be 0.
+# Width and height should be the same for all the frames.
+time=5000, image=0001.png
+time=40, image=0002.png
+time=40, image=0003.png
+time=40, image=0004.png
+time=40, image=0005.png
+time=40, image=0006.png
+time=40, image=0007.png
+time=40, image=0008.png
+time=40, image=0009.png
+time=40, image=0010.png
+time=40, image=0011.png
+time=40, image=0012.png
+time=40, image=0013.png
+time=40, image=0014.png
+time=40, image=0015.png
+time=40, image=0016.png
+time=40, image=0017.png
+time=40, image=0018.png
+time=40, image=0019.png
+time=40, image=0020.png

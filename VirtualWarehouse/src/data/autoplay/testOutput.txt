@@ -1,0 +1,6378 @@
+0.11, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.19, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.26, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.44, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.49, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.56, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.64, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.71, IMU_TRANSFORM, (10.014888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.81, IMU_TRANSFORM, (10.020889, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.91, IMU_TRANSFORM, (10.02789, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+0.96, IMU_TRANSFORM, (10.031891, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.03, IMU_TRANSFORM, (10.037841, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.1, IMU_TRANSFORM, (10.044282, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.2, IMU_TRANSFORM, (10.071034, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.25, IMU_TRANSFORM, (10.071034, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.35, IMU_TRANSFORM, (10.071034, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.4, IMU_TRANSFORM, (10.077235, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.48, IMU_TRANSFORM, (10.087556, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.53, IMU_TRANSFORM, (10.094406, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.65, IMU_TRANSFORM, (10.111448, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.82, IMU_TRANSFORM, (10.137631, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+1.92, IMU_TRANSFORM, (10.154733, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.05, IMU_TRANSFORM, (10.178265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.07, IMU_TRANSFORM, (10.182145, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.14, IMU_TRANSFORM, (10.195866, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.19, IMU_TRANSFORM, (10.222656, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.27, IMU_TRANSFORM, (10.222656, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.32, IMU_TRANSFORM, (10.233457, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.37, IMU_TRANSFORM, (10.244507, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.5, IMU_TRANSFORM, (10.297791, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.6, IMU_TRANSFORM, (10.297791, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.68, IMU_TRANSFORM, (10.317711, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.81, IMU_TRANSFORM, (10.351124, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+2.94, IMU_TRANSFORM, (10.386226, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.06, IMU_TRANSFORM, (10.420187, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.22, IMU_TRANSFORM, (10.46739, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.24, IMU_TRANSFORM, (10.473611, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.29, IMU_TRANSFORM, (10.554112, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.39, IMU_TRANSFORM, (10.554112, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.44, IMU_TRANSFORM, (10.554112, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.49, IMU_TRANSFORM, (10.554112, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.57, IMU_TRANSFORM, (10.581154, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.62, IMU_TRANSFORM, (10.5984535, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.7, IMU_TRANSFORM, (10.626534, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.82, IMU_TRANSFORM, (10.669617, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.84, IMU_TRANSFORM, (10.677036, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.86, IMU_TRANSFORM, (10.684497, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.91, IMU_TRANSFORM, (10.703247, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+3.96, IMU_TRANSFORM, (10.722247, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.04, IMU_TRANSFORM, (10.753048, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.12, IMU_TRANSFORM, (10.784489, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.2, IMU_TRANSFORM, (10.816569, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.35, IMU_TRANSFORM, (10.877922, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.48, IMU_TRANSFORM, (10.933044, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.53, IMU_TRANSFORM, (10.954895, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.66, IMU_TRANSFORM, (11.012357, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.68, IMU_TRANSFORM, (11.021457, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.73, IMU_TRANSFORM, (11.19606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.83, IMU_TRANSFORM, (11.19606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.9, IMU_TRANSFORM, (11.19606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+4.98, IMU_TRANSFORM, (11.19606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.0, IMU_TRANSFORM, (11.19606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.05, IMU_TRANSFORM, (11.19606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.07, IMU_TRANSFORM, (11.20594, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.12, IMU_TRANSFORM, (11.230741, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.2, IMU_TRANSFORM, (11.270822, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.33, IMU_TRANSFORM, (11.336993, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.46, IMU_TRANSFORM, (11.404856, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.54, IMU_TRANSFORM, (11.56797, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.59, IMU_TRANSFORM, (11.56797, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.76, IMU_TRANSFORM, (11.56797, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.81, IMU_TRANSFORM, (11.596221, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.88, IMU_TRANSFORM, (11.636121, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+5.98, IMU_TRANSFORM, (11.693823, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.13, IMU_TRANSFORM, (12.00319, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.18, IMU_TRANSFORM, (12.00319, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.33, IMU_TRANSFORM, (12.00319, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.41, IMU_TRANSFORM, (12.00319, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.49, IMU_TRANSFORM, (12.00319, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.54, IMU_TRANSFORM, (12.03509, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.59, IMU_TRANSFORM, (12.067241, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.64, IMU_TRANSFORM, (12.099641, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.69, IMU_TRANSFORM, (12.132291, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.84, IMU_TRANSFORM, (12.230994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.89, IMU_TRANSFORM, (12.264645, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+6.97, IMU_TRANSFORM, (12.318885, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.02, IMU_TRANSFORM, (12.353186, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.07, IMU_TRANSFORM, (12.387735, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.09, IMU_TRANSFORM, (12.401656, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.14, IMU_TRANSFORM, (12.436556, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.16, IMU_TRANSFORM, (12.507017, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.24, IMU_TRANSFORM, (12.507017, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.32, IMU_TRANSFORM, (12.564057, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.34, IMU_TRANSFORM, (12.578478, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.38, IMU_TRANSFORM, (12.607398, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.43, IMU_TRANSFORM, (12.643748, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.51, IMU_TRANSFORM, (12.70231, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.59, IMU_TRANSFORM, (12.76151, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.78, IMU_TRANSFORM, (12.903634, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.86, IMU_TRANSFORM, (13.026996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.94, IMU_TRANSFORM, (13.026996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+7.99, IMU_TRANSFORM, (13.066146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.04, IMU_TRANSFORM, (13.105547, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.11, IMU_TRANSFORM, (13.161057, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.16, IMU_TRANSFORM, (13.201057, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.26, IMU_TRANSFORM, (13.281559, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.31, IMU_TRANSFORM, (13.3223095, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.36, IMU_TRANSFORM, (13.36331, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.43, IMU_TRANSFORM, (13.42106, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.48, IMU_TRANSFORM, (13.462661, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.64, IMU_TRANSFORM, (13.596583, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.72, IMU_TRANSFORM, (13.6648245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.8, IMU_TRANSFORM, (13.7337055, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.85, IMU_TRANSFORM, (13.777156, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.9, IMU_TRANSFORM, (13.820856, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+8.98, IMU_TRANSFORM, (13.891176, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.03, IMU_TRANSFORM, (13.935527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.11, IMU_TRANSFORM, (14.006887, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.16, IMU_TRANSFORM, (14.051888, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.26, IMU_TRANSFORM, (14.142389, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.31, IMU_TRANSFORM, (14.18814, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.36, IMU_TRANSFORM, (14.234139, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.44, IMU_TRANSFORM, (14.308141, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.52, IMU_TRANSFORM, (14.382781, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.54, IMU_TRANSFORM, (14.620045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.67, IMU_TRANSFORM, (14.620045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.72, IMU_TRANSFORM, (14.620045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.77, IMU_TRANSFORM, (14.620045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.85, IMU_TRANSFORM, (14.697325, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+9.93, IMU_TRANSFORM, (14.775246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+10.19, IMU_TRANSFORM, (15.030566, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+10.24, IMU_TRANSFORM, (15.079666, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+10.35, IMU_TRANSFORM, (15.384086, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+10.48, IMU_TRANSFORM, (15.384086, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+10.55, IMU_TRANSFORM, (15.384086, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+10.9, IMU_TRANSFORM, (15.953646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.0, IMU_TRANSFORM, (15.953646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.08, IMU_TRANSFORM, (15.953646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.13, IMU_TRANSFORM, (15.953646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.18, IMU_TRANSFORM, (16.179506, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.23, IMU_TRANSFORM, (16.179506, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.31, IMU_TRANSFORM, (16.199146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.36, IMU_TRANSFORM, (16.199146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.38, IMU_TRANSFORM, (16.199146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.51, IMU_TRANSFORM, (16.326805, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.53, IMU_TRANSFORM, (16.346445, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.58, IMU_TRANSFORM, (16.395546, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.72, IMU_TRANSFORM, (16.533026, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+11.9, IMU_TRANSFORM, (16.709785, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.0, IMU_TRANSFORM, (16.807985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.05, IMU_TRANSFORM, (16.896366, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.09, IMU_TRANSFORM, (16.896366, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.13, IMU_TRANSFORM, (16.935646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.18, IMU_TRANSFORM, (16.984745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.23, IMU_TRANSFORM, (17.033846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.25, IMU_TRANSFORM, (17.053486, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.3, IMU_TRANSFORM, (17.102587, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.4, IMU_TRANSFORM, (17.200787, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.42, IMU_TRANSFORM, (17.220427, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.5, IMU_TRANSFORM, (17.298986, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.58, IMU_TRANSFORM, (17.377546, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.77, IMU_TRANSFORM, (17.760527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+12.97, IMU_TRANSFORM, (17.760527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.04, IMU_TRANSFORM, (17.829266, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.06, IMU_TRANSFORM, (17.848906, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.21, IMU_TRANSFORM, (17.996206, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.23, IMU_TRANSFORM, (18.251526, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.34, IMU_TRANSFORM, (18.251526, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.39, IMU_TRANSFORM, (18.251526, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.47, IMU_TRANSFORM, (18.251526, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.62, IMU_TRANSFORM, (18.398827, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.69, IMU_TRANSFORM, (18.624685, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.77, IMU_TRANSFORM, (18.673786, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.85, IMU_TRANSFORM, (18.673786, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.9, IMU_TRANSFORM, (18.673786, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+13.98, IMU_TRANSFORM, (18.752346, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.06, IMU_TRANSFORM, (18.830906, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.14, IMU_TRANSFORM, (18.909466, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.21, IMU_TRANSFORM, (18.978207, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.42, IMU_TRANSFORM, (19.184425, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.55, IMU_TRANSFORM, (19.312086, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.57, IMU_TRANSFORM, (19.331726, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.65, IMU_TRANSFORM, (19.410286, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.76, IMU_TRANSFORM, (19.518307, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.78, IMU_TRANSFORM, (19.537947, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.91, IMU_TRANSFORM, (19.665606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+14.96, IMU_TRANSFORM, (19.714706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.03, IMU_TRANSFORM, (19.783445, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.08, IMU_TRANSFORM, (19.832546, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.19, IMU_TRANSFORM, (19.940565, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.29, IMU_TRANSFORM, (20.038767, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.41, IMU_TRANSFORM, (20.156607, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.46, IMU_TRANSFORM, (20.205706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.51, IMU_TRANSFORM, (20.254807, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.53, IMU_TRANSFORM, (20.372646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.63, IMU_TRANSFORM, (20.372646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.68, IMU_TRANSFORM, (20.618147, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.83, IMU_TRANSFORM, (20.618147, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.88, IMU_TRANSFORM, (20.618147, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+15.96, IMU_TRANSFORM, (20.696707, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.06, IMU_TRANSFORM, (20.794907, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.14, IMU_TRANSFORM, (20.873466, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.19, IMU_TRANSFORM, (20.922565, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.21, IMU_TRANSFORM, (20.942205, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.29, IMU_TRANSFORM, (21.020765, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.34, IMU_TRANSFORM, (21.069866, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.42, IMU_TRANSFORM, (21.148426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.52, IMU_TRANSFORM, (21.246626, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.54, IMU_TRANSFORM, (21.266266, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.64, IMU_TRANSFORM, (21.521585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.72, IMU_TRANSFORM, (21.521585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.8, IMU_TRANSFORM, (21.521585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+16.85, IMU_TRANSFORM, (22.100965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.09, IMU_TRANSFORM, (22.100965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.22, IMU_TRANSFORM, (22.100965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.3, IMU_TRANSFORM, (22.100965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.32, IMU_TRANSFORM, (22.100965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.39, IMU_TRANSFORM, (22.100965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.41, IMU_TRANSFORM, (22.120605, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.46, IMU_TRANSFORM, (22.169706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.51, IMU_TRANSFORM, (22.218805, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.53, IMU_TRANSFORM, (22.238445, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.69, IMU_TRANSFORM, (22.395565, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.77, IMU_TRANSFORM, (22.474127, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.82, IMU_TRANSFORM, (22.523226, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.87, IMU_TRANSFORM, (22.572327, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+17.89, IMU_TRANSFORM, (22.591967, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.01, IMU_TRANSFORM, (22.709806, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.14, IMU_TRANSFORM, (22.837465, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.27, IMU_TRANSFORM, (22.965126, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.32, IMU_TRANSFORM, (23.014227, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.37, IMU_TRANSFORM, (23.063326, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.42, IMU_TRANSFORM, (23.112427, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.47, IMU_TRANSFORM, (23.161526, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.72, IMU_TRANSFORM, (23.407026, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.82, IMU_TRANSFORM, (23.505226, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.92, IMU_TRANSFORM, (23.603426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+18.97, IMU_TRANSFORM, (23.652527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.05, IMU_TRANSFORM, (23.731087, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.07, IMU_TRANSFORM, (23.750727, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.12, IMU_TRANSFORM, (23.799826, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.25, IMU_TRANSFORM, (23.927486, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.27, IMU_TRANSFORM, (23.947126, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.35, IMU_TRANSFORM, (24.025686, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.42, IMU_TRANSFORM, (24.094425, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.5, IMU_TRANSFORM, (24.172985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.58, IMU_TRANSFORM, (24.251547, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.63, IMU_TRANSFORM, (24.300646, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.65, IMU_TRANSFORM, (24.320286, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.7, IMU_TRANSFORM, (24.369387, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.75, IMU_TRANSFORM, (24.418486, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.82, IMU_TRANSFORM, (24.487226, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+19.87, IMU_TRANSFORM, (24.536325, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.33, IMU_TRANSFORM, (24.988047, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.41, IMU_TRANSFORM, (25.066607, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.48, IMU_TRANSFORM, (25.135345, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.55, IMU_TRANSFORM, (25.204086, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.6, IMU_TRANSFORM, (25.253185, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.73, IMU_TRANSFORM, (25.380846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.83, IMU_TRANSFORM, (25.479046, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.88, IMU_TRANSFORM, (25.528147, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+20.96, IMU_TRANSFORM, (25.606707, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.01, IMU_TRANSFORM, (25.655806, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.12, IMU_TRANSFORM, (25.763826, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.3, IMU_TRANSFORM, (25.940586, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.35, IMU_TRANSFORM, (25.989687, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.4, IMU_TRANSFORM, (26.038786, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.5, IMU_TRANSFORM, (26.136986, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.58, IMU_TRANSFORM, (26.215546, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.66, IMU_TRANSFORM, (26.294106, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.68, IMU_TRANSFORM, (26.313745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.94, IMU_TRANSFORM, (26.569065, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+21.96, IMU_TRANSFORM, (26.588707, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.04, IMU_TRANSFORM, (26.667267, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.06, IMU_TRANSFORM, (26.686907, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.55, IMU_TRANSFORM, (27.217186, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.6, IMU_TRANSFORM, (27.217186, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.65, IMU_TRANSFORM, (27.266287, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.73, IMU_TRANSFORM, (27.344847, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.83, IMU_TRANSFORM, (27.443047, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.91, IMU_TRANSFORM, (27.521606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+22.96, IMU_TRANSFORM, (27.570705, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.34, IMU_TRANSFORM, (27.943867, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.39, IMU_TRANSFORM, (27.992966, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.52, IMU_TRANSFORM, (28.120626, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.57, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.62, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.72, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.77, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.82, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+23.98, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.02, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.24, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.34, IMU_TRANSFORM, (28.925865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.42, IMU_TRANSFORM, (29.024067, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.44, IMU_TRANSFORM, (29.024067, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.49, IMU_TRANSFORM, (29.073166, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.54, IMU_TRANSFORM, (29.122267, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.59, IMU_TRANSFORM, (29.171366, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.64, IMU_TRANSFORM, (29.495426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.69, IMU_TRANSFORM, (29.495426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.87, IMU_TRANSFORM, (29.495426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+24.92, IMU_TRANSFORM, (29.495426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.0, IMU_TRANSFORM, (29.573986, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.07, IMU_TRANSFORM, (29.642727, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.35, IMU_TRANSFORM, (29.917686, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.37, IMU_TRANSFORM, (29.937326, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.68, IMU_TRANSFORM, (30.241747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.81, IMU_TRANSFORM, (30.369406, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.91, IMU_TRANSFORM, (30.467606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+25.99, IMU_TRANSFORM, (30.546165, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.09, IMU_TRANSFORM, (30.644365, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.11, IMU_TRANSFORM, (30.664005, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.16, IMU_TRANSFORM, (30.713106, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.36, IMU_TRANSFORM, (30.909506, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.49, IMU_TRANSFORM, (31.037167, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.71, IMU_TRANSFORM, (31.253206, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.73, IMU_TRANSFORM, (31.272846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+26.95, IMU_TRANSFORM, (31.488886, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.03, IMU_TRANSFORM, (31.567446, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.08, IMU_TRANSFORM, (31.616547, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.12, IMU_TRANSFORM, (31.655827, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.23, IMU_TRANSFORM, (31.763845, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.33, IMU_TRANSFORM, (31.862045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.38, IMU_TRANSFORM, (31.911146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.46, IMU_TRANSFORM, (31.989706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.51, IMU_TRANSFORM, (32.038807, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.56, IMU_TRANSFORM, (32.087906, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.64, IMU_TRANSFORM, (32.166466, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.79, IMU_TRANSFORM, (32.313766, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.81, IMU_TRANSFORM, (32.333405, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+27.91, IMU_TRANSFORM, (32.431606, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.05, IMU_TRANSFORM, (32.569088, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.13, IMU_TRANSFORM, (32.647648, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.23, IMU_TRANSFORM, (32.745846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.34, IMU_TRANSFORM, (32.853867, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.36, IMU_TRANSFORM, (32.873505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.46, IMU_TRANSFORM, (32.971706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.51, IMU_TRANSFORM, (33.020805, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.64, IMU_TRANSFORM, (33.148468, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.69, IMU_TRANSFORM, (33.197567, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+28.89, IMU_TRANSFORM, (33.393967, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+29.12, IMU_TRANSFORM, (33.619827, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+29.2, IMU_TRANSFORM, (33.698387, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+29.35, IMU_TRANSFORM, (33.845688, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+29.48, IMU_TRANSFORM, (33.973347, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+29.74, IMU_TRANSFORM, (34.228664, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+29.89, IMU_TRANSFORM, (34.375965, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.02, IMU_TRANSFORM, (34.503624, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.07, IMU_TRANSFORM, (34.552074, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.14, IMU_TRANSFORM, (34.619553, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.37, IMU_TRANSFORM, (34.839657, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.39, IMU_TRANSFORM, (34.858337, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.46, IMU_TRANSFORM, (34.923576, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.48, IMU_TRANSFORM, (34.942078, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.56, IMU_TRANSFORM, (35.015915, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.61, IMU_TRANSFORM, (35.061665, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.63, IMU_TRANSFORM, (35.079865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.71, IMU_TRANSFORM, (35.152504, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.79, IMU_TRANSFORM, (35.224503, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.87, IMU_TRANSFORM, (35.295864, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+30.97, IMU_TRANSFORM, (35.384262, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.02, IMU_TRANSFORM, (35.42796, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.04, IMU_TRANSFORM, (35.44534, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.09, IMU_TRANSFORM, (35.48869, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.11, IMU_TRANSFORM, (35.50593, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.19, IMU_TRANSFORM, (35.57473, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.29, IMU_TRANSFORM, (35.860725, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.45, IMU_TRANSFORM, (35.860725, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.53, IMU_TRANSFORM, (35.860725, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.55, IMU_TRANSFORM, (36.06434, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.76, IMU_TRANSFORM, (36.06434, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.78, IMU_TRANSFORM, (36.06434, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.8, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.85, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+31.98, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.0, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.08, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.1, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.15, IMU_TRANSFORM, (36.352375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.23, IMU_TRANSFORM, (36.412853, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.32, IMU_TRANSFORM, (36.480175, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.37, IMU_TRANSFORM, (36.517124, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.39, IMU_TRANSFORM, (36.531803, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.57, IMU_TRANSFORM, (36.66356, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.62, IMU_TRANSFORM, (36.699257, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.72, IMU_TRANSFORM, (36.770157, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.82, IMU_TRANSFORM, (36.840057, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.84, IMU_TRANSFORM, (36.853836, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+32.89, IMU_TRANSFORM, (36.888187, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.16, IMU_TRANSFORM, (37.072315, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.24, IMU_TRANSFORM, (37.124718, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.34, IMU_TRANSFORM, (37.189415, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.46, IMU_TRANSFORM, (37.265854, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.51, IMU_TRANSFORM, (37.297104, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.61, IMU_TRANSFORM, (37.3591, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.63, IMU_TRANSFORM, (37.3713, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+33.81, IMU_TRANSFORM, (37.480736, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.01, IMU_TRANSFORM, (37.598732, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.09, IMU_TRANSFORM, (37.644333, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.22, IMU_TRANSFORM, (37.71739, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.35, IMU_TRANSFORM, (37.788757, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.43, IMU_TRANSFORM, (37.831635, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.48, IMU_TRANSFORM, (37.858036, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.53, IMU_TRANSFORM, (37.884186, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.55, IMU_TRANSFORM, (37.894547, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.6, IMU_TRANSFORM, (37.920345, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.62, IMU_TRANSFORM, (37.930565, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.7, IMU_TRANSFORM, (37.971283, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.86, IMU_TRANSFORM, (38.05144, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+34.96, IMU_TRANSFORM, (38.09994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.04, IMU_TRANSFORM, (38.13794, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.09, IMU_TRANSFORM, (38.16129, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.17, IMU_TRANSFORM, (38.19825, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.25, IMU_TRANSFORM, (38.234566, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.33, IMU_TRANSFORM, (38.27025, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.38, IMU_TRANSFORM, (38.292145, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.8, IMU_TRANSFORM, (38.473984, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.82, IMU_TRANSFORM, (38.481804, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.87, IMU_TRANSFORM, (38.501255, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.92, IMU_TRANSFORM, (38.520454, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.94, IMU_TRANSFORM, (38.528034, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+35.96, IMU_TRANSFORM, (38.535572, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.06, IMU_TRANSFORM, (38.57307, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.11, IMU_TRANSFORM, (38.591324, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.24, IMU_TRANSFORM, (38.63812, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.34, IMU_TRANSFORM, (38.672817, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.39, IMU_TRANSFORM, (38.689667, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.44, IMU_TRANSFORM, (38.70627, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.54, IMU_TRANSFORM, (38.738968, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.59, IMU_TRANSFORM, (38.754818, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.75, IMU_TRANSFORM, (38.804733, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.85, IMU_TRANSFORM, (38.83433, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+36.87, IMU_TRANSFORM, (38.840054, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.0, IMU_TRANSFORM, (38.87697, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.11, IMU_TRANSFORM, (38.90678, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.16, IMU_TRANSFORM, (38.919777, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.21, IMU_TRANSFORM, (38.93253, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.23, IMU_TRANSFORM, (38.937527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.34, IMU_TRANSFORM, (38.964806, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.44, IMU_TRANSFORM, (38.988506, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.52, IMU_TRANSFORM, (39.006664, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.65, IMU_TRANSFORM, (39.035133, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+37.73, IMU_TRANSFORM, (39.051613, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.02, IMU_TRANSFORM, (39.10902, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.07, IMU_TRANSFORM, (39.11747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.15, IMU_TRANSFORM, (39.13059, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.28, IMU_TRANSFORM, (39.150867, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.33, IMU_TRANSFORM, (39.158016, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.46, IMU_TRANSFORM, (39.175957, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.59, IMU_TRANSFORM, (39.20529, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.66, IMU_TRANSFORM, (39.20529, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.71, IMU_TRANSFORM, (39.20529, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.79, IMU_TRANSFORM, (39.23259, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.81, IMU_TRANSFORM, (39.23259, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.89, IMU_TRANSFORM, (39.23259, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+38.97, IMU_TRANSFORM, (39.23259, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.02, IMU_TRANSFORM, (39.23259, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.1, IMU_TRANSFORM, (39.245636, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.18, IMU_TRANSFORM, (39.245636, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.23, IMU_TRANSFORM, (39.245636, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.41, IMU_TRANSFORM, (39.254272, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.56, IMU_TRANSFORM, (39.25877, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.74, IMU_TRANSFORM, (39.261467, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.79, IMU_TRANSFORM, (39.261314, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.81, IMU_TRANSFORM, (39.261158, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.83, IMU_TRANSFORM, (39.260956, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.91, IMU_TRANSFORM, (39.259995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+39.96, IMU_TRANSFORM, (39.258995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  0.0  1.0 
+ 0.0  1.0  0.0 
+ -1.0  0.0  0.0 
+], ReplayJack
+40.01, IMU_TRANSFORM, (39.257744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0  1.0  0.0 
+ 0.01745233  0.0  -0.9998477 
+ -0.9998477  0.0  -0.01745236 
+], ReplayJack
+40.08, IMU_TRANSFORM, (39.255997, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017452598  0.0  -0.9998476 
+ 0.017449744  -0.99984765  3.0458812E-4 
+ -0.99969536  -0.017452404  -0.017449856 
+], ReplayJack
+40.16, IMU_TRANSFORM, (39.253994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017449617  -0.99984777  3.0454993E-4 
+ -2.7418137E-6  3.0446053E-4  1.0 
+ -0.99984777  -0.017449707  2.503395E-6 
+], ReplayJack
+40.36, IMU_TRANSFORM, (39.248997, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -2.7418137E-6  3.0458622E-4  1.0 
+ 2.6584894E-6  0.99999994  -3.0458622E-4 
+ -1.0  2.6576745E-6  -2.7418137E-6 
+], ReplayJack
+40.41, IMU_TRANSFORM, (39.247746, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 2.6226044E-6  0.9999999  -3.0460954E-4 
+ 0.017455071  -3.0457973E-4  -0.99984753 
+ -0.99984765  -2.7120113E-6  -0.017455101 
+], ReplayJack
+40.46, IMU_TRANSFORM, (39.246494, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017454982  -3.0458812E-4  -0.99984765 
+ 0.017447088  -0.99984753  6.091725E-4 
+ -0.9996954  -0.017455062  -0.017446995 
+], ReplayJack
+40.54, IMU_TRANSFORM, (39.244495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017446995  -0.9998476  6.0904026E-4 
+ -5.4836273E-6  6.0904026E-4  0.99999976 
+ -0.99984777  -0.017446965  5.185604E-6 
+], ReplayJack
+40.61, IMU_TRANSFORM, (39.242744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -5.4836273E-6  6.091724E-4  0.9999998 
+ 5.317823E-6  0.9999998  -6.091724E-4 
+ -1.0  5.314534E-6  -5.4836273E-6 
+], ReplayJack
+40.69, IMU_TRANSFORM, (39.240746, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 5.3048134E-6  0.99999976  -6.0915947E-4 
+ 0.017457604  -6.0915947E-4  -0.99984735 
+ -0.99984753  -5.364418E-6  -0.017457485 
+], ReplayJack
+40.77, IMU_TRANSFORM, (39.238747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017457664  -6.0917437E-4  -0.9998474 
+ 0.017444432  -0.9998474  9.1375876E-4 
+ -0.9996954  -0.017457724  -0.017444372 
+], ReplayJack
+40.9, IMU_TRANSFORM, (39.235497, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017444491  -0.9998474  9.137988E-4 
+ -8.076429E-6  9.138584E-4  0.9999995 
+ -0.9998478  -0.017444462  7.867813E-6 
+], ReplayJack
+40.92, IMU_TRANSFORM, (39.234997, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -7.987022E-6  9.1375835E-4  0.99999946 
+ 7.978E-6  0.9999996  -9.137583E-4 
+ -0.99999994  7.970608E-6  -7.987022E-6 
+], ReplayJack
+40.97, IMU_TRANSFORM, (39.233746, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 7.867813E-6  0.9999996  -9.137392E-4 
+ 0.017460287  -9.137392E-4  -0.9998472 
+ -0.99984753  -8.136034E-6  -0.017460346 
+], ReplayJack
+41.31, IMU_TRANSFORM, (39.225246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017460108  -9.137606E-4  -0.99984723 
+ 0.017441772  -0.9998473  0.0012183432 
+ -0.9996955  -0.017460378  -0.01744163 
+], ReplayJack
+41.39, IMU_TRANSFORM, (39.223244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01744163  -0.99984723  0.0012184381 
+ -1.0669231E-5  0.0012183189  0.99999934 
+ -0.999848  -0.01744169  1.04904175E-5 
+], ReplayJack
+41.44, IMU_TRANSFORM, (39.221996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -1.0728836E-5  0.0012183446  0.99999917 
+ 1.0638905E-5  0.9999993  -0.0012183443 
+ -0.9999999  1.062575E-5  -1.0728836E-5 
+], ReplayJack
+41.49, IMU_TRANSFORM, (39.220745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 1.04904175E-5  0.9999993  -0.0012183189 
+ 0.017462969  -0.0012183189  -0.9998468 
+ -0.99984753  -1.0818243E-5  -0.017462969 
+], ReplayJack
+41.56, IMU_TRANSFORM, (39.218994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017462969  -0.001218345  -0.9998469 
+ 0.01743911  -0.99984694  0.0015229313 
+ -0.9996955  -0.017463032  -0.017439127 
+], ReplayJack
+41.61, IMU_TRANSFORM, (39.217747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017438889  -0.9998468  0.0015229285 
+ -1.347065E-5  0.0015228987  0.99999887 
+ -0.999848  -0.017438948  1.2993813E-5 
+], ReplayJack
+41.68, IMU_TRANSFORM, (39.215996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -1.3589859E-5  0.0015229307  0.9999989 
+ 1.33008E-5  0.99999887  -0.0015229305 
+ -1.0000001  1.3280194E-5  -1.3589859E-5 
+], ReplayJack
+41.7, IMU_TRANSFORM, (39.215496, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 1.31726265E-5  0.9999988  -0.0015229583 
+ 0.017465562  -0.0015230179  -0.99984634 
+ -0.9998475  -1.3411045E-5  -0.017465591 
+], ReplayJack
+41.75, IMU_TRANSFORM, (39.214245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017465472  -0.0015229341  -0.9998463 
+ 0.017436445  -0.9998462  0.0018275166 
+ -0.99969536  -0.017465685  -0.017436147 
+], ReplayJack
+41.77, IMU_TRANSFORM, (39.213745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017436266  -0.9998463  0.001827538 
+ -1.6093254E-5  0.0018275976  0.99999833 
+ -0.99984795  -0.017436266  1.579523E-5 
+], ReplayJack
+41.87, IMU_TRANSFORM, (39.209995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -1.6212463E-5  0.0018275166  0.99999845 
+ 1.5963276E-5  0.99999833  -0.0018275164 
+ -1.0000001  1.5933823E-5  -1.6212463E-5 
+], ReplayJack
+41.92, IMU_TRANSFORM, (39.209995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 1.579523E-5  0.9999982  -0.0018274188 
+ 0.017468184  -0.0018273592  -0.9998457 
+ -0.99984735  -1.6212463E-5  -0.017468214 
+], ReplayJack
+41.97, IMU_TRANSFORM, (39.208744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017468214  -0.0018275185  -0.99984574 
+ 0.017433785  -0.99984574  0.0021321024 
+ -0.9996954  -0.017468339  -0.017433643 
+], ReplayJack
+42.02, IMU_TRANSFORM, (39.207497, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017433643  -0.9998457  0.0021321177 
+ -1.8835068E-5  0.0021321774  0.9999976 
+ -0.99984795  -0.017433614  1.8417835E-5 
+], ReplayJack
+42.15, IMU_TRANSFORM, (39.204247, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -1.859665E-5  0.002132102  0.99999774 
+ 1.8626568E-5  0.99999774  -0.0021321015 
+ -1.0  1.8586637E-5  -1.8715858E-5 
+], ReplayJack
+42.25, IMU_TRANSFORM, (39.201744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 1.8239021E-5  0.9999978  -0.0021320581 
+ 0.017470658  -0.0021321774  -0.99984515 
+ -0.9998474  -1.8954277E-5  -0.017470717 
+], ReplayJack
+42.3, IMU_TRANSFORM, (39.200497, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017470717  -0.0021321047  -0.9998452 
+ 0.017431121  -0.99984527  0.0024366868 
+ -0.9996955  -0.017470993  -0.017430902 
+], ReplayJack
+42.4, IMU_TRANSFORM, (39.197994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017430842  -0.99984515  0.0024366677 
+ -2.1487474E-5  0.0024366379  0.999997 
+ -0.9998481  -0.017430872  2.0980835E-5 
+], ReplayJack
+42.45, IMU_TRANSFORM, (39.194996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -2.1457672E-5  0.0024366872  0.999997 
+ 2.1290849E-5  0.999997  -0.0024366868 
+ -1.0  2.1238462E-5  -2.1576881E-5 
+], ReplayJack
+42.52, IMU_TRANSFORM, (39.194996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 2.1100044E-5  0.99999696  -0.0024366677 
+ 0.0174734  -0.0024366379  -0.9998443 
+ -0.9998473  -2.1576881E-5  -0.01747334 
+], ReplayJack
+42.59, IMU_TRANSFORM, (39.193245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01747328  -0.0024366914  -0.99984443 
+ 0.017428456  -0.99984455  0.002741274 
+ -0.99969554  -0.017473644  -0.017428279 
+], ReplayJack
+42.67, IMU_TRANSFORM, (39.191246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01742822  -0.9998443  0.0027413666 
+ -2.4110079E-5  0.0027413368  0.99999624 
+ -0.9998481  -0.01742822  2.3663044E-5 
+], ReplayJack
+42.72, IMU_TRANSFORM, (39.189995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -2.3961067E-5  0.0027412723  0.9999961 
+ 2.3955712E-5  0.99999624  -0.0027412719 
+ -0.99999994  2.3889355E-5  -2.4080276E-5 
+], ReplayJack
+42.8, IMU_TRANSFORM, (39.187996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 2.3722649E-5  0.9999962  -0.0027413666 
+ 0.017476052  -0.0027413368  -0.9998435 
+ -0.9998473  -2.4169683E-5  -0.017476082 
+], ReplayJack
+42.88, IMU_TRANSFORM, (39.185993, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017476082  -0.0027412768  -0.9998436 
+ 0.017425792  -0.9998436  0.0030458593 
+ -0.99969554  -0.017476296  -0.017425656 
+], ReplayJack
+43.0, IMU_TRANSFORM, (39.182995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017425358  -0.9998436  0.0030458272 
+ -2.69413E-5  0.0030457973  0.99999547 
+ -0.99984825  -0.017425448  2.6106834E-5 
+], ReplayJack
+43.05, IMU_TRANSFORM, (39.181744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -2.6464462E-5  0.0030458574  0.9999952 
+ 2.6621507E-5  0.99999535  -0.0030458565 
+ -0.9999998  2.6540249E-5  -2.6583672E-5 
+], ReplayJack
+43.07, IMU_TRANSFORM, (39.181244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 2.6345253E-5  0.99999535  -0.003045857 
+ 0.017478794  -0.0030459166  -0.9998426 
+ -0.99984723  -2.69413E-5  -0.017478704 
+], ReplayJack
+43.18, IMU_TRANSFORM, (39.178493, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017478704  -0.0030458616  -0.99984264 
+ 0.017423127  -0.99984264  0.0033504437 
+ -0.9996954  -0.017478945  -0.017422915 
+], ReplayJack
+43.26, IMU_TRANSFORM, (39.176495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017422795  -0.99984264  0.0033504963 
+ -2.9534101E-5  0.0033504367  0.9999944 
+ -0.99984825  -0.017422795  2.8789043E-5 
+], ReplayJack
+43.34, IMU_TRANSFORM, (39.174496, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -2.9444695E-5  0.0033504418  0.9999943 
+ 2.9288582E-5  0.9999944  -0.0033504409 
+ -0.9999999  2.9189396E-5  -2.9563904E-5 
+], ReplayJack
+43.47, IMU_TRANSFORM, (39.171246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 2.8967857E-5  0.99999446  -0.003350407 
+ 0.017481267  -0.0033504963  -0.99984163 
+ -0.9998473  -2.9563904E-5  -0.017481327 
+], ReplayJack
+43.52, IMU_TRANSFORM, (39.169994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017481327  -0.0033504455  -0.9998416 
+ 0.017420458  -0.9998416  0.0036550262 
+ -0.9996954  -0.017481593  -0.017420173 
+], ReplayJack
+43.53, IMU_TRANSFORM, (39.169746, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017420053  -0.9998416  0.003655076 
+ -3.2186508E-5  0.003655076  0.9999933 
+ -0.99984825  -0.017420053  3.1471252E-5 
+], ReplayJack
+43.64, IMU_TRANSFORM, (39.166996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -3.2305717E-5  0.003655027  0.9999933 
+ 3.1955773E-5  0.9999933  -0.003655026 
+ -1.0  3.183796E-5  -3.2424927E-5 
+], ReplayJack
+43.69, IMU_TRANSFORM, (39.165745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 3.159046E-5  0.9999933  -0.003655076 
+ 0.01748392  -0.003655076  -0.9998405 
+ -0.9998472  -3.233552E-5  -0.01748395 
+], ReplayJack
+43.71, IMU_TRANSFORM, (39.165245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01748389  -0.0036550313  -0.9998405 
+ 0.017417792  -0.9998405  0.003959612 
+ -0.9996954  -0.017484244  -0.01741743 
+], ReplayJack
+43.78, IMU_TRANSFORM, (39.163494, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017417312  -0.9998405  0.0039595366 
+ -3.501773E-5  0.0039595366  0.99999225 
+ -0.99984837  -0.01741743  3.385544E-5 
+], ReplayJack
+43.8, IMU_TRANSFORM, (39.162994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -3.4809113E-5  0.0039596106  0.99999213 
+ 3.4624245E-5  0.99999213  -0.003959609 
+ -1.0  3.4486176E-5  -3.4928322E-5 
+], ReplayJack
+43.85, IMU_TRANSFORM, (39.161747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 3.4213066E-5  0.9999922  -0.003959626 
+ 0.017486513  -0.0039596558  -0.99983925 
+ -0.99984705  -3.4987926E-5  -0.017486453 
+], ReplayJack
+43.92, IMU_TRANSFORM, (39.159996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017486513  -0.003959617  -0.9998393 
+ 0.017415125  -0.9998393  0.0042641964 
+ -0.9996954  -0.01748689  -0.017414808 
+], ReplayJack
+44.0, IMU_TRANSFORM, (39.157993, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017414749  -0.9998393  0.004264146 
+ -3.758073E-5  0.004264176  0.99999094 
+ -0.99984837  -0.017414719  3.671646E-5 
+], ReplayJack
+44.08, IMU_TRANSFORM, (39.155994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -3.7550926E-5  0.0042641945  0.9999909 
+ 3.7293416E-5  0.9999909  -0.004264193 
+ -0.99999994  3.7132762E-5  -3.7789345E-5 
+], ReplayJack
+44.15, IMU_TRANSFORM, (39.154243, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 3.695488E-5  0.99999094  -0.004264295 
+ 0.017489076  -0.0042643547  -0.999838 
+ -0.9998471  -3.761053E-5  -0.017489195 
+], ReplayJack
+44.31, IMU_TRANSFORM, (39.150246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017489195  -0.0042641982  -0.999838 
+ 0.017412454  -0.9998381  0.0045687784 
+ -0.9996954  -0.017489538  -0.017412186 
+], ReplayJack
+44.39, IMU_TRANSFORM, (39.148247, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017412066  -0.9998379  0.0045687556 
+ -4.014373E-5  0.004568815  0.99998945 
+ -0.9998483  -0.017412007  3.9458275E-5 
+], ReplayJack
+44.41, IMU_TRANSFORM, (39.147743, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -4.017353E-5  0.004568778  0.9999895 
+ 3.9963285E-5  0.99998957  -0.004568776 
+ -1.0  3.9779115E-5  -4.041195E-5 
+], ReplayJack
+44.43, IMU_TRANSFORM, (39.147243, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 3.9458275E-5  0.9999896  -0.0045687854 
+ 0.017491698  -0.004568815  -0.9998366 
+ -0.99984705  -4.041195E-5  -0.017491817 
+], ReplayJack
+44.51, IMU_TRANSFORM, (39.145245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017491579  -0.0045687845  -0.9998366 
+ 0.017409787  -0.99983656  0.004873359 
+ -0.9996955  -0.017492183  -0.017409205 
+], ReplayJack
+44.59, IMU_TRANSFORM, (39.143246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017409503  -0.99983644  0.0048734546 
+ -4.2796135E-5  0.004873574  0.999988 
+ -0.9998483  -0.017409384  4.220009E-5 
+], ReplayJack
+44.68, IMU_TRANSFORM, (39.140995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -4.3034554E-5  0.0048733614  0.9999882 
+ 4.2633852E-5  0.99998814  -0.0048733596 
+ -1.0000001  4.2424304E-5  -4.3272972E-5 
+], ReplayJack
+44.73, IMU_TRANSFORM, (39.137245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 4.208088E-5  0.9999881  -0.004873365 
+ 0.01749441  -0.004873395  -0.99983513 
+ -0.99984694  -4.312396E-5  -0.01749444 
+], ReplayJack
+44.81, IMU_TRANSFORM, (39.137245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01749432  -0.004873367  -0.999835 
+ 0.017407112  -0.999835  0.0051779416 
+ -0.9996953  -0.017494826  -0.017406583 
+], ReplayJack
+44.83, IMU_TRANSFORM, (39.137245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017406583  -0.999835  0.0051778853 
+ -4.568696E-5  0.0051779747  0.9999865 
+ -0.9998485  -0.017406583  4.452467E-5 
+], ReplayJack
+44.91, IMU_TRANSFORM, (39.133495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -4.5657158E-5  0.0051779435  0.9999867 
+ 4.5305584E-5  0.9999866  -0.005177941 
+ -1.0000001  4.5069028E-5  -4.5895576E-5 
+], ReplayJack
+44.93, IMU_TRANSFORM, (39.133495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 4.4822693E-5  0.99998665  -0.0051779747 
+ 0.017497092  -0.0051779747  -0.99983346 
+ -0.99984694  -4.5746565E-5  -0.017497063 
+], ReplayJack
+44.98, IMU_TRANSFORM, (39.133495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017497063  -0.0051779496  -0.99983346 
+ 0.01740444  -0.99983346  0.0054825265 
+ -0.9996954  -0.01749747  -0.01740396 
+], ReplayJack
+45.0, IMU_TRANSFORM, (39.130745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01740408  -0.99983346  0.0054825246 
+ -4.824996E-5  0.0054825544  0.999985 
+ -0.9998485  -0.01740399  4.720688E-5 
+], ReplayJack
+45.07, IMU_TRANSFORM, (39.130745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -4.8160553E-5  0.0054825246  0.999985 
+ 4.7977548E-5  0.999985  -0.0054825223 
+ -1.0  4.7712587E-5  -4.839897E-5 
+], ReplayJack
+45.09, IMU_TRANSFORM, (39.130745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 4.7504902E-5  0.999985  -0.0054825246 
+ 0.017499596  -0.0054825544  -0.9998318 
+ -0.9998468  -4.8428774E-5  -0.017499685 
+], ReplayJack
+45.14, IMU_TRANSFORM, (39.125744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017499566  -0.005482533  -0.9998318 
+ 0.017401773  -0.9998317  0.0057871067 
+ -0.9996954  -0.017500117  -0.0174011 
+], ReplayJack
+45.29, IMU_TRANSFORM, (39.125744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017401218  -0.9998318  0.005787164 
+ -5.0872564E-5  0.005787134  0.9999833 
+ -0.9998486  -0.017401248  4.9829483E-5 
+], ReplayJack
+45.39, IMU_TRANSFORM, (39.123245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -5.0783157E-5  0.005787106  0.9999832 
+ 5.0651142E-5  0.99998325  -0.0057871034 
+ -0.9999999  5.0356146E-5  -5.1021576E-5 
+], ReplayJack
+45.49, IMU_TRANSFORM, (39.120747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 5.0127506E-5  0.99998325  -0.005787134 
+ 0.017502248  -0.005787134  -0.99983007 
+ -0.9998468  -5.1140785E-5  -0.017502308 
+], ReplayJack
+45.57, IMU_TRANSFORM, (39.118244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01750207  -0.0057871146  -0.99983007 
+ 0.017399099  -0.9998301  0.006091687 
+ -0.99969536  -0.017502759  -0.017398477 
+], ReplayJack
+45.59, IMU_TRANSFORM, (39.118244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017398596  -0.9998301  0.0060917735 
+ -5.3554773E-5  0.006091714  0.99998146 
+ -0.99984866  -0.017398655  5.2452087E-5 
+], ReplayJack
+45.61, IMU_TRANSFORM, (39.111996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -5.352497E-5  0.006091688  0.99998146 
+ 5.3325202E-5  0.99998146  -0.006091685 
+ -1.0  5.2997842E-5  -5.38826E-5 
+], ReplayJack
+45.63, IMU_TRANSFORM, (39.111996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 5.2571297E-5  0.9999815  -0.0060916543 
+ 0.017504781  -0.006091714  -0.99982834 
+ -0.9998469  -5.4001808E-5  -0.017504811 
+], ReplayJack
+45.7, IMU_TRANSFORM, (39.111996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017504811  -0.006091695  -0.9998282 
+ 0.017396422  -0.9998281  0.006396268 
+ -0.9996954  -0.0175054  -0.017395735 
+], ReplayJack
+45.75, IMU_TRANSFORM, (39.111996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017395735  -0.9998282  0.0063963234 
+ -5.6177378E-5  0.0063962936  0.99997956 
+ -0.9998487  -0.017395794  5.507469E-5 
+], ReplayJack
+45.77, IMU_TRANSFORM, (39.111996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -5.6266785E-5  0.0063962685  0.9999795 
+ 5.599996E-5  0.99997956  -0.0063962652 
+ -1.0  5.5638608E-5  -5.6624413E-5 
+], ReplayJack
+45.84, IMU_TRANSFORM, (39.111996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 5.5372715E-5  0.9999795  -0.0063962936 
+ 0.017507404  -0.0063962936  -0.99982625 
+ -0.9998467  -5.6624413E-5  -0.017507315 
+], ReplayJack
+45.92, IMU_TRANSFORM, (39.109997, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017507315  -0.006396276  -0.9998263 
+ 0.01739375  -0.99982643  0.0067008473 
+ -0.9996954  -0.017508041  -0.017393112 
+], ReplayJack
+45.99, IMU_TRANSFORM, (39.101246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017392993  -0.9998263  0.006700903 
+ -5.891919E-5  0.006700754  0.9999776 
+ -0.99984884  -0.017393082  5.7578087E-5 
+], ReplayJack
+46.07, IMU_TRANSFORM, (39.101246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -5.888939E-5  0.006700848  0.99997765 
+ 5.8675185E-5  0.9999775  -0.0067008445 
+ -1.0000001  5.8279606E-5  -5.9247017E-5 
+], ReplayJack
+46.17, IMU_TRANSFORM, (39.101246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 5.8054924E-5  0.9999775  -0.0067008734 
+ 0.017509878  -0.006700754  -0.9998243 
+ -0.9998467  -5.927682E-5  -0.017509937 
+], ReplayJack
+46.22, IMU_TRANSFORM, (39.101246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017509818  -0.006700858  -0.9998242 
+ 0.017391076  -0.9998243  0.007005427 
+ -0.9996955  -0.017510684  -0.01739037 
+], ReplayJack
+46.27, IMU_TRANSFORM, (39.101246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01739037  -0.9998243  0.0070053637 
+ -6.16312E-5  0.007005334  0.9999755 
+ -0.99984884  -0.01739043  6.020069E-5 
+], ReplayJack
+46.35, IMU_TRANSFORM, (39.099247, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -6.151199E-5  0.0070054266  0.9999754 
+ 6.1351806E-5  0.99997544  -0.0070054224 
+ -0.99999994  6.0918974E-5  -6.198883E-5 
+], ReplayJack
+46.48, IMU_TRANSFORM, (39.095997, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 6.067753E-5  0.9999755  -0.007005453 
+ 0.017512739  -0.007005453  -0.99982214 
+ -0.9998467  -6.198883E-5  -0.017512798 
+], ReplayJack
+46.56, IMU_TRANSFORM, (39.093994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017512798  -0.007005434  -0.9998221 
+ 0.017388394  -0.9998219  0.0073100054 
+ -0.99969536  -0.01751332  -0.017387629 
+], ReplayJack
+46.71, IMU_TRANSFORM, (39.090244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017387748  -0.999822  0.007309884 
+ -6.4343214E-5  0.0073099136  0.9999733 
+ -0.9998487  -0.017387778  6.2823296E-5 
+], ReplayJack
+46.79, IMU_TRANSFORM, (39.088245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -6.41346E-5  0.007310005  0.99997324 
+ 6.4029125E-5  0.9999733  -0.0073100007 
+ -0.99999994  6.3558575E-5  -6.4611435E-5 
+], ReplayJack
+46.98, IMU_TRANSFORM, (39.083496, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 6.330013E-5  0.9999733  -0.007310033 
+ 0.017515332  -0.007310033  -0.9998199 
+ -0.9998466  -6.470084E-5  -0.017515302 
+], ReplayJack
+47.06, IMU_TRANSFORM, (39.081493, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017515242  -0.0073100147  -0.9998198 
+ 0.017385721  -0.99981976  0.007614585 
+ -0.99969536  -0.017515961  -0.017384887 
+], ReplayJack
+47.08, IMU_TRANSFORM, (39.080994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017385006  -0.9998198  0.0076146126 
+ -6.687641E-5  0.0076146126  0.99997103 
+ -0.99984884  -0.017385036  6.5505505E-5 
+], ReplayJack
+47.18, IMU_TRANSFORM, (39.078495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -6.699562E-5  0.0076145837  0.9999711 
+ 6.670738E-5  0.99997103  -0.007614579 
+ -1.0000001  6.619515E-5  -6.759167E-5 
+], ReplayJack
+47.26, IMU_TRANSFORM, (39.076496, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 6.592274E-5  0.99997103  -0.007614583 
+ 0.017517895  -0.0076146126  -0.9998176 
+ -0.9998466  -6.738305E-5  -0.017518044 
+], ReplayJack
+47.31, IMU_TRANSFORM, (39.075245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017517745  -0.007614594  -0.99981755 
+ 0.017383043  -0.9998176  0.007919161 
+ -0.9996955  -0.017518599  -0.017382264 
+], ReplayJack
+47.33, IMU_TRANSFORM, (39.074745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017382264  -0.9998175  0.0079191625 
+ -6.9618225E-5  0.007919192  0.99996865 
+ -0.99984884  -0.017382264  6.8068504E-5 
+], ReplayJack
+47.38, IMU_TRANSFORM, (39.073494, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -6.937981E-5  0.007919161  0.9999686 
+ 6.9385394E-5  0.99996865  -0.007919156 
+ -0.99999994  6.883405E-5  -6.997585E-5 
+], ReplayJack
+47.46, IMU_TRANSFORM, (39.071495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 6.8604946E-5  0.99996865  -0.007919192 
+ 0.017520428  -0.007919192  -0.9998152 
+ -0.9998466  -7.006526E-5  -0.017520428 
+], ReplayJack
+47.53, IMU_TRANSFORM, (39.069744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017520487  -0.007919166  -0.99981517 
+ 0.017380362  -0.9998152  0.008223737 
+ -0.9996955  -0.017521234  -0.01737976 
+], ReplayJack
+47.58, IMU_TRANSFORM, (39.068497, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017379403  -0.9998151  0.008223653 
+ -7.233024E-5  0.008223653  0.9999662 
+ -0.99984896  -0.017379463  7.05719E-5 
+], ReplayJack
+47.73, IMU_TRANSFORM, (39.064747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -7.212162E-5  0.008223737  0.9999662 
+ 7.206574E-5  0.9999662  -0.008223731 
+ -1.0  7.1469694E-5  -7.271767E-5 
+], ReplayJack
+47.8, IMU_TRANSFORM, (39.062996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 7.1287155E-5  0.99996614  -0.008223772 
+ 0.01752314  -0.008223772  -0.99981266 
+ -0.99984646  -7.277727E-5  -0.01752317 
+], ReplayJack
+47.95, IMU_TRANSFORM, (39.059246, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01752311  -0.008223746  -0.99981266 
+ 0.017377686  -0.9998127  0.0085283145 
+ -0.9996955  -0.017523872  -0.017377019 
+], ReplayJack
+47.97, IMU_TRANSFORM, (39.058746, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.0173769  -0.9998126  0.008528322 
+ -7.492304E-5  0.008528292  0.99996364 
+ -0.99984896  -0.01737693  7.331371E-5 
+], ReplayJack
+48.07, IMU_TRANSFORM, (39.056244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -7.4863434E-5  0.008528313  0.99996364 
+ 7.474562E-5  0.99996364  -0.008528307 
+ -1.0  7.4104406E-5  -7.545948E-5 
+], ReplayJack
+48.12, IMU_TRANSFORM, (39.054996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 7.390976E-5  0.9999637  -0.008528322 
+ 0.017525733  -0.008528352  -0.9998101 
+ -0.99984646  -7.545948E-5  -0.017525673 
+], ReplayJack
+48.17, IMU_TRANSFORM, (39.053745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017525494  -0.008528323  -0.9998101 
+ 0.017375007  -0.9998101  0.008832887 
+ -0.99969554  -0.017526507  -0.017374039 
+], ReplayJack
+48.27, IMU_TRANSFORM, (39.051247, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017374277  -0.99981  0.0088329315 
+ -7.754564E-5  0.008832991  0.99996096 
+ -0.99984896  -0.017374218  7.593632E-5 
+], ReplayJack
+48.32, IMU_TRANSFORM, (39.049995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -7.760525E-5  0.008832888  0.9999611 
+ 7.7428296E-5  0.99996096  -0.008832881 
+ -1.0000001  7.673958E-5  -7.8201294E-5 
+], ReplayJack
+48.48, IMU_TRANSFORM, (39.045994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 7.659197E-5  0.999961  -0.008832991 
+ 0.017528296  -0.0088329315  -0.99980736 
+ -0.9998464  -7.82609E-5  -0.017528296 
+], ReplayJack
+48.61, IMU_TRANSFORM, (39.042744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017528236  -0.008832897  -0.9998074 
+ 0.017372325  -0.9998075  0.009137463 
+ -0.9996955  -0.017529141  -0.017371535 
+], ReplayJack
+48.69, IMU_TRANSFORM, (39.040245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017371476  -0.99980736  0.009137452 
+ -8.037686E-5  0.009137511  0.9999582 
+ -0.999849  -0.017371476  7.843971E-5 
+], ReplayJack
+48.71, IMU_TRANSFORM, (39.040245, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -8.010864E-5  0.009137461  0.9999582 
+ 8.010911E-5  0.9999583  -0.009137455 
+ -0.99999994  7.93729E-5  -8.08239E-5 
+], ReplayJack
+48.76, IMU_TRANSFORM, (39.038994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 7.921457E-5  0.9999582  -0.009137511 
+ 0.017530978  -0.009137511  -0.99980456 
+ -0.99984634  -8.100271E-5  -0.017530918 
+], ReplayJack
+48.78, IMU_TRANSFORM, (39.038494, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017530978  -0.009137469  -0.99980456 
+ 0.017369643  -0.9998045  0.009442034 
+ -0.9996955  -0.017531775  -0.017368793 
+], ReplayJack
+48.93, IMU_TRANSFORM, (39.034744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017368674  -0.99980456  0.009442121 
+ -8.2969666E-5  0.009442091  0.9999555 
+ -0.9998492  -0.017368734  8.100271E-5 
+], ReplayJack
+49.01, IMU_TRANSFORM, (39.032745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -8.2969666E-5  0.009442035  0.9999554 
+ 8.279225E-5  0.9999554  -0.009442028 
+ -1.0  8.200621E-5  -8.368492E-5 
+], ReplayJack
+49.12, IMU_TRANSFORM, (39.029995, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 8.177757E-5  0.9999554  -0.009442121 
+ 0.017533422  -0.009442091  -0.99980175 
+ -0.99984634  -8.371472E-5  -0.01753354 
+], ReplayJack
+49.2, IMU_TRANSFORM, (39.027996, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017533481  -0.009442044  -0.9998016 
+ 0.017366959  -0.9998015  0.009746607 
+ -0.99969536  -0.017534407  -0.017365813 
+], ReplayJack
+49.32, IMU_TRANSFORM, (39.024994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017365992  -0.99980164  0.009746671 
+ -8.568168E-5  0.009746611  0.9999525 
+ -0.9998492  -0.017365992  8.356571E-5 
+], ReplayJack
+49.6, IMU_TRANSFORM, (39.017994, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ -8.583069E-5  0.009746607  0.99995255 
+ 8.547725E-5  0.9999525  -0.0097466 
+ -1.0  8.463813E-5  -8.666515E-5 
+], ReplayJack
+49.65, IMU_TRANSFORM, (39.016747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 8.4519386E-5  0.9999525  -0.00974673 
+ 0.017536104  -0.00974679  -0.9997988 
+ -0.9998463  -8.633733E-5  -0.017536163 
+], ReplayJack
+49.7, IMU_TRANSFORM, (39.015495, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.017536163  -0.009746616  -0.99979866 
+ 0.017364275  -0.9997988  0.010051181 
+ -0.9996954  -0.017537039  -0.01736343 
+], ReplayJack
+49.93, IMU_TRANSFORM, (39.009747, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.01, IMU_TRANSFORM, (39.007748, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.03, IMU_TRANSFORM, (39.007404, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.08, IMU_TRANSFORM, (39.006657, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.13, IMU_TRANSFORM, (39.006157, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.15, IMU_TRANSFORM, (39.006058, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.2, IMU_TRANSFORM, (39.005905, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.38, IMU_TRANSFORM, (39.00627, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.43, IMU_TRANSFORM, (39.00727, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.48, IMU_TRANSFORM, (39.008522, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.58, IMU_TRANSFORM, (39.016724, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.71, IMU_TRANSFORM, (39.016724, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.76, IMU_TRANSFORM, (39.028576, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.81, IMU_TRANSFORM, (39.028576, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+50.91, IMU_TRANSFORM, (39.028576, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.03, IMU_TRANSFORM, (39.064846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.13, IMU_TRANSFORM, (39.064846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.33, IMU_TRANSFORM, (39.064846, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.38, IMU_TRANSFORM, (39.076595, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.43, IMU_TRANSFORM, (39.11493, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.59, IMU_TRANSFORM, (39.11493, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.72, IMU_TRANSFORM, (39.11493, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.74, IMU_TRANSFORM, (39.13869, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.79, IMU_TRANSFORM, (39.13869, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.87, IMU_TRANSFORM, (39.13869, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+51.95, IMU_TRANSFORM, (39.166374, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.03, IMU_TRANSFORM, (39.166374, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.24, IMU_TRANSFORM, (39.21553, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.29, IMU_TRANSFORM, (39.21553, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.34, IMU_TRANSFORM, (39.226078, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.36, IMU_TRANSFORM, (39.2304, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.41, IMU_TRANSFORM, (39.2413, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.51, IMU_TRANSFORM, (39.2636, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.53, IMU_TRANSFORM, (39.26826, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.71, IMU_TRANSFORM, (39.310566, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.76, IMU_TRANSFORM, (39.323215, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.81, IMU_TRANSFORM, (39.336117, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.83, IMU_TRANSFORM, (39.341377, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+52.88, IMU_TRANSFORM, (39.354626, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.08, IMU_TRANSFORM, (39.40863, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.16, IMU_TRANSFORM, (39.43183, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.32, IMU_TRANSFORM, (39.479515, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.34, IMU_TRANSFORM, (39.485794, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.44, IMU_TRANSFORM, (39.517395, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.57, IMU_TRANSFORM, (39.55978, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.58, IMU_TRANSFORM, (39.563168, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.66, IMU_TRANSFORM, (39.59037, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.78, IMU_TRANSFORM, (39.63213, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+53.93, IMU_TRANSFORM, (39.742947, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.01, IMU_TRANSFORM, (39.742947, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.08, IMU_TRANSFORM, (39.742947, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.21, IMU_TRANSFORM, (39.793648, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.29, IMU_TRANSFORM, (39.82589, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.34, IMU_TRANSFORM, (39.84644, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.36, IMU_TRANSFORM, (39.85476, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.41, IMU_TRANSFORM, (39.87566, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.49, IMU_TRANSFORM, (39.9095, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.54, IMU_TRANSFORM, (39.93105, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.56, IMU_TRANSFORM, (39.93977, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.63, IMU_TRANSFORM, (39.970432, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.68, IMU_TRANSFORM, (39.99268, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.73, IMU_TRANSFORM, (40.015182, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.8, IMU_TRANSFORM, (40.04703, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.85, IMU_TRANSFORM, (40.070133, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.93, IMU_TRANSFORM, (40.107494, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+54.95, IMU_TRANSFORM, (40.116993, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.08, IMU_TRANSFORM, (40.179005, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.15, IMU_TRANSFORM, (40.213306, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.2, IMU_TRANSFORM, (40.238155, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.25, IMU_TRANSFORM, (40.263256, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.41, IMU_TRANSFORM, (40.412373, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.54, IMU_TRANSFORM, (40.412373, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.61, IMU_TRANSFORM, (40.586647, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.81, IMU_TRANSFORM, (40.586647, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+55.86, IMU_TRANSFORM, (40.586647, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.01, IMU_TRANSFORM, (40.71849, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.09, IMU_TRANSFORM, (40.71849, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.14, IMU_TRANSFORM, (40.748043, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.19, IMU_TRANSFORM, (40.825924, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.27, IMU_TRANSFORM, (40.825924, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.32, IMU_TRANSFORM, (40.856373, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.37, IMU_TRANSFORM, (40.887074, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.47, IMU_TRANSFORM, (41.075527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.62, IMU_TRANSFORM, (41.075527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.67, IMU_TRANSFORM, (41.075527, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.75, IMU_TRANSFORM, (41.180008, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.83, IMU_TRANSFORM, (41.180008, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+56.88, IMU_TRANSFORM, (41.21326, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.02, IMU_TRANSFORM, (41.30706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.04, IMU_TRANSFORM, (41.33446, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.06, IMU_TRANSFORM, (41.403263, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.16, IMU_TRANSFORM, (41.403263, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.29, IMU_TRANSFORM, (41.529556, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.34, IMU_TRANSFORM, (41.529556, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.42, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.5, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.68, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.73, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.8, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.85, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.87, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+57.95, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.08, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.18, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.23, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.33, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.46, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.72, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.77, IMU_TRANSFORM, (42.64629, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.9, IMU_TRANSFORM, (42.75796, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+58.95, IMU_TRANSFORM, (42.801563, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.08, IMU_TRANSFORM, (42.915573, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.15, IMU_TRANSFORM, (42.977875, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.28, IMU_TRANSFORM, (43.094486, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.36, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.46, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.54, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.62, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.75, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.85, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+59.9, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.03, IMU_TRANSFORM, (44.540066, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.08, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.18, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.28, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.33, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.38, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.4, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.42, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.44, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.49, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.59, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.64, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.79, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.81, IMU_TRANSFORM, (44.559505, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.86, IMU_TRANSFORM, (44.608105, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+60.91, IMU_TRANSFORM, (44.656704, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.13, IMU_TRANSFORM, (44.870544, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.21, IMU_TRANSFORM, (44.948303, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.29, IMU_TRANSFORM, (45.026062, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.34, IMU_TRANSFORM, (45.074665, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.36, IMU_TRANSFORM, (45.094105, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.41, IMU_TRANSFORM, (45.142704, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.53, IMU_TRANSFORM, (45.259342, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.58, IMU_TRANSFORM, (45.307945, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.63, IMU_TRANSFORM, (45.356544, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.7, IMU_TRANSFORM, (45.424583, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.8, IMU_TRANSFORM, (45.521786, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+61.88, IMU_TRANSFORM, (45.599545, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.01, IMU_TRANSFORM, (45.803665, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.09, IMU_TRANSFORM, (45.803665, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.17, IMU_TRANSFORM, (46.036945, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.28, IMU_TRANSFORM, (46.036945, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.33, IMU_TRANSFORM, (46.036945, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.37, IMU_TRANSFORM, (46.095264, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.39, IMU_TRANSFORM, (46.095264, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.41, IMU_TRANSFORM, (46.114704, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.46, IMU_TRANSFORM, (46.182743, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.48, IMU_TRANSFORM, (46.182743, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.59, IMU_TRANSFORM, (46.600704, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+62.91, IMU_TRANSFORM, (46.600704, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+63.04, IMU_TRANSFORM, (46.727062, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+63.16, IMU_TRANSFORM, (46.843704, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+63.46, IMU_TRANSFORM, (47.135303, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+63.53, IMU_TRANSFORM, (47.203342, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+63.74, IMU_TRANSFORM, (47.407463, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+63.97, IMU_TRANSFORM, (47.631023, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.02, IMU_TRANSFORM, (47.679623, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.1, IMU_TRANSFORM, (47.757385, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.25, IMU_TRANSFORM, (47.903183, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.35, IMU_TRANSFORM, (48.000385, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.4, IMU_TRANSFORM, (48.048985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.42, IMU_TRANSFORM, (48.068424, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.6, IMU_TRANSFORM, (48.243385, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.71, IMU_TRANSFORM, (48.350304, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.78, IMU_TRANSFORM, (48.418343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+64.85, IMU_TRANSFORM, (48.486385, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.03, IMU_TRANSFORM, (48.661343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.08, IMU_TRANSFORM, (48.709946, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.1, IMU_TRANSFORM, (48.729385, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.23, IMU_TRANSFORM, (48.855743, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.31, IMU_TRANSFORM, (48.933502, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.38, IMU_TRANSFORM, (49.001545, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.48, IMU_TRANSFORM, (49.098743, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.61, IMU_TRANSFORM, (49.225105, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.71, IMU_TRANSFORM, (49.370903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.76, IMU_TRANSFORM, (49.370903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.86, IMU_TRANSFORM, (49.468105, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.91, IMU_TRANSFORM, (49.565304, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+65.96, IMU_TRANSFORM, (49.565304, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.01, IMU_TRANSFORM, (49.613903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.06, IMU_TRANSFORM, (49.662502, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.14, IMU_TRANSFORM, (49.915222, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.32, IMU_TRANSFORM, (49.915222, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.37, IMU_TRANSFORM, (50.041584, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.45, IMU_TRANSFORM, (50.090183, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.5, IMU_TRANSFORM, (50.090183, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.63, IMU_TRANSFORM, (50.216545, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.71, IMU_TRANSFORM, (50.410942, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.73, IMU_TRANSFORM, (50.410942, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.78, IMU_TRANSFORM, (50.410942, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.83, IMU_TRANSFORM, (50.410942, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+66.96, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.12, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.2, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.25, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.3, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.35, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.4, IMU_TRANSFORM, (50.964985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.42, IMU_TRANSFORM, (50.984425, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.47, IMU_TRANSFORM, (51.033024, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.52, IMU_TRANSFORM, (51.081623, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.69, IMU_TRANSFORM, (51.246864, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.74, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.79, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.91, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+67.99, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.04, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.11, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.16, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.21, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.26, IMU_TRANSFORM, (51.800903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.31, IMU_TRANSFORM, (51.849503, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.41, IMU_TRANSFORM, (51.946705, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.49, IMU_TRANSFORM, (52.024464, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.54, IMU_TRANSFORM, (52.296623, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.67, IMU_TRANSFORM, (52.364662, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.77, IMU_TRANSFORM, (52.364662, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+68.84, IMU_TRANSFORM, (52.364662, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.0, IMU_TRANSFORM, (52.665985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.15, IMU_TRANSFORM, (52.665985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.2, IMU_TRANSFORM, (52.714584, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.35, IMU_TRANSFORM, (52.860386, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.46, IMU_TRANSFORM, (53.015903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.51, IMU_TRANSFORM, (53.015903, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.56, IMU_TRANSFORM, (53.385265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.84, IMU_TRANSFORM, (53.385265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.89, IMU_TRANSFORM, (53.385265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+69.97, IMU_TRANSFORM, (53.589382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.1, IMU_TRANSFORM, (53.589382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.15, IMU_TRANSFORM, (53.637985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.33, IMU_TRANSFORM, (53.812943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.4, IMU_TRANSFORM, (53.880985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.51, IMU_TRANSFORM, (53.987904, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.53, IMU_TRANSFORM, (54.007343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.58, IMU_TRANSFORM, (54.055943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.66, IMU_TRANSFORM, (54.133705, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.71, IMU_TRANSFORM, (54.182304, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.81, IMU_TRANSFORM, (54.405865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+70.94, IMU_TRANSFORM, (54.405865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.04, IMU_TRANSFORM, (54.979343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.09, IMU_TRANSFORM, (54.979343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.14, IMU_TRANSFORM, (54.979343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.27, IMU_TRANSFORM, (54.979343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.37, IMU_TRANSFORM, (54.979343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.53, IMU_TRANSFORM, (54.979343, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.55, IMU_TRANSFORM, (55.581985, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.74, IMU_TRANSFORM, (55.630585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.79, IMU_TRANSFORM, (55.630585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.81, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+71.94, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.02, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.1, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.15, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.2, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.35, IMU_TRANSFORM, (55.776382, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.45, IMU_TRANSFORM, (55.873585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.52, IMU_TRANSFORM, (55.990223, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.57, IMU_TRANSFORM, (55.990223, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.59, IMU_TRANSFORM, (56.009663, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.67, IMU_TRANSFORM, (56.262383, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.72, IMU_TRANSFORM, (56.281822, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.85, IMU_TRANSFORM, (56.281822, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.87, IMU_TRANSFORM, (56.281822, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+72.98, IMU_TRANSFORM, (56.388744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.11, IMU_TRANSFORM, (56.612305, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.21, IMU_TRANSFORM, (56.612305, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.29, IMU_TRANSFORM, (56.767822, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.37, IMU_TRANSFORM, (56.767822, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.48, IMU_TRANSFORM, (56.874744, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.53, IMU_TRANSFORM, (56.923344, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.79, IMU_TRANSFORM, (57.176064, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.89, IMU_TRANSFORM, (57.273266, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.94, IMU_TRANSFORM, (57.321865, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+73.99, IMU_TRANSFORM, (57.370464, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.06, IMU_TRANSFORM, (57.438503, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.08, IMU_TRANSFORM, (57.457943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.15, IMU_TRANSFORM, (57.525986, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.17, IMU_TRANSFORM, (57.545425, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.22, IMU_TRANSFORM, (57.594025, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.32, IMU_TRANSFORM, (57.691223, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.37, IMU_TRANSFORM, (57.817585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.45, IMU_TRANSFORM, (57.817585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.53, IMU_TRANSFORM, (57.992542, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.63, IMU_TRANSFORM, (57.992542, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.9, IMU_TRANSFORM, (58.332745, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+74.98, IMU_TRANSFORM, (58.672943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.25, IMU_TRANSFORM, (58.672943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.33, IMU_TRANSFORM, (58.672943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.41, IMU_TRANSFORM, (58.750706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.43, IMU_TRANSFORM, (58.770145, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.45, IMU_TRANSFORM, (58.789585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.57, IMU_TRANSFORM, (58.906223, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.62, IMU_TRANSFORM, (58.954823, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.75, IMU_TRANSFORM, (59.081184, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.79, IMU_TRANSFORM, (59.120064, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.87, IMU_TRANSFORM, (59.197823, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.92, IMU_TRANSFORM, (59.246426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+75.97, IMU_TRANSFORM, (59.295025, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.02, IMU_TRANSFORM, (59.343624, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.12, IMU_TRANSFORM, (59.440823, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.17, IMU_TRANSFORM, (59.489426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.28, IMU_TRANSFORM, (59.596344, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.36, IMU_TRANSFORM, (59.674103, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.41, IMU_TRANSFORM, (59.722706, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.46, IMU_TRANSFORM, (59.771305, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.54, IMU_TRANSFORM, (59.849064, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.62, IMU_TRANSFORM, (59.926823, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+76.87, IMU_TRANSFORM, (60.169823, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.07, IMU_TRANSFORM, (60.364223, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.24, IMU_TRANSFORM, (60.529465, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.29, IMU_TRANSFORM, (60.578064, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.34, IMU_TRANSFORM, (60.626663, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.42, IMU_TRANSFORM, (60.704426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.5, IMU_TRANSFORM, (60.782185, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.57, IMU_TRANSFORM, (60.850224, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.65, IMU_TRANSFORM, (60.927982, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.7, IMU_TRANSFORM, (60.976585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.75, IMU_TRANSFORM, (61.025185, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.85, IMU_TRANSFORM, (61.122383, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+77.9, IMU_TRANSFORM, (61.170982, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.0, IMU_TRANSFORM, (61.268185, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.08, IMU_TRANSFORM, (61.345943, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.13, IMU_TRANSFORM, (61.394543, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.18, IMU_TRANSFORM, (61.443146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.2, IMU_TRANSFORM, (61.462585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.32, IMU_TRANSFORM, (61.579224, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.43, IMU_TRANSFORM, (61.686146, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.45, IMU_TRANSFORM, (61.705585, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.47, IMU_TRANSFORM, (61.725025, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.55, IMU_TRANSFORM, (61.802784, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.65, IMU_TRANSFORM, (61.899982, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.67, IMU_TRANSFORM, (61.919426, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.8, IMU_TRANSFORM, (62.045784, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+78.89, IMU_TRANSFORM, (62.133263, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.05, IMU_TRANSFORM, (62.288784, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.2, IMU_TRANSFORM, (62.434586, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.45, IMU_TRANSFORM, (62.677586, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.5, IMU_TRANSFORM, (62.726185, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.55, IMU_TRANSFORM, (62.774784, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.6, IMU_TRANSFORM, (63.076103, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.86, IMU_TRANSFORM, (63.153866, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+79.94, IMU_TRANSFORM, (63.153866, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.07, IMU_TRANSFORM, (63.32817, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.12, IMU_TRANSFORM, (63.32817, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.22, IMU_TRANSFORM, (63.51797, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.32, IMU_TRANSFORM, (63.51797, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.34, IMU_TRANSFORM, (63.536648, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.5, IMU_TRANSFORM, (63.759045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.58, IMU_TRANSFORM, (63.759045, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.63, IMU_TRANSFORM, (63.849594, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.68, IMU_TRANSFORM, (63.849594, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.97, IMU_TRANSFORM, (64.11, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+80.99, IMU_TRANSFORM, (64.12738, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.01, IMU_TRANSFORM, (64.14472, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.08, IMU_TRANSFORM, (64.20528, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.16, IMU_TRANSFORM, (64.27391, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.26, IMU_TRANSFORM, (64.35891, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.34, IMU_TRANSFORM, (64.42611, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.36, IMU_TRANSFORM, (64.44275, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.47, IMU_TRANSFORM, (64.64012, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.52, IMU_TRANSFORM, (64.64012, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.6, IMU_TRANSFORM, (64.64012, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.67, IMU_TRANSFORM, (64.86432, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.88, IMU_TRANSFORM, (64.86432, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+81.93, IMU_TRANSFORM, (65.1557, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.06, IMU_TRANSFORM, (65.1557, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.26, IMU_TRANSFORM, (65.1557, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.48, IMU_TRANSFORM, (65.3185, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.56, IMU_TRANSFORM, (65.37594, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.64, IMU_TRANSFORM, (65.43274, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.69, IMU_TRANSFORM, (65.467834, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.77, IMU_TRANSFORM, (65.5236, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.84, IMU_TRANSFORM, (65.57182, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+82.91, IMU_TRANSFORM, (65.61957, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.12, IMU_TRANSFORM, (65.76131, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.19, IMU_TRANSFORM, (65.80709, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.24, IMU_TRANSFORM, (65.83944, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.32, IMU_TRANSFORM, (65.8908, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.37, IMU_TRANSFORM, (66.1265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.45, IMU_TRANSFORM, (66.1265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.58, IMU_TRANSFORM, (66.1265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.7, IMU_TRANSFORM, (66.1265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.78, IMU_TRANSFORM, (66.17418, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.94, IMU_TRANSFORM, (66.26826, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+83.99, IMU_TRANSFORM, (66.29686, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.04, IMU_TRANSFORM, (66.32521, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.09, IMU_TRANSFORM, (66.35331, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.2, IMU_TRANSFORM, (66.41457, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.3, IMU_TRANSFORM, (66.46918, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.4, IMU_TRANSFORM, (66.52277, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.52, IMU_TRANSFORM, (66.58589, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.59, IMU_TRANSFORM, (66.62187, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.7, IMU_TRANSFORM, (66.67764, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.75, IMU_TRANSFORM, (66.70244, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.8, IMU_TRANSFORM, (66.72699, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.88, IMU_TRANSFORM, (66.76587, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+84.98, IMU_TRANSFORM, (66.81367, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.18, IMU_TRANSFORM, (66.907265, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.23, IMU_TRANSFORM, (66.929665, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.28, IMU_TRANSFORM, (66.95181, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.36, IMU_TRANSFORM, (66.98685, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.54, IMU_TRANSFORM, (67.06425, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.62, IMU_TRANSFORM, (67.097206, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.7, IMU_TRANSFORM, (67.129524, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.8, IMU_TRANSFORM, (67.16912, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.85, IMU_TRANSFORM, (67.18842, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.92, IMU_TRANSFORM, (67.215096, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.97, IMU_TRANSFORM, (67.233795, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+85.99, IMU_TRANSFORM, (67.24117, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.09, IMU_TRANSFORM, (67.27787, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.11, IMU_TRANSFORM, (67.28501, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.19, IMU_TRANSFORM, (67.31341, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.27, IMU_TRANSFORM, (67.368286, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.35, IMU_TRANSFORM, (67.368286, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.58, IMU_TRANSFORM, (67.44441, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.7, IMU_TRANSFORM, (67.48137, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.77, IMU_TRANSFORM, (67.50209, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+86.9, IMU_TRANSFORM, (67.53966, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.0, IMU_TRANSFORM, (67.58588, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.07, IMU_TRANSFORM, (67.58588, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.14, IMU_TRANSFORM, (67.604004, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.22, IMU_TRANSFORM, (67.62416, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.32, IMU_TRANSFORM, (67.728035, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.34, IMU_TRANSFORM, (67.728035, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.39, IMU_TRANSFORM, (67.728035, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.44, IMU_TRANSFORM, (67.728035, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.55, IMU_TRANSFORM, (67.728035, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.68, IMU_TRANSFORM, (67.728035, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.76, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.85, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+87.93, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.11, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.3, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.38, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.43, IMU_TRANSFORM, (67.85332, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.51, IMU_TRANSFORM, (67.89375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.59, IMU_TRANSFORM, (67.89375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.79, IMU_TRANSFORM, (67.89375, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+88.84, IMU_TRANSFORM, (67.91286, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.02, IMU_TRANSFORM, (67.91286, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.15, IMU_TRANSFORM, (67.92807, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.2, IMU_TRANSFORM, (67.92807, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.25, IMU_TRANSFORM, (67.92807, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.3, IMU_TRANSFORM, (67.92807, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.38, IMU_TRANSFORM, (67.930954, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.54, IMU_TRANSFORM, (67.935425, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.56, IMU_TRANSFORM, (67.93567, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.61, IMU_TRANSFORM, (67.936165, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.69, IMU_TRANSFORM, (67.93657, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.8, IMU_TRANSFORM, (67.93623, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.85, IMU_TRANSFORM, (67.93554, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+89.9, IMU_TRANSFORM, (67.934586, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack
+90.0, IMU_TRANSFORM, (67.93218, 0.01, -5.0), com.jme.math.Matrix3f
+[
+ 0.01736343  -0.9997987  0.010051221 
+ -8.8214874E-5  0.010051191  0.99994946 
+ -0.9998492  -0.01736343  8.636713E-5 
+], ReplayJack

@@ -1,0 +1,90 @@
+<rooms>
+	<room>
+		<name>Room 1</name>
+		<temperature>0</temperature>
+		<x1>5.31</x1>
+		<z1>-15.41</z1>
+		<x2>0.04</x2>
+		<z2>-7.2</z2>
+	</room>
+	<room>
+		<name>Produce Section</name>
+		<temperature>0</temperature>
+		<x1>5.31</x1>
+		<z1>-27.3</z1>
+		<x2>0.04</x2>
+		<z2>-15.41</z2>
+	</room>
+	<room>
+		<name>Room 2</name>
+		<temperature>0</temperature>
+		<x1>11.747</x1>
+		<z1>-41.44</z1>
+		<x2>0.04</x2>
+		<z2>-27.34</z2>
+	</room>
+	<room>
+		<name>Room 3</name>
+		<temperature>0</temperature>
+		<x1>11.601</x1>
+		<z1>-27.3</z1>
+		<x2>5.31</x2>
+		<z2>-7.2</z2>
+	</room>
+	<room>
+		<name>Room 4</name>
+		<temperature>0</temperature>
+		<x1>24.786</x1>
+		<z1>-25.475</z1>
+		<x2>11.9</x2>
+		<z2>-7.673</z2>
+	</room>
+	<room>
+		<name>Room 5</name>
+		<temperature>0</temperature>
+		<x1>24.786</x1>
+		<z1>-41.48</z1>
+		<x2>11.9</x2>
+		<z2>-25.475</z2>
+	</room>
+	<room>
+		<name>Room 6</name>
+		<temperature>0</temperature>
+		<x1>54.86</x1>
+		<z1>-46.57</z1>
+		<x2>24.94</x2>
+		<z2>-28.757</z2>
+	</room>
+	<room>
+		<name>Room 7</name>
+		<temperature>0</temperature>
+		<x1>54.86</x1>
+		<z1>-28.757</z1>
+		<x2>24.94</x2>
+		<z2>-7.24</z2>
+	</room>
+	<room>
+		<name>Loading Dock</name>
+		<temperature>0</temperature>
+		<x1>54.86</x1>
+		<z1>-7.2</z1>
+		<x2>0.04</x2>
+		<z2>-0.04</z2>
+	</room>
+	<room>
+		<name>Receiving Dock (a)</name>
+		<temperature>0</temperature>
+		<x1>24.786</x1>
+		<z1>-48.66</z1>
+		<x2>0.04</x2>
+		<z2>-41.48</z2>
+	</room>
+	<room>
+		<name>Receiving Dock (b)</name>
+		<temperature>0</temperature>
+		<x1>54.86</x1>
+		<z1>-48.66</z1>
+		<x2>24.786</x2>
+		<z2>-46.57</z2>
+	</room>
+</rooms>

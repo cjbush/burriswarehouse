@@ -1,0 +1,901 @@
+<scene formatVersion="1.0.0">
+  <nodes>
+    <node name="Cube.074">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.074" meshFile="Cube.073.mesh"/>
+    </node>
+    <node name="Cube.075">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.075" meshFile="Cube.074.mesh"/>
+    </node>
+    <node name="Cube.076">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.076" meshFile="Cube.075.mesh"/>
+    </node>
+    <node name="Cube.077">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.077" meshFile="Cube.076.mesh"/>
+    </node>
+    <node name="Cube.071">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.071" meshFile="Cube.070.mesh"/>
+    </node>
+    <node name="Cube.072">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.072" meshFile="Cube.071.mesh"/>
+    </node>
+    <node name="Cube.073">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.073" meshFile="Cube.072.mesh"/>
+    </node>
+    <node name="Cube.078">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.078" meshFile="Cube.077.mesh"/>
+    </node>
+    <node name="Cube.079">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.079" meshFile="Cube.078.mesh"/>
+    </node>
+    <node name="Cylinder.028">
+      <position x="46.820000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.028" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.029">
+      <position x="47.360001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.029" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.081">
+      <position x="23.610001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.040000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.081" meshFile="Cube.080.mesh"/>
+    </node>
+    <node name="Cube.080">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.080" meshFile="Cube.079.mesh"/>
+    </node>
+    <node name="Cube.083">
+      <position x="23.610001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.040000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.083" meshFile="Cube.082.mesh"/>
+    </node>
+    <node name="Cube.082">
+      <position x="23.610001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.040000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.082" meshFile="Cube.081.mesh"/>
+    </node>
+    <node name="Cylinder.026">
+      <position x="45.380001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.026" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.084">
+      <position x="23.610001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.040000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.084" meshFile="Cube.083.mesh"/>
+    </node>
+    <node name="Cylinder.024">
+      <position x="44.150002" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.024" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.025">
+      <position x="44.360001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.025" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.067">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.067" meshFile="Cube.069.mesh"/>
+    </node>
+    <node name="Cube.066">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.066" meshFile="Cube.068.mesh"/>
+    </node>
+    <node name="Cube.065">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.065" meshFile="Cube.067.mesh"/>
+    </node>
+    <node name="Cube.064">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube.064" meshFile="Cube.066.mesh"/>
+    </node>
+    <node name="Cube.062">
+      <position x="9.382545" y="777.900024" z="1.789298"/>
+      <quaternion x="-0.000000" y="1.000000" z="-0.000000" w="0.000000"/>
+      <scale x="0.510111" y="-0.000000" z="0.000000"/>
+      <entity name="Cube.062" meshFile="Cube.065.mesh"/>
+    </node>
+    <node name="Cylinder.035">
+      <position x="13.070000" y="0.222000" z="-0.180000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.035" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.034">
+      <position x="8.690000" y="0.222000" z="-0.180000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.034" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.037">
+      <position x="35.150002" y="0.222000" z="-0.180000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.037" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.036">
+      <position x="16.190001" y="0.222000" z="-0.180000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.036" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.031">
+      <position x="48.799999" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.031" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.030">
+      <position x="48.380001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.030" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.033">
+      <position x="50.029999" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.033" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.032">
+      <position x="49.820000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.032" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.039">
+      <position x="0.440000" y="0.222000" z="-48.450001"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.039" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.038">
+      <position x="39.529999" y="0.222000" z="-0.180000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.038" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Plane.001">
+      <position x="-5.625000" y="0.000000" z="-1.800000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.625000" y="1.000000" z="11.199997"/>
+      <entity name="Plane.001" meshFile="Plane.001.mesh"/>
+    </node>
+    <node name="Plane.003">
+      <position x="24.566006" y="2.080000" z="-0.882199"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="1.000000" y="1.000000" z="1.000000"/>
+      <entity name="Plane.003" meshFile="Plane.003.mesh"/>
+    </node>
+    <node name="Plane.002">
+      <position x="-1.570000" y="0.000000" z="-44.380001"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="1.570000" y="1.000000" z="4.320000"/>
+      <entity name="Plane.002" meshFile="Plane.002.mesh"/>
+    </node>
+    <node name="Cylinder.040">
+      <position x="19.770000" y="0.222000" z="-48.450001"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.040" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.041">
+      <position x="0.440000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.041" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.042">
+      <position x="0.600000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.042" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.043">
+      <position x="1.620000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.043" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.044">
+      <position x="2.040000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.044" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.045">
+      <position x="3.060000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.045" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.046">
+      <position x="3.600000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.046" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.047">
+      <position x="4.620000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.047" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.048">
+      <position x="5.040000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.048" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.049">
+      <position x="6.120000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.049" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.053">
+      <position x="9.060000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.053" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.052">
+      <position x="8.040000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.052" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.051">
+      <position x="7.620000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.051" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.050">
+      <position x="6.540000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.050" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.057">
+      <position x="12.060000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.057" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.056">
+      <position x="11.040000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.056" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.055">
+      <position x="10.620000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.055" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.054">
+      <position x="9.600000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.054" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.059">
+      <position x="13.620000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.059" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.058">
+      <position x="12.600000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.058" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.022">
+      <position x="39.320000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.022" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.023">
+      <position x="39.529999" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.023" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.052">
+      <position x="5.570001" y="2.500000" z="-27.320009"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.052" meshFile="Cube.059.mesh"/>
+    </node>
+    <node name="Cube.053">
+      <position x="5.570001" y="2.500000" z="-27.320009"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.053" meshFile="Cube.060.mesh"/>
+    </node>
+    <node name="Cube.050">
+      <position x="5.570001" y="2.500000" z="-27.320009"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.050" meshFile="Cube.057.mesh"/>
+    </node>
+    <node name="Cube.051">
+      <position x="5.570001" y="2.500000" z="-27.320009"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.051" meshFile="Cube.058.mesh"/>
+    </node>
+    <node name="Cube.056">
+      <position x="5.605000" y="2.500000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.056" meshFile="Cube.063.mesh"/>
+    </node>
+    <node name="Cylinder.020">
+      <position x="37.880001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.020" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.054">
+      <position x="5.605000" y="2.500000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.054" meshFile="Cube.061.mesh"/>
+    </node>
+    <node name="Cube.038">
+      <position x="2.720000" y="3.400000" z="-27.320005"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.038" meshFile="Cube.038.mesh"/>
+    </node>
+    <node name="Cube.039">
+      <position x="24.920000" y="2.500000" z="-46.384998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.039" meshFile="Cube.039.mesh"/>
+    </node>
+    <node name="Cylinder.021">
+      <position x="38.299999" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.021" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.030">
+      <position x="11.760000" y="3.400000" z="-28.379997"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="15.929999"/>
+      <entity name="Cube.030" meshFile="Cube.030.mesh"/>
+    </node>
+    <node name="Cube.031">
+      <position x="10.355001" y="2.500000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.031" meshFile="Cube.031.mesh"/>
+    </node>
+    <node name="Cube.032">
+      <position x="8.490000" y="3.400000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.032" meshFile="Cube.032.mesh"/>
+    </node>
+    <node name="Cube.033">
+      <position x="5.605000" y="2.500000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.033" meshFile="Cube.033.mesh"/>
+    </node>
+    <node name="Cube.034">
+      <position x="2.719999" y="3.400000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.034" meshFile="Cube.034.mesh"/>
+    </node>
+    <node name="Cube.035">
+      <position x="10.325001" y="2.500000" z="-27.320011"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.035" meshFile="Cube.035.mesh"/>
+    </node>
+    <node name="Cube.036">
+      <position x="8.455000" y="3.400000" z="-27.320011"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.036" meshFile="Cube.036.mesh"/>
+    </node>
+    <node name="Cube.037">
+      <position x="5.570001" y="2.500000" z="-27.320009"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.037" meshFile="Cube.037.mesh"/>
+    </node>
+    <node name="Cylinder.068">
+      <position x="19.770000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.068" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.066">
+      <position x="18.540001" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.066" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.067">
+      <position x="19.559999" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.067" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.064">
+      <position x="17.040001" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.064" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.065">
+      <position x="18.059999" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.065" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.062">
+      <position x="15.540000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.062" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.063">
+      <position x="16.559999" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.063" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.060">
+      <position x="14.040000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.060" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.061">
+      <position x="15.060000" y="0.222000" z="-47.990002"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.061" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.049">
+      <position x="25.615000" y="1.000001" z="-2.880000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="2.044999" y="1.000000" z="0.040000"/>
+      <entity name="Cube.049" meshFile="Cube.055.mesh"/>
+    </node>
+    <node name="Cube.048">
+      <position x="25.615000" y="1.000001" z="-2.880000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="2.044999" y="1.000000" z="0.040000"/>
+      <entity name="Cube.048" meshFile="Cube.054.mesh"/>
+    </node>
+    <node name="Cube.045">
+      <position x="26.820000" y="1.000001" z="-1.585000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.760000" y="1.000000" z="0.025000"/>
+      <entity name="Cube.045" meshFile="Cube.048.mesh"/>
+    </node>
+    <node name="Cube.044">
+      <position x="51.654999" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.044" meshFile="Cube.046.mesh"/>
+    </node>
+    <node name="Cube.047">
+      <position x="25.615000" y="1.000001" z="-2.880000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="2.044999" y="1.000000" z="0.040000"/>
+      <entity name="Cube.047" meshFile="Cube.053.mesh"/>
+    </node>
+    <node name="Cube.046">
+      <position x="26.820000" y="1.000001" z="-1.585000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.760000" y="1.000000" z="0.025000"/>
+      <entity name="Cube.046" meshFile="Cube.049.mesh"/>
+    </node>
+    <node name="Cube.041">
+      <position x="29.474998" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.041" meshFile="Cube.042.mesh"/>
+    </node>
+    <node name="Cube.040">
+      <position x="24.920000" y="2.500000" z="-46.384998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.040" meshFile="Cube.040.mesh"/>
+    </node>
+    <node name="Cube.043">
+      <position x="51.654999" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.043" meshFile="Cube.045.mesh"/>
+    </node>
+    <node name="Cube.042">
+      <position x="29.474998" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.042" meshFile="Cube.043.mesh"/>
+    </node>
+    <node name="Cube.029">
+      <position x="11.760000" y="2.500000" z="-27.099997"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="15.929999"/>
+      <entity name="Cube.029" meshFile="Cube.029.mesh"/>
+    </node>
+    <node name="Cube.028">
+      <position x="11.760000" y="3.400000" z="-25.819998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="15.929999"/>
+      <entity name="Cube.028" meshFile="Cube.028.mesh"/>
+    </node>
+    <node name="Cube.023">
+      <position x="24.920000" y="2.500000" z="-46.384998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.023" meshFile="Cube.023.mesh"/>
+    </node>
+    <node name="Cube.022">
+      <position x="51.654999" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.022" meshFile="Cube.022.mesh"/>
+    </node>
+    <node name="Cube.021">
+      <position x="47.970001" y="3.400000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.021" meshFile="Cube.021.mesh"/>
+    </node>
+    <node name="Cube.020">
+      <position x="34.529999" y="3.400000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.020" meshFile="Cube.020.mesh"/>
+    </node>
+    <node name="Cube.027">
+      <position x="11.760000" y="2.500000" z="-16.299997"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="15.929999"/>
+      <entity name="Cube.027" meshFile="Cube.027.mesh"/>
+    </node>
+    <node name="Cube.026">
+      <position x="24.920000" y="3.400000" z="-28.379995"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.026" meshFile="Cube.026.mesh"/>
+    </node>
+    <node name="Cube.025">
+      <position x="24.920000" y="2.500000" z="-36.044998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.025" meshFile="Cube.025.mesh"/>
+    </node>
+    <node name="Cube.024">
+      <position x="24.920000" y="3.400000" z="-43.709999"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.024" meshFile="Cube.024.mesh"/>
+    </node>
+    <node name="Cylinder">
+      <position x="8.690000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.027">
+      <position x="45.799999" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.027" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cube.018">
+      <position x="26.820000" y="1.000001" z="-1.585000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.760000" y="1.000000" z="0.025000"/>
+      <entity name="Cube.018" meshFile="Cube.018.mesh"/>
+    </node>
+    <node name="Cube.019">
+      <position x="41.250000" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.019" meshFile="Cube.019.mesh"/>
+    </node>
+    <node name="Cube.016">
+      <position x="26.084999" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.025000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.016" meshFile="Cube.016.mesh"/>
+    </node>
+    <node name="Cube.017">
+      <position x="23.309999" y="-0.074138" z="-0.473634"/>
+      <quaternion x="0.000000" y="0.707107" z="-0.000000" w="0.707107"/>
+      <scale x="0.157721" y="0.110933" z="0.100325"/>
+      <entity name="Cube.017" meshFile="Cube.017.mesh"/>
+    </node>
+    <node name="Cube.014">
+      <position x="27.620001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.040000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.014" meshFile="Cube.014.mesh"/>
+    </node>
+    <node name="Cube.015">
+      <position x="25.495001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.025000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.015" meshFile="Cube.015.mesh"/>
+    </node>
+    <node name="Cube.012">
+      <position x="23.610001" y="1.000000" z="-1.440000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.040000" y="1.000000" z="1.399999"/>
+      <entity name="Cube.012" meshFile="Cube.mesh"/>
+    </node>
+    <node name="Cube.013">
+      <position x="25.615000" y="1.000001" z="-2.880000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="2.044999" y="1.000000" z="0.040000"/>
+      <entity name="Cube.013" meshFile="Cube.013.mesh"/>
+    </node>
+    <node name="Cube.010">
+      <position x="1.180001" y="2.500000" z="-27.320005"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.010" meshFile="Cube.011.mesh"/>
+    </node>
+    <node name="Cube.011">
+      <position x="11.760000" y="2.500000" z="-35.139999"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="15.929999"/>
+      <entity name="Cube.011" meshFile="Cube.012.mesh"/>
+    </node>
+    <node name="Cylinder.008">
+      <position x="16.190001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.008" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.009">
+      <position x="16.400000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.009" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.004">
+      <position x="11.360000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.004" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.005">
+      <position x="11.900000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.005" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.006">
+      <position x="12.860000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.006" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.007">
+      <position x="13.070000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.007" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.001">
+      <position x="8.900000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.001" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.002">
+      <position x="9.860000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.002" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.003">
+      <position x="10.400000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.003" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Plane">
+      <position x="27.459999" y="0.000000" z="-24.349998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="24.349998"/>
+      <entity name="Plane" meshFile="Plane.mesh"/>
+    </node>
+    <node name="Cube.001">
+      <position x="39.910000" y="1.000000" z="-48.669998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="15.010000" y="1.000000" z="0.030000"/>
+      <entity name="Cube.001" meshFile="Cube.002.mesh"/>
+    </node>
+    <node name="Cube.003">
+      <position x="29.474998" y="2.500000" z="-7.220000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="14.980000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.003" meshFile="Cube.004.mesh"/>
+    </node>
+    <node name="Cube.002">
+      <position x="54.889999" y="1.000000" z="-24.340000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.030000" y="1.000000" z="24.299999"/>
+      <entity name="Cube.002" meshFile="Cube.003.mesh"/>
+    </node>
+    <node name="Cube.005">
+      <position x="12.450000" y="1.000000" z="-48.680000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="12.450000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.005" meshFile="Cube.006.mesh"/>
+    </node>
+    <node name="Cube.004">
+      <position x="24.920000" y="2.500000" z="-17.599998"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="20.700001"/>
+      <entity name="Cube.004" meshFile="Cube.005.mesh"/>
+    </node>
+    <node name="Cube.007">
+      <position x="0.030000" y="1.000000" z="-24.359999"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.030000" y="1.000000" z="17.120001"/>
+      <entity name="Cube.007" meshFile="Cube.008.mesh"/>
+    </node>
+    <node name="Cube.006">
+      <position x="0.020000" y="1.000000" z="-45.070000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="3.590000"/>
+      <entity name="Cube.006" meshFile="Cube.007.mesh"/>
+    </node>
+    <node name="Cube.009">
+      <position x="1.150000" y="2.500000" z="-41.460003"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="5.840000" y="1.000000" z="0.020000"/>
+      <entity name="Cube.009" meshFile="Cube.010.mesh"/>
+    </node>
+    <node name="Cube.008">
+      <position x="0.020000" y="1.000000" z="-3.640000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.020000" y="1.000000" z="3.600000"/>
+      <entity name="Cube.008" meshFile="Cube.009.mesh"/>
+    </node>
+    <node name="Cube">
+      <position x="27.459999" y="1.000000" z="-0.020000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="27.459999" y="1.000000" z="0.020000"/>
+      <entity name="Cube" meshFile="Cube.001.mesh"/>
+    </node>
+    <node name="Cylinder.019">
+      <position x="36.860001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.019" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.018">
+      <position x="36.320000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.018" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.017">
+      <position x="35.360001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.017" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.016">
+      <position x="35.150002" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.016" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.015">
+      <position x="20.570000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.015" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.014">
+      <position x="20.360001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.014" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.013">
+      <position x="19.340000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.013" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.012">
+      <position x="18.920000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.012" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.011">
+      <position x="17.900000" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.011" meshFile="Cylinder.mesh"/>
+    </node>
+    <node name="Cylinder.010">
+      <position x="17.360001" y="0.222000" z="-0.670000"/>
+      <quaternion x="0.000000" y="0.000000" z="-0.000000" w="1.000000"/>
+      <scale x="0.009188" y="0.009188" z="0.009188"/>
+      <entity name="Cylinder.010" meshFile="Cylinder.mesh"/>
+    </node>
+  </nodes>
+  <externals>
+    <item type="material">
+      <file name="Scene.material"/>
+    </item>
+  </externals>
+  <environment>
+    <colourAmbient r="0.800000" g="0.800000" b="0.800000"/>
+    <colourBackground r="0.056563" g="0.220815" b="0.400000"/>
+  </environment>
+</scene>
