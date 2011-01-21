@@ -620,7 +620,11 @@ public class VirtualWarehouse extends GameState {
 		characters = new Npc[5];
 		for (int i = 0; i < 5; i++){
 			
-			characters[i] = new Npc(4, 4, 4, 4);
+			/*
+			 * need to fix this stuff! Talk with Dan to get filePath stuff and Vector information...this
+			 * is where I may or may not get confused. -CM
+			 */
+			//characters[i] = new Npc(4, 4, 4, 4, name, name, name, name, i, null, null, null, null);
 		}
 	}
  
