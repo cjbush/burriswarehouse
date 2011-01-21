@@ -20,7 +20,9 @@ import code.hud.ScoringTimer;
 import code.infoicons.InfoIconManager;
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
+import code.model.player.Character;
 import code.model.player.Player;
+import code.model.player.RandomPerson;
 import code.npc.logic.Npc;
 import code.research.playback.Grid;
 import code.sound.SoundPlayer;
@@ -43,6 +45,7 @@ import com.jme.renderer.ColorRGBA;
 import com.jme.renderer.pass.BasicPassManager;
 import com.jme.renderer.pass.RenderPass;
 import com.jme.scene.CameraNode;
+import com.jme.scene.Controller;
 import com.jme.scene.Node;
 import com.jme.scene.state.CullState;
 import com.jme.scene.state.LightState;
@@ -619,12 +622,11 @@ public class VirtualWarehouse extends GameState {
 		// creates the path they should take.
 		characters = new Npc[5];
 		for (int i = 0; i < 5; i++){
+			characters[i] = new Npc(FastMath.nextRandomInt(5,15), FastMath.nextRandomInt(0,-10), 4, 4, Character.PLAYER_LOC + "Guy.md5mesh", "Character"+i, Character.STANDING_ANIM[Character.NAME_INDX], 
+			Character.STANDING_ANIM[Character.FILE_INDX],	Controller.RT_WRAP, Vector3f.UNIT_X, Vector3f.UNIT_Z,
+			code.model.AnimatedModel.DEFAULT_UP, new RandomPerson());
 			
-			/*
-			 * need to fix this stuff! Talk with Dan to get filePath stuff and Vector information...this
-			 * is where I may or may not get confused. -CM
-			 */
-			//characters[i] = new Npc(4, 4, 4, 4, name, name, name, name, i, null, null, null, null);
+			rootNode.attachChild(characters[i]);
 		}
 	}
  

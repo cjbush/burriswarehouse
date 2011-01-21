@@ -27,11 +27,13 @@ public class Npc extends AnimatedModel{
 	public Npc(int begX, int begY, int endX, int endY, String filePath, String folderPath, String defaultAnimName,
 			String animFilePath, int repeatType, Vector3f forwardVector, Vector3f rightVector, Vector3f upVector,
 			RandomPerson randomPerson){
-		super(filePath, folderPath, defaultAnimName, animFilePath, repeatType, forwardVector, rightVector, DEFAULT_UP, null);
+		super(filePath, folderPath, defaultAnimName, animFilePath, repeatType, forwardVector, rightVector, DEFAULT_UP, randomPerson);
 		this.beginningX = begX;
 		this.beginningY = begY;
 		this.endingX = endX;
 		this.endingY = endY;
+		
+		getLocalTranslation().set(new Vector3f(begX, .1f, begY).clone());
 		
 		path = initPath(this.beginningX, this.beginningY, this.endingX, this.endingY);
 	}

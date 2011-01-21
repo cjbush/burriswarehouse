@@ -20,6 +20,8 @@ import code.research.playback.Grid;
 import code.vocollect.DBInfoRetriever;
 import code.world.DeliveryArea;
 
+import code.model.player.Character;
+
 import com.jme.bounding.BoundingBox;
 import com.jme.input.InputHandler;
 import com.jme.input.KeyBindingManager;
@@ -54,27 +56,6 @@ public class Player extends AnimatedModel {
     //how close the player must be to product to pick it up
 	public static final float MAX_PRODUCT_PICKUP_DISTANCE = 0.5f;
 	
-	private static final String PLAYER_LOC = "data/models/animated/player/";
-	
-	//animation file locations
-	protected static final String[] STANDING_ANIM = {"stand", PLAYER_LOC + "Idle.md5anim"};
-	protected static final String[] IDLE_CARRY = {"idle_carry", PLAYER_LOC + "IdleCarry.md5anim"};
-	
-	protected static final String[] WALK_ARMS_ANIM = {"walk_arms", PLAYER_LOC + "Walking.md5anim"};
-	protected static final String[] WALK_CARRY = {"walk_carry", PLAYER_LOC + "WalkingCarry.md5anim"};
-	
-	protected static final String[] DRIVING_PALLET_ANIM = {"driving", PLAYER_LOC + "Driving.md5anim"};
-	protected static final String[] PICK_UP = {"pickup", PLAYER_LOC + "Pickup.md5anim"};
-	
-	//protected static final String[] GRAB_ANIM_FILE = {"grab", PLAYER_LOC + "grab.md5anim"};
-	//protected static final String[] WALKING_GRAB = {"walking_grab", PLAYER_LOC + "walking_grab.md5anim"};
-	//protected static final String[] WALKING_BACK_GRAB = {"walking_back_grab", PLAYER_LOC + "walking_back_grab.md5anim"};
-	//protected static final String[] GRAB_PJ = {"grabPJ", PLAYER_LOC + "grab_pj.md5anim"};
-	
-	//index locations of the names and files in above constants
-	protected static final int NAME_INDX = 0;
-	protected static final int FILE_INDX = 1;
-	
 	private VirtualWarehouse warehouseGame;
 	private InputHandler input;
 	
@@ -97,8 +78,8 @@ public class Player extends AnimatedModel {
     
 	public Player(VirtualWarehouse vw) 
 	{
-		super(PLAYER_LOC + "Guy.md5mesh", "player", STANDING_ANIM[NAME_INDX], 
-				STANDING_ANIM[FILE_INDX],	Controller.RT_WRAP, Vector3f.UNIT_X, Vector3f.UNIT_Z,
+		super(Character.PLAYER_LOC + "Guy.md5mesh", "player", Character.STANDING_ANIM[Character.NAME_INDX], 
+				Character.STANDING_ANIM[Character.FILE_INDX],	Controller.RT_WRAP, Vector3f.UNIT_X, Vector3f.UNIT_Z,
 				DEFAULT_UP, new RandomPerson());
 		
 		warehouseGame = vw;
@@ -275,7 +256,7 @@ public class Player extends AnimatedModel {
 	    			grabPalletJack();
 	    			isGrabbing = true;
 	    			inVehicle = true;
-	    			setActiveAnimation(DRIVING_PALLET_ANIM[NAME_INDX], Controller.RT_WRAP, .25f);
+	    			setActiveAnimation(Character.DRIVING_PALLET_ANIM[Character.NAME_INDX], Controller.RT_WRAP, .25f);
     			}
     		}
     		else
@@ -734,15 +715,15 @@ public class Player extends AnimatedModel {
 	 */
 	private void addAnimations()
 	{
-		this.addAnimation(WALK_ARMS_ANIM[NAME_INDX], WALK_ARMS_ANIM[FILE_INDX]);
+		this.addAnimation(Character.WALK_ARMS_ANIM[Character.NAME_INDX], Character.WALK_ARMS_ANIM[Character.FILE_INDX]);
 		
-		this.addAnimation(IDLE_CARRY[NAME_INDX], IDLE_CARRY[FILE_INDX]);
+		this.addAnimation(Character.IDLE_CARRY[Character.NAME_INDX], Character.IDLE_CARRY[Character.FILE_INDX]);
 		
-		this.addAnimation(WALK_CARRY[NAME_INDX], WALK_CARRY[FILE_INDX]);
+		this.addAnimation(Character.WALK_CARRY[Character.NAME_INDX], Character.WALK_CARRY[Character.FILE_INDX]);
 		
-		this.addAnimation(DRIVING_PALLET_ANIM[NAME_INDX],DRIVING_PALLET_ANIM[FILE_INDX]);
+		this.addAnimation(Character.DRIVING_PALLET_ANIM[Character.NAME_INDX],Character.DRIVING_PALLET_ANIM[Character.FILE_INDX]);
 		
-		this.addAnimation(PICK_UP[NAME_INDX],PICK_UP[FILE_INDX]);
+		this.addAnimation(Character.PICK_UP[Character.NAME_INDX],Character.PICK_UP[Character.FILE_INDX]);
 		
 		//this.addAnimation(GRAB_ANIM_FILE[NAME_INDX], GRAB_ANIM_FILE[FILE_INDX]);
 		//this.addAnimation(WALKING_GRAB[NAME_INDX], WALKING_GRAB[FILE_INDX]);
@@ -796,11 +777,11 @@ public class Player extends AnimatedModel {
 	{
 		if(!isGrabbing)
 		{
-			setActiveAnimation(STANDING_ANIM[NAME_INDX], Controller.RT_WRAP, .25f);
+			setActiveAnimation(Character.STANDING_ANIM[Character.NAME_INDX], Controller.RT_WRAP, .25f);
 		}
 		else
 		{
-			setActiveAnimation(IDLE_CARRY[NAME_INDX], Controller.RT_WRAP, .25f);
+			setActiveAnimation(Character.IDLE_CARRY[Character.NAME_INDX], Controller.RT_WRAP, .25f);
 		}
 		
 	}
@@ -819,11 +800,11 @@ public class Player extends AnimatedModel {
 	{
 		if(!isGrabbing)
 		{
-			boolean result = setActiveAnimation(WALK_ARMS_ANIM[NAME_INDX], Controller.RT_WRAP, .25f);
+			boolean result = setActiveAnimation(Character.WALK_ARMS_ANIM[Character.NAME_INDX], Controller.RT_WRAP, .25f);
 		}
 		else
 		{
-			setActiveAnimation(WALK_CARRY[NAME_INDX], Controller.RT_WRAP, .3f);
+			setActiveAnimation(Character.WALK_CARRY[Character.NAME_INDX], Controller.RT_WRAP, .3f);
 		}
 	}
 
