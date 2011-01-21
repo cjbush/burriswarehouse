@@ -10,11 +10,11 @@ public class Npc {
 	private int endingX;
 	private int endingY;
 	
-	Npc(int beginningX, int beginningY, int endingX, int endingY){
-		this.beginningX = beginningX;
-		this.beginningY = beginningY;
-		this.endingX = endingX;
-		this.endingY = endingY;
+	public Npc(int begX, int begY, int endX, int endY){
+		this.beginningX = begX;
+		this.beginningY = begY;
+		this.endingX = endX;
+		this.endingY = endY;
 		
 		path = initPath(this.beginningX, this.beginningY, this.endingX, this.endingY);
 	}
@@ -22,10 +22,10 @@ public class Npc {
 	public LinkedList<Coordinate> initPath(int begX, int begY, int endX, int endY){
 		
 		
-		// do some path logic here.
-		Coordinate newpath = new Coordinate(endY, endY);
+		// do some path logic here. probably a triple loop. yup.
+		Coordinate newCoord = new Coordinate(endY, endY);
 		LinkedList<Coordinate> newlist = new LinkedList<Coordinate>();
-		newlist.add(newpath);
+		newlist.add(newCoord);
 		return newlist;
 		//return path;
 	}
