@@ -10,6 +10,7 @@ public class RandomPerson
 	
 	private String textures[] = new String[numTextures];
 	private Integer count = 0;
+	private Boolean isWhite;
 	
 	public RandomPerson()
 	{
