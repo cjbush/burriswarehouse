@@ -21,6 +21,7 @@ import code.infoicons.InfoIconManager;
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
 import code.model.player.Player;
+import code.npc.logic.Npc;
 import code.research.playback.Grid;
 import code.sound.SoundPlayer;
 import code.vocollect.VocollectHandler;
@@ -112,6 +113,8 @@ public class VirtualWarehouse extends GameState {
 	
 	//the player node
 	private Player playerNode;
+	//auto characters
+	private Npc []characters;
 	
 	//keep track of scoring items
 	private Score score;
@@ -611,6 +614,14 @@ public class VirtualWarehouse extends GameState {
 		}
 		
 		//grid = new Grid(rootNode, this, showGrid);
+		
+		// gotta init the characters...make them. this also
+		// creates the path they should take.
+		characters = new Npc[5];
+		for (int i = 0; i < 5; i++){
+			
+			characters[i] = new Npc(4, 4, 4, 4);
+		}
 	}
  
 	protected void reinit() {
