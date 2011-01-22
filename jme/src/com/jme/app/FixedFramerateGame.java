@@ -158,7 +158,7 @@ public abstract class FixedFramerateGame extends AbstractGame {
             assertDisplayCreated();
 
             timer = Timer.getTimer();
-            setFrameRate(60); //default to 60 fps
+            setFrameRate(30); //default to 60 fps
 
             initGame();
 

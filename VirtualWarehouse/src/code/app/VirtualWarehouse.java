@@ -130,11 +130,8 @@ public class VirtualWarehouse extends GameState {
     //private boolean fullscreen;
     
     // Our camera objects for viewing the scene
-    // fpCam:  the first person camera which is attached to the camNode which is attached 
-    //         to the player (i.e., the camNode moves with the player)
     // tpCam:  the third person camera which is attached to the chaseCam and follows the
     //         player
-    private Camera fpCam;
     private Camera tpCam;
     private CameraNode camNode;
     private ChaseCamera chaseCam;
@@ -186,11 +183,6 @@ public class VirtualWarehouse extends GameState {
     //      update:      To update the game content
     //      render:      To draw the game content
     public static void main(String[] args) {
-//		VirtualWarehouse app = new VirtualWarehouse();
-//		app.setConfigShowMode(ConfigShowMode.AlwaysShow);
-//		app.setConfigShowMode(ConfigShowMode.ShowIfNoConfig);
-//		app.start(); 
-    	
     	//Start the WarehouseTrainer
     	WarehouseTrainer app = new WarehouseTrainer();
 		app.setConfigShowMode(ConfigShowMode.AlwaysShow);
@@ -208,9 +200,6 @@ public class VirtualWarehouse extends GameState {
     	}
     	
     	this.useVocollect = enableTrainingMode;
-    	
-    	initSystem();
-    	initGame();
     }
 
     public DisplaySystem getDisplay() {
@@ -243,10 +232,6 @@ public class VirtualWarehouse extends GameState {
 	
 	public void setSharedMeshManager(SharedMeshManager smm) {
 		sharedMeshManager = smm;
-	}
-	
-	public Camera getFirstPersonCamera() {
-		return fpCam;
 	}
 	
 	public Camera getThirdPersonCamera() {
@@ -463,29 +448,6 @@ public class VirtualWarehouse extends GameState {
 	 */
 	protected void initSystem() {
 
-		//moved to WarehouseTrainer
-//		// store the settings information
-//        width = settings.getWidth();
-//        height = settings.getHeight();
-//        depth = settings.getDepth();
-//        freq = settings.getFrequency();
-//        fullscreen = settings.isFullscreen();
-//        
-//        try {
-//            display = DisplaySystem.getDisplaySystem(settings.getRenderer());
-//            display.setMinStencilBits(8);
-//            display.setMinDepthBits(8);
-//            display.setMinAlphaBits(0);
-//            display.setMinSamples(0);
-//            display.createWindow(width, height, depth, freq, fullscreen);
-//
-//            fpCam = display.getRenderer().createCamera(width, height);
-//            tpCam = display.getRenderer().createCamera(width, height);
-//        } catch (JmeException e) {
-//            logger.log(Level.SEVERE, "Could not create displaySystem", e);
-//            System.exit(1);
-//        }
-
 		MouseInput.get().setCursorVisible(false);
 		
 		initCameras();
@@ -507,20 +469,17 @@ public class VirtualWarehouse extends GameState {
 	{
 		addToLoadingProgress(5, "Creating Cameras...");
 		
-		fpCam = display.getRenderer().createCamera(display.getWidth(), display.getHeight());
 		tpCam = display.getRenderer().createCamera(display.getWidth(), display.getHeight());
 		
         // set the background to blue
         display.getRenderer().setBackgroundColor(ColorRGBA.lightGray.clone());
 
         // initialize the cameras using the correct aspect ratio
-        //fpCam.setFrustum(1f, 1000f, -width/1000f, width/1000f, height/1000f, -height/1000f);
         //tpCam.setFrustum(1f, 1000f, -width/1000f, width/1000f, height/1000f, -height/1000f);
-        fpCam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), 1.0f, 1000.0f);
+        //fpCam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), 1.0f, 1000.0f);
         tpCam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), 1.0f, 1000.0f);
         
         // Signal that we've changed our cameras' frustums.
-        fpCam.update();
         tpCam.update();
 	}
 
@@ -650,11 +609,8 @@ public class VirtualWarehouse extends GameState {
 		playerNode = new Player(this);
 		rootNode.attachChild(playerNode);
 		
-		//attach a first person camera to the player
-		camNode = new CameraNode("camera node", fpCam);
 		playerNode.attachChild(camNode);
 		float yOffset = (((BoundingBox) playerNode.getWorldBound()).yExtent)*3;
-		camNode.setLocalTranslation(-2, yOffset, 0);
 	    playerNode.updateGeometricState(0, true);
 
 	    //attach a third person camera to the player
@@ -673,6 +629,18 @@ public class VirtualWarehouse extends GameState {
 			infoIconManagerNode = new InfoIconManager(this);
 			rootNode.attachChild(infoIconManagerNode);
 		}
+		
+		System.out.println("ENVIRONMENT");
+		System.out.println("ENVIRONMENT");
+		System.out.println("ENVIRONMENT");
+		System.out.println("ENVIRONMENT");
+		System.out.println("ENVIRONMENT");
+		System.out.println("               ");
+		System.out.println("            ");
+		System.out.println("               ");
+		System.out.println("            ");
+		System.out.println("               ");
+		System.out.println("            ");
 	}
 	
     private void buildLighting() {
