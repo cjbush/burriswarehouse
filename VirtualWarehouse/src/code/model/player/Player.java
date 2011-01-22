@@ -61,7 +61,6 @@ public class Player extends AnimatedModel {
 	
 	private Spatial collisionModel;
 	
-	private boolean firstPerson = false;
 	private boolean inVehicle = false;
 	private Vehicle vehicleBeingUsed = null;
 	private boolean hasProduct = false;
@@ -95,11 +94,7 @@ public class Player extends AnimatedModel {
 		updateGeometricState(0, true);
 		
 		//set correct camera for rendering
-		if (firstPerson == true) {
-	        DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getFirstPersonCamera());
-		} else {
-			DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getThirdPersonCamera());
-		}
+		DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getThirdPersonCamera());
 		
 		addAnimations();
 	}
@@ -233,8 +228,6 @@ public class Player extends AnimatedModel {
 		checkVehicleEnterExit(false);
 		
 		checkProductGetDrop();
-		
-		checkCameraSwitch();
 	}
 	
 	/**
@@ -561,30 +554,6 @@ public class Player extends AnimatedModel {
 				
 		currentProduct = null;
 		hasProduct = false;
-	}
-	
-	private void checkCameraSwitch() {
-		//if switch was pressed, we change camera
-		if (KeyBindingManager.getKeyBindingManager().isValidCommand("switch", false)) {
-			firstPerson = !firstPerson;
-			if (firstPerson) {
-		        DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getFirstPersonCamera());
-		        if (!inVehicle)
-		        {
-		        	setupFirstPersonInputHandler();
-		        }
-			} else {
-		        DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getThirdPersonCamera());
-		        if (!inVehicle)
-		        {
-		        	setupThirdPersonInputHandler();
-		        }
-			}
-		}
-	}
-	
-	private void setupFirstPersonInputHandler() {
-		//input = new NodeHandler(this, 3f, 0.5f);
 	}
 	
 	private void setupThirdPersonInputHandler() {

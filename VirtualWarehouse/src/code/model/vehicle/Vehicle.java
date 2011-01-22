@@ -44,6 +44,9 @@ public class Vehicle extends Node {
 	private float acceleration;
 	private float braking;
 	private float turnSpeed;
+	
+	private float lastX;
+	private float lastZ;
 
 	private float maxSpeed = 30;
 	private float minSpeed = 10;
@@ -364,15 +367,21 @@ public class Vehicle extends Node {
     
     public void processCollisions() {
     	
-    	//bounce off the object
+    	velocity /= 2;
+    	
+    	/*
     	if (velocity > -0.5)
     	{
-    		velocity = -0.5f;
+    		velocity = -10f;
+    		System.out.println("velocity is -2f");
     	}
     	else if (velocity < 0.5)
     	{
     		velocity = 0.5f;
+    		System.out.println("velocity is .5f");
     	}
+    	*/
+    	
     }
     
     /**
@@ -381,6 +390,9 @@ public class Vehicle extends Node {
      * @param time the time between frames
      */
     public void updateMovement(float time) {
+    	lastX = this.getLocalTranslation().x;
+    	lastZ = this.getLocalTranslation().z;
+    	
         this.localTranslation.addLocal(this.localRotation.getRotationColumn(2, tempVa)
                 .multLocal(velocity * time));
     }

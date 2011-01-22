@@ -86,7 +86,6 @@ public class PlayerHandler extends InputHandler {
         KeyBindingManager.getKeyBindingManager().set("down", KeyInput.KEY_S);
         KeyBindingManager.getKeyBindingManager().set("left", KeyInput.KEY_A);
         KeyBindingManager.getKeyBindingManager().set("right", KeyInput.KEY_D);
-        KeyBindingManager.getKeyBindingManager().set("switch", KeyInput.KEY_K);
         KeyBindingManager.getKeyBindingManager().set("enter_exit_vehicle", KeyInput.KEY_T);
 		KeyBindingManager.getKeyBindingManager().set("pickup_place_product", KeyInput.KEY_Y);
         

@@ -126,52 +126,6 @@ public class WarehouseTrainer extends FixedFramerateGame {
 		{
 			startInGameState();
 		}
-		
-//		// create a new Thread which displays a LoadingGamestate while something is being computed
-//        Thread t = new Thread(new Runnable() {
-//            public void run() {
-//                // create a LoadingGamestate and attach it
-//                final LoadingGameState loading = new LoadingGameState(10);
-//                GameStateManager.getInstance().attachChild(loading);
-//                loading.setActive(true);
-//                try {
-//                	loading.setProgress(0, "loading...");
-//                	Thread.sleep(100);
-//                   final VirtualWarehouse v = new VirtualWarehouse();
-//                   loading.increment("more...");
-//                   Thread.sleep(100);
-//                   loading.increment("more...");
-//                   Thread.sleep(100);
-//                   loading.increment("more...");
-//                   Thread.sleep(100);
-//                   v.initSystem();
-//                   loading.increment("and more...");
-//                   Thread.sleep(100);
-//                   loading.increment("and more...");
-//                   Thread.sleep(100);
-//                   loading.increment("and more...");
-//                   Thread.sleep(100);
-//                   GameTaskQueueManager.getManager().update(new Callable<Object>() {
-//           			public Object call() throws Exception {
-//           				v.initGame();
-//           				loading.setProgress(1.0f);
-// 	                   Thread.sleep(5000);
-//           				return null;
-//           			}
-//                   });
-//
-//                   
-//                    // all work is done, sleep a bit to let the LoadingGamestate fade out, then detach
-//                    Thread.sleep(3000);
-//                    GameStateManager.getInstance().detachChild(loading);
-//                    v.setActive(true);
-//                    GameStateManager.getInstance().attachChild(v);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//        t.start();
 	}
 
 	protected void initSystem() {
