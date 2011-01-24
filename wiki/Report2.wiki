@@ -30,8 +30,8 @@ This week we migrated our repository to Google Code to provide issue tracking, w
 
 Time and Financial Report
 
-Hours	Week	YTD	+/-		Parts Purchased During Current Week	Cost
+               Hours	Week	YTD +/-		
 Chris Bush	12	12	0			
 Caleb Mays	13	13	+1			
-Dan Jewett	17	17	+5		Weekly Total	$0.00
-Totals	42	42	+6		YTD Total	$0.00
+Dan Jewett	17	17	+5		
+Totals	42	42	+6		
