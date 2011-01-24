@@ -1,0 +1,11 @@
+#summary Report for 1/25 - 1/31
+#labels Phase-Implementation
+
+=Report=
+
+=Meeting Notes / Task Assignments=
+
+  * General - Set up labels for issue tracking; Do code profiling to figure out where resources are being used the most (use TPTP)
+  * Chris - Set up wiki page to match milestones to release dates; Commit code for controller interface
+  * Caleb - Implement meaningful NPC paths using waypoints rather than random movement in the warehouse; Get them moving by 1/31
+  * Dan - Check where NPC's are being placed in the scene graph
