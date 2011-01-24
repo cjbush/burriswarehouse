@@ -1,0 +1,16 @@
+#summary Initially Loading the Virtual Warehouse Project.
+
+= Introduction =
+
+This page describes how to initialize the Eclipse project on your laptop/desktop.
+
+
+= Details =
+
+  # _Download the Project Code_:  The repository may be downloaded using a standard SVN client (e.g. tortoisesvn). The server is [https://burriswarehouse.googlecode.com/svn] and your username is your Google account. The password may be found at [https://code.google.com/hosting/settings], and is randomly generated for security.  If using tortoise for your SVN client, checkout the code in a new folder using RIGHT-CLICK ... SVN Checkout ...
+
+  # _Start Eclipse_:  Start Eclipse and use the new folder you created in step 1 as the root of the Eclipse workspace.
+
+  # _Import the Project_:  Within Eclipse choose File ... import ... General ... Existing Projects Into Workspace and click Next.  Then choose at the root directory the new folder created in step 1 and click OK, then Finish.
+
+  # _Clean Project_:  Within Eclipse choose Project ... Clean ... Clean All Projects, then click OK.
