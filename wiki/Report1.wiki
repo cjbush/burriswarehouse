@@ -7,7 +7,39 @@ This is our first wiki-based weekly report.  As such, it includes only those not
 
 = Report =
 
-None.
+==Summary==
+
+This week we migrated our repository to Google Code to provide issue tracking, wiki functionality, and a public subversion repository. We also began implementation of a data-driven controller interface.
+
+==Chris Bush, Team Leader/Vocollect/Network/Database Developer==
+
+  * Tasks accomplished: Migrated repository to Google Code (see instructional email). Began design and implementation of data-driven controller interface for player. Briefly assisted Caleb with NPC design. Began script to crawl Google Images for product texturing.
+  
+  * Most immediate upcoming tasks: Finish controller interface and web crawler for product texturing.
+
+==Caleb Mays, Software Developer==
+
+  * Tasks accomplished: Designed and Partially implemented Autonomous characters (Npc) class. I worked with Dan to get the autonomous characters actually into the warehouse. I helped Dan find the random pallet-jack that was being loaded right underneath the player. Also, I worked with Dan to find that we were actually initializing the system and game twice.
+
+  * Future tasks researched: Helped Dan begin to fix the collision detection when backing into the wall. I will also perhaps work with Dan a bit on this in the future.
+
+  * Most immediate upcoming tasks: This week I will begin coding a shortest path algorithm so that the characters will move about the warehouse. I hope to be actually finding the path characters should go done by the end of the week, and then have the characters actually moving sometime next week.
+
+==*Dan Jewett, Modeler/Software Developer*==
+
+  * Tasks accomplished: Modified the MD5 class to allow for random textures for the autonomous characters.  Got the SVN working with Google code.  Fixed a lot of small issues, such as extra cameras and lighting.  Found a major problem in that it loaded the whole game twice and solved this issue.  Those were the major things.
+
+  * Research for future tasks: Animation, texturing
+
+  * Most immediate upcoming tasks:  Fix texture problems.  Figure out other ways to make the game run much faster.  Increase clutter in warehouse.
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||12||12||0|| || || ||
+||Caleb Mays||13||13||+1|| || || ||
+||Dan Jewett||17||17||+5|| ||*Weekly Total*||$0.00||
+||*Totals*||42||42||+6|| ||*YTD Total*||$0.00||
 
 = Meeting Notes/Task Assignments =
 
