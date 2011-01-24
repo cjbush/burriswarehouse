@@ -1,0 +1,20 @@
+#summary Weekly Report from Jan 17th to Jan 24th.
+
+= Introduction =
+
+This is our first wiki-based weekly report.  As such, it includes only those notes which which we took on our first advisor meeting on 24 Jan.
+
+
+= Report =
+
+None.
+
+= Meeting Notes/Task Assignments =
+
+* _Chris_ - outline specific tasks (designing, scheduling roll-out, etc), data-driven interface, look into profiling.
+
+* _Caleb_ - autonomous characters, and helping Chris whenever possible.
+
+* _Dan_ - autonomous characters (aesthetic design) 
+
+Momentum is crucial. Let's start rolling.
