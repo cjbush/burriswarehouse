@@ -11,10 +11,10 @@ None.
 
 = Meeting Notes/Task Assignments =
 
-* _Chris_ - outline specific tasks (designing, scheduling roll-out, etc), data-driven interface, look into profiling.
++ _Chris_ - outline specific tasks (designing, scheduling roll-out, etc), data-driven interface, look into profiling.
 
-* _Caleb_ - autonomous characters, and helping Chris whenever possible.
++ _Caleb_ - autonomous characters, and helping Chris whenever possible.
 
-* _Dan_ - autonomous characters (aesthetic design) 
++ _Dan_ - autonomous characters (aesthetic design) 
 
 Momentum is crucial. Let's start rolling.
