@@ -8,5 +8,5 @@ Rather than email progress reports to the team leader, and then on to our adviso
 = Details =
 
 Add your content here.  Format your content with:
-  * Jan17-24 [JanSeventeenTwentyFour]
+  * Jan17-24 [Report1]
   * Jan25-31
