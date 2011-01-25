@@ -32,9 +32,9 @@ public class WarehouseChaseCam extends ChaseCamera {
         chaserProps.put(ChaseCamera.PROP_ENABLESPRING, "true");
         chaserProps.put(ChaseCamera.PROP_DAMPINGK, "10.0");
         chaserProps.put(ChaseCamera.PROP_SPRINGK, "25.0");
-        chaserProps.put(ChaseCamera.PROP_MAXDISTANCE, "120.0");
+        chaserProps.put(ChaseCamera.PROP_MAXDISTANCE, "10.0");
         //chaserProps.put(ChaseCamera.PROP_MAXDISTANCE, "5.0");
-        chaserProps.put(ChaseCamera.PROP_MINDISTANCE, "0.0");
+        chaserProps.put(ChaseCamera.PROP_MINDISTANCE, "2");
         chaserProps.put(ChaseCamera.PROP_INITIALSPHERECOORDS, new Vector3f(3.0f, 0f, FastMath.DEG_TO_RAD * 30.000002f));
         chaserProps.put(ChaseCamera.PROP_STAYBEHINDTARGET, "true");
         chaserProps.put(ChaseCamera.PROP_TARGETOFFSET, new Vector3f(0f, ((BoundingBox) target.getWorldBound()).yExtent * 1.5f, 0f));

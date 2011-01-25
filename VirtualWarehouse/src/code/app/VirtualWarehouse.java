@@ -474,23 +474,14 @@ public class VirtualWarehouse extends GameState {
 
 	private void initCameras() {
 		addToLoadingProgress(5, "Creating Cameras...");
+		tpCam = display.getRenderer().createCamera(display.getWidth(), display.getHeight());
+        display.getRenderer().setBackgroundColor(ColorRGBA.lightGray.clone());
 
-		tpCam = display.getRenderer().createCamera(display.getWidth(),
-				display.getHeight());
-
-		// set the background to blue
-		display.getRenderer().setBackgroundColor(ColorRGBA.lightGray.clone());
-
-		// initialize the cameras using the correct aspect ratio
-		// tpCam.setFrustum(1f, 1000f, -width/1000f, width/1000f, height/1000f,
-		// -height/1000f);
-		// fpCam.setFrustumPerspective(45.0f, (float)display.getWidth() /
-		// (float)display.getHeight(), 1.0f, 1000.0f);
-		tpCam.setFrustumPerspective(45.0f, (float) display.getWidth()
-				/ (float) display.getHeight(), 1.0f, 1000.0f);
-
-		// Signal that we've changed our cameras' frustums.
-		tpCam.update();
+        // initialize the cameras using the correct aspect ratio
+        tpCam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), .1f, 1000.0f);
+        
+        // Signal that we've changed our cameras' frustums.
+        tpCam.update();
 	}
 
 	/**
@@ -515,7 +506,7 @@ public class VirtualWarehouse extends GameState {
 		font = BitmapFontLoader.loadDefaultFont();
 
 		// create the HUDs
-		minimapHUD = new MinimapHUD(this);
+		//minimapHUD = new MinimapHUD(this);
 		debugHUD = new DebugHUD();
 		messageBox = new MessageBox(font);
 		infoBar = new InformationBar(this, font);
@@ -647,9 +638,7 @@ public class VirtualWarehouse extends GameState {
 		playerNode = new Player(this);
 		rootNode.attachChild(playerNode);
 
-		playerNode.attachChild(camNode);
-		float yOffset = (((BoundingBox) playerNode.getWorldBound()).yExtent) * 3;
-		playerNode.updateGeometricState(0, true);
+	    playerNode.updateGeometricState(0, true);
 
 		// attach a third person camera to the player
 		chaseCam = new WarehouseChaseCam(tpCam, playerNode, this);
@@ -666,18 +655,6 @@ public class VirtualWarehouse extends GameState {
 			infoIconManagerNode = new InfoIconManager(this);
 			rootNode.attachChild(infoIconManagerNode);
 		}
-
-		System.out.println("ENVIRONMENT");
-		System.out.println("ENVIRONMENT");
-		System.out.println("ENVIRONMENT");
-		System.out.println("ENVIRONMENT");
-		System.out.println("ENVIRONMENT");
-		System.out.println("               ");
-		System.out.println("            ");
-		System.out.println("               ");
-		System.out.println("            ");
-		System.out.println("               ");
-		System.out.println("            ");
 	}
 
 	private void buildLighting() {

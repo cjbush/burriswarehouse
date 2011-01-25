@@ -3,8 +3,10 @@ package code.npc.logic;
 import java.util.LinkedList;
 
 import com.jme.math.Vector3f;
+import com.jme.scene.Controller;
 
 import code.model.AnimatedModel;
+import code.model.player.Character;
 import code.model.player.RandomPerson;
 
 

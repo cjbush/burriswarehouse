@@ -187,7 +187,10 @@ public class MeshImporter extends ResourceImporter<IMD5Node> {
 					this.reader.nextToken();
 					this.texture = this.reader.sval;
 					
-					this.texture = rp.renameTexture(this.texture);
+					if (rp != null)
+					{
+						this.texture = rp.renameTexture(this.texture);
+					}
 					
 				} else if(this.reader.sval.equals("numverts")) {
 					this.reader.nextToken();

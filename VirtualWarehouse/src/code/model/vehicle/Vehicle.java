@@ -367,9 +367,6 @@ public class Vehicle extends Node {
     
     public void processCollisions() {
     	
-    	velocity /= 2;
-    	
-    	/*
     	if (velocity > -0.5)
     	{
     		velocity = -10f;
@@ -380,7 +377,6 @@ public class Vehicle extends Node {
     		velocity = 0.5f;
     		System.out.println("velocity is .5f");
     	}
-    	*/
     	
     }
     
