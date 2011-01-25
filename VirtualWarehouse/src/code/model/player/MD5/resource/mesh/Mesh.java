@@ -285,8 +285,6 @@ public class Mesh extends TriMesh implements IMesh {
 		if(last < 0) last = file.length();
 		File path = new File(file.substring(0, last));
 		
-		System.out.println(file);
-		
 		try {
 			if(path != null) {
 				SimpleResourceLocator locator = new SimpleResourceLocator(path.toURI().toURL());

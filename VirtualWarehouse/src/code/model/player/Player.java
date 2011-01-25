@@ -79,19 +79,15 @@ public class Player extends AnimatedModel {
 	{
 		super(Character.PLAYER_LOC + "Guy.md5mesh", "player", Character.STANDING_ANIM[Character.NAME_INDX], 
 				Character.STANDING_ANIM[Character.FILE_INDX],	Controller.RT_WRAP, Vector3f.UNIT_X, Vector3f.UNIT_Z,
-				DEFAULT_UP, new RandomPerson());
+				DEFAULT_UP, null);
 		
 		warehouseGame = vw;
-		this.setName("Player");
 		
 		collisionModel = this;
-		//loadModel();
 		setupThirdPersonInputHandler();
 		
 		getLocalTranslation().set(INITIAL_LOCATION.clone());
 		lastPosition.set(INITIAL_LOCATION.clone());
-		
-		updateGeometricState(0, true);
 		
 		//set correct camera for rendering
 		DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getThirdPersonCamera());

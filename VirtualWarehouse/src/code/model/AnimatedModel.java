@@ -274,7 +274,7 @@ public abstract class AnimatedModel extends Node
 			}
 			else
 			{
-				importer.load(modelMesh, meshName, modelAnim, animName, repeatType,randomPerson);
+				importer.load(modelMesh, meshName, modelAnim, animName, repeatType, randomPerson);
 			}
 
 			float scaleFloat = .17f;

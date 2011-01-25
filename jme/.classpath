@@ -17,6 +17,5 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/jme-colladabinding.jar"/>
 	<classpathentry kind="lib" path="lib/swt/windows/swt.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/MD5Importer-jME2.0-v1.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

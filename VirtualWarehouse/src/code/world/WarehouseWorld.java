@@ -164,7 +164,7 @@ public class WarehouseWorld extends Node {
 
 		
 		//add tarp walls
-		addTarpWalls();
+		//addTarpWalls();
 		
 		if (loadVehicles)
 		{
@@ -412,13 +412,6 @@ public class WarehouseWorld extends Node {
 					object.setLocalTranslation(new Vector3f(translationX, translationY, translationZ));
 					object.setLocalRotation(new Quaternion(rotationX, rotationY, rotationZ, rotationW));
 					object.setName(name);
-					
-					List<Spatial> children = object.getChildren();
-					for(int i=0; i<children.size(); i++){
-						Node n = (Node) children.get(i);
-						n.setModelBound(new BoundingBox());
-						n.updateModelBound();
-					}
 					
 					collidables.attachChild(object);
 					object.updateWorldBound();
