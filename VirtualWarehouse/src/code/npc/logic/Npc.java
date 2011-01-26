@@ -1,5 +1,6 @@
 package code.npc.logic;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import com.jme.math.Vector3f;
@@ -16,46 +17,65 @@ public class Npc extends AnimatedModel{
 	 */
 	private static final long serialVersionUID = -2393676632933569642L;
 
-	private LinkedList<Coordinate> path;
+	private ArrayList<Coordinate> path;
+	private int counter = 0;
 	
 	// this beginning and ending coordinate values are in grid-space; NOT real space. All values will be
 	// ints, and not floats, at least for assignment, because for the translation, we're just going
 	// go get the grid node at begX, begY, and translate it on the fly.
-	private int beginningX;
-	private int beginningY;
-	private int endingX;
-	private int endingY;
+	private float beginningX;
+	private float beginningZ;
+	//private float endingX;
+	//private float endingY;
 	
-	public Npc(int begX, int begY, int endX, int endY, String filePath, String folderPath, String defaultAnimName,
-			String animFilePath, int repeatType, Vector3f forwardVector, Vector3f rightVector, Vector3f upVector,
-			RandomPerson randomPerson){
-		super(filePath, folderPath, defaultAnimName, animFilePath, repeatType, forwardVector, rightVector, DEFAULT_UP, randomPerson);
-		this.beginningX = begX;
-		this.beginningY = begY;
-		this.endingX = endX;
-		this.endingY = endY;
-		
-		getLocalTranslation().set(new Vector3f(begX, .1f, begY).clone());
-		
-		path = initPath(this.beginningX, this.beginningY, this.endingX, this.endingY);
+
+	
+	public Npc(float x, float z, String filePath, String folderPath,
+			String defaultAnimName, String animFilePath, int rtWrap,
+			Vector3f forwardVector, Vector3f rightVector, Vector3f defaultUp,
+			RandomPerson randomPerson, ArrayList<Coordinate> ll) {
+		// TODO Auto-generated constructor stub
+		super(filePath, folderPath, defaultAnimName, animFilePath, rtWrap, forwardVector, rightVector, DEFAULT_UP, randomPerson);
+		this.beginningX = x;
+		this.beginningZ = z;
+		this.path = ll;
+		getLocalTranslation().set(new Vector3f(this.beginningX, .1f, this.beginningZ).clone());
+		addAnimations();
 	}
-	
-	public LinkedList<Coordinate> initPath(int begX, int begY, int endX, int endY){
-		
-		
-		// do some path logic here. probably a triple loop. yup.
-		Coordinate newCoord = new Coordinate(endY, endY);
-		LinkedList<Coordinate> newlist = new LinkedList<Coordinate>();
-		newlist.add(newCoord);
-		return newlist;
-		//return path;
-	}
-	
+
 	public void move(){
-		// something like this. then get the location, and move the thing.
-		// if the path is out of moves to do, then we're going to have to create another new
-		// beginning and ending X,Y to be able to make another path to go.
-		//path.remove();
+		
+			Coordinate cd = path.get(this.counter);
+			
+			
+			// so this is the place I want to go. Therefore,
+			// if I'm at the place I want to go, then I can go onto the next counter.
+			float x = cd.getX();
+			float z = cd.getZ();
+			float myX = this.getLocalTranslation().getX();
+			float myZ = this.getLocalTranslation().getZ();
+			
+//			if ((myX == x) && (myZ == z)){
+//				this.counter++;
+//			}
+//			else if (myX < x){
+//				this.setLocalTranslation(myX + .1f, .1f, myZ);
+//			}
+//			else if (myX > x){
+//				this.setLocalTranslation(myX - .1f, .1f, myZ);
+//			}			
+//			else if (myZ < z){
+//				this.setLocalTranslation(myX, .1f, myZ + .1f);
+//			}
+//			else if (myZ > z){
+//				this.setLocalTranslation(myX, .1f, myZ - .1f);
+//			}
+			
+			
+			// need to reset the counter to make the path look cyclical.
+			if (counter == path.size()){
+				counter = 0;
+			}		
 	}
 
 	@Override
@@ -134,5 +154,22 @@ public class Npc extends AnimatedModel{
 	public void translateUpAnim() {
 		
 		
+	}
+	private void addAnimations()
+	{
+		this.addAnimation(Character.WALK_ARMS_ANIM[Character.NAME_INDX], Character.WALK_ARMS_ANIM[Character.FILE_INDX]);
+		
+		this.addAnimation(Character.IDLE_CARRY[Character.NAME_INDX], Character.IDLE_CARRY[Character.FILE_INDX]);
+		
+		this.addAnimation(Character.WALK_CARRY[Character.NAME_INDX], Character.WALK_CARRY[Character.FILE_INDX]);
+		
+		this.addAnimation(Character.DRIVING_PALLET_ANIM[Character.NAME_INDX],Character.DRIVING_PALLET_ANIM[Character.FILE_INDX]);
+		
+		this.addAnimation(Character.PICK_UP[Character.NAME_INDX],Character.PICK_UP[Character.FILE_INDX]);
+		
+		//this.addAnimation(GRAB_ANIM_FILE[NAME_INDX], GRAB_ANIM_FILE[FILE_INDX]);
+		//this.addAnimation(WALKING_GRAB[NAME_INDX], WALKING_GRAB[FILE_INDX]);
+		//this.addAnimation(WALKING_BACK_GRAB[NAME_INDX], WALKING_BACK_GRAB[FILE_INDX]);
+		//this.addAnimation(GRAB_PJ[NAME_INDX], GRAB_PJ[FILE_INDX]);
 	}
 }

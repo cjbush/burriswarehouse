@@ -1,11 +1,18 @@
 package code.npc.logic;
 
 public class Coordinate {
-	int X;
-	int Y;
+	private float X;
+	private float Z;
 	
-	Coordinate(int x, int y){
+	public Coordinate(float x, float z){
 		this.X = x;
-		this.Y = y;		
+		this.Z = z;		
+	}
+	
+	public float getX(){
+		return X;
+	}
+	public float getZ(){
+		return Z;
 	}
 }
