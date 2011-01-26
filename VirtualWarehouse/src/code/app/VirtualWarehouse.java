@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.logging.Logger;
@@ -27,6 +28,7 @@ import code.model.SharedMeshManager;
 import code.model.player.Character;
 import code.model.player.Player;
 import code.model.player.RandomPerson;
+import code.npc.logic.Coordinate;
 import code.npc.logic.Npc;
 import code.research.playback.Grid;
 import code.research.playback.GridNode;
@@ -566,6 +568,10 @@ public class VirtualWarehouse extends GameState {
 		score = new Score(scoringTimer);
 		infoBar.setScoringTimer(scoringTimer);
 
+		// build the autonomous characters. 
+		buildAutoCharacters(numCharacters);
+		
+		
 		// start the game
 		makeScene();
 		paused = false;
@@ -578,7 +584,7 @@ public class VirtualWarehouse extends GameState {
 
 		// gotta init the characters...make them. this also
 		// creates the path they should take.
-		buildAutoCharacters(numCharacters);
+		
 	}
 
 	protected void reinit() {
@@ -594,7 +600,7 @@ public class VirtualWarehouse extends GameState {
 	}
 
 	private void buildAutoCharacters(int numberCharacters) {
-		characters = new Npc[numberCharacters];
+		
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
@@ -603,12 +609,27 @@ public class VirtualWarehouse extends GameState {
 			Connection con = DriverManager.getConnection(url, "warehouse",
 					"vwburr15");
 			Statement stmt = con.createStatement();
-			String query = "select * from AutoPickCoords where AutoPickJobID = ANY(select ID from AutoPickJobs);";
+			Statement stmt2 = con.createStatement();
+			
+			String query2 = "select ID from AutoPickJobs";
+			stmt2.executeQuery(query2);
+			ResultSet result2 = stmt2.getResultSet();
+			
+			int numCharacters;
+			if (result2.last()){
+				numCharacters = result2.getInt("ID");
+				characters = new Npc[numCharacters];
+			}
 			// do it.
-			// System.out.println(query);
+			String query = "select * from AutoPickCoords where AutoPickJobID = ANY(select ID from AutoPickJobs);";
 			stmt.executeQuery(query);
 			// get the results
 			ResultSet result = stmt.getResultSet();
+			
+			for(int i = 0; result.next(); i++){
+				float x = result.getFloat("XCoord");
+				float y = result.getFloat("YCoord");			
+			}
 
 			con.close();
 
@@ -616,7 +637,8 @@ public class VirtualWarehouse extends GameState {
 
 			e.printStackTrace();
 		}
-
+		
+		
 		for (int i = 0; i < characters.length; i++) {
 
 			characters[i] = new Npc(FastMath.nextRandomInt(5, 15), FastMath
