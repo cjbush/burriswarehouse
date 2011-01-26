@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -376,9 +377,9 @@ public class VirtualWarehouse extends GameState {
 
 			if (world.getRoomManager() != null) {
 				world.getRoomManager().findCurrentRoom(); // needs to be called
-															// before the
-															// infobar is
-															// updated
+				// before the
+				// infobar is
+				// updated
 				if (optimizeVisibleRooms) {
 					world.getRoomManager().optimizeAttachedRooms();
 				}
@@ -422,6 +423,10 @@ public class VirtualWarehouse extends GameState {
 		} else {
 			Node arrow = this.getArrowNode();
 			// arrow.setLocalScale(0f);
+		}
+		
+		for (int i = 0; i < characters.length; i++){
+			characters[i].move();
 		}
 
 	}
@@ -476,14 +481,16 @@ public class VirtualWarehouse extends GameState {
 
 	private void initCameras() {
 		addToLoadingProgress(5, "Creating Cameras...");
-		tpCam = display.getRenderer().createCamera(display.getWidth(), display.getHeight());
-        display.getRenderer().setBackgroundColor(ColorRGBA.lightGray.clone());
+		tpCam = display.getRenderer().createCamera(display.getWidth(),
+				display.getHeight());
+		display.getRenderer().setBackgroundColor(ColorRGBA.lightGray.clone());
 
-        // initialize the cameras using the correct aspect ratio
-        tpCam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), .1f, 1000.0f);
-        
-        // Signal that we've changed our cameras' frustums.
-        tpCam.update();
+		// initialize the cameras using the correct aspect ratio
+		tpCam.setFrustumPerspective(45.0f, (float) display.getWidth()
+				/ (float) display.getHeight(), .1f, 1000.0f);
+
+		// Signal that we've changed our cameras' frustums.
+		tpCam.update();
 	}
 
 	/**
@@ -508,7 +515,7 @@ public class VirtualWarehouse extends GameState {
 		font = BitmapFontLoader.loadDefaultFont();
 
 		// create the HUDs
-		//minimapHUD = new MinimapHUD(this);
+		// minimapHUD = new MinimapHUD(this);
 		debugHUD = new DebugHUD();
 		messageBox = new MessageBox(font);
 		infoBar = new InformationBar(this, font);
@@ -568,10 +575,9 @@ public class VirtualWarehouse extends GameState {
 		score = new Score(scoringTimer);
 		infoBar.setScoringTimer(scoringTimer);
 
-		// build the autonomous characters. 
+		// build the autonomous characters.
 		buildAutoCharacters(numCharacters);
-		
-		
+
 		// start the game
 		makeScene();
 		paused = false;
@@ -584,7 +590,7 @@ public class VirtualWarehouse extends GameState {
 
 		// gotta init the characters...make them. this also
 		// creates the path they should take.
-		
+
 	}
 
 	protected void reinit() {
@@ -600,35 +606,60 @@ public class VirtualWarehouse extends GameState {
 	}
 
 	private void buildAutoCharacters(int numberCharacters) {
-		
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			 String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
-			//String url = "jdbc:mysql://localhost:3306/vwburr";
+			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
+			// String url = "jdbc:mysql://localhost:3306/vwburr";
 			Connection con = DriverManager.getConnection(url, "warehouse",
 					"vwburr15");
 			Statement stmt = con.createStatement();
-			Statement stmt2 = con.createStatement();
-			
-			String query2 = "select ID from AutoPickJobs";
-			stmt2.executeQuery(query2);
-			ResultSet result2 = stmt2.getResultSet();
-			
-			int numCharacters;
-			if (result2.last()){
-				numCharacters = result2.getInt("ID");
-				characters = new Npc[numCharacters];
-			}
-			// do it.
-			String query = "select * from AutoPickCoords where AutoPickJobID = ANY(select ID from AutoPickJobs);";
+
+			String query = "select ID from AutoPickJobs ORDER BY ID desc;";
 			stmt.executeQuery(query);
-			// get the results
 			ResultSet result = stmt.getResultSet();
-			
-			for(int i = 0; result.next(); i++){
-				float x = result.getFloat("XCoord");
-				float y = result.getFloat("YCoord");			
+
+			// I simply want to know how many characters I need to make.
+			result.next();
+			int numCharacters = result.getInt("ID");
+			characters = new Npc[numCharacters];
+
+			// do it.
+
+			/*
+			 * so. here's the deal. This simply looks at the characters.length,
+			 * which is how many characters I want to make (it also happens to
+			 * be how many paths I want to create. Then, we look to see how many
+			 * items are in each path (query2). From there, we simply look
+			 * through that list and get the X and Z(Y) locations that we need.
+			 * We put those into an array list, and then get them into the
+			 * people's information through the constructor.
+			 */
+			for (int i = 0; i < characters.length; i++) {
+				ArrayList<Coordinate> ll = new ArrayList<Coordinate>();
+				Statement stmt2 = con.createStatement();
+				String query2 = "select * from AutoPickCoords where AutoPickJobID = "
+						+ "ANY(select ID from AutoPickJobs where AutoPickJobID = "
+						+ (i + 1) + ");";
+				stmt2.execute(query2);
+				ResultSet result2 = stmt2.getResultSet();
+
+				float x, z;
+				while (result2.next()) {
+					x = result2.getFloat("XCoord");
+					z = result2.getFloat("YCoord");
+					Coordinate cd = new Coordinate(x, z);
+					ll.add(cd);
+				}
+				characters[i] = new Npc(ll.get(0).getX(), ll.get(0).getZ(),
+						Character.PLAYER_LOC + "Guy.md5mesh", "Character" + i,
+						Character.STANDING_ANIM[Character.NAME_INDX],
+						Character.STANDING_ANIM[Character.FILE_INDX],
+						Controller.RT_WRAP, Vector3f.UNIT_X, Vector3f.UNIT_Z,
+						code.model.AnimatedModel.DEFAULT_UP,
+						new RandomPerson(), ll);
+				rootNode.attachChild(characters[i]);
+
 			}
 
 			con.close();
@@ -636,20 +667,6 @@ public class VirtualWarehouse extends GameState {
 		} catch (Exception e) {
 
 			e.printStackTrace();
-		}
-		
-		
-		for (int i = 0; i < characters.length; i++) {
-
-			characters[i] = new Npc(FastMath.nextRandomInt(5, 15), FastMath
-					.nextRandomInt(0, -10), 4, 4, Character.PLAYER_LOC
-					+ "Guy.md5mesh", "Character" + i,
-					Character.STANDING_ANIM[Character.NAME_INDX],
-					Character.STANDING_ANIM[Character.FILE_INDX],
-					Controller.RT_WRAP, Vector3f.UNIT_X, Vector3f.UNIT_Z,
-					code.model.AnimatedModel.DEFAULT_UP, new RandomPerson());
-
-			rootNode.attachChild(characters[i]);
 		}
 	}
 
@@ -660,7 +677,7 @@ public class VirtualWarehouse extends GameState {
 		playerNode = new Player(this);
 		rootNode.attachChild(playerNode);
 
-	    playerNode.updateGeometricState(0, true);
+		playerNode.updateGeometricState(0, true);
 
 		// attach a third person camera to the player
 		chaseCam = new WarehouseChaseCam(tpCam, playerNode, this);
