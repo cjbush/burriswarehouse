@@ -9,3 +9,10 @@
   * Chris - Set up wiki page to match milestones to release dates; Commit code for controller interface
   * Caleb - Implement meaningful NPC paths using waypoints rather than random movement in the warehouse; Get them moving by 1/31
   * Dan - Check where NPC's are being placed in the scene graph
+
+
+Caleb Mays, Software Developer¶
+
+Tasks accomplished: Implemented the way point system with Npcs. Characters are now walking and moving through the warehouse.
+Future tasks researched: 
+Most immediate upcoming tasks: 
