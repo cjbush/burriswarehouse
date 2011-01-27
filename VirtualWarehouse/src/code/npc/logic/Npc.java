@@ -3,6 +3,8 @@ package code.npc.logic;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+import com.jme.math.FastMath;
+import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 import com.jme.scene.Controller;
 
@@ -19,6 +21,7 @@ public class Npc extends AnimatedModel{
 
 	private ArrayList<Coordinate> path;
 	private int counter = 0;
+	private boolean walking = false;
 	
 	// this beginning and ending coordinate values are in grid-space; NOT real space. All values will be
 	// ints, and not floats, at least for assignment, because for the translation, we're just going
@@ -53,29 +56,45 @@ public class Npc extends AnimatedModel{
 			float x = cd.getX();
 			float z = cd.getZ();
 			float myX = this.getLocalTranslation().getX();
-			float myZ = this.getLocalTranslation().getZ();
+			float myZ = this.getLocalTranslation().getZ();						
 			
-//			if ((myX == x) && (myZ == z)){
-//				this.counter++;
-//			}
-//			else if (myX < x){
-//				this.setLocalTranslation(myX + .1f, .1f, myZ);
-//			}
-//			else if (myX > x){
-//				this.setLocalTranslation(myX - .1f, .1f, myZ);
-//			}			
-//			else if (myZ < z){
-//				this.setLocalTranslation(myX, .1f, myZ + .1f);
-//			}
-//			else if (myZ > z){
-//				this.setLocalTranslation(myX, .1f, myZ - .1f);
-//			}
+			float direction = -(FastMath.atan2(myZ-z, myX-x));
+			setLocalRotation(new Quaternion().fromAngleAxis(direction, Vector3f.UNIT_Y));
+			if ((Math.abs(myX-x) < .1) && (Math.abs(myZ-z) < .1)){
+				this.counter++;
+			}
+			
+			if ((myX < x) && (Math.abs(myX-x) > .1)){
+				walking = true;
+				this.setLocalTranslation(myX + .06f, .1f, myZ);
+				
+			}
+			else if ((myX > x) && (Math.abs(myX-x) > .1)){
+				walking = true;
+				this.setLocalTranslation(myX - .06f, .1f, myZ);
+			}	
+			
+			if ((myZ < z)&& Math.abs(myZ-z) > .1){
+				walking = true;
+				this.setLocalTranslation(myX, .1f, myZ + .06f);
+			}
+			else if ((myZ > z)&& Math.abs(myZ-z) > .1){
+				walking = true;
+				this.setLocalTranslation(myX, .1f, myZ - .06f);
+			}
 			
 			
 			// need to reset the counter to make the path look cyclical.
 			if (counter == path.size()){
 				counter = 0;
 			}		
+			if(!walking){
+				//System.out.println("Stationary.");
+				stationaryAnim();
+			}
+			else{
+				translateForwardAnim();
+			}
 	}
 
 	@Override
@@ -116,7 +135,7 @@ public class Npc extends AnimatedModel{
 
 	@Override
 	public void stationaryAnim() {
-		
+		setActiveAnimation(Character.STANDING_ANIM[Character.NAME_INDX], Controller.RT_WRAP, .25f);
 		
 	}
 
@@ -135,7 +154,7 @@ public class Npc extends AnimatedModel{
 	@Override
 	public void translateForwardAnim() {
 		
-		
+		setActiveAnimation(Character.WALK_ARMS_ANIM[Character.NAME_INDX], Controller.RT_WRAP, .25f);
 	}
 
 	@Override
