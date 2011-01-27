@@ -26,5 +26,3 @@
 
 
 ==Time and Financial Report==
-
-||*Hours*||*Week*||*YTD*||*+/-*|
