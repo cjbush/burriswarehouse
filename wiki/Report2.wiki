@@ -14,5 +14,7 @@
 =Caleb Mays, Software Developer=
 
 Tasks accomplished: Implemented the way point system with Npcs. Characters are now walking and moving through the warehouse.
+
 Future tasks researched: 
+
 Most immediate upcoming tasks: 
