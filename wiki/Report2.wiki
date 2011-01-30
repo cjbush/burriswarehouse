@@ -15,9 +15,9 @@
 
    * Tasks accomplished: Implemented the way point system with Npcs. Characters are now walking and moving through the warehouse.
 
-   * Future tasks researched: 
+   * Future tasks researched: Spent a few minutes looking at collision detection issues. 
 
-   * Most immediate upcoming tasks: 
+   * Most immediate upcoming tasks: Two things: Finish entering paths and way-points so that a reasonable number of characters populate the warehouse, and look into collision detection problems, specifically when riding a pallet jack.  
 
 
 
