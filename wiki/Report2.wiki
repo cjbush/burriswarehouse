@@ -22,9 +22,9 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished:
-  * Future tasks researched:
-  * Most immediate upcoming tasks:
+  * Tasks accomplished: Profiled and debugged application to discover major performance issue and continued work on data-driven controller interface.
+  * Future tasks researched: Researched collision detection in order to resolve performance issue.
+  * Most immediate upcoming tasks: Assist with collision detection fix and finish controller interface by 2/7.
 
 ==Time and Financial Report==
 
