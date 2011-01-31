@@ -194,7 +194,7 @@ public class Player extends AnimatedModel {
 
 		//check for collisions
         delta.set(collisionModel.getLocalTranslation().subtract(lastPosition));
-		checkForCollision();
+		//checkForCollision();
 		
 		//first try at collision detection
 		//check for collisions between player and walls/solid objects
