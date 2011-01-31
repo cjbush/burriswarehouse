@@ -29,9 +29,9 @@
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush||x||x||x|| || || ||
+||Chris Bush||10||22||-2|| || || ||
 ||Caleb Mays||12||25||+1|| || || ||
-||Dan Jewett||9||28||+4|| ||*Weekly Total*||$0.00||
+||Dan Jewett||10||29||+5|| ||*Weekly Total*||$0.00||
 ||*Totals*||x||54||+5|| ||*YTD Total*||$0.00||
 
 
