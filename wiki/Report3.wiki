@@ -1,0 +1,39 @@
+#summary Report for 2/1-2/7
+#labels Phase-Implementation
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished: 
+   * Future tasks researched:
+   * Most immediate upcoming tasks:  
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished:
+   * Future tasks researched: 
+   * Most immediate upcoming tasks: 
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Future tasks researched: 
+  * Most immediate upcoming tasks: 
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||x||22||-2|| || || ||
+||Caleb Mays||x||25||+1|| || || ||
+||Dan Jewett||x||29||+5|| ||*Weekly Total*||$0.00||
+||*Totals*||x||76||+4|| ||*YTD Total*||$0.00||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - Estimate time left on tasks so we can get a big picture view of time estimates. Finish by Wednesday 2/2/11
+  * Chris - 
+  * Caleb - 
+  * Dan - 
