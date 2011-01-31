@@ -22,7 +22,7 @@
 
 =Dan Jewett, Modeler/Software Developer=
 
-   * Tasks accomplished: Searched through code trying to figure out what goes on behind the scenes to fix the texture problems.  Worked with Dr. Shomper trying to figure out problems.  Found out it is in the rendering of our models.  Continue tweaking NPC's.  Now models are "black and white" and not mixed.  Other changes within RandomPerson class.  Adding more variations of the textures.
+   * Tasks accomplished: Searched through code trying to figure out what goes on behind the scenes to fix the texture problems.  Worked with Dr. Shomper trying to figure out problems.  Found out it is in the rendering of our game.  Continue tweaking NPC's.  Now models are "black and white" and not mixed.  Other changes within RandomPerson class.  Adding more variations of the textures.
 
    * Future tasks researched: Rendering, Animation, Texturing.
 
