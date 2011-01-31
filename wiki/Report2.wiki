@@ -20,7 +20,13 @@
    * Most immediate upcoming tasks: Two things: Finish entering paths and way-points so that a reasonable number of characters populate the warehouse, and look into collision detection problems, specifically when riding a pallet jack.  
 
 
+=Dan Jewett, Modeler/Software Developer=
 
+   * Tasks accomplished: Searched through code trying to figure out what goes on behind the scenes to fix the texture problems.  Worked with Dr. Shomper trying to figure out problems.  Found out it is in the rendering of our models.  Continue tweaking NPC's.  Now models are "black and white" and not mixed.  Other changes within RandomPerson class.  Adding more variations of the textures.
+
+   * Future tasks researched: Rendering, Animation, Texturing.
+
+   * Most immediate upcoming tasks: Fix rendering problems.  Figure out other ways to make the game run much faster.  Increase clutter in warehouse.  Finalize the variations for textures.
 
 
 
