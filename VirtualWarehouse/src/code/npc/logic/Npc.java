@@ -46,6 +46,9 @@ public class Npc extends AnimatedModel {
 		getLocalTranslation().set(
 				new Vector3f(this.beginningX, .1f, this.beginningZ).clone());
 		addAnimations();
+		
+		
+		setLocalScale(new Vector3f(randomPerson.weight,randomPerson.weight,randomPerson.height));
 	}
 
 	public void move() {
