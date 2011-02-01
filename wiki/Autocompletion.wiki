@@ -1,0 +1,20 @@
+#summary Detailed description of how long I think it will take to complete this issue.
+
+= Introduction =
+
+Here is how I'm envisioning this working from the user's perspective: I the user will need to initiate the function by pushing a key. Not sure which key...it doesn't really matter. This will then call a function which calculate the shortest path, and animate the character on that path through the pick job. It won't matter if the character is on a pallet-jack or not when the user asks for it.
+
+
+= Details =
+
+Auto-completion of pick-jobs. final due: 2/28
+
+-pre-requisite: Chris' generic controller
+
+-pre-requisite: grid system with "don't walk here" ability
+
+-This really involves 3 steps
+
+    * getting the information on where to go (2-3 days…already have the basic working code in the “showArrow” function) 
+    * doing the logic on which path is the shortest, including taking out the spaces where I can’t go. This would be a SSSP or an APSP with just going from where I am to where I need to go. (4-5 days)
+    * getting the character to actually move on that path. It’s simple enough to find the path, but to actually use it would take a little more code. (2-3 days)
