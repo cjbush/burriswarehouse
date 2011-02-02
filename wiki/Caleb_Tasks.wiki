@@ -25,6 +25,7 @@ Essentially, instead of checking every "collide-able" object in the warehouse, w
 
 ==Details==
 -pre-requisites: none.
+
 The way I see it, this is sort of a complex problem involving a few steps
 
    * add a field in the "gridNode" class which represents whether or not a grid is "walkable" or not. (couple of hours)
