@@ -1,0 +1,29 @@
+#summary This is my plan for increasing the clutter of the Warehouse.
+#labels Phase-Requirements
+
+= Introduction =
+
+My plans are as follows:
+
+
+= Details =
+
+Modeled objects
+  * *1/31/10 - 2/6/10*
+  * Get the models that are already done into the warehouse.  This includes maybe retexturing and other necessities to make them look good.  If these models require animation, that part may be pushed into the next week.
+
+Animate already done models and research
+  * *2/7/10 - 2/13/10*
+  * Begin and finish models that require animation from the Graphics class.  (Hopefully rigging will not take as long)  Figure out mistakes from all of the past two weeks that will happen.  Research other models that need to be in the warehouse
+
+Buy or make models that are not done
+  * *2/7/10 - 2/13/10*
+  * Model anything else we need.  The texturing may or may not be gotten to this week.
+
+Texturing/Animation/Mistakes
+  * *2/14/10 - 2/20/10*
+  * Texture these models that were made, add animations if necessary.  Account for mistakes that will happen from past few weeks.
+
+Spill Week
+  * *2/21/10 - 2/27/10*
+  * Since life isn't perfect, anything that is still need to be figured out, or accomplished, the buffer week is here.  This will be anything with characters, new models, anything.
