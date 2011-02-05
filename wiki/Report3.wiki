@@ -5,7 +5,7 @@
 
 ==Caleb Mays, Software Developer==
 
-   * Tasks accomplished: Added another character into the warehouse, and will continue to add characters when I can; not going to be a huge priority. I know they work. Worked on my "issues" to get a better idea of what needs to be done, and divided them up into sub-tasks with approximate times. (6 hours so far)
+   * Tasks accomplished: Added another character into the warehouse, and will continue to add characters when I can; not going to be a huge priority. I know they work. Worked on my "issues" to get a better idea of what needs to be done, and divided them up into sub-tasks with approximate times. (7 hours so far)
    * Future tasks researched:
    * Most immediate upcoming tasks: Figure out "collision detection" with the grid system.  
 
