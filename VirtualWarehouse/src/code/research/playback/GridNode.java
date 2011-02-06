@@ -1,5 +1,4 @@
 package code.research.playback;
-
 import com.jme.bounding.BoundingVolume;
 import com.jme.intersection.CollisionResults;
 import com.jme.intersection.PickResults;
