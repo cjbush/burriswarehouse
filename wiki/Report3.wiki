@@ -5,9 +5,9 @@
 
 ==Caleb Mays, Software Developer==
 
-   * Tasks accomplished: Added another character into the warehouse, and will continue to add characters when I can; not going to be a huge priority. I know they work. Worked on my "issues" to get a better idea of what needs to be done, and divided them up into sub-tasks with approximate times. (7 hours so far)
-   * Future tasks researched:
-   * Most immediate upcoming tasks: Figure out "collision detection" with the grid system.  
+   * Tasks accomplished: Added another character into the warehouse, and will continue to add characters when I can; not going to be a huge priority. I know they work. Worked on my "issues" to get a better idea of what needs to be done, and divided them up into sub-tasks with approximate times. 
+   * Future tasks researched: Began thinking through collision detection. Chris and I came up with a basic design.
+   * Most immediate upcoming tasks: Figure out "collision detection" with a custom bounding box system.  
 
 
 ==Dan Jewett, Modeler/Software Developer==
@@ -26,7 +26,7 @@
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x||22||-2|| || || ||
-||Caleb Mays||x||25||+1|| || || ||
+||Caleb Mays||10||35||-1|| || || ||
 ||Dan Jewett||x||29||+5|| ||*Weekly Total*||$0.00||
 ||*Totals*||x||76||+4|| ||*YTD Total*||$0.00||
 
