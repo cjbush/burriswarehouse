@@ -49,15 +49,15 @@ public class WarehouseWorld extends Node {
 	//set which things are loaded into the game
 	//these should probably all be set to true unless debugging
 	public static final boolean loadWarehouseShell = true; //warehouse walls
-	public static final boolean loadWarehouseInsides = false; //racks, pallets, etc...
+	public static final boolean loadWarehouseInsides = true; //racks, pallets, etc...
 	
-	public static final boolean loadRacks = false; //racks
-	public static final boolean loadVehicles = false; //palletjacks
-	public static final boolean loadExtraPallets = false; //scattered empty pallets
-	public static final boolean loadStackedPallets = false; //scattered stacks of pallets
-	public static final boolean loadObjects = false; //all other objects
-	public static final boolean fillRacks = false; //put pallets and product on racks
-	public static final boolean iWantArrow = false;
+	public static final boolean loadRacks = true; //racks
+	public static final boolean loadVehicles = true; //palletjacks
+	public static final boolean loadExtraPallets = true; //scattered empty pallets
+	public static final boolean loadStackedPallets = true; //scattered stacks of pallets
+	public static final boolean loadObjects = true; //all other objects
+	public static final boolean fillRacks = true; //put pallets and product on racks
+	public static final boolean iWantArrow = true;
 	
 	public static final boolean useLocalhost = false;
 	
