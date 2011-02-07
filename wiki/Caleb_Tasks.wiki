@@ -19,16 +19,15 @@ Here is how I'm envisioning this working from the user's perspective: I the user
 
 
 
-="Collision detection" using grid. Due: ??=
+="Collision detection" using grid. Due: 2/14=
 
-Essentially, instead of checking every "collide-able" object in the warehouse, we want to just be checking the grid-nodes around us to see if the one we want to walk onto is either "walk-able" or "not walk-able". This would allow for a very quick search to be done to see whether or not we can go somewhere, or if we need to "collide" and stop at a certain point.
+Basic idea: we're going to make custom "bounding boxes". Basically, what this means is that we're going to surround everything that is going to be "non-walkable" -- the majority of the things in this list will be the racks. In fact, whole shelves of racks and the random pallets laying around may be the only things in this list. The actual "collidables" list should dwindle down to things like: the warehouse walls, and the characters, etc...nothing like all of the racks. That can just be done with some 2d stuff.
 
 ==Details==
 -pre-requisites: none.
 
 The way I see it, this is sort of a complex problem involving a few steps
 
-   * add a field in the "gridNode" class which represents whether or not a grid is "walkable" or not. (couple of hours)
-   * somehow determining where the grid-nodes are in relation to the racks in the warehouse. This really is the key step here, and the one that will probably be the biggest hinderer to getting this done. (1 week)
-   * once we know that a rack (or any other object) is on top of the grid-node, we can mark it "not walk-able" (2 days)
-   * changing the "checkCollisions" function to reflect the fact that we're using a grid. This means checking the grid nodes around where the player is walking to see if a grid node is "walkable" or not, keeping the player from moving onto the "not walk-able" grid nodes. (2-3 days)
+   * create a class which contains 4 fields (at least): two X-positions and two Y-positions. This will become the base class for the "non-walkable" sections of the warehouse. (few hours)
+   * create a table in the db that has these 4 fields in the db. This will contain the actual numbers. These numbers will make a rectangle, inside of which, the user will not be able to walk. (few hours)
+   * place these rectangles around large areas (whole rows of racks, for example). This will keep the checking in a 2d field, and not in 3d. Should be able to keep the player out of this box, but simply checking to see if the player wants to walk into it, or if that player is in it, then stopping the player's velocity. Basically. (2-3 days)
