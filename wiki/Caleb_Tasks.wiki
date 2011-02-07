@@ -2,20 +2,17 @@
 
 = Auto Completion. Due: 2/28 =
 
-Here is how I'm envisioning this working from the user's perspective: I the user will need to initiate the function by pushing a key. Not sure which key...it doesn't really matter. This will then call a function which calculate the shortest path, and animate the character on that path through the pick job. It won't matter if the character is on a pallet-jack or not when the user asks for it.
+Here is how I'm envisioning this working from the user's perspective: I the user will need to initiate the function by pushing a key. Not sure which key...it doesn't really matter. This will then call a function which will start something like a cut-scene: a short movie which will start at the beginning of the pic-job and walk through each segment of it. The short clip will then stop, and the screen will then show the player in the original location, ready to go.
 
 
 == Details ==
 
--pre-requisite: Chris' generic controller
+-pre-req: the 2d bounding boxes.
 
--pre-requisite: grid system with "don't walk here" ability
-
--This really involves 3 steps
-
-    * getting the information on where to go (2-3 days…already have the basic working code in the “showArrow” function) 
-    * doing the logic on which path is the shortest, including taking out the spaces where I can’t go. This would be a SSSP or an APSP with just going from where I am to where I need to go. (4-5 days)
-    * getting the character to actually move on that path. It’s simple enough to find the path, but to actually use it would take a little more code. (2-3 days)
+-Details:
+   * Putting the way points into a db, or getting them from the vocollect db already in existence. 
+   * Making the player walk there (sort of like the Npc system...). 
+   * Cleaning up the beginning and ending so that it fades, or is somehow clear that the user no longer has control.
 
 
 
