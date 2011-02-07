@@ -1,0 +1,19 @@
+#summary Tasks for Chris
+
+=Collision Detection=
+
+Because our character only moves in two directions, we only need to detect collisions in those two dimensions. By eliminating the third dimension, it will greatly reduce the amount of time needed to calculate collisions. We can also reduce the number of calculations needed by surrounding entire sections (e.g. an entire row of racks) with a 2D bounding box, rather than each individual rack. This task belongs to both Caleb and me.
+
+==Subtasks==
+
+  * Create a 2D box object, similar to a bounding box but in two dimensions instead of 3. (2/8)
+  * Modify the application's database to add a table with XY coordinates to specify size and location of all the necessary boxes. (2/10)
+  * Write a function to detect collisions between the players 2D bounding box and the 2D bounding boxes loaded from the database. (2/12)
+  * Test and make adjustments. (2/14)
+
+
+
+=Auto Completion=
+Rather than continuing on from where the user currently is, it will be substantially easier and provide more functionality to essentially implement auto-completion as a cut scene. Essentially, the user will hit a button and the player will be reset to the starting position, begin walking on a pre-recorded path along the pick route, and then returned to where the player was standing after the auto-pick-job is complete.
+
+==Subtasks==
