@@ -10,9 +10,9 @@ Here is how I'm envisioning this working from the user's perspective: I the user
 -pre-req: the 2d bounding boxes.
 
 -Details:
-   * Putting the way points into a db, or getting them from the vocollect db already in existence. 
-   * Making the player walk there (sort of like the Npc system...). 
-   * Cleaning up the beginning and ending so that it fades, or is somehow clear that the user no longer has control.
+   * Putting the way points into a db, or getting them from the vocollect db already in existence. (1 day)
+   * Making the player walk there (sort of like the Npc system...). (1 day)
+   * Cleaning up the beginning and ending so that it fades, or is somehow clear that the user no longer has control. (3-4 days)
 
 
 
