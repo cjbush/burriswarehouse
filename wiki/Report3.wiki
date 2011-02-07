@@ -12,9 +12,9 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished:
-   * Future tasks researched: 
-   * Most immediate upcoming tasks: 
+   * Tasks accomplished: Variations of characters completed.  This includes clothing (pants, shirts), skinning (arms), fixing variations of heights, and facial (hair, race, facial hair, etc).  There are 26 of them.  Provides plenty of randomness now.  Began the modeling development in increasing clutter in warehouse.
+   * Future tasks researched: Rendering, Animation, Texturing
+   * Most immediate upcoming tasks: Fix rendering problems. Figure out other ways to make the game run much faster. Increase clutter in warehouse. 
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
@@ -27,8 +27,8 @@
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||9||31||-5|| || || ||
 ||Caleb Mays||10||35||-1|| || || ||
-||Dan Jewett||x||29||+5|| ||*Weekly Total*||$0.00||
-||*Totals*||x||76||+4|| ||*YTD Total*||$0.00||
+||Dan Jewett||9||38||+2|| ||*Weekly Total*||$0.00||
+||*Totals*||38||76||-4|| ||*YTD Total*||$0.00||
 
 
 =Meeting Notes / Task Assignments=
