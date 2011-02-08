@@ -13,6 +13,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import code.app.VirtualWarehouse;
+import code.collisions.BoundingBoxes;
 import code.model.ModelLoader;
 import code.model.TarpWall;
 import code.model.pallet.Pallet;
@@ -68,6 +69,8 @@ public class WarehouseWorld extends Node {
 	
 	//parent node for solid objects
 	private Node collidables;
+	
+	private ArrayList <BoundingBoxes>boundingBoxes;
 	
 	//parent node for the vehicles that the player can use
 	private Node vehicles;
@@ -159,6 +162,7 @@ public class WarehouseWorld extends Node {
 		//rack.setLocalRotation(q);		
 		
 		//add the warehouse shell and place objects in the warehouse
+		boundingBoxes = new ArrayList<BoundingBoxes>();
 		buildWarehouse();
 		
 
@@ -446,6 +450,7 @@ public class WarehouseWorld extends Node {
 					rotationX = result.getFloat("rotationX");
 					rotationY = result.getFloat("rotationY");
 					rotationZ = result.getFloat("rotationZ");
+					
 					
 					object = null;
 					if (iWantArrow && name.equals("arrow")){

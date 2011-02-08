@@ -69,6 +69,7 @@ import com.jmex.game.state.GameState;
 import com.jmex.model.collada.ColladaImporter;
 
 import java.io.FileInputStream;
+import code.collisions.BoundingBoxes;
 
 /**
  * The in-game state of the Virtual Warehouse application.
@@ -178,7 +179,7 @@ public class VirtualWarehouse extends GameState {
 	private boolean useVocollect = false;
 	private DeliveryArea deliveryArea;
 
-	private Grid grid;
+	private BoundingBoxes [] boundingBoxes;
 
 	private boolean showArrow;
 	private static final boolean showGrid = false;
@@ -302,6 +303,11 @@ public class VirtualWarehouse extends GameState {
 		// update the time to get the framerate
 		// timer.update();
 		// interpolation = timer.getTimePerFrame();
+		float lastX = playerNode.getLocalTranslation().getX();
+		float lastZ = playerNode.getLocalTranslation().getZ();
+		for (int i = 0; i < boundingBoxes.length; i++){
+			boundingBoxes[i].checkForCollisions(playerNode, lastX, lastZ);
+		}
 
 		if (DEBUG_MODE) {
 			debugHUD.setFPS(timer.getFrameRate());
@@ -401,6 +407,10 @@ public class VirtualWarehouse extends GameState {
 
 			rootNode.updateGeometricState(interpolation, true);
 			hudNode.updateGeometricState(interpolation, true);
+			
+			for (int i = 0; i < characters.length; i++){
+				characters[i].move();
+			}
 		}
 
 		if (sounds != null) {
@@ -425,9 +435,8 @@ public class VirtualWarehouse extends GameState {
 			// arrow.setLocalScale(0f);
 		}
 		
-		for (int i = 0; i < characters.length; i++){
-			characters[i].move();
-		}
+
+	
 
 	}
 
@@ -576,7 +585,9 @@ public class VirtualWarehouse extends GameState {
 		infoBar.setScoringTimer(scoringTimer);
 
 		// build the autonomous characters.
-		buildAutoCharacters(numCharacters);
+		buildBoundingBoxes();
+		buildAutoCharacters();
+
 
 		// start the game
 		makeScene();
@@ -593,6 +604,49 @@ public class VirtualWarehouse extends GameState {
 
 	}
 
+	private void buildBoundingBoxes() {
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
+			// String url = "jdbc:mysql://localhost:3306/vwburr";
+			Connection con = DriverManager.getConnection(url, "warehouse",
+					"vwburr15");
+			Statement stmt = con.createStatement();
+
+			String query = "select * from BOUNDINGBOXES ORDER BY ID desc;";
+			stmt.executeQuery(query);
+			ResultSet result = stmt.getResultSet();
+			
+			// I simply want to know how many characters I need to make.
+			result.first();
+			int numBoxes = result.getInt("ID");
+			boundingBoxes = new BoundingBoxes[numBoxes];
+			
+			result.beforeFirst();
+			for (int i = 0; result.next(); i++){
+				float leftX = result.getFloat("leftX");
+				float rightX = result.getFloat("rightX");
+				float lowerZ = result.getFloat("lowerZ");
+				float upperZ = result.getFloat("upperZ");
+				
+				boundingBoxes[i] = new BoundingBoxes();
+				boundingBoxes[i].setLeftX(leftX);
+				boundingBoxes[i].setRightX(rightX);
+				boundingBoxes[i].setLowerZ(lowerZ);
+				boundingBoxes[i].setUpperZ(upperZ);
+			}
+
+			 
+			
+			con.close();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+	}
+
 	protected void reinit() {
 	}
 
@@ -605,7 +659,7 @@ public class VirtualWarehouse extends GameState {
 		}
 	}
 
-	private void buildAutoCharacters(int numberCharacters) {
+	private void buildAutoCharacters() {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
