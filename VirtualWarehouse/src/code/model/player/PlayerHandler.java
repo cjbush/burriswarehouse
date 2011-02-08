@@ -255,4 +255,7 @@ public class PlayerHandler extends InputHandler {
 			player.getLocalRotation().normalize();
 		}
 	}
+	public void setSpeed(float s){
+		speed = s;
+	}
 }
