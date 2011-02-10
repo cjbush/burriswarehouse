@@ -303,11 +303,7 @@ public class VirtualWarehouse extends GameState {
 		// update the time to get the framerate
 		// timer.update();
 		// interpolation = timer.getTimePerFrame();
-		/*float lastX = playerNode.getLocalTranslation().getX();
-		float lastZ = playerNode.getLocalTranslation().getZ();
-		for (int i = 0; i < boundingBoxes.length; i++){
-			boundingBoxes[i].checkForCollisions(playerNode, lastX, lastZ);
-		}*/
+
 
 		if (DEBUG_MODE) {
 			debugHUD.setFPS(timer.getFrameRate());
@@ -411,6 +407,9 @@ public class VirtualWarehouse extends GameState {
 			rootNode.updateGeometricState(interpolation, true);
 			hudNode.updateGeometricState(interpolation, true);
 			
+			
+			
+			
 			for (int i = 0; i < characters.length; i++){
 				characters[i].move();
 			}
@@ -435,7 +434,7 @@ public class VirtualWarehouse extends GameState {
 			playerNode.showArrow(nextAisle, nextSlot);
 		} else {
 			Node arrow = this.getArrowNode();
-			// arrow.setLocalScale(0f);
+			arrow.setLocalScale(0f);
 		}
 		
 
