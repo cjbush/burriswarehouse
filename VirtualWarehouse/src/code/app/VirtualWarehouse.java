@@ -69,7 +69,7 @@ import com.jmex.game.state.GameState;
 import com.jmex.model.collada.ColladaImporter;
 
 import java.io.FileInputStream;
-import code.collisions.BoundingBoxes;
+import code.collisions.BoundingBox2D;
 
 /**
  * The in-game state of the Virtual Warehouse application.
@@ -179,7 +179,7 @@ public class VirtualWarehouse extends GameState {
 	private boolean useVocollect = false;
 	private DeliveryArea deliveryArea;
 
-	private BoundingBoxes [] boundingBoxes;
+	private BoundingBox2D [] boundingBoxes;
 
 	private boolean showArrow;
 	private static final boolean showGrid = false;
@@ -303,15 +303,18 @@ public class VirtualWarehouse extends GameState {
 		// update the time to get the framerate
 		// timer.update();
 		// interpolation = timer.getTimePerFrame();
-		float lastX = playerNode.getLocalTranslation().getX();
+		/*float lastX = playerNode.getLocalTranslation().getX();
 		float lastZ = playerNode.getLocalTranslation().getZ();
 		for (int i = 0; i < boundingBoxes.length; i++){
 			boundingBoxes[i].checkForCollisions(playerNode, lastX, lastZ);
-		}
+		}*/
 
 		if (DEBUG_MODE) {
 			debugHUD.setFPS(timer.getFrameRate());
 			Vector3f loc = getPlayerNode().getLocalTranslation();
+			if(((Player)getPlayerNode()).inVehicle()){
+				loc = ((Player)getPlayerNode()).getVehicleBeingUsed().getLocalTranslation();
+			}
 			debugHUD.setPlayerLocation(loc.x, loc.y, loc.z);
 		}
 
@@ -621,7 +624,7 @@ public class VirtualWarehouse extends GameState {
 			// I simply want to know how many characters I need to make.
 			result.first();
 			int numBoxes = result.getInt("ID");
-			boundingBoxes = new BoundingBoxes[numBoxes];
+			boundingBoxes = new BoundingBox2D[numBoxes];
 			
 			result.beforeFirst();
 			for (int i = 0; result.next(); i++){
@@ -630,11 +633,11 @@ public class VirtualWarehouse extends GameState {
 				float lowerZ = result.getFloat("lowerZ");
 				float upperZ = result.getFloat("upperZ");
 				
-				boundingBoxes[i] = new BoundingBoxes();
-				boundingBoxes[i].setLeftX(leftX);
+				boundingBoxes[i] = new BoundingBox2D(leftX, rightX, lowerZ, upperZ);
+				/*boundingBoxes[i].setLeftX(leftX);
 				boundingBoxes[i].setRightX(rightX);
 				boundingBoxes[i].setLowerZ(lowerZ);
-				boundingBoxes[i].setUpperZ(upperZ);
+				boundingBoxes[i].setUpperZ(upperZ);*/
 			}
 
 			 
@@ -887,6 +890,14 @@ public class VirtualWarehouse extends GameState {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public BoundingBox2D[] get2DCollidables(){
+		return boundingBoxes;
+	}
+	
+	public DebugHUD getDebugHUD(){
+		return debugHUD;
 	}
 
 }

@@ -17,6 +17,8 @@ public class DebugHUD extends HUD {
 
 	private Text2D fps;
 	private Text2D location;
+	//private Text2D bblocation;
+	private Text2D debug;
 	
 	public DebugHUD() {
 		
@@ -32,7 +34,12 @@ public class DebugHUD extends HUD {
         location.setLocalTranslation(0, 20, 0);
         this.attachChild(location);
 
+        debug = my2DFont.createText("Debug: No Message.", 10, 0);
+        debug.setLocalTranslation(0,40,0);
+        this.attachChild(debug);
+        
         this.setLocalTranslation(10, 100, 0);
+        
         
         this.updateGeometricState(0, false);
         this.updateRenderState();
@@ -45,6 +52,10 @@ public class DebugHUD extends HUD {
 	public void setPlayerLocation(Float x, Float y, Float z)
 	{
 		location.setText("Loc: " + x.toString() + ", " + y.toString() + ", " + z.toString());
+	}
+	
+	public void setDebugMessage(String msg){
+		debug.setText("Debug: "+msg);
 	}
 	
 }

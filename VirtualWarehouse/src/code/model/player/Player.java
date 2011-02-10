@@ -9,6 +9,7 @@ import java.util.Hashtable;
 import java.util.List;
 
 import code.app.VirtualWarehouse;
+import code.collisions.BoundingBox2D;
 import code.component.Score;
 import code.hud.PickErrorDisplay;
 import code.model.AnimatedModel;
@@ -74,6 +75,14 @@ public class Player extends AnimatedModel {
     private BoundingCollisionResults boundCollision= new BoundingCollisionResults();
     private Vector3f temp = new Vector3f();;
 	private Vector3f delta = new Vector3f();
+	
+	public static final float noVehiclePaddingX = 0.07f;
+	public static final float noVehiclePaddingZ = 0.07f;
+	
+	public static final float vehiclePaddingX = 0.14f;
+	public static final float vehiclePaddingZ = 0.92f;
+	
+	private BoundingBox2D playerBox;
     
 	public Player(VirtualWarehouse vw) 
 	{
@@ -93,6 +102,8 @@ public class Player extends AnimatedModel {
 		DisplaySystem.getDisplaySystem().getRenderer().setCamera(warehouseGame.getThirdPersonCamera());
 		
 		addAnimations();
+		
+		playerBox = new BoundingBox2D();
 	}
 	
 	public void showArrow(String nextAisle, String nextSlot) {
@@ -195,6 +206,7 @@ public class Player extends AnimatedModel {
 		//check for collisions
         delta.set(collisionModel.getLocalTranslation().subtract(lastPosition));
 		//checkForCollision();
+        checkForCollision2D();
 		
 		//first try at collision detection
 		//check for collisions between player and walls/solid objects
@@ -571,6 +583,8 @@ public class Player extends AnimatedModel {
 	/**
 	 * Attempt at smooth collision detection (wall sliding) - code found on
 	 * http://www.jmonkeyengine.com/forum/index.php?topic=10909.0
+	 * 
+	 * @deprecated Replaced by checkForCollision2D()
 	 */
     private void checkForCollision() {
 
@@ -607,9 +621,72 @@ public class Player extends AnimatedModel {
 			
 		}
 	}
+    
+    /**
+     * 
+     */
+    private void checkForCollision2D(){
+    	BoundingBox2D[] boxes = warehouseGame.get2DCollidables();
+    	this.updateBoundingBox();
+    	float playerX = this.getLocalTranslation().getX();
+		float playerZ = this.getLocalTranslation().getZ();
+    	for(BoundingBox2D b : boxes){    		
+    		if(playerBox.isCollidingWith(b)){
+    			if(this.inVehicle()){
+    				this.getVehicleBeingUsed().processCollisions();
+    			}
+    			else{
+	    			float diffRightX = Math.abs(playerBox.getRightX()-b.getRightX());
+	    			float diffLeftX = Math.abs(playerBox.getLeftX()-b.getLeftX());
+	    			float top = Math.abs(playerBox.getUpperZ()-b.getUpperZ());
+	    			float bottom = Math.abs(playerBox.getLowerZ()-b.getLowerZ());
+	    			
+	    			if (diffRightX <= diffLeftX && diffRightX <= top && diffRightX<= bottom){
+	    				this.setLocalTranslation(playerX+diffRightX, .1f, playerZ);
+	    			}
+	    			
+	    			else if (diffLeftX <= diffRightX && diffLeftX <= top && diffLeftX <= bottom){
+	    				this.setLocalTranslation(playerX-diffLeftX, .1f, playerZ);
+	    			}
+	    			
+	    			else if (top <= bottom && top <= diffRightX && top <= diffLeftX){
+	    				this.setLocalTranslation(playerX, .1f, playerZ-top);
+	    			}
+	    			else if (bottom <= top && bottom <= diffRightX && bottom <= diffLeftX){
+	    				this.setLocalTranslation(playerX, .1f, playerZ+bottom);
+	    			}
+	    			updateBoundingBox();
+    			}
+    		}
+    	}
+    }
+    
+    private void updateBoundingBox(){
+    	float playerX = this.getLocalTranslation().getX();
+		float playerZ = this.getLocalTranslation().getZ();
+		
+		if(this.inVehicle && this.getVehicleBeingUsed()!= null){
+			Vehicle v = this.getVehicleBeingUsed();
+			playerX = v.getLocalTranslation().getX();
+			playerZ = v.getLocalTranslation().getZ();
+			playerBox.setLeftX(playerX - vehiclePaddingX);
+			playerBox.setRightX(playerX + vehiclePaddingX);
+			playerBox.setLowerZ(playerZ - vehiclePaddingZ);
+			playerBox.setUpperZ(playerZ);
+		}
+		else{
+			playerBox.setLeftX(playerX-noVehiclePaddingX);
+			playerBox.setLowerZ(playerZ-noVehiclePaddingZ);
+			playerBox.setRightX(playerX+noVehiclePaddingX);
+			playerBox.setUpperZ(playerZ+noVehiclePaddingZ);
+		}
+		
+		warehouseGame.getDebugHUD().setDebugMessage("leftX: "+playerBox.getLeftX()+" lowerZ: "+playerBox.getLowerZ()+" rightX: "+playerBox.getRightX()+" upperZ: "+playerBox.getUpperZ());
+    }
 
     /**
      * Helper function for checkForCollision()
+     * @deprecated
      */
 	private Vector3f getCollisionNormal(CollisionData data) {
 
@@ -637,7 +714,7 @@ public class Player extends AnimatedModel {
 	}
 	
 	public boolean inVehicle() {
-		return inVehicle;
+		return inVehicle && this.getVehicleBeingUsed() != null;
 	}
 	
 	public void setPlayerInVehicle(boolean in) {
