@@ -628,32 +628,54 @@ public class Player extends AnimatedModel {
     private void checkForCollision2D(){
     	BoundingBox2D[] boxes = warehouseGame.get2DCollidables();
     	this.updateBoundingBox();
-    	float playerX = this.getLocalTranslation().getX();
-		float playerZ = this.getLocalTranslation().getZ();
+    	
     	for(BoundingBox2D b : boxes){    		
     		if(playerBox.isCollidingWith(b)){
     			if(this.inVehicle()){
-    				this.getVehicleBeingUsed().processCollisions();
-    			}
-    			else{
+    				float playerX = this.getVehicleBeingUsed().getLocalTranslation().getX();
+    				float playerZ = this.getVehicleBeingUsed().getLocalTranslation().getZ();
 	    			float diffRightX = Math.abs(playerBox.getRightX()-b.getRightX());
 	    			float diffLeftX = Math.abs(playerBox.getLeftX()-b.getLeftX());
 	    			float top = Math.abs(playerBox.getUpperZ()-b.getUpperZ());
 	    			float bottom = Math.abs(playerBox.getLowerZ()-b.getLowerZ());
 	    			
 	    			if (diffRightX <= diffLeftX && diffRightX <= top && diffRightX<= bottom){
-	    				this.setLocalTranslation(playerX+diffRightX, .1f, playerZ);
+	    				this.getVehicleBeingUsed().setLocalTranslation(playerBox.getRightX()+diffRightX, .1f, playerZ);
 	    			}
 	    			
 	    			else if (diffLeftX <= diffRightX && diffLeftX <= top && diffLeftX <= bottom){
-	    				this.setLocalTranslation(playerX-diffLeftX, .1f, playerZ);
+	    				this.getVehicleBeingUsed().setLocalTranslation(playerBox.getLeftX()-diffLeftX, .1f, playerZ);
 	    			}
 	    			
 	    			else if (top <= bottom && top <= diffRightX && top <= diffLeftX){
-	    				this.setLocalTranslation(playerX, .1f, playerZ-top);
+	    				this.getVehicleBeingUsed().setLocalTranslation(playerX, .1f, playerBox.getUpperZ()-top);
 	    			}
 	    			else if (bottom <= top && bottom <= diffRightX && bottom <= diffLeftX){
-	    				this.setLocalTranslation(playerX, .1f, playerZ+bottom);
+	    				this.getVehicleBeingUsed().setLocalTranslation(playerX, .1f, playerBox.getLowerZ()+bottom);
+	    			}
+	    			updateBoundingBox();
+    			}
+    			else{
+    				float playerX = this.getLocalTranslation().getX();
+    				float playerZ = this.getLocalTranslation().getZ();
+	    			float diffRightX = Math.abs(playerBox.getRightX()-b.getRightX());
+	    			float diffLeftX = Math.abs(playerBox.getLeftX()-b.getLeftX());
+	    			float top = Math.abs(playerBox.getUpperZ()-b.getUpperZ());
+	    			float bottom = Math.abs(playerBox.getLowerZ()-b.getLowerZ());
+	    			
+	    			if (diffRightX <= diffLeftX && diffRightX <= top && diffRightX<= bottom){
+	    				this.setLocalTranslation(playerBox.getRightX()+diffRightX, .1f, playerZ);
+	    			}
+	    			
+	    			else if (diffLeftX <= diffRightX && diffLeftX <= top && diffLeftX <= bottom){
+	    				this.setLocalTranslation(playerBox.getLeftX()-diffLeftX, .1f, playerZ);
+	    			}
+	    			
+	    			else if (top <= bottom && top <= diffRightX && top <= diffLeftX){
+	    				this.setLocalTranslation(playerX, .1f, playerBox.getUpperZ()-top);
+	    			}
+	    			else if (bottom <= top && bottom <= diffRightX && bottom <= diffLeftX){
+	    				this.setLocalTranslation(playerX, .1f, playerBox.getLowerZ()+bottom);
 	    			}
 	    			updateBoundingBox();
     			}
@@ -664,21 +686,28 @@ public class Player extends AnimatedModel {
     private void updateBoundingBox(){
     	float playerX = this.getLocalTranslation().getX();
 		float playerZ = this.getLocalTranslation().getZ();
+	
 		
 		if(this.inVehicle && this.getVehicleBeingUsed()!= null){
 			Vehicle v = this.getVehicleBeingUsed();
 			playerX = v.getLocalTranslation().getX();
 			playerZ = v.getLocalTranslation().getZ();
+			
+			// I'd add something about a rotation, and check to see if we're more oriented toward
+			// the Z axis, or the X axis (horizontal/vertical) and then make the bounding box rotate
+			// accordingly. Check out the rotational stuff. We could do some pretty intense math as far
+			// as how to rotate the box...yea...-CM]
+			
 			playerBox.setLeftX(playerX - vehiclePaddingX);
 			playerBox.setRightX(playerX + vehiclePaddingX);
-			playerBox.setLowerZ(playerZ - vehiclePaddingZ);
-			playerBox.setUpperZ(playerZ);
+			playerBox.setLowerZ(playerZ + vehiclePaddingZ);
+			playerBox.setUpperZ(playerZ - vehiclePaddingZ);
 		}
 		else{
 			playerBox.setLeftX(playerX-noVehiclePaddingX);
-			playerBox.setLowerZ(playerZ-noVehiclePaddingZ);
 			playerBox.setRightX(playerX+noVehiclePaddingX);
-			playerBox.setUpperZ(playerZ+noVehiclePaddingZ);
+			playerBox.setLowerZ(playerZ+noVehiclePaddingZ);
+			playerBox.setUpperZ(playerZ-noVehiclePaddingZ);
 		}
 		
 		warehouseGame.getDebugHUD().setDebugMessage("leftX: "+playerBox.getLeftX()+" lowerZ: "+playerBox.getLowerZ()+" rightX: "+playerBox.getRightX()+" upperZ: "+playerBox.getUpperZ());
