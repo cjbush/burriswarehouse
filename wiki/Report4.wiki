@@ -1,0 +1,38 @@
+#summary Report for 2/8-2/14
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished: Basically finished the new collision detection system. There are only a few more "boxes" that need to be added to the db to make it fully complete (interior walls, yellow door guards, etc...)
+   * Future tasks researched: Rotating the collision "box" around the vehicle and Auto-completion.
+   * Most immediate upcoming tasks: Auto-completion, adding perhaps a few more Npcs into the game, and ensuring collision detection is completed.
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished: 
+   * Future tasks researched:
+   * Most immediate upcoming tasks: 
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Future tasks researched: 
+  * Most immediate upcoming tasks: 
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush|| ||31||-5|| || || ||
+||Caleb Mays||13.5||48.5||+.5|| || || ||
+||Dan Jewett|| ||38||+2|| ||*Weekly Total*||$0.00||
+||*Totals*|| ||76||-4|| ||*YTD Total*||$0.00||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - 
+  * Chris - 
+  * Caleb - 
+  * Dan - 
