@@ -1,0 +1,32 @@
+newmtl swingarm:Iron
+illum 4
+Kd 0.17 0.19 0.24
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.31 0.31 0.35
+Ns 39.22
+newmtl swingarm:Steel
+illum 4
+Kd 0.64 0.64 0.64
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.82 0.82 0.82
+Ns 29.41
+newmtl swingarm:ToilCeramic
+illum 4
+Kd 0.92 0.92 0.92
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 2.00 2.00 2.00
+Ns 272.55
+newmtl swingarm:canvas1_001
+illum 4
+Kd 0.64 0.64 0.64
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.24 0.24 0.24
+Ns 13.73

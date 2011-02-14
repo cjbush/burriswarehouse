@@ -1,0 +1,72 @@
+newmtl mop_bucket_5:Material
+illum 4
+Kd 0.74 0.76 0.03
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_001
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_002
+illum 4
+Kd 0.11 0.11 0.11
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_003
+illum 4
+Kd 0.76 0.05 0.05
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_004
+illum 4
+Kd 0.77 0.05 0.06
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_005
+illum 4
+Kd 0.73 0.77 0.03
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_007
+illum 4
+Kd 0.53 0.79 0.04
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_0014
+illum 4
+Kd 0.08 0.02 0.78
+Ka 0.00 0.00 0.00
+Tf 0.34 0.34 0.34
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
+newmtl mop_bucket_5:Material_010
+illum 4
+Kd 0.34 0.34 0.34
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 96.08
