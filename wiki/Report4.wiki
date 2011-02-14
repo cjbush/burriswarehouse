@@ -17,14 +17,13 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished: 
-  * Future tasks researched: 
-  * Most immediate upcoming tasks: 
+  * Tasks accomplished: Worked on collision detection, began design and implementation of autocompletion per task list
+  * Most immediate upcoming tasks: Finish fetching textures from the internet for products. I apologize for falling slightly behind on that task. I was concentrating on collision detection this week. Continue working on autocompletion. We're about on schedule for our major tasks, I believe.
 
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush|| ||31||-5|| || || ||
+||Chris Bush|| 12 || 43 ||-5|| || || ||
 ||Caleb Mays||13.5||48.5||+.5|| || || ||
 ||Dan Jewett||13 ||51||+3|| ||*Weekly Total*||$0.00||
 ||*Totals*|| ||76||-4|| ||*YTD Total*||$0.00||
