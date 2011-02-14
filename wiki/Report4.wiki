@@ -11,9 +11,9 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: 
-   * Future tasks researched:
-   * Most immediate upcoming tasks: 
+   * Tasks accomplished: Got many of the models that are already done into the warehouse. Having some major problems with textures.  Also began redoing the pallet and box class, which is also having some major problems.  This required some learning of the old code to figure out how to make this better
+   * Future tasks researched: Rendering, Animation, Texturing
+   * Most immediate upcoming tasks: Pallets/Boxes, Begin and finish models that require animation from the Graphics class.  Also try completing importing the rest of the models that we already have.
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
@@ -26,7 +26,7 @@
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush|| ||31||-5|| || || ||
 ||Caleb Mays||13.5||48.5||+.5|| || || ||
-||Dan Jewett|| ||38||+2|| ||*Weekly Total*||$0.00||
+||Dan Jewett||13 ||51||+3|| ||*Weekly Total*||$0.00||
 ||*Totals*|| ||76||-4|| ||*YTD Total*||$0.00||
 
 
