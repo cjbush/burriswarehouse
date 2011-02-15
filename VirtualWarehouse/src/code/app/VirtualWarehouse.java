@@ -334,9 +334,16 @@ public class VirtualWarehouse extends GameState {
 		if (KeyBindingManager.getKeyBindingManager().isValidCommand(
 				"position_reset", false)) {
 
-			playerNode.setLocalScale(1);
-			playerNode.setLocalTranslation(Player.INITIAL_LOCATION.clone());
-			playerNode.setLocalRotation(Player.INITIAL_ROTATION.clone());
+			if (!playerNode.inVehicle()){
+				playerNode.setLocalScale(1);
+				playerNode.setLocalTranslation(Player.INITIAL_LOCATION.clone());
+				playerNode.setLocalRotation(Player.INITIAL_ROTATION.clone());
+			}
+			else{
+				playerNode.getVehicleBeingUsed().setLocalScale(1);
+				playerNode.getVehicleBeingUsed().setLocalTranslation(Player.INITIAL_LOCATION.clone());
+				playerNode.getVehicleBeingUsed().setLocalRotation(Player.INITIAL_ROTATION.clone());
+			}
 
 		}
 
