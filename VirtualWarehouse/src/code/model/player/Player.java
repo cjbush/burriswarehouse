@@ -76,8 +76,8 @@ public class Player extends AnimatedModel {
     private Vector3f temp = new Vector3f();;
 	private Vector3f delta = new Vector3f();
 	
-	public static final float noVehiclePaddingX = 0.07f;
-	public static final float noVehiclePaddingZ = 0.07f;
+	public static final float noVehiclePaddingX = 0.03f;
+	public static final float noVehiclePaddingZ = 0.03f;
 	
 	public static final float vehiclePaddingX = 0.14f;
 	public static final float vehiclePaddingZ = 0.92f;
@@ -626,13 +626,15 @@ public class Player extends AnimatedModel {
      * 
      */
     private void checkForCollision2D(){
+    	
     	BoundingBox2D[] boxes = warehouseGame.get2DCollidables();
     	this.updateBoundingBox();
-    	
     	for(BoundingBox2D b : boxes){    		
     		if(playerBox.isCollidingWith(b)){
+    			
     			if(this.inVehicle()){
-    				float playerX = this.getVehicleBeingUsed().getLocalTranslation().getX();
+    				this.getVehicleBeingUsed().processCollisions();
+    				/*float playerX = this.getVehicleBeingUsed().getLocalTranslation().getX();
     				float playerZ = this.getVehicleBeingUsed().getLocalTranslation().getZ();
 	    			float diffRightX = Math.abs(playerBox.getRightX()-b.getRightX());
 	    			float diffLeftX = Math.abs(playerBox.getLeftX()-b.getLeftX());
@@ -652,7 +654,7 @@ public class Player extends AnimatedModel {
 	    			}
 	    			else if (bottom <= top && bottom <= diffRightX && bottom <= diffLeftX){
 	    				this.getVehicleBeingUsed().setLocalTranslation(playerX, .1f, playerBox.getLowerZ()+bottom);
-	    			}
+	    			}*/
 	    			updateBoundingBox();
     			}
     			else{
@@ -679,6 +681,7 @@ public class Player extends AnimatedModel {
 	    			}
 	    			updateBoundingBox();
     			}
+    			
     		}
     	}
     }
@@ -693,24 +696,60 @@ public class Player extends AnimatedModel {
 			playerX = v.getLocalTranslation().getX();
 			playerZ = v.getLocalTranslation().getZ();
 			
-			// I'd add something about a rotation, and check to see if we're more oriented toward
-			// the Z axis, or the X axis (horizontal/vertical) and then make the bounding box rotate
-			// accordingly. Check out the rotational stuff. We could do some pretty intense math as far
-			// as how to rotate the box...yea...-CM]
+			// I need to use rotation to rotate our vehicle box around so that the box is actually
+			// around the vehicle. Would be sweet if we had a "rotateBox" function that calculated
+			// the exact bounds of the box, but that's now how this works...unfortunately...
+			float rotationY = v.getWorldRotation().getY();
 			
-			playerBox.setLeftX(playerX - vehiclePaddingX);
-			playerBox.setRightX(playerX + vehiclePaddingX);
-			playerBox.setLowerZ(playerZ + vehiclePaddingZ);
-			playerBox.setUpperZ(playerZ - vehiclePaddingZ);
+			if (rotationY < .355f && rotationY > -.355f){
+				//reset the position stuff.
+				// vehicle is facing positiveZ
+				playerBox.setLeftX(playerX - vehiclePaddingX);
+				playerBox.setRightX(playerX + vehiclePaddingX);
+				playerBox.setLowerZ(playerZ + vehiclePaddingZ);
+				playerBox.setUpperZ(playerZ);
+			}
+			else if (rotationY > .860f){
+				// reset the position stuff.
+				// vehicle is facing negativeZ
+				playerBox.setLeftX(playerX - vehiclePaddingX);
+				playerBox.setRightX(playerX + vehiclePaddingX);
+				playerBox.setLowerZ(playerZ);
+				playerBox.setUpperZ(playerZ - vehiclePaddingZ);
+			}
+			else if (rotationY < .860f && rotationY > .355f){
+				//vehicle is facing positiveX
+				playerBox.setLeftX(playerX);
+				playerBox.setRightX(playerX + vehiclePaddingZ);
+				playerBox.setLowerZ(playerZ + vehiclePaddingX);
+				playerBox.setUpperZ(playerZ - vehiclePaddingX);
+			}
+			else if (rotationY < -.355f){
+				// vehicle is facing negativeX
+				playerBox.setLeftX(playerX - vehiclePaddingZ);
+				playerBox.setRightX(playerX);
+				playerBox.setLowerZ(playerZ + vehiclePaddingX);
+				playerBox.setUpperZ(playerZ - vehiclePaddingX);
+			}
+			
+			
+		
+			
+			
+			warehouseGame.getDebugHUD().setDebugMessage("leftX: "+playerBox.getLeftX()+" lowerZ: "+playerBox.getLowerZ()+" rightX: "+playerBox.getRightX()+" upperZ: "+playerBox.getUpperZ() /*+ "\n"+
+					"rotZ: "+ rotationZ + "rotY: " + rotationY + "rotX: "+ rotationX + "rotW: " + rotationW*/);
+			
 		}
 		else{
+			
+			
 			playerBox.setLeftX(playerX-noVehiclePaddingX);
 			playerBox.setRightX(playerX+noVehiclePaddingX);
 			playerBox.setLowerZ(playerZ+noVehiclePaddingZ);
 			playerBox.setUpperZ(playerZ-noVehiclePaddingZ);
+			warehouseGame.getDebugHUD().setDebugMessage("leftX: "+playerBox.getLeftX()+" lowerZ: "+playerBox.getLowerZ()+" rightX: "+playerBox.getRightX()+" upperZ: "+playerBox.getUpperZ());
 		}
 		
-		warehouseGame.getDebugHUD().setDebugMessage("leftX: "+playerBox.getLeftX()+" lowerZ: "+playerBox.getLowerZ()+" rightX: "+playerBox.getRightX()+" upperZ: "+playerBox.getUpperZ());
     }
 
     /**

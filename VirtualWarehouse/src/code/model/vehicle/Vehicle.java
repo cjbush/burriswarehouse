@@ -367,7 +367,12 @@ public class Vehicle extends Node {
     
     public void processCollisions() {
     	
-    	velocity = 0;
+    	if (velocity > 0){
+    		velocity = -.2f;
+    	}
+    	else if (velocity < 0){
+    		velocity = .2f;
+    	}
     	
     }
     
