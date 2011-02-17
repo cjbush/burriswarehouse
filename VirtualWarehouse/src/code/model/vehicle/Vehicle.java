@@ -6,6 +6,7 @@ import java.util.List;
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
 import code.model.pallet.Pallet;
+import code.model.pallet.PalletStack;
 import code.model.player.Player;
 
 import com.jme.bounding.BoundingBox;
@@ -36,15 +37,15 @@ public class Vehicle extends Node {
 	// sets how many pallets can be held on the vehicle
 	public static final int MAX_PALLETS = 2;
 	public static final float MAX_DISTANCE_PALLET_PICKUP = 2;
-    public static final float PALLET_FROM_BODY_OFFSET = 0.26f;
-    public static final float PLAYER_ATTACHED_Z_OFFSET = .74f;
+	public static final float PALLET_FROM_BODY_OFFSET = 0.26f;
+	public static final float PLAYER_ATTACHED_Z_OFFSET = .74f;
 	private Spatial model;
 	private float weight;
 	private float velocity;
 	private float acceleration;
 	private float braking;
 	private float turnSpeed;
-	
+
 	private float lastX;
 	private float lastZ;
 
@@ -70,6 +71,7 @@ public class Vehicle extends Node {
 	private VirtualWarehouse warehouseGame;
 	private Spatial tempChaseTarget;
 	private Spatial tempPlayerCollisionModel;
+	private boolean checkPickUp;
 
 	// temporary vector for the rotation
 	private static final Vector3f tempVa = new Vector3f();
@@ -124,9 +126,9 @@ public class Vehicle extends Node {
 		// its size
 		playerOnOffPositionNode = new Node("OnOffPositionNode");
 		this.attachChild(playerOnOffPositionNode);
-		playerOnOffPositionNode.setLocalTranslation(0, 0,
-				jackBody.getWorldTranslation().z
-						+ jackBody.getWorldBound().getCenter().z);
+		playerOnOffPositionNode.setLocalTranslation(0, 0, jackBody
+				.getWorldTranslation().z
+				+ jackBody.getWorldBound().getCenter().z);
 
 		input = new VehicleHandler(this, DisplaySystem.getDisplaySystem()
 				.getDisplayRenderer());
@@ -194,89 +196,50 @@ public class Vehicle extends Node {
 		// "p" for pickup or pallet....
 		// i'd also have to check for the closest pallet to be the one I want to
 		// pick up.
-		
-		
-		Pallet p = (Pallet) getClosestWithinDistance(warehouseGame
-				.getWarehouseWorld().getPalletsList(),
-				MAX_DISTANCE_PALLET_PICKUP, this);
 
-		if (attachedPallets.size() < MAX_PALLETS) {
+		if (KeyBindingManager.getKeyBindingManager().isValidCommand(
+				"pickupPallet", true)) {
 
-			if (KeyBindingManager.getKeyBindingManager().isValidCommand(
-					"pickupPallet", true)) {
-				if (!attachedPallets.contains(p)) {
-					attachPalletToVehicle(p);
-				}
-				else {
-					// this method isn't filled in yet/doesn't work..... -CM
-					// detachPalletFromVehicle(p);
-				}
-			} 
+			checkPickUp = true;
+		} else {
+			checkPickUp = false;
 		}
 
-		// only allow the player to pick a certain number of pallets
-		// if (attachedPallets.size() < MAX_PALLETS)
-		// {
-		// jackLeftFork.setCollisionMask(2);
-		// jackRightFork.setCollisionMask(2);
-		// jackBody.setCollisionMask(2);
-		//
-		// if
-		// (this.hasCollision(warehouseGame.getWarehouseWorld().getPalletsNode(),
-		// false, 2))
-		// {
-		// List<Pallet> pallets =
-		// warehouseGame.getWarehouseWorld().getPalletsList();
-		// Pallet p = null;
-		// for (int i=0; i<pallets.size(); i++)
-		// {
-		// Pallet collisionPallet = pallets.get(i);
-		// if (this.hasCollision(collisionPallet, false, 2))
-		// {
-		// p = collisionPallet;
-		// }
-		// }
-		//
-		// if (p.canBePickedUp())
-		// {
-		// Spatial opening1 = p.getPickupCollisionMesh1();
-		// Spatial opening2 = p.getPickupCollisionMesh2();
-		//
-		// if ((jackBody.hasCollision(opening1, false, 2) &&
-		// jackLeftFork.hasCollision(opening2, false, 2)) ||
-		// jackBody.hasCollision(opening2, false, 2) &&
-		// jackLeftFork.hasCollision(opening1, false, 2))
-		// {
-		// //make sure it's not the pallet that's already attached
-		// if (!attachedPallets.contains(p))
-		// {
-		// attachPalletToVehicle(p);
-		// }
-		// }
-		// }
-		// }
-		//
-		// jackLeftFork.setCollisionMask(1);
-		// jackRightFork.setCollisionMask(1);
-		// jackBody.setCollisionMask(1);
-		// }
+		if (checkPickUp) {
+			if (attachedPallets.size() < MAX_PALLETS) {
+
+				Pallet p = (Pallet) getClosestWithinDistance(warehouseGame
+						.getWarehouseWorld().getPalletsList(),
+						MAX_DISTANCE_PALLET_PICKUP, this);
+				if (!attachedPallets.contains(p)) {
+					attachPalletToVehicle(p);
+				} else {
+					
+					detachPalletFromVehicle(p);
+				}
+			}
+		}
+
+		
 	}
 
 	private void detachPalletFromVehicle(Pallet p) {
-		// TODO Auto-generated method stub
-		p.removeFromParent();
-		warehouseGame.getRootNode().attachChild(p);
 
-		Vector3f translation = new Vector3f(
-				palletOnOffPositionNode.getWorldTranslation().x,
-				Player.INITIAL_LOCATION.y,
-				palletOnOffPositionNode.getWorldTranslation().z);
+		p.unlock();
+		p.removeFromParent();
+
+		Vector3f translation = new Vector3f(this.getWorldTranslation().x, 0f,
+				this.getWorldTranslation().z);
 		Quaternion rotation = this.getLocalRotation().clone();
 
 		p.setLocalTranslation(translation);
 		p.getLocalRotation().set(rotation);
 
 		// p.setCollisionModel(tempPlayerCollisionModel);
+		warehouseGame.getRootNode().attachChild(p);
+		attachedPallets.remove(p);
+		
+		p.setInUse(false);
 
 	}
 
@@ -315,12 +278,14 @@ public class Vehicle extends Node {
 		player.setInputHandler(input);
 
 		// attach the player node to the vehicle node
-		Vector3f translation = new Vector3f(.12f, .12f, PLAYER_ATTACHED_Z_OFFSET);
+		Vector3f translation = new Vector3f(.12f, .12f,
+				PLAYER_ATTACHED_Z_OFFSET);
 
 		player.removeFromParent();
 		player.setLocalTranslation(translation);
-		player.setLocalRotation(new Quaternion().fromAngleAxis(0,Vector3f.UNIT_Y));
-		
+		player.setLocalRotation(new Quaternion().fromAngleAxis(0,
+				Vector3f.UNIT_Y));
+
 		this.attachChild(player);
 		player.setPlayerInVehicle(true);
 		playerUsingVehicle = true;
@@ -347,9 +312,8 @@ public class Vehicle extends Node {
 		warehouseGame.getRootNode().attachChild(player);
 
 		// position the player in the world
-		Vector3f translation = new Vector3f(
-				playerOnOffPositionNode.getWorldTranslation().x,
-				Player.INITIAL_LOCATION.y,
+		Vector3f translation = new Vector3f(playerOnOffPositionNode
+				.getWorldTranslation().x, Player.INITIAL_LOCATION.y,
 				playerOnOffPositionNode.getWorldTranslation().z);
 		Quaternion rotation = this.getLocalRotation().clone();
 
@@ -361,64 +325,69 @@ public class Vehicle extends Node {
 		warehouseGame.getChaseCam().setTarget(tempChaseTarget);
 
 		this.lock();
-		
+
 		player.stationaryAnim();
-    }
-    
-    public void processCollisions() {
-    	
-    	if (velocity > 0){
-    		velocity = -.2f;
-    	}
-    	else if (velocity < 0){
-    		velocity = .2f;
-    	}
-    	
-    }
-    
-    /**
-     * update applies the translation to the vehicle based on the time passed. called by
-     * the VehicleHandler class 
-     * @param time the time between frames
-     */
-    public void updateMovement(float time) {
-    	lastX = this.getLocalTranslation().x;
-    	lastZ = this.getLocalTranslation().z;
-    	
-        this.localTranslation.addLocal(this.localRotation.getRotationColumn(2, tempVa)
-                .multLocal(velocity * time));
-    }
+	}
 
-	private void attachPalletToVehicle(Pallet pallet) {
-		// FIXME: Crashes with stacked pallet
-		pallet.unlock();
-		pallet.removeFromParent();
+	public void processCollisions() {
 
-		Vector3f translation;
-
-		// set position based on how many pallets are on the jack
-		if (attachedPallets.size() == 0) {
-			translation = new Vector3f(0, 0, PALLET_FROM_BODY_OFFSET);
-			pallet.setLocalTranslation(translation);
-		} else {
-			Pallet lastPallet = attachedPallets.get(attachedPallets.size() - 1);
-			float offset = lastPallet.getLocalTranslation().getZ()
-					+ (((BoundingBox) lastPallet.getWorldBound()).zExtent)
-					+ (((BoundingBox) pallet.getWorldBound()).zExtent);
-
-			translation = new Vector3f(0, 0, offset);
-			pallet.setLocalTranslation(translation);
+		if (velocity > 0) {
+			velocity = -.2f;
+		} else if (velocity < 0) {
+			velocity = .2f;
 		}
 
-		Quaternion q = new Quaternion();
-		q.fromAngles(0, (float) (90 * (Math.PI / 180)), 0);
-		pallet.getLocalRotation().set(q);
-
-		jackBody.attachChild(pallet);
-		attachedPallets.add(pallet);
-		pallet.setInUse(true);
 	}
-	
+
+	/**
+	 * update applies the translation to the vehicle based on the time passed.
+	 * called by the VehicleHandler class
+	 * 
+	 * @param time
+	 *            the time between frames
+	 */
+	public void updateMovement(float time) {
+		lastX = this.getLocalTranslation().x;
+		lastZ = this.getLocalTranslation().z;
+
+		this.localTranslation.addLocal(this.localRotation.getRotationColumn(2,
+				tempVa).multLocal(velocity * time));
+	}
+
+	private void attachPalletToVehicle(Pallet pallet) {
+		// FIXME: Crashes with stacked pallet...
+
+		if (pallet != null) {
+			pallet.unlock();
+			pallet.removeFromParent();
+
+			Vector3f translation;
+
+			// set position based on how many pallets are on the jack
+			if (attachedPallets.size() == 0) {
+				translation = new Vector3f(0, 0, PALLET_FROM_BODY_OFFSET);
+				pallet.setLocalTranslation(translation);
+			} else {
+				Pallet lastPallet = attachedPallets
+						.get(attachedPallets.size() - 1);
+				float offset = lastPallet.getLocalTranslation().getZ()
+						+ (((BoundingBox) lastPallet.getWorldBound()).zExtent)
+						+ (((BoundingBox) pallet.getWorldBound()).zExtent);
+
+				translation = new Vector3f(0, 0, offset);
+				pallet.setLocalTranslation(translation);
+			}
+
+			Quaternion q = new Quaternion();
+			q.fromAngles(0, (float) (90 * (Math.PI / 180)), 0);
+			pallet.getLocalRotation().set(q);
+
+			jackBody.attachChild(pallet);
+			attachedPallets.add(pallet);
+			pallet.setInUse(true);
+		}
+	}
+
 	/**
 	 * update applies the translation to the vehicle based on the time passed.
 	 * called by the VehicleHandler class
