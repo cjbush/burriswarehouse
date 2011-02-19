@@ -1,0 +1,37 @@
+#summary Report for 2/15-2/21
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished: Totally finished the collision detection boxes. All the the bounding boxes are in the db now (at least, to my knowledge). Worked on a few misc bugs. Helped Chris quite a bit with the auto-completion task. The design is done, and the implementation has begun. Chris can explain it best, because he's been doing the actual coding...
+   * Future tasks researched: 
+   * Most immediate upcoming tasks:
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished: 
+   * Future tasks researched: 
+   * Most immediate upcoming tasks: 
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Future tasks researched:
+  * Most immediate upcoming tasks: 
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||  ||  ||-5|| || || ||
+||Caleb Mays||12||60.5||+.5|| || || ||
+||Dan Jewett|| || ||+3|| ||*Weekly Total*||$0.00||
+||*Totals*||  ||  || -1.5 || ||*YTD Total*||$0.00||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - 
+  * Chris - 
+  * Caleb - 
+  * Dan - 
