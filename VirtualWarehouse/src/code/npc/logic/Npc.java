@@ -11,6 +11,7 @@ import com.jme.scene.Controller;
 import code.model.AnimatedModel;
 import code.model.player.Character;
 import code.model.player.RandomPerson;
+import code.util.Coordinate;
 
 public class Npc extends AnimatedModel {
 	/**
