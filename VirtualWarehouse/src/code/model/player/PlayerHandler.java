@@ -127,6 +127,12 @@ public class PlayerHandler extends InputHandler {
         
         super.update(time);
         
+        if(KeyBindingManager.getKeyBindingManager().isValidCommand("autocomplete", true)){
+        	player.getACH().activate();
+        }
+        
+        if(player.getACH().isActive()) return;
+        
         rotation = ROTATION_NONE;
         direction = DIRECTION_NONE;
         

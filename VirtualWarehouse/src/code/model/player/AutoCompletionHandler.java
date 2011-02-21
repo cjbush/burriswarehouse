@@ -21,14 +21,30 @@ public class AutoCompletionHandler{
 		this.start = start;
 		this.finish = finish;
 		this.path = path;
-		this.counter = path.indexOf(start);
+		
+		//TODO: Remove Test Code
+		this.path = new ArrayList<Coordinate>();
+		this.path.add(new Coordinate(10.0f, -5.0f));
+		this.path.add(new Coordinate(2.5f, -5.0f));
+		this.path.add(new Coordinate(2.5f, -9.17f));
+		this.start = this.path.get(0);
+		this.finish = this.path.get(2);		
+		
+		//this.counter = path.indexOf(this.start);
+		this.counter = 0;
 		this.player = player;
 		this.walking = false;
+		this.active = false;
 	}
 	
-	public boolean isActive(){return active;}
-	public void activate(){active = true;}
-	public void deactivate(){active = false;}
+	public boolean isActive(){return this.active;}
+	public void activate(){
+		this.active = true;
+		player.setLocalTranslation(start.getX(), .1f, start.getZ());
+		this.counter++;
+	}
+	
+	public void deactivate(){this.active = false;}
 	
 	public void update(){
 		if(!active) return;
@@ -38,34 +54,36 @@ public class AutoCompletionHandler{
 		float x = c.getX();
 		float z = c.getZ();
 		
-		float playerX = player.getLocalTranslation().getX();
-		float playerZ = player.getLocalTranslation().getY();
+		float myX = player.getLocalTranslation().getX();
+		float myZ = player.getLocalTranslation().getZ();
 		
-		float playerDirection = -(FastMath.atan2(playerZ - z, playerX - x));
+		float playerDirection = -(FastMath.atan2(myZ - z, myX - x));
 		player.setLocalRotation(new Quaternion().fromAngleAxis(playerDirection, Vector3f.UNIT_Y));
 		
-		if((Math.abs(playerX - x) < 0.1f) && (Math.abs(playerZ - z) < 0.1f)){
+		walking = false;
+		
+		if ((Math.abs(myX - x) < .1f) && (Math.abs(myZ - z) < .1f)) {
 			this.counter++;
-		}
-		else{
-			if ((playerX < x) && (Math.abs(playerX - x) > .07f)) {
-				walking = true;
-				player.setLocalTranslation(playerX + .035f, .1f, playerZ);
+		} else {
 
-			} else if ((playerX > x) && (Math.abs(playerX - x) > .07f)) {
+			if ((myX < x) && (Math.abs(myX - x) > .07f)) {
 				walking = true;
-				player.setLocalTranslation(playerX - .035f, .1f, playerX);
+				player.setLocalTranslation(myX + .035f, .1f, myZ);
+
+			} else if ((myX > x) && (Math.abs(myX - x) > .07f)) {
+				walking = true;
+				player.setLocalTranslation(myX - .035f, .1f, myZ);
 			}
 
-			if ((playerZ < z) && Math.abs(playerZ - z) > .07f) {
+			if ((myZ < z) && Math.abs(myZ - z) > .07f) {
 				walking = true;
-				player.setLocalTranslation(playerX, .1f, playerZ + .035f);
-			} else if ((playerZ > z) && Math.abs(playerZ - z) > .07f) {
+				player.setLocalTranslation(myX, .1f, myZ + .035f);
+			} else if ((myZ > z) && Math.abs(myZ - z) > .07f) {
 				walking = true;
-				player.setLocalTranslation(playerX, .1f, playerZ - .035f);
+				player.setLocalTranslation(myX, .1f, myZ - .035f);
 			}
 		}
-		if(counter == path.indexOf(finish)){
+		if(counter >= path.indexOf(finish)){
 			deactivate();
 		}
 		if(!walking){

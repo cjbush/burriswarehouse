@@ -19,6 +19,7 @@ public class DebugHUD extends HUD {
 	private Text2D location;
 	//private Text2D bblocation;
 	private Text2D debug;
+	private Text2D auto;
 	
 	public DebugHUD() {
 		
@@ -38,6 +39,10 @@ public class DebugHUD extends HUD {
         debug.setLocalTranslation(0,40,0);
         this.attachChild(debug);
         
+        auto = my2DFont.createText("Autocomplete: No",10,0);
+        auto.setLocalTranslation(0,60,0);
+        this.attachChild(auto);
+        
         this.setLocalTranslation(10, 100, 0);
         
         
@@ -56,6 +61,11 @@ public class DebugHUD extends HUD {
 	
 	public void setDebugMessage(String msg){
 		debug.setText("Debug: "+msg);
+	}
+	
+	public void setAutoMessage(boolean enabled){
+		if(enabled) auto.setText("Autocomplete: Yes");
+		else auto.setText("Autocomplete: No");
 	}
 	
 }

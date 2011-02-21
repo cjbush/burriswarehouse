@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 
 import code.app.VirtualWarehouse;
@@ -15,19 +14,13 @@ import code.hud.PickErrorDisplay;
 import code.model.AnimatedModel;
 import code.model.action.pallet.Pallet;
 import code.model.action.pick.Product;
-import code.model.action.product.DProduct;
 import code.model.action.product.LargeProductBox;
 import code.model.vehicle.Vehicle;
-import code.research.playback.Grid;
-import code.vocollect.DBInfoRetriever;
 import code.world.DeliveryArea;
-
-import code.model.player.Character;
 
 import com.jme.bounding.BoundingBox;
 import com.jme.input.InputHandler;
 import com.jme.input.KeyBindingManager;
-import com.jme.input.KeyInput;
 import com.jme.intersection.BoundingCollisionResults;
 import com.jme.intersection.CollisionData;
 import com.jme.intersection.TriangleCollisionResults;
@@ -60,13 +53,14 @@ public class Player extends AnimatedModel {
 	
 	private VirtualWarehouse warehouseGame;
 	private InputHandler input;
+	private AutoCompletionHandler ach;
 	
 	private Spatial collisionModel;
 	
 	private boolean inVehicle = false;
 	private Vehicle vehicleBeingUsed = null;
 	private boolean hasProduct = false;
-	private Product currentProduct;
+	private code.model.action.pick.Product currentProduct;
 	private float productPlacementHeight;
 	private boolean isGrabbing  = false;
 	private boolean hasCorrectProduct = false;
@@ -94,7 +88,9 @@ public class Player extends AnimatedModel {
 		warehouseGame = vw;
 		
 		collisionModel = this;
-		setupThirdPersonInputHandler();
+		//setupThirdPersonInputHandler();
+		input = new PlayerHandler(this);
+		ach = new AutoCompletionHandler(this, null, null, null);
 		
 		getLocalTranslation().set(INITIAL_LOCATION.clone());
 		lastPosition.set(INITIAL_LOCATION.clone());
@@ -200,6 +196,8 @@ public class Player extends AnimatedModel {
 		
 		//move the player
 		input.update(interpolation);
+		this.warehouseGame.getDebugHUD().setAutoMessage(ach.isActive());
+		ach.update();
 
 		//keep player at a constant height
 		//setLocalTranslation(getLocalTranslation().x, 0.1f, getLocalTranslation().z);
@@ -285,7 +283,7 @@ public class Player extends AnimatedModel {
 			if (!hasProduct)
 			{
 				//pick up nearest product if player is close enough
-				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getDProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
+				Product closest = (Product) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductsList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
 				
 				
 				if (closest != null)
@@ -370,25 +368,39 @@ public class Player extends AnimatedModel {
 		return closest;
 	}
 	
-	private void attachProductToPlayer(DProduct product) {
+	private void attachProductToPlayer(Product product) {
+		Pallet palletParent = (Pallet) product.getParent().getParent();
+		
+		//palletParent.unlock();
+		
+		//product.removeFromParent();
+		//palletParent.setModelBound(new BoundingBox());
+		//palletParent.updateModelBound();
+		//palletParent.updateGeometricState(0.0f, true);
+		//if (!palletParent.isInUse())
+		//{
+		//	palletParent.lock();
+		//}
+		
 		Product smallBox = null;
 		
-		if (product instanceof DProduct)
+		if (product instanceof LargeProductBox)
 		{
 			//make a smaller box that the player 'picked up' from the pile
-			smallBox = product.pickSmallProduct();
+			LargeProductBox largeBox = (LargeProductBox) product;
+			smallBox = largeBox.pickSmallProduct();
 			warehouseGame.getWarehouseWorld().addToProductsList(smallBox);
 			smallBox.updateGeometricState(warehouseGame.getTimePerFrame(), true);
 			
 			if (warehouseGame.isUsingVocollect() && warehouseGame.getPickList().size() > 0)
 			{
 				//check if the player picked up the right box
-				String binNumber = product.getBinNumber();
+				String binNumber = largeBox.getBinNumber();
 				List<String> pickList = warehouseGame.getPickList();
 				String pickNumber = pickList.get(0);
 				System.out.println("picked from bin " + binNumber + " looking for " + pickNumber);
 				//List<String> pickList = warehouseGame.getPickList(); 
-				if (product.getBinNumber().equals(pickList.get(0)))
+				if (largeBox.getBinNumber().equals(pickList.get(0)))
 				{
 					System.out.println("correct pick");
 					hasCorrectProduct = true;
@@ -403,6 +415,18 @@ public class Player extends AnimatedModel {
 			}
 			
 		}
+		else
+		{
+			//attach the small box to the player
+			//product is instance of SmallProductBox
+			product.removeFromParent();
+			smallBox = product;
+			
+			palletParent.setModelBound(new BoundingBox());
+			palletParent.updateModelBound();
+			palletParent.updateGeometricState(0.0f, true);
+			
+		}
 		
 		float yOffset = ((BoundingBox) this.getWorldBound()).yExtent;
 		float zOffset = (((BoundingBox) this.getWorldBound()).zExtent)+
@@ -412,6 +436,7 @@ public class Player extends AnimatedModel {
     	this.attachChild(smallBox);
     	currentProduct = smallBox;
     	hasProduct = true;
+    	
 	}
 	
 	private void attachProductToPallet(Pallet p) {
@@ -538,6 +563,9 @@ public class Player extends AnimatedModel {
 		hasProduct = false;
 	}
 	
+	/**
+	 * @deprecated Doesn't do anything?
+	 */
 	private void setupThirdPersonInputHandler() {
 		
 		//setup some properties for the input handler
@@ -552,6 +580,48 @@ public class Player extends AnimatedModel {
 		//input = new ThirdPersonHandler(this, warehouseGame.getThirdPersonCamera(), tpHandlerProps);
 	    //input.setActionSpeed(2f);
 	    input = new PlayerHandler(this);
+	}
+	
+	/**
+	 * Attempt at smooth collision detection (wall sliding) - code found on
+	 * http://www.jmonkeyengine.com/forum/index.php?topic=10909.0
+	 * 
+	 * @deprecated Replaced by checkForCollision2D()
+	 */
+    private void checkForCollision() {
+
+		// check for bounding collision
+		if(collisionModel.hasCollision(warehouseGame.getCollidables(), false)) {
+			
+			//System.out.println("collision");
+			
+			if (inVehicle && vehicleBeingUsed != null)
+			{
+				vehicleBeingUsed.processCollisions();
+			}
+			else
+			{
+				triCollision.clear();
+				collisionModel.calculateCollisions(warehouseGame.getCollidables(), triCollision);
+	
+				// check for actual triangle collision
+				if(triCollision.getNumber() > 0) {
+	
+					temp.zero();
+	
+					for(int index = 0; index < triCollision.getNumber(); index++)
+						temp.addLocal(getCollisionNormal(triCollision.getCollisionData(index)));
+	
+					temp.normalizeLocal();
+					temp.multLocal(delta.length());
+					temp.addLocal(delta);
+	
+					temp.setY(0); //should never go up or down
+					collisionModel.setLocalTranslation(lastPosition.add(temp));
+				}
+			}
+			
+		}
 	}
     
     /**
@@ -781,7 +851,6 @@ public class Player extends AnimatedModel {
 	@Override
 	public void rotateXNegAnim() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -867,5 +936,7 @@ public class Player extends AnimatedModel {
 		// TODO Auto-generated method stub
 		
 	} 
+	
+	public AutoCompletionHandler getACH(){ return ach; }
 	
 }
