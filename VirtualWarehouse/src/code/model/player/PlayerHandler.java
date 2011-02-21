@@ -88,6 +88,7 @@ public class PlayerHandler extends InputHandler {
         KeyBindingManager.getKeyBindingManager().set("right", KeyInput.KEY_D);
         KeyBindingManager.getKeyBindingManager().set("enter_exit_vehicle", KeyInput.KEY_T);
 		KeyBindingManager.getKeyBindingManager().set("pickup_place_product", KeyInput.KEY_Y);
+		KeyBindingManager.getKeyBindingManager().set("insert_info", KeyInput.KEY_I);
         
         ControllerEnvironment ce = ControllerEnvironment.getDefaultEnvironment();
 		Controller[] controllers = ce.getControllers();
@@ -126,12 +127,6 @@ public class PlayerHandler extends InputHandler {
         }*/
         
         super.update(time);
-        
-        if(KeyBindingManager.getKeyBindingManager().isValidCommand("autocomplete", true)){
-        	player.getACH().activate();
-        }
-        
-        if(player.getACH().isActive()) return;
         
         rotation = ROTATION_NONE;
         direction = DIRECTION_NONE;
