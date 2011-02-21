@@ -6,7 +6,7 @@ import java.util.List;
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
 import code.model.action.pallet.Pallet;
-import code.model.pallet.PalletStack;
+import code.model.action.pallet.PalletStack;
 import code.model.player.Player;
 
 import com.jme.bounding.BoundingBox;
