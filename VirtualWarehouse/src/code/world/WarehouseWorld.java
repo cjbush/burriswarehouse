@@ -60,7 +60,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
-	public static final boolean fillRacks = false; //put pallets and product on racks //KEEP THIS FALSE, IDK the outcome yet, still working... - Dan
+	public static final boolean fillRacks = true; //put pallets and product on racks //KEEP THIS FALSE, IDK the outcome yet, still working... - Dan
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean iWantArrow = true;
 	

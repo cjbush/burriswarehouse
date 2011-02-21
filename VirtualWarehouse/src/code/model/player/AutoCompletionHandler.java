@@ -40,31 +40,54 @@ public class AutoCompletionHandler{
 	public boolean isActive(){return this.active;}
 	public void activate(){
 		this.active = true;
-		player.setLocalTranslation(start.getX(), .1f, start.getZ());
+		if(!player.inVehicle())
+			player.setLocalTranslation(start.getX(), .1f, start.getZ());
+		else player.getVehicleBeingUsed().setLocalTranslation(start.getX(), .1f, start.getZ());
 		this.counter++;
+		return;
 	}
 	
-	public void deactivate(){this.active = false;}
+	public void deactivate(){
+		this.active = false;
+		this.counter = 0;
+		return;
+	}
 	
 	public void update(){
 		if(!active) return;
+		
+		player.getDebugHud().setAutoCount(counter);
 		
 		Coordinate c = path.get(this.counter);
 		
 		float x = c.getX();
 		float z = c.getZ();
 		
-		float myX = player.getLocalTranslation().getX();
-		float myZ = player.getLocalTranslation().getZ();
+		float myX, myZ;
+		
+		if(!player.inVehicle()){
+			myX = player.getLocalTranslation().getX();
+			myZ = player.getLocalTranslation().getZ();
+		}
+		else{
+			myX = player.getVehicleBeingUsed().getLocalTranslation().getX();
+			myZ = player.getVehicleBeingUsed().getLocalTranslation().getZ();
+		}
 		
 		float playerDirection = -(FastMath.atan2(myZ - z, myX - x));
-		player.setLocalRotation(new Quaternion().fromAngleAxis(playerDirection, Vector3f.UNIT_Y));
+		
+		if(!player.inVehicle()){
+			player.setLocalRotation(new Quaternion().fromAngleAxis(playerDirection, Vector3f.UNIT_Y));
+		}
+		else{
+			player.getVehicleBeingUsed().setLocalRotation(new Quaternion().fromAngleAxis(playerDirection-1.55f, Vector3f.UNIT_Y));
+		}
 		
 		walking = false;
 		
 		if ((Math.abs(myX - x) < .1f) && (Math.abs(myZ - z) < .1f)) {
 			this.counter++;
-		} else {
+		} else if(!player.inVehicle()){
 
 			if ((myX < x) && (Math.abs(myX - x) > .07f)) {
 				walking = true;
@@ -83,7 +106,22 @@ public class AutoCompletionHandler{
 				player.setLocalTranslation(myX, .1f, myZ - .035f);
 			}
 		}
-		if(counter >= path.indexOf(finish)){
+		else{
+			walking = false;
+			if ((myX < x) && (Math.abs(myX - x) > .07f)) {
+				player.getVehicleBeingUsed().setLocalTranslation(myX + .035f, .1f, myZ);
+
+			} else if ((myX > x) && (Math.abs(myX - x) > .07f)) {
+				player.getVehicleBeingUsed().setLocalTranslation(myX - .035f, .1f, myZ);
+			}
+
+			if ((myZ < z) && Math.abs(myZ - z) > .07f) {
+				player.getVehicleBeingUsed().setLocalTranslation(myX, .1f, myZ + .035f);
+			} else if ((myZ > z) && Math.abs(myZ - z) > .07f) {
+				player.getVehicleBeingUsed().setLocalTranslation(myX, .1f, myZ - .035f);
+			}
+		}
+		if(counter > path.indexOf(finish)){
 			deactivate();
 		}
 		if(!walking){

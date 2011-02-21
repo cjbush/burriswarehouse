@@ -20,6 +20,7 @@ public class DebugHUD extends HUD {
 	//private Text2D bblocation;
 	private Text2D debug;
 	private Text2D auto;
+	private Text2D autocounter;
 	
 	public DebugHUD() {
 		
@@ -42,6 +43,10 @@ public class DebugHUD extends HUD {
         auto = my2DFont.createText("Autocomplete: No",10,0);
         auto.setLocalTranslation(0,60,0);
         this.attachChild(auto);
+        
+        autocounter = my2DFont.createText("Waypoint: ", 10, 0);
+        autocounter.setLocalTranslation(0,80,0);
+        this.attachChild(autocounter);
         
         this.setLocalTranslation(10, 100, 0);
         
@@ -68,4 +73,7 @@ public class DebugHUD extends HUD {
 		else auto.setText("Autocomplete: No");
 	}
 	
+	public void setAutoCount(int count){
+		autocounter.setText("Waypoint: "+count);
+	}
 }
