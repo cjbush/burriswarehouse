@@ -235,11 +235,36 @@ public class Player extends AnimatedModel {
 		checkVehicleEnterExit(false);
 		
 		checkProductGetDrop();
+		if (KeyBindingManager.getKeyBindingManager().isValidCommand("insert_info", false)){
+			this.insertInfo();
+		}
 	}
 	
 	/**
 	 * Checks if the player is trying to get in or out of a vehicle.
 	 */
+	public void insertInfo(){
+		// inserts into the DPallet table so that 
+		// the location happens based on the players location. yea...simply a helper for us.
+ 		float X = this.getLocalTranslation().getX();
+		float Z = this.getLocalTranslation().getZ();
+		try {
+			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
+			//String url = "jdbc:mysql://localhost:3306/vwburr";
+			Connection con = DriverManager.getConnection(url, "warehouse", "vwburr15");
+			Statement stmt = con.createStatement();
+			String query = "insert into DPallet (X_Location, Z_Location) values ('" +X+ "'," + " '"+Z +"');";
+			// do it.
+			//System.out.println(query);
+			stmt.executeUpdate(query);
+			//stmt.executeQuery(query);
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
 	public void checkVehicleEnterExit(boolean controllerOverride) {
 		
 		if ((KeyBindingManager.getKeyBindingManager().isValidCommand("enter_exit_vehicle", false)||controllerOverride) && !hasProduct)
