@@ -144,9 +144,9 @@ public class WarehouseTrainer extends FixedFramerateGame {
             
             // I AM A WIZARD
             display.setMinStencilBits(8);
-            display.setMinDepthBits(8);
-            display.setMinAlphaBits(0);
-            display.setMinSamples(0);
+            display.setMinDepthBits(24);
+            display.setMinAlphaBits(8);
+            display.setMinSamples(8);
             display.createWindow(width, height, depth, freq, fullscreen);
             
             cam = display.getRenderer().createCamera(width, height);
