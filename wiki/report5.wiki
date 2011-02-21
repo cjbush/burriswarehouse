@@ -19,7 +19,7 @@
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
   * Tasks accomplished: Worked on autocompletion. I'd say we're around 50% done with it. We should have more than enough time to finish it in time for our milestone.
-  * Most immediate upcoming tasks: Assist Caleb with finishing autocompletion (if he's willing to take charge of it) and write Dan's required functionality from issue 16.
+  * Most immediate upcoming tasks: Finish autocompletion. I need Caleb's assistance with path traversal.
 
 ==Time and Financial Report==
 
