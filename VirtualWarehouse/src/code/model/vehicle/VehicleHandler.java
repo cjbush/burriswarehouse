@@ -2,6 +2,7 @@ package code.model.vehicle;
 
 import java.util.ArrayList;
 
+import code.model.player.Player;
 import code.model.player.PlayerHandler;
 import code.model.vehicle.actions.*;
 
@@ -15,11 +16,17 @@ public class VehicleHandler extends InputHandler {
     private Vehicle vehicle;
     //the default action
     private DriftAction drift;
+    private Player player;
     
     public void update(float time) {
         if ( !isEnabled() ) return;
 
         super.update(time);
+        if(KeyBindingManager.getKeyBindingManager().isValidCommand("autocomplete", false)){
+        	player.getACH().activate();
+        }
+        
+        if(player.getACH().isActive()) return;
         //we always want to allow friction to control the drift
         drift.performAction(event);
         vehicle.updateMovement(time);
@@ -30,8 +37,9 @@ public class VehicleHandler extends InputHandler {
      * @param vehicle the node we wish to move
      * @param api the library that will handle creation of the input.
      */
-    public VehicleHandler(Vehicle vehicle, String api) {
+    public VehicleHandler(Vehicle vehicle, String api, Player player) {
         this.vehicle = vehicle;
+        this.player = player;
         setKeyBindings(api);
         setActions(vehicle);
 

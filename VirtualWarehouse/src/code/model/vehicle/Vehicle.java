@@ -72,6 +72,8 @@ public class Vehicle extends Node {
 	private Spatial tempChaseTarget;
 	private Spatial tempPlayerCollisionModel;
 	private boolean checkPickUp;
+	
+	private Player player;
 
 	// temporary vector for the rotation
 	private static final Vector3f tempVa = new Vector3f();
@@ -129,9 +131,6 @@ public class Vehicle extends Node {
 		playerOnOffPositionNode.setLocalTranslation(0, 0, jackBody
 				.getWorldTranslation().z
 				+ jackBody.getWorldBound().getCenter().z);
-
-		input = new VehicleHandler(this, DisplaySystem.getDisplaySystem()
-				.getDisplayRenderer());
 	}
 
 	/**
@@ -273,6 +272,9 @@ public class Vehicle extends Node {
 
 		this.unlock();
 
+		this.player = player;
+		input = new VehicleHandler(this, DisplaySystem.getDisplaySystem()
+				.getDisplayRenderer(), player);
 		// change the input handler to the vehicle input handler
 		tempPlayerHandler = player.getInputHandler();
 		player.setInputHandler(input);

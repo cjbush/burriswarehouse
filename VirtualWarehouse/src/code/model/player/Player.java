@@ -10,10 +10,12 @@ import java.util.List;
 import code.app.VirtualWarehouse;
 import code.collisions.BoundingBox2D;
 import code.component.Score;
+import code.hud.DebugHUD;
 import code.hud.PickErrorDisplay;
 import code.model.AnimatedModel;
 import code.model.action.pallet.Pallet;
 import code.model.action.pick.Product;
+import code.model.action.product.DProduct;
 import code.model.action.product.LargeProductBox;
 import code.model.vehicle.Vehicle;
 import code.world.DeliveryArea;
@@ -308,7 +310,7 @@ public class Player extends AnimatedModel {
 			if (!hasProduct)
 			{
 				//pick up nearest product if player is close enough
-				Product closest = (Product) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductsList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
+				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getDProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
 				
 				
 				if (closest != null)
@@ -393,39 +395,25 @@ public class Player extends AnimatedModel {
 		return closest;
 	}
 	
-	private void attachProductToPlayer(Product product) {
-		Pallet palletParent = (Pallet) product.getParent().getParent();
-		
-		//palletParent.unlock();
-		
-		//product.removeFromParent();
-		//palletParent.setModelBound(new BoundingBox());
-		//palletParent.updateModelBound();
-		//palletParent.updateGeometricState(0.0f, true);
-		//if (!palletParent.isInUse())
-		//{
-		//	palletParent.lock();
-		//}
-		
+	private void attachProductToPlayer(DProduct closest) {		
 		Product smallBox = null;
 		
-		if (product instanceof LargeProductBox)
+		if (closest instanceof DProduct)
 		{
 			//make a smaller box that the player 'picked up' from the pile
-			LargeProductBox largeBox = (LargeProductBox) product;
-			smallBox = largeBox.pickSmallProduct();
+			smallBox = closest.pickSmallProduct();
 			warehouseGame.getWarehouseWorld().addToProductsList(smallBox);
 			smallBox.updateGeometricState(warehouseGame.getTimePerFrame(), true);
 			
 			if (warehouseGame.isUsingVocollect() && warehouseGame.getPickList().size() > 0)
 			{
 				//check if the player picked up the right box
-				String binNumber = largeBox.getBinNumber();
+				String binNumber = closest.getBinNumber();
 				List<String> pickList = warehouseGame.getPickList();
 				String pickNumber = pickList.get(0);
 				System.out.println("picked from bin " + binNumber + " looking for " + pickNumber);
 				//List<String> pickList = warehouseGame.getPickList(); 
-				if (largeBox.getBinNumber().equals(pickList.get(0)))
+				if (closest.getBinNumber().equals(pickList.get(0)))
 				{
 					System.out.println("correct pick");
 					hasCorrectProduct = true;
@@ -440,18 +428,6 @@ public class Player extends AnimatedModel {
 			}
 			
 		}
-		else
-		{
-			//attach the small box to the player
-			//product is instance of SmallProductBox
-			product.removeFromParent();
-			smallBox = product;
-			
-			palletParent.setModelBound(new BoundingBox());
-			palletParent.updateModelBound();
-			palletParent.updateGeometricState(0.0f, true);
-			
-		}
 		
 		float yOffset = ((BoundingBox) this.getWorldBound()).yExtent;
 		float zOffset = (((BoundingBox) this.getWorldBound()).zExtent)+
@@ -461,7 +437,6 @@ public class Player extends AnimatedModel {
     	this.attachChild(smallBox);
     	currentProduct = smallBox;
     	hasProduct = true;
-    	
 	}
 	
 	private void attachProductToPallet(Pallet p) {
@@ -964,4 +939,5 @@ public class Player extends AnimatedModel {
 	
 	public AutoCompletionHandler getACH(){ return ach; }
 	
+	public DebugHUD getDebugHud(){ return warehouseGame.getDebugHUD(); }
 }
