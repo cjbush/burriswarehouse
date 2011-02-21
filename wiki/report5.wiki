@@ -18,16 +18,16 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished: 
-  * Future tasks researched:
-  * Most immediate upcoming tasks: 
+  * Tasks accomplished: Worked on autocompletion. I'd say we're around 50% done with it. We should have more than enough time to finish it in time for our milestone.
+  * Most immediate upcoming tasks: Assist Caleb with finishing autocompletion (if he's willing to take charge of it) and write Dan's required functionality from issue 16.
+
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush||  ||  ||-5|| || || ||
+||Chris Bush|| 12 || 55  ||-5|| || || ||
 ||Caleb Mays||12||60.5||+.5|| || || ||
 ||Dan Jewett||13||64||+4|| ||*Weekly Total*||$0.00||
-||*Totals*||  ||  || -1.5 || ||*YTD Total*||$0.00||
+||*Totals*|| 37 || 179.5 || -0.5 || ||*YTD Total*||$0.00||
 
 
 =Meeting Notes / Task Assignments=
