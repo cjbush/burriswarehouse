@@ -9,9 +9,11 @@ import java.util.HashMap;
 import java.util.logging.Logger;
 
 import com.jme.bounding.BoundingBox;
+import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
 import com.jme.scene.TriMesh;
 import com.jme.scene.state.BlendState;
+import com.jme.scene.state.CullState;
 import com.jme.system.DisplaySystem;
 import com.jme.util.CloneImportExport;
 import com.jme.util.export.binary.BinaryImporter;
@@ -36,7 +38,7 @@ public class ModelLoader {
 	 * Loads a model and returns it as a node, determining which load function to use
 	 * based on the given format. SetBounds defaults to true if not specified.
 	 */
-	public static Node loadModel(String format, String filePath, String folderPath, SharedMeshManager smm, boolean setBounds) {
+	public static Node loadModel(String format, String filePath, String folderPath, SharedMeshManager smm, boolean setBounds, Renderer r, String type) {
 
 		Node model = null;
 
@@ -73,6 +75,22 @@ public class ModelLoader {
 			{
 				logger.info("Model format " + format + " cannot be loaded.");
 			}
+			
+			if (newModel != null && r != null)
+			{
+				if (type.equals("object"))
+				{
+					CullState cs = r.createCullState();
+					cs.setCullFace(CullState.Face.None);
+					newModel.setRenderState(cs);
+				}
+				else
+				{
+					CullState cs = r.createCullState();
+					cs.setCullFace(CullState.Face.Back);
+					newModel.setRenderState(cs);
+				}
+			}
 
 			//store the model in case it is used again
 			if (smm != null && newModel != null)
@@ -107,7 +125,7 @@ public class ModelLoader {
 	}
 
 	public static Node loadModel(String format, String filePath, String folderPath) {
-		return loadModel(format, filePath, folderPath, null, true);		
+		return loadModel(format, filePath, folderPath, null, true, null, "ignore");		
 	}
 
 	public static Node loadJmeModel(String path) {

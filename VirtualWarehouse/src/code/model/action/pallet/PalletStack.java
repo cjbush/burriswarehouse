@@ -1,4 +1,4 @@
-package code.model.pallet;
+package code.model.action.pallet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
-import code.model.product.LargeProductBox;
+import code.model.action.product.LargeProductBox;
 import code.world.WarehouseWorld;
 
 import com.jme.bounding.BoundingBox;
@@ -40,7 +40,7 @@ public class PalletStack extends Node {
 		for (int i=0; i<count; i++)
 		{
 			Spatial palletModel = null;
-			palletModel = ModelLoader.loadModel("obj", PALLET_MODEL_FOLDER + PALLET_MODEL, PALLET_MODEL_FOLDER, ww.getVirtualWarehouse().getSharedNodeManager(), true);
+			palletModel = ModelLoader.loadModel("obj", PALLET_MODEL_FOLDER + PALLET_MODEL, PALLET_MODEL_FOLDER, ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 			palletModel.setLocalTranslation(0, nextHeight, 0);
 			attachChild(palletModel);
 			

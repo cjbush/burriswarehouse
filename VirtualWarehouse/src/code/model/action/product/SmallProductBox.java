@@ -1,7 +1,9 @@
-package code.model.product;
+package code.model.action.product;
 
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
+import code.model.action.pick.Product;
+import code.world.WarehouseWorld;
 
 import com.jme.math.Vector3f;
 import com.jme.scene.Node;
@@ -25,16 +27,16 @@ public class SmallProductBox extends Product {
 	 */
 	private static int count = 1;
 	
-	public SmallProductBox(SharedMeshManager smm, String name) {
+	public SmallProductBox(SharedMeshManager smm, String name, WarehouseWorld ww) {
 		this.setName(name + count);
-		loadModel(smm);
+		loadModel(smm, ww);
 		count++;
 	}
 	
-	private void loadModel(SharedMeshManager smm) {
+	private void loadModel(SharedMeshManager smm, WarehouseWorld ww) {
 		Spatial productModel = null;
 		productModel = ModelLoader.loadModel("obj", PROD_LOC + PROD_FILE,
-				PROD_LOC, smm, true);
+				PROD_LOC, smm, true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 		this.setLocalTranslation(INITIAL_LOC);
 		attachChild(productModel);
 	}

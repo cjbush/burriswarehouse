@@ -1,4 +1,4 @@
-package code.model.product;
+package code.model.action.pick;
 
 import com.jme.scene.Node;
 
