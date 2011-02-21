@@ -11,7 +11,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import code.model.ModelLoader;
-import code.model.pallet.Pallet;
+import code.model.action.pallet.Pallet;
 import code.model.vehicle.Vehicle;
 
 import com.jme.math.Quaternion;

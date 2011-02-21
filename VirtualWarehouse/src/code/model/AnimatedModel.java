@@ -15,11 +15,11 @@ import com.jme.scene.Node;
 import com.jme.scene.shape.Box;
 import com.jme.util.resource.ResourceLocatorTool;
 import com.jme.util.resource.SimpleResourceLocator;
-import code.model.player.MD5.MD5Animation;
-import code.model.player.MD5.MD5Node;
-import code.model.player.MD5.controller.MD5Controller;
-import code.model.player.MD5.importer.MD5Importer;
-import code.model.player.MD5.interfaces.IMD5Controller;
+import code.MD5.MD5Animation;
+import code.MD5.MD5Node;
+import code.MD5.controller.MD5Controller;
+import code.MD5.importer.MD5Importer;
+import code.MD5.interfaces.IMD5Controller;
 
 import code.model.player.RandomPerson;
 

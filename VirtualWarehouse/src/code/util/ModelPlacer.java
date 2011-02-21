@@ -56,18 +56,6 @@ public class ModelPlacer extends SimpleGame{
 		world = new WarehouseWorld(vw);
 		rootNode.attachChild(world);
 
-		this.modelsToPlace = new ArrayList<Spatial>();
-		
-		List<Spatial> models = world.getCollidables().getChildren();
-		//TODO:needs to be fixed to work with the new organiztion structure
-
-		for (int i=0; i < models.size(); i++) {
-			if (MODEL_TO_PLACE.equals(models.get(i).getName())) {
-				this.modelsToPlace.add(models.get(i));
-			}
-		}
-		this.currentModelIndex = 0;
-		modelsToPlace.get(currentModelIndex).unlock();
 		setupInput();
 		
 	}

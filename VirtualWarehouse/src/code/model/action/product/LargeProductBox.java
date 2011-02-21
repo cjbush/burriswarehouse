@@ -1,8 +1,9 @@
-package code.model.product;
+package code.model.action.product;
 
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
+import code.model.action.pick.Product;
 import code.world.WarehouseWorld;
 
 import com.jme.scene.Node;
@@ -23,18 +24,18 @@ public class LargeProductBox extends Product {
 		this.ww = ww;
 		this.setName(name);
 		this.binNumber = binNumber;
-		loadModel();
+		loadModel(ww);
 	}
 	
-	private void loadModel() {
+	private void loadModel(WarehouseWorld ww) {
 		Spatial productModel = null;
 		productModel = ModelLoader.loadModel("obj", "data/models/boxes/generic/box.obj",
-				"data/models/boxes/generic/", ww.getVirtualWarehouse().getSharedNodeManager(), true);
+				"data/models/boxes/generic/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 		attachChild(productModel);
 	}
 	
 	public Product pickSmallProduct() {
-		Product smallBox = new SmallProductBox(ww.getVirtualWarehouse().getSharedNodeManager(), "SmallProduct");
+		Product smallBox = new SmallProductBox(ww.getVirtualWarehouse().getSharedNodeManager(), "SmallProduct", this.ww);
 		return smallBox;
 	}
 

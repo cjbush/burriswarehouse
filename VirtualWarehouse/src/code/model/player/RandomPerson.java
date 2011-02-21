@@ -10,7 +10,7 @@ public class RandomPerson
 	
 	public static final String raceTextures[] = {"ForeArm1.bmp","Hands_01.bmp","Head_M-B.bmp"};
 	
-	private static final float heightFactor = .15f;
+	private static final float heightFactor = .10f;
 	private static final float weightFactor = .2f;
 	
 	private String textures[] = new String[numTextures];

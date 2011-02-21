@@ -1,4 +1,4 @@
-package code.model.pallet;
+package code.model.action.pallet;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
-import code.model.product.LargeProductBox;
+import code.model.action.product.LargeProductBox;
 import code.world.WarehouseWorld;
 
 import com.jme.bounding.BoundingBox;
@@ -57,7 +57,7 @@ public class Pallet extends Node {
 		int num = ww.getPalletsList().size();
 		setName("pallet"+num);
 		
-		loadModel(ww.getVirtualWarehouse().getSharedNodeManager());
+		loadModel(ww.getVirtualWarehouse().getSharedNodeManager(),ww);
 		productNode = new Node("product node");
 		attachChild(productNode);
 		if (addProduct)
@@ -90,7 +90,7 @@ public class Pallet extends Node {
 			//they are not taken into account for collision detection,
 			//but can still be collided with
 						
-			ww.setChildrenCollidable(this, false);
+			//ww.setChildrenCollidable(this, false);
 			updateGeometricState(0, true);
 			
 			float xExtent = ((BoundingBox) this.getWorldBound()).xExtent;
@@ -147,9 +147,9 @@ public class Pallet extends Node {
 		productNode.attachChild(product);
 	}
 	
-	private void loadModel(SharedMeshManager smm) {
+	private void loadModel(SharedMeshManager smm, WarehouseWorld ww) {
 		Spatial palletModel = null;
-		palletModel = ModelLoader.loadModel("obj", PALLET_MODEL_FOLDER + PALLET_MODEL, PALLET_MODEL_FOLDER, smm, true);
+		palletModel = ModelLoader.loadModel("obj", PALLET_MODEL_FOLDER + PALLET_MODEL, PALLET_MODEL_FOLDER, smm, true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "object");
 		attachChild(palletModel);
 	}
 	

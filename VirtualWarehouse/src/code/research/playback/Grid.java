@@ -45,13 +45,17 @@ public class Grid {
 						(Node) ie.loadClone());
 				grid[i][j].setModelBound(new BoundingBox());
 				grid[i][j].updateModelBound();
-				warehouseGame.getCollidables().attachChild(grid[i][j]);
+				
+				//UPDATE THIS
+				/*
+				//warehouseGame.getCollidables().attachChild(grid[i][j]);
 				collisionModel = grid[i][j];
 				if (!collisionModel.hasCollision(
-						warehouseGame.getCollidables(), false)) {
+						//warehouseGame.getCollidables(), false)) {
 					grid[i][j].setUsable(true, root, (Node) ie.loadClone());
 				}
-				warehouseGame.getCollidables().detachChild(grid[i][j]);
+				//warehouseGame.getCollidables().detachChild(grid[i][j]);
+				*/
 				x += wWidth / resolutionX;
 			}
 			y -= wLength / resolutionY;
@@ -61,7 +65,7 @@ public class Grid {
 	private void loadModel() {
 		object = ModelLoader.loadModel("obj",
 				"data/models/miscObj/gridnode/gridnode.obj",
-				"data/models/miscObj/gridnode/", null, true);
+				"data/models/miscObj/gridnode/", null, true, warehouseGame.getWarehouseWorld().getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 		ie.saveClone(object);
 	}
 }

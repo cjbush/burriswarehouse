@@ -242,7 +242,7 @@ public class InfoIconManager extends Node {
 					
 					//load the model and attach to node
 					Spatial object = null;
-					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", warehouseGame.getSharedNodeManager(), true);
+					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", warehouseGame.getSharedNodeManager(), true, warehouseGame.getDisplay().getRenderer(), "ignore");
 					if (object != null)
 					{
 						Node infoIcon = new BasicInfoIcon(text);
