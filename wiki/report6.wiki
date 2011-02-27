@@ -1,0 +1,38 @@
+#summary Report for 2/21-2/28
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished: Got collision boxes around all of Dan's misc. boxes. Helped Chris with auto-completion. 
+   * Future tasks researched: The manuals.
+   * Most immediate upcoming tasks: ?? (would like some direction/guidance...)
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished: 
+   * Future tasks researched: 
+   * Most immediate upcoming tasks: Make everything work:  
+
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Most immediate upcoming tasks: 
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||x|| 55  ||-5|| || || ||
+||Caleb Mays||8||68.5||-3.5|| || || ||
+||Dan Jewett||x||64||+4|| ||*Weekly Total*||$0.00||
+||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - 
+  * Chris - 
+  * Caleb - 
+  * Dan - 
