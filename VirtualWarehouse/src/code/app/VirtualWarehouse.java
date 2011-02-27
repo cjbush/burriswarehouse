@@ -261,21 +261,8 @@ public class VirtualWarehouse extends GameState {
 		return world;
 	}
 
-	/**
-	 * @deprecated Unnecessary because of new collision detection
-	 * 
-	 */
-	public Node getCollidables() {
-		return null;
-		//return world.getCollidables();
-	}
-
 	public Score getScore() {
 		return score;
-	}
-
-	public BitmapFont getFont() {
-		return font;
 	}
 
 	public boolean isGameComplete() {
@@ -445,8 +432,8 @@ public class VirtualWarehouse extends GameState {
 			String nextSlot = vh.getSlot();
 			playerNode.showArrow(nextAisle, nextSlot);
 		} else {
-			Node arrow = this.getArrowNode();
-			arrow.setLocalScale(0f);
+			//Node arrow = this.getArrowNode();
+			//arrow.setLocalScale(0f);
 		}
 		
 
@@ -537,8 +524,6 @@ public class VirtualWarehouse extends GameState {
 
 		addToLoadingProgress(5, "Building HUD...");
 
-		font = BitmapFontLoader.loadDefaultFont();
-
 		// create the HUDs
 		// minimapHUD = new MinimapHUD(this);
 		debugHUD = new DebugHUD();
@@ -581,13 +566,6 @@ public class VirtualWarehouse extends GameState {
 		buf.setEnabled(true);
 		buf.setFunction(ZBufferState.TestFunction.LessThanOrEqualTo);
 		rootNode.setRenderState(buf);
-
-		// Time for a little optimization. We don't need to render back face
-		// triangles, so lets
-		// not. This will give us a performance boost for very little effort.
-		CullState cs = display.getRenderer().createCullState();
-		cs.setCullFace(CullState.Face.Back);
-		rootNode.setRenderState(cs);
 
 		// create sharedNode manager to cache models and improve performance
 		sharedMeshManager = new SharedMeshManager();

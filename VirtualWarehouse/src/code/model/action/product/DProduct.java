@@ -1,7 +1,7 @@
 package code.model.action.product;
 
 import code.model.ModelLoader;
-import code.model.action.pick.Product;
+import code.model.action.pick.Pick;
 import code.world.WarehouseWorld;
 
 import com.jme.scene.Node;
@@ -46,11 +46,11 @@ public class DProduct extends Node
 		this.attachChild(m);
 	}
 	
-	public Product pickSmallProduct()
+	public Pick pickSmallProduct()
 	{
 		if (pickable)
 		{
-			Product smallBox = new SmallProductBox(ww.getVirtualWarehouse().getSharedNodeManager(), "SmallProduct", this.ww);
+			Pick smallBox = new SmallProductBox(ww.getVirtualWarehouse().getSharedNodeManager(), "SmallProduct", this.ww);
 			return smallBox;
 		}
 		return null;

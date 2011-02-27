@@ -22,6 +22,7 @@ import com.jme.math.Vector3f;
 import com.jme.scene.Controller;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
+import com.jmex.angelfont.BitmapFontLoader;
 
 import code.app.VirtualWarehouse;
 import code.hud.PopupMessageBox;
@@ -141,7 +142,7 @@ public class InfoIconManager extends Node {
 	
 	public void showActiveIconText() {
 		logger.info(activeIcon.getText());
-		popup = new PopupMessageBox(activeIcon.getText(), warehouseGame.getFont());
+		popup = new PopupMessageBox(activeIcon.getText(), BitmapFontLoader.loadDefaultFont());
 		warehouseGame.getHudNode().attachChild(popup);
 	}
 	

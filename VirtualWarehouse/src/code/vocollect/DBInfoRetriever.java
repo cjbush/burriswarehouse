@@ -99,6 +99,11 @@ public class DBInfoRetriever {
 	 * @return
 	 */
 	public boolean getIsPossiblePickJob(String binNumber) {
+		if (binNumber == null)
+		{
+			return false;
+		}
+		
 		binNumber += "00";
 		if (data.containsKey(binNumber)) {
 	    	return true;

@@ -2,7 +2,7 @@ package code.model.action.product;
 
 import code.model.ModelLoader;
 import code.model.SharedMeshManager;
-import code.model.action.pick.Product;
+import code.model.action.pick.Pick;
 import code.world.WarehouseWorld;
 
 import com.jme.math.Vector3f;
@@ -15,7 +15,7 @@ import com.jme.scene.Spatial;
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  *
  */
-public class SmallProductBox extends Product {
+public class SmallProductBox extends Pick {
 
 	private static final String PROD_LOC = "data/models/boxes/small_generic/";
 	private static final String PROD_FILE = "smallbox.obj";

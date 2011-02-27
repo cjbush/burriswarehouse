@@ -1,164 +1,351 @@
 package code.model.action.rack;
 
-import java.util.List;
-
-import code.model.action.pallet.Pallet;
-import code.model.action.pick.Product;
-import code.world.Room;
+import code.model.action.pallet.StackedDPallet;
+import code.model.action.pick.Pick;
+import code.model.action.product.DProduct;
+import code.model.racklabels.BinNumberLabel;
+import code.model.racklabels.CheckDigitLabel;
+import code.model.racklabels.RackAisleLabel;
+import code.util.DUtility;
+import code.world.WarehouseWorld;
 
 import com.jme.bounding.BoundingBox;
+import com.jme.math.FastMath;
+import com.jme.math.Quaternion;
+import com.jme.math.Vector3f;
 import com.jme.scene.Node;
-import com.jme.scene.Spatial;
+import com.jmex.angelfont.BitmapFont;
+import com.jmex.angelfont.BitmapFontLoader;
 
 
 public class DRack extends Node
 {
-	private enum PalletPosition {
-		LEFT, RIGHT
+	//a font to be used for labels
+	private BitmapFont font = BitmapFontLoader.loadDefaultFont();
+
+	private WarehouseWorld ww;
+	private String rackName;
+	private Node rack;
+	
+	private int rackHeight; //how high up to go
+	private String rackType; //single, double, for special cases
+	
+	private final int totalOnShelf = 4; //the most boxes that can be on a particular shelf
+	
+	private StackedDPallet pallets[][];
+	private DUtility[] util;
+	
+	private final float spacing = .25f; //spacing used in position
+	private Vector3f positions[][]; //positions of racks
+	
+	private float heightOffset; //space between each shelf
+
+	public DRack(Node r, String name, WarehouseWorld ww)
+	{
+		this.rack = r;
+		this.rackName = name;
+		this.ww = ww;
+		
+		setRackHeight(name);
+		setRackType(name);
+		setHeightOffset(name);
+		
+		pallets = new StackedDPallet[totalOnShelf][rackHeight];
+		
+		util = new DUtility[totalOnShelf];
+		
+		util[0] = new DUtility(5f, .4f, null, .2f, null);
+		util[1] = new DUtility(5f, .4f, null, .2f, null);
+		util[2] = new DUtility(5f, .4f, null, .2f, null);
+		util[3] = new DUtility(5f, .4f, null, .001f, null);
+		
+		positions = new Vector3f[totalOnShelf][totalOnShelf];
+		
+		positions[0][0] = new Vector3f(0f,0f,0f);
+		
+		positions[1][0] = new Vector3f(-spacing,0f,0f);
+		positions[1][1] = new Vector3f(spacing,0f,0f);
+		
+		positions[2][0] = new Vector3f(0f,0f,spacing);
+		positions[2][1] = new Vector3f(-spacing,0f,-spacing);
+		positions[2][2] = new Vector3f(spacing,0f,-spacing);
+		
+		positions[3][0] = new Vector3f(-spacing,0f,-spacing);
+		positions[3][1] = new Vector3f(-spacing,0f,spacing);
+		positions[3][2] = new Vector3f(spacing,0f,-spacing);
+		positions[3][3] = new Vector3f(spacing,0f,spacing);
+
+		this.setName(name);
 	}
 	
-	public DRack()
+	//attaches an aisle to the rack
+	public void attachAisleLabel(String text, String position) 
 	{
-		/*
-		if (binNumber1 != null && dbInfoRetriever.getIsPossiblePickJob(binNumber1) == true)
+		rack.updateGeometricState(0, true);
+		
+		RackAisleLabel t = new RackAisleLabel(text, font, ww.getVirtualWarehouse().getSharedNodeManager());
+		float xOffset = (((BoundingBox) rack.getWorldBound()).xExtent);
+		
+		Quaternion q = new Quaternion();
+		if (position.equals("LEFT"))
 		{
-			placePalletOnRack(object, binNumber1, r, rotationY, PalletPosition.LEFT);
+			q.fromAngles(0,(float)(90*(Math.PI/180)),0);
+			t.setLocalTranslation(xOffset+0.001f, 0.82f, 0);
+		}
+		else if (position.equals("RIGHT"))
+		{
+			q.fromAngles(0,(float)(-90*(Math.PI/180)),0);
+			t.setLocalTranslation(-xOffset-0.001f, 0.82f, 0);
+		}
+		t.setLocalRotation(q);
+		
+		rack.attachChild(t);
+	}
+	
+	//attaches a bin label to the rack
+	public void attachBinLabel(String binNumber, String checkNumber, String position)
+	{
+		rack.updateGeometricState(0, true);
+		
+		BinNumberLabel binLabel = new BinNumberLabel(binNumber, font, ww.getVirtualWarehouse().getSharedNodeManager());
+		CheckDigitLabel checkDigitLabel = new CheckDigitLabel(checkNumber, font, ww.getVirtualWarehouse().getSharedNodeManager());
+		
+		float zOffset = (((BoundingBox) rack.getWorldBound()).zExtent);
+		float xOffset = (((BoundingBox) rack.getWorldBound()).xExtent)/2;
+		
+		if (position.equals("RIGHT"))
+		{
+			binLabel.setLocalTranslation(xOffset, 0.82f-BinNumberLabel.LABEL_HEIGHT/3, zOffset+0.001f);
+			checkDigitLabel.setLocalTranslation(xOffset, 0.82f-(BinNumberLabel.LABEL_HEIGHT/3)-BinNumberLabel.LABEL_HEIGHT+.03f, zOffset+0.001f);
+		}
+		else if (position.equals("LEFT"))
+		{
+			binLabel.setLocalTranslation(-xOffset, 0.82f-BinNumberLabel.LABEL_HEIGHT/3, zOffset+0.001f);
+			checkDigitLabel.setLocalTranslation(-xOffset, 0.82f-(BinNumberLabel.LABEL_HEIGHT/3)-BinNumberLabel.LABEL_HEIGHT+.03f, zOffset+0.001f);
+		}
+		else if (position.equals("CENTER"))
+		{
+			binLabel.setLocalTranslation(0.0f, 0.82f-BinNumberLabel.LABEL_HEIGHT/3, zOffset+0.001f);
+			checkDigitLabel.setLocalTranslation(0.0f, 0.82f-(BinNumberLabel.LABEL_HEIGHT/3)-BinNumberLabel.LABEL_HEIGHT+.03f, zOffset+0.001f);
+		}
+		
+		rack.attachChild(binLabel);
+		rack.attachChild(checkDigitLabel);
+	}
+	
+	//get how tall the rack is
+	public float getHeight()
+	{
+		return this.rackHeight;
+	}
+	
+	//get the pallets associated
+	public StackedDPallet[][] getPallets()
+	{
+		return pallets;
+	}
+	
+	public StackedDPallet[] getPallets(int row)
+	{
+		return pallets[row];
+	}
+	
+	public StackedDPallet[] getPickablePallets()
+	{
+		return pallets[0];
+	}
+	
+	public StackedDPallet getPickablePallet()
+	{
+		return pallets[0][0];
+	}
+	
+	public DProduct getPickableProduct()
+	{
+		if (isPickable())
+		{
+			return getPickablePallet().getTop().getProducts().getTop();
+		}
+		return null;
+	}
+	
+	public Pick pickSmallProduct()
+	{
+		if (isPickable() && this.pallets != null)
+		{
+			return getPickablePallet().pickSmallProduct();
+		}
+		return null;
+	}
+	
+	public boolean isPickable()
+	{
+		return getPickablePallet().isPickable();
+	}
+	
+	public String getBinNumber()
+	{
+		return getPickablePallet().getBinNumber();
+	}
+	
+	public String getMainName()
+	{
+		return getPickablePallet().getMainName();
+	}
+	
+	//sets the rack height, because of the special case
+	private void setRackHeight(String name)
+	{
+		rackHeight = 0;
+		
+		if (name.equals("racksSingleRaised147"))
+		{
+			rackHeight = 3;
 		}
 		else
 		{
-			randomPlacePalletOnRack(object, binNumber1, r, rotationY, PalletPosition.LEFT);
+			rackHeight = 6;
 		}
-		
-		if (binNumber2 != null && dbInfoRetriever.getIsPossiblePickJob(binNumber2) == true)
-		{
-			placePalletOnRack(object, binNumber2, r, rotationY, PalletPosition.RIGHT);
-		}
-		else if (binNumber2 != null)
-		{
-			randomPlacePalletOnRack(object, binNumber2, r, rotationY, PalletPosition.RIGHT);
-		}
-		*/
 	}
 	
-	/**
-	 * Places pallets in their proper positions on the racks. Uses randomization if specified,
-	 * so a pallet will only actually get placed a certain percentage of the time.
-	 * @param object
-	 * @param r
-	 * @param rotationY
-	 * @param p
-	 */
-	private void randomPlacePalletOnRack(Node object, String binNumber, Room r, float rotationY, PalletPosition p, boolean addRandomness) {
-		//update rack object so that bounding measurements can be used
-		object.updateGeometricState(0, true);
-		
-		float xOffset = (((BoundingBox) object.getWorldBound()).xExtent)/2;
-		float zOffset = (((BoundingBox) object.getWorldBound()).zExtent)/2;
-		
-		float heightOffset = 0.82f; //space between each shelf
-		
-		/*
-		for (int m=0; m<2; m++) //put pallets on the racks at m different heights
+	private void setRackType(String name)
+	{
+		if (name.toLowerCase().indexOf("single") > -1)
 		{
-			//add some randomness - possible empty spots on racks
-			int randomNumber = (int)(Math.random()*10); 
-			if (addRandomness == false || randomNumber < 8)
+			if (name.indexOf("103") > -1 || name.indexOf("106") > -1)
 			{
-				//place pallets
-				
-				//only allow pallets on the bottom (floor) level to be picked-up
-				boolean canPickup = false;
-				if (m == 0)
-				{
-					//canPickup = true;
-					//disabled - not working well
-					canPickup = false;
-				}
-				
-				Pallet pallet = new Pallet(this, true, binNumber, canPickup, true);
-				
-				Node roomNode = (Node) palletRooms.getChild(r.getName());
-				
-				roomNode.attachChild(pallet);
-				palletsList.add(pallet);
-				
-				List<Spatial> productsOnPallet = pallet.getProducts();
-				if (productsOnPallet != null)
-				{
-					for (int n=0; n<productsOnPallet.size(); n++)
-					{
-						productsList.add((Product) productsOnPallet.get(n));
-					}
-				}
-				
-				if (p == PalletPosition.LEFT)
-				{
-					if (rotationY == 90  || rotationY == -270)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z+zOffset);
-					}
-					else if (rotationY == 270 || rotationY == -90)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z-zOffset);
-					}
-					else if (rotationY == 0)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x-xOffset, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z);
-					}
-					else if (rotationY == 180 || rotationY == -180)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x+xOffset, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z);
-					}
-				}
-				else if (p == PalletPosition.RIGHT)
-				{
-					if (rotationY == 90 || rotationY == -270)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z-zOffset);
-					}
-					else if (rotationY == 270 || rotationY == -90)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z+zOffset);
-					}
-					else if (rotationY == 0)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x+xOffset, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z);
-					}
-					else if (rotationY == 180 || rotationY == -180)
-					{
-						pallet.setLocalTranslation(object.getWorldTranslation().x-xOffset, object.getWorldTranslation().y+heightOffset*m, object.getWorldTranslation().z);
-					}
-				}
-				
-				//pallet.setLocalRotation(q);
-				pallet.updateWorldBound();
-				pallet.lock();
+				rackType = "single two";
+			}
+			else
+			{
+				rackType = "single";
 			}
 		}
-		*/
-	}
-
-	/**
-	 * Creates a pallet a certain percentage of the time.
-	 * @param object
-	 * @param binNumber
-	 * @param r
-	 * @param rotationY
-	 * @param p
-	 */
-	private void randomPlacePalletOnRack(Node object, String binNumber, Room r, float rotationY, PalletPosition p) {
-		randomPlacePalletOnRack(object, binNumber, r, rotationY, p, false);
+		else
+		{
+			rackType = "double";
+		}
 	}
 	
-	/**
-	 * Ensures that product will be placed on the pallet.
-	 * @param object
-	 * @param binNumber
-	 * @param r
-	 * @param rotationY
-	 * @param p
-	 */
-	private void placePalletOnRack(Node object, String binNumber, Room r, float rotationY, PalletPosition p) {
-		randomPlacePalletOnRack(object, binNumber, r, rotationY, p, false);
+	//sets the height of set because of the special case, racks being raised
+	private void setHeightOffset(String name)
+	{
+		if (name.toLowerCase().indexOf("raised") > -1)
+		{
+			heightOffset = 0.48f;
+		}
+		else
+		{
+			heightOffset = 0.82f; 
+		}
+	}
+	
+	private int random(int lowestNum, int maxNum) 
+	{
+		return (int)Math.round((double)FastMath.nextRandomFloat()*(maxNum-lowestNum))+lowestNum;
+	}
+	
+	//create pallets in the racks
+	public void createThePallets(String binNumber, boolean withProduct)
+	{
+		//for how tall it is
+		for (int i=0; i<rackHeight; i++)
+		{
+			int h1;//rack height
+			int h2;//box height
+			boolean tempProduct = false;//product associated
+			
+			int num; //how many products to put on the shelf
+			
+			if (rackType.equals("single")) //special case, only one product on these small racks
+			{
+				num = 1;
+			}
+			else if ((rackType.indexOf("single") > -1 && rackType.indexOf("two") > -1)) //another special case, either 1 or 2 products
+			{
+				num = random(1,2);
+			}
+			else //either one, two, three or four products
+			{
+				num = random(1,4);
+			}
+			
+			//for how many boxes it decided to put on the shelf
+			for (int j=0; j<num; j++)
+			{
+				//usual case, if it is the normal height offset
+				if (heightOffset == .82)
+				{
+					if (i==0) //if it is the ground layer
+					{
+						h1 = random(1,2);
+						h2 = 1;
+						tempProduct = true; //withProduct
+					}
+					else
+					{
+						h1 = random(1,2);
+						h2 = random(1,2);
+					}
+				}
+				else //there cant be as many on the raised racks, special case
+				{
+					if (i+1==rackHeight)
+					{
+						h1 = random(3,8);
+						h2 = random(3,8);
+					}
+					else if (i==0)
+					{
+						h1 = random(1,2);
+						h2 = 1;
+						tempProduct = true; //withProduct
+					}
+					else
+					{
+						h1 = random(1,2);
+						h2 = 1;
+					}
+				}
+				
+				float trans1 = 0f;
+				float trans2 = 0f;
+				
+				if (rackType.equals("double")) //if it is a double rack, we can translate the pallets a little bit within the shelf
+				{
+					switch (num) //translate randomly depending on the number of boxes we are putting on the rack
+					{
+						case 1:
+							trans1 = util[num-1].translation();
+							trans2 = util[num-1].translation();
+							break;
+						case 2:
+							trans2 = util[num-1].translation();
+							break;
+						case 3:
+							if (j == 0) //only translate the first box in the three case
+							{
+								trans1 = util[num-1].translation();
+							}
+							break;
+						case 4:
+							trans1 = util[num-1].translation();
+							trans2 = util[num-1].translation();
+							break;
+					}
+				}
+				
+				float rot = util[num-1].rotation();
+				
+				StackedDPallet SDP = new StackedDPallet(h1,this.ww,binNumber,binNumber,tempProduct,h2);
+				
+				pallets[j][i] = SDP;
+				
+				SDP.setLocalTranslation(positions[num-1][j].x+trans1, 0f+heightOffset*i, positions[num-1][j].z+trans2);
+				SDP.setLocalRotation(new Quaternion().fromAngles(0f,(float)(rot*(Math.PI/180)),0f));
+				
+				rack.attachChild(SDP);
+			}
+		}
 	}
 }
