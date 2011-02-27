@@ -606,16 +606,27 @@ public class VirtualWarehouse extends GameState {
 			Connection con = DriverManager.getConnection(url, "warehouse",
 					"vwburr15");
 			Statement stmt = con.createStatement();
-
+			Statement stmt2 = con.createStatement();
 			String query = "select * from BOUNDINGBOXES ORDER BY ID desc;";
+			String query2 = "select count(id) from DPallet";
 			stmt.executeQuery(query);
+			stmt2.execute(query2);
 			ResultSet result = stmt.getResultSet();
+			ResultSet rs2 = stmt2.getResultSet();
+			rs2.next();
+			int boxCount = rs2.getInt("count(id)");
+			
 			
 			// I simply want to know how many characters I need to make.
 			result.first();
 			int numBoxes = result.getInt("ID");
-			boundingBoxes = new BoundingBox2D[numBoxes];
+			boundingBoxes = new BoundingBox2D[numBoxes + boxCount];
 			
+			
+			
+			// this particular loop just wants to get all of the very static things (the rows of racks, mostly)
+			// these things shouldn't move, so that's why we put a box around the rows, instead of having to get
+			// where the thing
 			result.beforeFirst();
 			for (int i = 0; result.next(); i++){
 				float leftX = result.getFloat("leftX");
@@ -629,8 +640,28 @@ public class VirtualWarehouse extends GameState {
 				boundingBoxes[i].setLowerZ(lowerZ);
 				boundingBoxes[i].setUpperZ(upperZ);*/
 			}
-
-			 
+			
+			// now I want to get all of the pallets from the DPallet table on the db because I need to have a bounding box around those
+			// as well...woot.
+			
+			// so....this portion of this code specifically wants to get all of the boxes/pallets that are laying around and 
+			// get those into the collision list.
+			String query3 = "select * from DPallet";
+			stmt2.executeQuery(query3);
+			ResultSet rs3 = stmt2.getResultSet();
+			
+			for (int i = numBoxes; i < boxCount+numBoxes; i++){
+				rs3.next();
+				float xCenter = rs3.getFloat("X_Location");
+				float zCenter = rs3.getFloat("Z_Location");
+				
+				float leftX = xCenter - .3f;
+				float rightX = xCenter + .3f;
+				float lowerZ = zCenter +.3f;
+				float upperZ = zCenter - .3f;
+				boundingBoxes[i] = new BoundingBox2D(leftX, rightX, lowerZ, upperZ);
+				
+			}
 			
 			con.close();
 
