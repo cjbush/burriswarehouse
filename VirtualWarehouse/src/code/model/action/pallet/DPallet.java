@@ -1,7 +1,7 @@
 package code.model.action.pallet;
 
 import code.model.ModelLoader;
-import code.model.action.pick.Product;
+import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
 import code.model.action.product.StackedDProduct;
 import code.util.DUtility;
@@ -13,6 +13,10 @@ import com.jme.scene.Spatial;
 
 public class DPallet extends Node
 {
+	private boolean inUse;
+	private Node productNode;
+	
+	
 	private WarehouseWorld ww;
 	
 	private DUtility util;
@@ -36,6 +40,9 @@ public class DPallet extends Node
 		this.ww = ww;
 		this.setName(name);
 		
+		productNode = new Node("product node");
+		this.attachChild(productNode);
+		
 		loadModel();
 			
 		if (height > 0)
@@ -48,6 +55,8 @@ public class DPallet extends Node
 			
 			products.setLocalTranslation(trans1, util.getH(), trans2);
 			products.setLocalRotation(new Quaternion().fromAngles(0f,(float)(rot*(Math.PI/180)),0f));
+			
+			ww.getPalletsList().add(this);
 			
 			this.attachChild(products);
 		}
@@ -68,7 +77,7 @@ public class DPallet extends Node
 		this.attachChild(m);
 	}
 	
-	public Product pickSmallProduct()
+	public Pick pickSmallProduct()
 	{
 		if (isPickable() && this.products != null)
 		{
@@ -95,5 +104,19 @@ public class DPallet extends Node
 	public String getMainName()
 	{
 		return getTop().getMainName();
+	}
+	
+	//from old file
+	
+	public boolean isInUse() {
+		return inUse;
+	}
+
+	public void setInUse(boolean inUse) {
+		this.inUse = inUse;
+	}
+	
+	public Node getProductNode() {
+		return productNode;
 	}
 }

@@ -16,10 +16,9 @@ import code.app.VirtualWarehouse;
 import code.collisions.BoundingBox2D;
 import code.model.ModelLoader;
 import code.model.TarpWall;
-import code.model.action.pallet.Pallet;
-import code.model.action.pallet.PalletStack;
+import code.model.action.pallet.DPallet;
 import code.model.action.pallet.StackedDPallet;
-import code.model.action.pick.Product;
+import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
 import code.model.action.rack.DRack;
 import code.model.racklabels.BinNumberLabel;
@@ -60,7 +59,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
-	public static final boolean fillRacks = true; //put pallets and product on racks //KEEP THIS FALSE, IDK the outcome yet, still working... - Dan
+	public static final boolean fillRacks = true; //put pallets and product on racks
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean iWantArrow = true;
 	
@@ -76,57 +75,40 @@ public class WarehouseWorld extends Node {
 	//parent node for the vehicles that the player can use
 	private Node vehicles;
 	
+	private RoomManager roomManager;
+	
 	private Node rooms;
-	private Node pallets;
-	private ArrayList<Pallet> palletsList = new ArrayList<Pallet>();
-	private ArrayList<Product> productsList = new ArrayList<Product>();
-	private Node palletRooms;
 	private HashMap<String, Spatial> roomMap;
-	private HashMap<String, Spatial> palletRoomMap;
+	
+	
+	private ArrayList<DPallet> palletsList = new ArrayList<DPallet>();
+	private ArrayList<Pick> productsList = new ArrayList<Pick>();
+	
 	
 	private ArrayList<DProduct> productList = new ArrayList<DProduct>();
 	
 	private HashMap<String, CloneImportExport> cache = new HashMap<String, CloneImportExport>();
 	
-	//a font to be used for labels
-	private BitmapFont font;
-	
-	private enum LabelPosition {
-		LEFT, RIGHT, CENTER
-	}
-	
-	private RoomManager roomManager;
-	
 	private VirtualWarehouse warehouseGame;
 	
 	private DatabaseHandler db;
+	
+	private int III = 0;
 	
 	public WarehouseWorld(VirtualWarehouse vw) {
 		
 		warehouseGame = vw;	
 		
 		roomManager = new RoomManager(warehouseGame);
-		
-		font = warehouseGame.getFont();
-		if (font == null)
-		{
-			font = BitmapFontLoader.loadDefaultFont();
-		}
 
 		this.setName("warehouse node");
 		
 		//create a node for each room for organization
 		rooms = roomManager.makeRoomNodes();
 		
-		//create a separate node for pallets
-		pallets = new Node("pallets");
-		palletRooms = roomManager.makeRoomNodes();
-		pallets.attachChild(palletRooms);	
-		
 		//add the warehouse shell and place objects in the warehouse
 		boundingBoxes = new ArrayList<BoundingBox2D>();
-		buildWarehouse();
-		
+		buildWarehouse();		
 		
 		//add tarp walls
 		//addTarpWalls();
@@ -137,17 +119,14 @@ public class WarehouseWorld extends Node {
 			this.attachChild(vehicles);
 		}
 		
-		pallets.lock();
 		//TODO: fix locking warnings?
 		
 		//use a hashmap to keep track of room nodes so that they can still be referenced
 		//after disconnecting them from the scene graph
 		roomMap = new HashMap<String, Spatial>();
-		palletRoomMap = new HashMap<String, Spatial>();
 		List<Spatial> roomsList = rooms.getChildren();
 		for (int i=0; i<roomsList.size(); i++){
 			roomMap.put(rooms.getChild(i).getName(), rooms.getChild(i));
-			palletRoomMap.put(palletRooms.getChild(i).getName(), palletRooms.getChild(i));
 		}
 		
 	}
@@ -157,92 +136,18 @@ public class WarehouseWorld extends Node {
 	 * Used for optimization.
 	 * @param roomName Room to hide
 	 */
-	public void hideRoom(String roomName) {
-		//cull everything in the room
-		//rooms.getChild(roomName).setCullHint(CullHint.Always);
+	public void hideRoom(String roomName)
+	{
 		rooms.detachChildNamed(roomName);
-		//cull the pallets separately as they are stored in a pallets node
-		//palletRooms.getChild(roomName).setCullHint(CullHint.Always);
-		palletRooms.detachChildNamed(roomName);
 	}
 	
 	/**
 	 * Re-attaches the room node so that it will be shown in the game
 	 * @param roomName Room to show
 	 */
-	public void showRoom(String roomName) {
-		//cull everything in the room
-		//rooms.getChild(roomName).setCullHint(CullHint.Dynamic);
+	public void showRoom(String roomName) 
+	{
 		rooms.attachChild(roomMap.get(roomName));
-		//cull the pallets separately as they are stored in a pallets node
-		//palletRooms.getChild(roomName).setCullHint(CullHint.Dynamic);
-		palletRooms.attachChild(palletRoomMap.get(roomName));
-	}
-	
-	/**
-	 * Attaches an aisle label (node with a quad with text on it to a rack) to a rack. 
-	 * @param rack
-	 * @param text
-	 * @param position
-	 */
-	private void attachAisleLabel(Node rack, String text, LabelPosition position) {
-		rack.updateGeometricState(0, true);
-		
-		RackAisleLabel t = new RackAisleLabel(text, font, warehouseGame.getSharedNodeManager());
-		float xOffset = (((BoundingBox) rack.getWorldBound()).xExtent);
-		
-		// TODO:  End of aisle labels are not positioned in the center of double racks, but
-		//        rather centered on the interior rack.  For accurate positioning, we need
-		//        to know the rack type, single or double, when attaching the label
-		Quaternion q = new Quaternion();
-		if (position == LabelPosition.LEFT)
-		{
-			q.fromAngles(0,(float)(90*(Math.PI/180)),0);
-			t.setLocalTranslation(xOffset+0.001f, 0.82f, 0);
-		}
-		else if (position == LabelPosition.RIGHT)
-		{
-			q.fromAngles(0,(float)(-90*(Math.PI/180)),0);
-			t.setLocalTranslation(-xOffset-0.001f, 0.82f, 0);
-		}
-		t.setLocalRotation(q);
-		
-		rack.attachChild(t);
-	}
-	
-	private void attachBinLabel(Node rack, String binNumber, String checkNumber, LabelPosition position) {
-		rack.updateGeometricState(0, true);
-		
-		//Quaternion q180 = new Quaternion();
-		//q180.fromAngles(0,(float)(180*(Math.PI/180)),0);
-		
-		BinNumberLabel binLabel = new BinNumberLabel(binNumber, font, warehouseGame.getSharedNodeManager());
-		CheckDigitLabel checkDigitLabel = new CheckDigitLabel(checkNumber, font, warehouseGame.getSharedNodeManager());
-		
-		float zOffset = (((BoundingBox) rack.getWorldBound()).zExtent);
-		float xOffset = (((BoundingBox) rack.getWorldBound()).xExtent)/2;
-		if (position == LabelPosition.RIGHT)
-		{
-			binLabel.setLocalTranslation(xOffset, 0.82f-BinNumberLabel.LABEL_HEIGHT/3, zOffset+0.001f);
-			checkDigitLabel.setLocalTranslation(xOffset, 0.82f-(BinNumberLabel.LABEL_HEIGHT/3)-BinNumberLabel.LABEL_HEIGHT+.03f, zOffset+0.001f);
-		}
-		else if (position == LabelPosition.LEFT)
-		{
-			binLabel.setLocalTranslation(-xOffset, 0.82f-BinNumberLabel.LABEL_HEIGHT/3, zOffset+0.001f);
-			checkDigitLabel.setLocalTranslation(-xOffset, 0.82f-(BinNumberLabel.LABEL_HEIGHT/3)-BinNumberLabel.LABEL_HEIGHT+.03f, zOffset+0.001f);
-		}
-		else if (position == LabelPosition.CENTER)
-		{
-			binLabel.setLocalTranslation(0.0f, 0.82f-BinNumberLabel.LABEL_HEIGHT/3, zOffset+0.001f);
-			checkDigitLabel.setLocalTranslation(0.0f, 0.82f-(BinNumberLabel.LABEL_HEIGHT/3)-BinNumberLabel.LABEL_HEIGHT+.03f, zOffset+0.001f);
-		}
-		
-		//binLabel.setLocalRotation(q180);
-		//checkDigitLabel.setLocalRotation(q180);
-		
-		rack.attachChild(binLabel);
-		rack.attachChild(checkDigitLabel);
-		
 	}
 	
 	private void buildWarehouse() {
@@ -267,26 +172,19 @@ public class WarehouseWorld extends Node {
 		}
 		Connection con;
 		Statement stmt;
-		Statement rack_stmt;
 		ResultSet result;
-		ResultSet rack_result;
 		try {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			con = DriverManager.getConnection(url, "warehouse", "vwburr15");
 			//System.out.println("Connecting to "+url);
 			stmt = con.createStatement();
-			rack_stmt = con.createStatement();
 			warehouseGame.addToLoadingProgress(5, "Model Database Connection Established");
-			//set up the XML parser
 			
 			String query = "select * from MODEL where typeid='warehouse';";
 			
 			stmt.executeQuery(query);
 			
 			result = stmt.getResultSet();
-			
-			System.out.println(query);
-			//System.out.println("Query returned
 			
 			//variables for holding data from XML file
 			String name;
@@ -343,7 +241,7 @@ public class WarehouseWorld extends Node {
 				int itemCounter = 0;
 				warehouseGame.addToLoadingProgress(5, "Loading Warehouse Environment...");
 					
-				//Let's use are flags here - Dan
+				//Let's use the flags
 				if (loadRacks)
 				{
 					if (loadObjects)
@@ -386,87 +284,69 @@ public class WarehouseWorld extends Node {
 					rotationZ = result.getFloat("rotationZ");
 					
 					object = null;
-					if (iWantArrow && name.equals("arrow")){
-						String MODEL_DIR = "data/models/";
-						object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", null, false, warehouseGame.getDisplay().getRenderer(), "ignore");
-						if(object != null){
-							object.setLocalScale(scale);
-							object.setLocalTranslation(new Vector3f(translationX, translationY, translationZ));
-							//object.setLocalRotation();
-							object.setName(name);
-							warehouseGame.setArrowNode(object);
-						}
-					}
 					
 					//MAIN OBJ loader
 					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", warehouseGame.getSharedNodeManager(), true, render, typeid);
 					
 					if(object != null)
 					{
-						String binNumber1 = null;
-						String binNumber2 = null;
-						
-						//Filling Racks
-						if (typeid.equals("rack") && fillRacks && name.equals("racksSingleRaised147"))
+						//Arrow case
+						if (iWantArrow && name.equals("arrow"))
 						{
-							/*
-							//special case for racksSingleRaised147 - don't have product, just empty pallets
-							object.updateGeometricState(0, true);
-							float xOffset = (((BoundingBox) object.getWorldBound()).xExtent)/2;
-							float zOffset = (((BoundingBox) object.getWorldBound()).zExtent)/2;
-							
-							float heightOffset = 0.65f; //guesstimated space between each shelf - get better value
-							for (int m=0; m<3; m++){
-								int randomNumber = (int)(Math.random()*10);
-								Node pallets = new PalletStack(this, randomNumber);
-								object.attachChild(pallets);
-								pallets.setLocalTranslation(-xOffset, heightOffset*m, 0);
-								
-								randomNumber = (int)(Math.random()*10);
-								pallets = new PalletStack(this, randomNumber);
-								object.attachChild(pallets);
-								pallets.setLocalTranslation(xOffset, heightOffset*m, 0);
-							}
-							*/
+							warehouseGame.setArrowNode(object);
 						}
-						else if(typeid.equals("rack"))
+						
+						//rack stuff, in one spot, easier to read
+						if(typeid.equals("rack"))
 						{
-							CullState cs = getVirtualWarehouse().getDisplay().getRenderer().createCullState();
-							cs.setCullFace(CullState.Face.None);
-					        object.setRenderState(cs);
-					        
-					        
-					        rack_stmt.executeQuery("select * from RACK where id = "+id+";");
-					        rack_result = rack_stmt.getResultSet();
-					        if(rack_result.next())
-					        {
-						        String aisle = rack_result.getString("rackaisle");
-						        String label = rack_result.getString("label");
+							DRack rack = new DRack(object,name,this);
+
+							Statement rack_stmt = con.createStatement();
+							rack_stmt.executeQuery("select * from RACK where id = "+id+";");
+							
+							ResultSet rack_result = rack_stmt.getResultSet();
+						    
+						    String aisle = "";
+					        String label = "";
+					        String binNumber1 = null;
+							String binNumber2 = null;
+						   
+							//creating the labels and such
+						    if(rack_result.next())
+						    {
+						        aisle = rack_result.getString("rackaisle");
+						        label = rack_result.getString("label");
 						        binNumber1 = rack_result.getString("binNumber1");
-						        binNumber2 = rack_result.getString("binNumber2");
-						        
-						        if(label.equalsIgnoreCase("left"))
-						        {
-						        	attachAisleLabel(object, aisle, LabelPosition.LEFT);
-						        }
-						        else if(label.equalsIgnoreCase("right"))
-						        {
-						        	attachAisleLabel(object, aisle, LabelPosition.RIGHT);
-						        }
+						        binNumber2 = rack_result.getString("binNumber2"); 
 							}
-					        
-					        if(binNumber1 != null && binNumber2 != null)
-					        {
-					        	String checkDigit = dbInfoRetriever.getCheckDigit(binNumber1);
-					        	attachBinLabel(object, binNumber1, checkDigit, LabelPosition.LEFT);
-					        	checkDigit = dbInfoRetriever.getCheckDigit(binNumber2);
-					        	attachBinLabel(object, binNumber2, checkDigit, LabelPosition.RIGHT);
-					        }
-					        else if(binNumber1 != null)
-					        {
-					        	String checkDigit = dbInfoRetriever.getCheckDigit(binNumber1);
-					        	attachBinLabel(object, binNumber1, checkDigit, LabelPosition.CENTER);
-					        }
+						    
+						    if(binNumber1 != null && binNumber2 != null)
+						    {
+						    	String checkDigit = dbInfoRetriever.getCheckDigit(binNumber1);
+						    	rack.attachBinLabel(binNumber1, checkDigit, "LEFT");
+						    	checkDigit = dbInfoRetriever.getCheckDigit(binNumber2);
+						    	rack.attachBinLabel(binNumber2, checkDigit, "RIGHT");
+						    }
+						    else if(binNumber1 != null)
+						    {
+						    	String checkDigit = dbInfoRetriever.getCheckDigit(binNumber1);
+						    	rack.attachBinLabel(binNumber1, checkDigit, "CENTER");
+						    }	
+						    
+						    if (label != null && !label.equals("") && !label.equals("none"))
+						    {
+						    	rack.attachAisleLabel(aisle, label.toUpperCase());
+						    }
+						    //
+						    
+						    if (fillRacks)
+						    {
+							    //creating pallets and products on the racks, 
+							    boolean withProduct = (dbInfoRetriever.getIsPossiblePickJob(binNumber1) || dbInfoRetriever.getIsPossiblePickJob(binNumber2));
+							    String binName = binNumber1 != null ? binNumber1 : binNumber2 != null ? binNumber2 : "newRack"+id;
+							    
+							    rack.createThePallets(binName,withProduct);
+						    }
 						}
 						
 						object.setLocalScale(scale);
@@ -476,29 +356,31 @@ public class WarehouseWorld extends Node {
 						q.fromAngles((float)(rotationX*(Math.PI/180)),(float)(rotationY*(Math.PI/180)),(float)(rotationZ*(Math.PI/180)));
 						object.setLocalRotation(q);
 						
+						object.setName(name);
+						
+						/*fix*/
+						
+						/*
+						palletsList.add(pallet);
+						
+						List<Spatial> productsOnPallet = pallet.getProducts();
+						if (productsOnPallet != null)
+						{
+							for (int n=0; n<productsOnPallet.size(); n++)
+							{
+								productsList.add((Product) productsOnPallet.get(n));
+							}
+						}
+						*/
+						
 						Room r = roomManager.getRoom(translationX, translationZ);
 						if (r != null)
 						{
-							//special case for pallets - need to be put into
-							//the palletsRooms node
-							if (typeid.equals("pallet"))
-							{
-								Node roomNode = (Node) palletRooms.getChild(r.getName());
-								roomNode.attachChild(object);
-								palletsList.add((Pallet) object);
-							}
-							else
-							{
-								Node roomNode = (Node) rooms.getChild(r.getName());
-								roomNode.attachChild(object);
-								object.setName(name);
-							}
+							((Node)rooms.getChild(r.getName())).attachChild(object);
 						}
 						else
 						{							
-							object.setName(name);
 							logger.info("no room defined for object " + name);
-							
 						}
 						
 						//optimize
@@ -510,17 +392,6 @@ public class WarehouseWorld extends Node {
 							cache.put(name, new CloneImportExport());
 							cache.get(name).saveClone(object);
 			        	}
-						
-						//special case for rack - put pallet/product on it
-						if (typeid.equals("rack") && fillRacks && name.equals("racksSingle147"))
-						{
-							int height = (int)(Math.random()*10);
-							object = new PalletStack(this, height);
-						}
-						else if (typeid.equals("rack") && fillRacks)
-						{
-							DRack rack = new DRack();
-						}
 					}
 					else
 					{
@@ -538,10 +409,8 @@ public class WarehouseWorld extends Node {
 					{
 						itemCounter++;
 					}
-					
-					warehouseGame.getRootNode().attachChild(object);
 				}
-				
+
 				if (miscPallets)
 				{
 					stmt.executeQuery("select * from DPallet;");
@@ -552,25 +421,48 @@ public class WarehouseWorld extends Node {
 					
 					while(result.next())
 					{
-						float tX = result.getInt("X_Location");
-						float tZ = result.getInt("Z_Location");
+						float tX = result.getFloat("X_Location");
+						float tZ = result.getFloat("Z_Location");
 						
 						int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
-						int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3)+1;
+						int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3);
 						
-						StackedDPallet SDP = new StackedDPallet(h1,this,null,"Misc_Pallet"+i,true,h2);
+						StackedDPallet SDP = new StackedDPallet(h1,this,null,"Misc_Pallet"+i,false,h2);
 						SDP.setLocalTranslation(tX, 0f, tZ);
-						warehouseGame.getRootNode().attachChild(SDP);
+						
+						Room r = roomManager.getRoom(tX, tZ);
+						if (r != null)
+						{
+							((Node)rooms.getChild(r.getName())).attachChild(SDP);
+						}
+						else
+						{							
+							logger.info("no room defined for object " + name);
+						}
 						
 						i++;
 					}
 				}
+				
+				warehouseGame.getRootNode().attachChild(rooms);
 			}
 			
 		} catch (Exception e) {
 				 e.printStackTrace();
 		}
 		
+	}
+	
+	public void makeThis(float x, float z)
+	{
+		int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
+		int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3)+1;
+		
+		StackedDPallet SDP = new StackedDPallet(h1,this,null,"Misc_Pallet"+III,true,h2);
+		SDP.setLocalTranslation(x, 0f, z);
+		warehouseGame.getRootNode().attachChild(SDP);
+		
+		III += 1;
 	}
 	
 	private void addTarpWalls() 
@@ -609,23 +501,19 @@ public class WarehouseWorld extends Node {
 		return vehicles.getChildren();
 	}
 	
-	public Node getPalletsNode() {
-		return pallets;
-	}
-	
-	public List<Pallet> getPalletsList() {
+	public List<DPallet> getPalletsList() {
 		return palletsList;
 	}
 	
-	public List<Product> getProductsList() {
+	public List<Pick> getProductsList() {
 		return productsList;
 	}
 	
-	public void addToProductsList(Product p) {
+	public void addToProductsList(Pick p) {
 		productsList.add(p);
 	}
 	
-	public void removeFromProductsList(Product p) {
+	public void removeFromProductsList(Pick p) {
 		productsList.remove(p);
 	}
 	

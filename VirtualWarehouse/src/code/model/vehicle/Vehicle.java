@@ -5,8 +5,7 @@ import java.util.List;
 
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
-import code.model.action.pallet.Pallet;
-import code.model.action.pallet.PalletStack;
+import code.model.action.pallet.DPallet;
 import code.model.player.Player;
 
 import com.jme.bounding.BoundingBox;
@@ -66,7 +65,7 @@ public class Vehicle extends Node {
 	private Node palletOnOffPositionNode;
 
 	private boolean playerUsingVehicle;
-	private ArrayList<Pallet> attachedPallets = new ArrayList<Pallet>();
+	private ArrayList<DPallet> attachedPallets = new ArrayList<DPallet>();
 
 	private VirtualWarehouse warehouseGame;
 	private Spatial tempChaseTarget;
@@ -204,25 +203,25 @@ public class Vehicle extends Node {
 			checkPickUp = false;
 		}
 
-		if (checkPickUp) {
-			if (attachedPallets.size() < MAX_PALLETS) {
+		if (checkPickUp) 
+		{
+			if (attachedPallets.size() < MAX_PALLETS) 
+			{
 
-				Pallet p = (Pallet) getClosestWithinDistance(warehouseGame
-						.getWarehouseWorld().getPalletsList(),
-						MAX_DISTANCE_PALLET_PICKUP, this);
-				if (!attachedPallets.contains(p)) {
+				DPallet p = (DPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this);
+				if (!attachedPallets.contains(p)) 
+				{
 					attachPalletToVehicle(p);
-				} else {
-					
+				} 
+				else 
+				{
 					detachPalletFromVehicle(p);
 				}
 			}
 		}
-
-		
 	}
 
-	private void detachPalletFromVehicle(Pallet p) {
+	private void detachPalletFromVehicle(DPallet p) {
 
 		p.unlock();
 		p.removeFromParent();
@@ -242,12 +241,9 @@ public class Vehicle extends Node {
 
 	}
 
-	private Node getClosestWithinDistance(List<Pallet> palletsList,
+	private Node getClosestWithinDistance(List<DPallet> palletsList,
 			float distance, Vehicle vehicle) {
-		// TODO Auto-generated method stub
 
-		// this function will return the closest pallet to the vehicle.
-		// not done yet...
 		Node closest = null;
 		float closestDist = distance;
 		for (int i = 0; i < palletsList.size(); i++) {
@@ -356,9 +352,7 @@ public class Vehicle extends Node {
 				tempVa).multLocal(velocity * time));
 	}
 
-	private void attachPalletToVehicle(Pallet pallet) {
-		// FIXME: Crashes with stacked pallet...
-
+	private void attachPalletToVehicle(DPallet pallet) {
 		if (pallet != null) {
 			pallet.unlock();
 			pallet.removeFromParent();
@@ -370,8 +364,7 @@ public class Vehicle extends Node {
 				translation = new Vector3f(0, 0, PALLET_FROM_BODY_OFFSET);
 				pallet.setLocalTranslation(translation);
 			} else {
-				Pallet lastPallet = attachedPallets
-						.get(attachedPallets.size() - 1);
+				DPallet lastPallet = attachedPallets.get(attachedPallets.size() - 1);
 				float offset = lastPallet.getLocalTranslation().getZ()
 						+ (((BoundingBox) lastPallet.getWorldBound()).zExtent)
 						+ (((BoundingBox) pallet.getWorldBound()).zExtent);

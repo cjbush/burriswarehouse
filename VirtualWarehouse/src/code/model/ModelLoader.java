@@ -78,7 +78,7 @@ public class ModelLoader {
 			
 			if (newModel != null && r != null)
 			{
-				if (type.equals("object"))
+				if (type.equals("object") || type.equals("rack"))
 				{
 					CullState cs = r.createCullState();
 					cs.setCullFace(CullState.Face.None);

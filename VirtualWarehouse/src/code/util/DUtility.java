@@ -9,7 +9,7 @@ public class DUtility
 	private Float scaleFactor;
 	private Float transFactor;
 	
-	private float h;
+	private Float h;
 	
 	public DUtility(Float scaFactor, Float traFactor)
 	{

@@ -5,7 +5,7 @@ import code.world.WarehouseWorld;
 import com.jme.math.Quaternion;
 import com.jme.scene.Node;
 
-import code.model.action.pick.Product;
+import code.model.action.pick.Pick;
 import code.util.DUtility;
 
 
@@ -64,7 +64,7 @@ public class StackedDPallet extends Node
 		}
 	}
 	
-	private DPallet getTop()
+	public DPallet getTop()
 	{
 		return this.palletStack[(int)(this.height-1)];
 	}
@@ -88,7 +88,7 @@ public class StackedDPallet extends Node
 		return null;
 	}
 	
-	public Product pickSmallProduct()
+	public Pick pickSmallProduct()
 	{
 		if (isPickable() && this.palletStack != null)
 		{

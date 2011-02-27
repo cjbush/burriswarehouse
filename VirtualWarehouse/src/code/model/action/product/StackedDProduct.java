@@ -1,6 +1,6 @@
 package code.model.action.product;
 
-import code.model.action.pick.Product;
+import code.model.action.pick.Pick;
 import code.util.DUtility;
 import code.world.WarehouseWorld;
 
@@ -80,7 +80,7 @@ public class StackedDProduct extends Node
 		}
 	}
 	
-	private DProduct getTop()
+	public DProduct getTop()
 	{
 		return this.productStack[(int)(this.height-1)];
 	}
@@ -90,7 +90,7 @@ public class StackedDProduct extends Node
 		return productStack;
 	}
 	
-	public Product pickSmallProduct()
+	public Pick pickSmallProduct()
 	{
 		if (isPickable() && this.productStack != null)
 		{

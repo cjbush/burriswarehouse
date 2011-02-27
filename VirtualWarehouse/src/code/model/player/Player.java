@@ -13,10 +13,9 @@ import code.component.Score;
 import code.hud.DebugHUD;
 import code.hud.PickErrorDisplay;
 import code.model.AnimatedModel;
-import code.model.action.pallet.Pallet;
-import code.model.action.pick.Product;
+import code.model.action.pallet.DPallet;
+import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
-import code.model.action.product.LargeProductBox;
 import code.model.vehicle.Vehicle;
 import code.world.DeliveryArea;
 
@@ -36,6 +35,7 @@ import com.jme.scene.Spatial;
 import com.jme.scene.TriMesh;
 import com.jme.system.DisplaySystem;
 import com.jme.util.Timer;
+import com.jmex.angelfont.BitmapFontLoader;
 
 /**
  * 
@@ -62,7 +62,7 @@ public class Player extends AnimatedModel {
 	private boolean inVehicle = false;
 	private Vehicle vehicleBeingUsed = null;
 	private boolean hasProduct = false;
-	private code.model.action.pick.Product currentProduct;
+	private code.model.action.pick.Pick currentProduct;
 	private float productPlacementHeight;
 	private boolean isGrabbing  = false;
 	private boolean hasCorrectProduct = false;
@@ -261,10 +261,14 @@ public class Player extends AnimatedModel {
 			//System.out.println(query);
 			stmt.executeUpdate(query);
 			//stmt.executeQuery(query);
+			
+			warehouseGame.getWarehouseWorld().makeThis(X,Z);
+			
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 		}
+		
 		
 	}
 	public void checkVehicleEnterExit(boolean controllerOverride) {
@@ -323,7 +327,7 @@ public class Player extends AnimatedModel {
 			else
 			{
 				//set the product down if player is close enough to the pallet
-				Pallet p = (Pallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct);
+				DPallet p = (DPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct);
 				if (p != null)
 				{
 					attachProductToPallet(p);
@@ -396,7 +400,7 @@ public class Player extends AnimatedModel {
 	}
 	
 	private void attachProductToPlayer(DProduct closest) {		
-		Product smallBox = null;
+		Pick smallBox = null;
 		
 		if (closest instanceof DProduct)
 		{
@@ -422,7 +426,7 @@ public class Player extends AnimatedModel {
 				{
 					System.out.println("wrong pick");
 					warehouseGame.getScore().incrementBoxesPickedWrong();
-					PickErrorDisplay e = new PickErrorDisplay(warehouseGame.getFont());
+					PickErrorDisplay e = new PickErrorDisplay(BitmapFontLoader.loadDefaultFont());
 					warehouseGame.getHudNode().attachChild(e);
 				}
 			}
@@ -439,7 +443,7 @@ public class Player extends AnimatedModel {
     	hasProduct = true;
 	}
 	
-	private void attachProductToPallet(Pallet p) {
+	private void attachProductToPallet(DPallet p) {
 		
 		p.unlock();
 		currentProduct.removeFromParent();
@@ -580,48 +584,6 @@ public class Player extends AnimatedModel {
 		//input = new ThirdPersonHandler(this, warehouseGame.getThirdPersonCamera(), tpHandlerProps);
 	    //input.setActionSpeed(2f);
 	    input = new PlayerHandler(this);
-	}
-	
-	/**
-	 * Attempt at smooth collision detection (wall sliding) - code found on
-	 * http://www.jmonkeyengine.com/forum/index.php?topic=10909.0
-	 * 
-	 * @deprecated Replaced by checkForCollision2D()
-	 */
-    private void checkForCollision() {
-
-		// check for bounding collision
-		if(collisionModel.hasCollision(warehouseGame.getCollidables(), false)) {
-			
-			//System.out.println("collision");
-			
-			if (inVehicle && vehicleBeingUsed != null)
-			{
-				vehicleBeingUsed.processCollisions();
-			}
-			else
-			{
-				triCollision.clear();
-				collisionModel.calculateCollisions(warehouseGame.getCollidables(), triCollision);
-	
-				// check for actual triangle collision
-				if(triCollision.getNumber() > 0) {
-	
-					temp.zero();
-	
-					for(int index = 0; index < triCollision.getNumber(); index++)
-						temp.addLocal(getCollisionNormal(triCollision.getCollisionData(index)));
-	
-					temp.normalizeLocal();
-					temp.multLocal(delta.length());
-					temp.addLocal(delta);
-	
-					temp.setY(0); //should never go up or down
-					collisionModel.setLocalTranslation(lastPosition.add(temp));
-				}
-			}
-			
-		}
 	}
     
     /**
