@@ -1528,7 +1528,7 @@ vn 0.000000 -1.000000 0.000000
 vn 0.000000 -1.000000 0.000000
 s off
 g palletMain:Mesh
-usemtl palletMain:Material
+usemtl initialShadingGroup
 f 222/1/1 122/2/2 123/3/3
 f 222/1/4 123/3/5 213/4/6
 f 212/5/7 224/6/8 121/7/9

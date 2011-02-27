@@ -70,7 +70,6 @@ public class Vehicle extends Node {
 	private VirtualWarehouse warehouseGame;
 	private Spatial tempChaseTarget;
 	private Spatial tempPlayerCollisionModel;
-	private boolean checkPickUp;
 	
 	private Player player;
 
@@ -185,25 +184,9 @@ public class Vehicle extends Node {
 	/*
 	 * Checks for any pallets that the player is trying to pick up.
 	 */
-	public void checkForPalletPickup() {
-
-		// this still may want to go inside the check for doing the MAX_PALLETS
-		// thing...yea...probably...
-		// so instead of doing this checking business, perhaps we should just
-		// hit a key...something like
-		// "p" for pickup or pallet....
-		// i'd also have to check for the closest pallet to be the one I want to
-		// pick up.
-
-		if (KeyBindingManager.getKeyBindingManager().isValidCommand(
-				"pickupPallet", true)) {
-
-			checkPickUp = true;
-		} else {
-			checkPickUp = false;
-		}
-
-		if (checkPickUp) 
+	public void checkForPalletPickup()
+	{
+		if (KeyBindingManager.getKeyBindingManager().isValidCommand("pickupPallet", false)) 
 		{
 			if (attachedPallets.size() < MAX_PALLETS) 
 			{
@@ -233,7 +216,6 @@ public class Vehicle extends Node {
 		p.setLocalTranslation(translation);
 		p.getLocalRotation().set(rotation);
 
-		// p.setCollisionModel(tempPlayerCollisionModel);
 		warehouseGame.getRootNode().attachChild(p);
 		attachedPallets.remove(p);
 		
