@@ -92,7 +92,7 @@ public class Player extends AnimatedModel {
 		collisionModel = this;
 		//setupThirdPersonInputHandler();
 		input = new PlayerHandler(this);
-		ach = new AutoCompletionHandler(this, null, null, null);
+		ach = new AutoCompletionHandler(this, 1, 0, 2);
 		
 		getLocalTranslation().set(INITIAL_LOCATION.clone());
 		lastPosition.set(INITIAL_LOCATION.clone());
@@ -540,6 +540,7 @@ public class Player extends AnimatedModel {
 				List<String> pickList = warehouseGame.getPickList(); 
 				warehouseGame.getScore().incrementBoxesPickedCorrect();
 				pickList.remove(0);
+				ach.advance();
 				if (pickList.isEmpty())
 				{
 					System.out.println("picking complete");

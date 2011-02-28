@@ -1,5 +1,7 @@
 package code.model.player;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.jme.math.FastMath;
@@ -7,9 +9,12 @@ import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 
 import code.util.Coordinate;
+import code.util.DatabaseHandler;
 
 public class AutoCompletionHandler{
 	private ArrayList<Coordinate> path;
+	private DatabaseHandler db;
+	private ResultSet rs;
 	private Coordinate start;
 	private Coordinate finish;
 	private int counter;
@@ -17,18 +22,28 @@ public class AutoCompletionHandler{
 	private boolean active;
 	private boolean walking;
 	
-	public AutoCompletionHandler(Player player, ArrayList<Coordinate> path, Coordinate start, Coordinate finish){
-		this.start = start;
-		this.finish = finish;
-		this.path = path;
+	public AutoCompletionHandler(Player player, int pickjob, int start, int finish){
+		
+		this.path = new ArrayList<Coordinate>();
+		try{
+			db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse", "vwburr15");
+			rs = db.executeQuery("SELECT * FROM PICKWAYPOINT WHERE pickjob = 1");
+			
+			while(rs.next()){
+				Coordinate c = new Coordinate(rs.getInt(2), rs.getInt(3), rs.getInt(8));
+				path.add(c);
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 		
 		//TODO: Remove Test Code
-		this.path = new ArrayList<Coordinate>();
-		this.path.add(new Coordinate(10.0f, -5.0f));
+		/*this.path.add(new Coordinate(10.0f, -5.0f));
 		this.path.add(new Coordinate(2.5f, -5.0f));
-		this.path.add(new Coordinate(2.5f, -9.17f));
+		this.path.add(new Coordinate(2.5f, -9.17f));*/
 		this.start = this.path.get(0);
-		this.finish = this.path.get(2);		
+		this.finish = this.path.get(5);		
 		
 		//this.counter = path.indexOf(this.start);
 		this.counter = 0;
@@ -49,8 +64,15 @@ public class AutoCompletionHandler{
 	
 	public void deactivate(){
 		this.active = false;
-		this.counter = 0;
+		advance();
 		return;
+	}
+	
+	public void advance(){
+		int next = finish.getNext();
+		this.start = path.get(next);
+		this.finish = path.get(start.getNext()-1);		
+		this.counter = path.indexOf(start);
 	}
 	
 	public void update(){

@@ -50,8 +50,8 @@ public class VocollectHandler extends Thread {
 
     public void run() {
 
-        String hostName = "192.168.1.5";
-    	//String hostName = "joseph.cedarville.edu";
+        //String hostName = "192.168.1.5";
+    	String hostName = "joseph.cedarville.edu";
     	//String hostName = "localhost";
     	//String hostName = "163.11.210.22";
     	
