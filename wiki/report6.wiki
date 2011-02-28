@@ -5,7 +5,7 @@
 ==Caleb Mays, Software Developer==
 
    * Tasks accomplished: Got collision boxes around all of Dan's misc. boxes. Helped Chris with auto-completion. 
-   * Future tasks researched: The manuals.
+   * Future tasks researched: Discussed with Chris about starting some of the documentation and manuals. 
    * Most immediate upcoming tasks: ?? (would like some direction/guidance...)
 
 
