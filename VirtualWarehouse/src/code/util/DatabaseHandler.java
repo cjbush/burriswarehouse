@@ -68,6 +68,12 @@ public class DatabaseHandler {
 //      return rs.getString(column);
 	}
 	
+	public ResultSet executeQuery(String query) throws SQLException{
+		ResultSet rs = con.createStatement().executeQuery(query);
+		//rs.next();
+		return rs;
+	}
+	
 	/**
 	 * Returns an ArrayList of results from a MySQL table - ONLY to be used where outWorkID is the value being
 	 * searched on.
