@@ -11,9 +11,9 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: 
-   * Future tasks researched: 
-   * Most immediate upcoming tasks: Make everything work:  
+   * Tasks accomplished: Got everything redesigned with racks, stacked pallets, pallets, stacked products, products, and picks (DRack, StackedDPallet, DPallet, StackedDProduct, DProduct, Pick) and working as it used to be.  They are now 'clutterly' organized, as well as scattering many misc. pallets and products.  I also fixed some misc. bugs as well as adding to Caleb's routine he wrote me to add the pallet and product to the warehouse when I press 'I' as well as adding it to the database (which Caleb wrote) for better model inserting.  This could possibly be used in the future for better model placement.
+   * Future tasks researched: Rendering, Animation, Texturing, Lighting.
+   * Most immediate upcoming tasks: Finish populating the warehouse with new models, adding permanent positions with new models, figure out texture problems with misc. objects as well as warehouse.  There is also a need for optimizing now.  An issue is being put up in the issue tracker, which I will own and start.  There is also a pallet jack problem which should or should not be assigned to me, but if I happen to figure it out while fixing other problems, I will claim it.  Finally, there is an issue with the Camera at the beginning, try to do animation, which kills the game at the beginning.  That ought to be found and removed until we can figure out a better way of doing that.
 
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
@@ -26,7 +26,7 @@
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x|| 55  ||-5|| || || ||
 ||Caleb Mays||8||68.5||-3.5|| || || ||
-||Dan Jewett||x||64||+4|| ||*Weekly Total*||$0.00||
+||Dan Jewett||13.5||77.5||+5.5|| ||*Weekly Total*||$0.00||
 ||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
 
 
