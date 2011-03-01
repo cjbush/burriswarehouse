@@ -29,7 +29,7 @@ public class WarehouseChaseCam extends ChaseCamera {
 		
 		//set some properties for the chase camera
         HashMap<String, Object> chaserProps = new HashMap<String, Object>();
-        chaserProps.put(ChaseCamera.PROP_ENABLESPRING, "true");
+        chaserProps.put(ChaseCamera.PROP_ENABLESPRING, "false");
         chaserProps.put(ChaseCamera.PROP_DAMPINGK, "10.0");
         chaserProps.put(ChaseCamera.PROP_SPRINGK, "25.0");
         chaserProps.put(ChaseCamera.PROP_MAXDISTANCE, "10.0");
