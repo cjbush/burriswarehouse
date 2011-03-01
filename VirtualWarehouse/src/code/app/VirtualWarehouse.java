@@ -126,7 +126,6 @@ public class VirtualWarehouse extends GameState {
 	private Player playerNode;
 	// auto characters
 	private Npc[] characters;
-	private static final int numCharacters = 5;
 
 	// keep track of scoring items
 	private Score score;
@@ -143,7 +142,6 @@ public class VirtualWarehouse extends GameState {
 	// follows the
 	// player
 	private Camera tpCam;
-	private CameraNode camNode;
 	private ChaseCamera chaseCam;
 
 	// the timer
@@ -367,7 +365,7 @@ public class VirtualWarehouse extends GameState {
 				playerNode.update(interpolation);
 			}
 
-			// update the chase camera mode and its attached camera
+			// update the chase camera node and its attached camera
 			chaseCam.update(interpolation);
 			tpCam.update();
 
@@ -379,6 +377,7 @@ public class VirtualWarehouse extends GameState {
 				minimapHUD.update();
 			}
 
+			//Fix because they are dumb
 			if (world.getRoomManager() != null) {
 				world.getRoomManager().findCurrentRoom(); // needs to be called
 				// before the
@@ -406,10 +405,9 @@ public class VirtualWarehouse extends GameState {
 			rootNode.updateGeometricState(interpolation, true);
 			hudNode.updateGeometricState(interpolation, true);
 			
-			
-			
-			
-			for (int i = 0; i < characters.length; i++){
+
+			for (int i = 0; i < characters.length; i++)
+			{
 				characters[i].move();
 			}
 		}
@@ -427,11 +425,15 @@ public class VirtualWarehouse extends GameState {
 				showArrow = true;
 			}
 		}
-		if (showArrow) {
+		
+		if (showArrow) 
+		{
 			String nextAisle = vh.getAisle();
 			String nextSlot = vh.getSlot();
 			playerNode.showArrow(nextAisle, nextSlot);
-		} else {
+		} 
+		else 
+		{
 			//Node arrow = this.getArrowNode();
 			//arrow.setLocalScale(0f);
 		}

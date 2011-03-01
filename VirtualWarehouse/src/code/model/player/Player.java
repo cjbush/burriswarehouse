@@ -567,25 +567,6 @@ public class Player extends AnimatedModel {
 		currentProduct = null;
 		hasProduct = false;
 	}
-	
-	/**
-	 * @deprecated Doesn't do anything?
-	 */
-	private void setupThirdPersonInputHandler() {
-		
-		//setup some properties for the input handler
-	    //HashMap<String, Object> tpHandlerProps = new HashMap<String, Object>();
-	    //tpHandlerProps.put(ThirdPersonHandler.PROP_ROTATEONLY, "true");
-	    //tpHandlerProps.put(ThirdPersonHandler.PROP_DOGRADUAL, "true");
-	    //tpHandlerProps.put(ThirdPersonHandler.PROP_TURNSPEED, "3.1415");
-	    //tpHandlerProps.put(ThirdPersonHandler.PROP_LOCKBACKWARDS, "false");
-	    //tpHandlerProps.put(ThirdPersonHandler.PROP_STRAFETARGETALIGN, "true");
-	    //tpHandlerProps.put(ThirdPersonHandler.PROP_CAMERAALIGNEDMOVE, "true");
-		
-		//input = new ThirdPersonHandler(this, warehouseGame.getThirdPersonCamera(), tpHandlerProps);
-	    //input.setActionSpeed(2f);
-	    input = new PlayerHandler(this);
-	}
     
     /**
      * 
