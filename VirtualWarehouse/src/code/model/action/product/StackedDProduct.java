@@ -29,7 +29,7 @@ public class StackedDProduct extends Node
 	
 	public StackedDProduct(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable)
 	{		
-		util = new DUtility(30f,.4f,null,.01f,.27f);
+		util = new DUtility(20f,null,.01f,.27f);
 		
 		if (height <= 0)
 		{

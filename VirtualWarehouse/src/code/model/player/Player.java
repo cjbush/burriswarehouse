@@ -13,7 +13,7 @@ import code.component.Score;
 import code.hud.DebugHUD;
 import code.hud.PickErrorDisplay;
 import code.model.AnimatedModel;
-import code.model.action.pallet.DPallet;
+import code.model.action.pallet.StackedDPallet;
 import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
 import code.model.vehicle.Vehicle;
@@ -314,8 +314,7 @@ public class Player extends AnimatedModel {
 			if (!hasProduct)
 			{
 				//pick up nearest product if player is close enough
-				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getDProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
-				
+				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
 				
 				if (closest != null)
 				{
@@ -327,7 +326,7 @@ public class Player extends AnimatedModel {
 			else
 			{
 				//set the product down if player is close enough to the pallet
-				DPallet p = (DPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct);
+				StackedDPallet p = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct);
 				if (p != null)
 				{
 					attachProductToPallet(p);
@@ -336,27 +335,6 @@ public class Player extends AnimatedModel {
 			}
 		}
 	}
-	
-	/*private void loadModel() {
-		Spatial playerModel = null;
-		
-		*//**
-		 * IMPORTANT: This box is added as the FIRST child of the player node to as a work-around
-		 * for an md5 model importation problem. When the model was loaded the camera would not
-		 * function properly. We solve this problem by adding an ordinary box as the first child of
-		 * the node. Since the box is a child of the player node, the box move around in side the 
-		 * animated md5 node.
-		 *//*
-		Box b = new Box("playerBox", new Vector3f(0f, 0f, 0f), .005f, .005f, .005f);
-		b.setModelBound(new BoundingBox());
-		attachChild(b);
-		
-		playerModel = ModelLoader.loadModel("md5", PLAYER_LOC + "person.md5mesh", PLAYER_LOC);
-		//playerModel = ModelLoader.loadModel("obj", PLAYER_LOC + "Dareus4.obj", PLAYER_LOC);
-		//playerModel = ModelLoader.loadModel("md5", PLAYER_LOC + "marine.md5mesh", PLAYER_LOC);
-		attachChild(playerModel);
-		collisionModel = this;
-	}*/
 	
 	@SuppressWarnings("unchecked")
 	private Node getClosestWithinDistance(List list, float distance, Node object) {
@@ -406,7 +384,7 @@ public class Player extends AnimatedModel {
 		{
 			//make a smaller box that the player 'picked up' from the pile
 			smallBox = closest.pickSmallProduct();
-			warehouseGame.getWarehouseWorld().addToProductsList(smallBox);
+			warehouseGame.getWarehouseWorld().addToPickList(smallBox);
 			smallBox.updateGeometricState(warehouseGame.getTimePerFrame(), true);
 			
 			if (warehouseGame.isUsingVocollect() && warehouseGame.getPickList().size() > 0)
@@ -443,7 +421,7 @@ public class Player extends AnimatedModel {
     	hasProduct = true;
 	}
 	
-	private void attachProductToPallet(DPallet p) {
+	private void attachProductToPallet(StackedDPallet p) {
 		
 		p.unlock();
 		currentProduct.removeFromParent();
@@ -555,7 +533,7 @@ public class Player extends AnimatedModel {
 		{
 			//make the product 'disappear' into the large box
 			//(the player put it back)
-			warehouseGame.getWarehouseWorld().removeFromProductsList(currentProduct);
+			warehouseGame.getWarehouseWorld().removeFromPickList(currentProduct);
 			//p.lock();
 			
 			if (warehouseGame.isUsingVocollect())

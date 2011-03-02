@@ -662,7 +662,6 @@ public class VirtualWarehouse extends GameState {
 				float lowerZ = zCenter +.3f;
 				float upperZ = zCenter - .3f;
 				boundingBoxes[i] = new BoundingBox2D(leftX, rightX, lowerZ, upperZ);
-				
 			}
 			
 			con.close();

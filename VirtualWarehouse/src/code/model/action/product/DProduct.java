@@ -28,7 +28,7 @@ public class DProduct extends Node
 		
 		if (top)
 		{
-			ww.getDProductList().add(this);
+			ww.getProductList().add(this);
 		}
 	}
 	

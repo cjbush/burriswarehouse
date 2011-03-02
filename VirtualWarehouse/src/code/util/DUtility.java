@@ -4,31 +4,14 @@ import com.jme.math.FastMath;
 
 public class DUtility
 {
-	private Float rotationAngle;
 	private Float rotationFactor;
 	private Float scaleFactor;
 	private Float transFactor;
 	
 	private Float h;
 	
-	public DUtility(Float scaFactor, Float traFactor)
-	{
-		this(null, null, scaFactor, traFactor, null);
-	}
-	
-	public DUtility(Float scaFactor, Float traFactor, Float h)
-	{
-		this(null, null, scaFactor, traFactor, h);
-	}
-	
 	public DUtility(Float rotFactor, Float scaFactor, Float traFactor, Float h)
 	{
-		this(null, rotFactor, scaFactor, traFactor, h);
-	}
-	
-	public DUtility(Float rotAngle, Float rotFactor, Float scaFactor, Float traFactor, Float h)
-	{
-		this.rotationAngle = rotAngle;
 		this.rotationFactor = rotFactor;
 		this.scaleFactor = scaFactor;
 		this.transFactor = traFactor;
@@ -47,12 +30,7 @@ public class DUtility
 	
 	public float rotation()
 	{
-		return rotationAngle * ((rotationFactor/2)+FastMath.nextRandomFloat()*rotationFactor*2);
-	}
-	
-	public float getRotationAngle()
-	{
-		return rotationAngle;
+		return -(rotationFactor/2) + (FastMath.nextRandomFloat()*rotationFactor);
 	}
 	
 	public float getRotationFactor()
@@ -62,12 +40,12 @@ public class DUtility
 	
 	public float getTranslationFactor()
 	{
-		return rotationAngle;
+		return transFactor;
 	}
 	
 	public float getScaleFactor()
 	{
-		return rotationAngle;
+		return scaleFactor;
 	}
 	
 	public float getH()

@@ -11,6 +11,10 @@ import code.util.DUtility;
 
 public class StackedDPallet extends Node
 {
+	private boolean inUse;
+	private Node productNode;
+	
+	
 	private DPallet palletStack[];
 	
 	private float height;
@@ -36,7 +40,10 @@ public class StackedDPallet extends Node
 			height = 1;
 		}
 		
-		util = new DUtility(10f,.4f,null,.01f,.07f);
+		productNode = new Node("product node");
+		this.attachChild(productNode);
+		
+		util = new DUtility(10f,null,.01f,.07f);
 		
 		this.height = height;
 		
@@ -62,6 +69,8 @@ public class StackedDPallet extends Node
 			
 			this.attachChild(palletStack[i]);
 		}
+		
+		ww.getPalletsList().add(this);
 	}
 	
 	public DPallet getTop()
@@ -110,5 +119,19 @@ public class StackedDPallet extends Node
 	public String getMainName()
 	{
 		return getTop().getMainName();
+	}
+	
+	//from old file
+	
+	public boolean isInUse() {
+		return inUse;
+	}
+
+	public void setInUse(boolean inUse) {
+		this.inUse = inUse;
+	}
+	
+	public Node getProductNode() {
+		return productNode;
 	}
 }
