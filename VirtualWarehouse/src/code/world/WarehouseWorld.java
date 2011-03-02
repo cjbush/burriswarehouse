@@ -9,9 +9,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-
 import code.app.VirtualWarehouse;
 import code.collisions.BoundingBox2D;
 import code.model.ModelLoader;
@@ -21,25 +18,15 @@ import code.model.action.pallet.StackedDPallet;
 import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
 import code.model.action.rack.DRack;
-import code.model.racklabels.BinNumberLabel;
-import code.model.racklabels.CheckDigitLabel;
-import code.model.racklabels.RackAisleLabel;
-import code.util.DatabaseHandler;
 import code.vocollect.DBInfoRetriever;
 
-import com.jme.bounding.BoundingBox;
 import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Renderer;
-import com.jme.scene.Geometry;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
-import com.jme.scene.shape.Box;
-import com.jme.scene.state.CullState;
 import com.jme.util.CloneImportExport;
-import com.jmex.angelfont.BitmapFont;
-import com.jmex.angelfont.BitmapFontLoader;
 
 /**
  * This class provides a node containing the warehouse environment (the warehouse structure 
@@ -67,9 +54,6 @@ public class WarehouseWorld extends Node {
 	
 	private static final Logger logger = Logger.getLogger(WarehouseWorld.class.getName());
 	
-	//store a list of objects (tag names) that will be loaded by the game
-	private ArrayList<String> tagNames = new ArrayList<String>();
-	
 	private ArrayList <BoundingBox2D>boundingBoxes;
 	
 	//parent node for the vehicles that the player can use
@@ -81,17 +65,13 @@ public class WarehouseWorld extends Node {
 	private HashMap<String, Spatial> roomMap;
 	
 	
-	private ArrayList<DPallet> palletsList = new ArrayList<DPallet>();
-	private ArrayList<Pick> productsList = new ArrayList<Pick>();
-	
-	
+	private ArrayList<StackedDPallet> palletsList = new ArrayList<StackedDPallet>();
 	private ArrayList<DProduct> productList = new ArrayList<DProduct>();
+	private ArrayList<Pick> pickList = new ArrayList<Pick>();
 	
 	private HashMap<String, CloneImportExport> cache = new HashMap<String, CloneImportExport>();
 	
 	private VirtualWarehouse warehouseGame;
-	
-	private DatabaseHandler db;
 	
 	private int III = 0;
 	
@@ -501,30 +481,30 @@ public class WarehouseWorld extends Node {
 		return vehicles.getChildren();
 	}
 	
-	public List<DPallet> getPalletsList() {
+	public List<StackedDPallet> getPalletsList() {
 		return palletsList;
 	}
 	
-	public List<Pick> getProductsList() {
-		return productsList;
+	public List<Pick> getPickList() {
+		return pickList;
 	}
 	
-	public void addToProductsList(Pick p) {
-		productsList.add(p);
+	public List<DProduct> getProductList() {
+		return productList;
 	}
 	
-	public void removeFromProductsList(Pick p) {
-		productsList.remove(p);
+	public void addToPickList(Pick p) {
+		pickList.add(p);
+	}
+	
+	public void removeFromPickList(Pick p) {
+		pickList.remove(p);
 	}
 	
 	public RoomManager getRoomManager() {
 		return roomManager;
 	}
 	
-	///\/\/\/\/\/\/\\\
 	
-	public List<DProduct> getDProductList() {
-		return productList;
-	}
 	
 }

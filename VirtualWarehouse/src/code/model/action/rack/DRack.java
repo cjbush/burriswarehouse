@@ -54,10 +54,10 @@ public class DRack extends Node
 		
 		util = new DUtility[totalOnShelf];
 		
-		util[0] = new DUtility(5f, .4f, null, .2f, null);
-		util[1] = new DUtility(5f, .4f, null, .2f, null);
-		util[2] = new DUtility(5f, .4f, null, .2f, null);
-		util[3] = new DUtility(5f, .4f, null, .001f, null);
+		util[0] = new DUtility(10f, null, .2f, null);
+		util[1] = new DUtility(10f, null, .2f, null);
+		util[2] = new DUtility(10f, null, .2f, null);
+		util[3] = new DUtility(10f, null, .001f, null);
 		
 		positions = new Vector3f[totalOnShelf][totalOnShelf];
 		
