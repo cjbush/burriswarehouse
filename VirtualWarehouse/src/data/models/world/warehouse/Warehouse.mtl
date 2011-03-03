@@ -1,10 +1,10 @@
-newmtl blinn3SG
+newmtl blinn3SG1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -s 0.0625 1 /src/models/animated/player/textures/wall.png
-bump -s 0.0625 1 /src/models/animated/player/textures/wall.png -bm 0.2
+map_Kd file4-Mesh.1.png
+bump bump2d3-Mesh.1.png -bm 0.2
 Ni 1.00
 Ks 0.50 0.50 0.50
 newmtl lambert3SG
@@ -13,20 +13,20 @@ Kd 0.50 0.48 0.28
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl phong1SG
+newmtl phong1SG1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -s 0.125 0.125 /src/models/animated/player/textures/floor.png
+map_Kd file2-Mesh.1.png
 Ni 1.00
 Ks 0.50 0.50 0.50
-newmtl phong2SG
+newmtl phong2SG1
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -s 0.0625 1 /src/models/animated/player/textures/wall.png
-bump -s 0.0625 1 /src/models/animated/player/textures/wall.png -bm 0.2
+map_Kd file3-Mesh.1.png
+bump bump2d1-Mesh.1.png -bm 0.2
 Ni 1.00
 Ks 0.50 0.50 0.50
