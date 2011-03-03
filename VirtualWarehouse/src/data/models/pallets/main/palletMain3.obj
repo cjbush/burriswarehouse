@@ -1,6 +1,6 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
-mtllib palletMain.mtl
+mtllib palletMain3.mtl
 g default
 v 0.223746 0.058219 -0.111555
 v 0.223746 0.058219 -0.071708

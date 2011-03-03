@@ -7,6 +7,7 @@ import code.model.action.product.StackedDProduct;
 import code.util.DUtility;
 import code.world.WarehouseWorld;
 
+import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
@@ -21,22 +22,27 @@ public class DPallet extends Node
 	
 	public DPallet(WarehouseWorld ww)
 	{
-		this(ww,null,null,false,0);
+		this(ww,null,null,false,0,null);
 	}
 
 	public DPallet(WarehouseWorld ww, String binNumber, String name, boolean pickable)
 	{
-		this(ww,binNumber,name,pickable,0);
+		this(ww,binNumber,name,pickable,0,null);
 	}
 	
-	public DPallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height)
+	public DPallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height,String file)
 	{
 		util = new DUtility(null,null,.04f,.07f);
 		
 		this.ww = ww;
 		this.setName(name);
 
-		loadModel();
+		if (file == null)
+		{
+			file = "palletMain.obj";
+		}
+		
+		loadModel(file);
 			
 		if (height > 0)
 		{
@@ -60,9 +66,9 @@ public class DPallet extends Node
 		return this.products.getBox((int)(this.products.getHeight()-1));
 	}
 	
-	private void loadModel()
-	{
-		Spatial m = ModelLoader.loadModel("obj", "data/models/pallets/main/palletMain.obj","data/models/pallets/main/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "pallet");
+	private void loadModel(String file)
+	{		
+		Spatial m = ModelLoader.loadModel("obj", "data/models/pallets/main/"+file,"data/models/pallets/main/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "pallet");
 		this.attachChild(m);
 	}
 	

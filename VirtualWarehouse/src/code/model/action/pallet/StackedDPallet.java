@@ -2,6 +2,7 @@ package code.model.action.pallet;
 
 import code.world.WarehouseWorld;
 
+import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.scene.Node;
 
@@ -49,15 +50,17 @@ public class StackedDPallet extends Node
 		
 		palletStack = new DPallet[height];
 		
+		String palletType = getPalletType();
+		
 		for (int i=0;i<height;i++)
 		{
 			if (i+1 != height)
 			{
-				palletStack[i] = new DPallet(ww,binNumber,name+_p+i,pickable);
+				palletStack[i] = new DPallet(ww,binNumber,name+_p+i,pickable,0,palletType);
 			}
 			else
 			{
-				palletStack[i] = new DPallet(ww,binNumber,name+_p+i,pickable,productHeight);
+				palletStack[i] = new DPallet(ww,binNumber,name+_p+i,pickable,productHeight,palletType);
 			}
 			
 			float rot = util.rotation();
@@ -71,6 +74,32 @@ public class StackedDPallet extends Node
 		}
 		
 		ww.getPalletsList().add(this);
+	}
+	
+	private String getPalletType()
+	{
+		int choice = (int)FastMath.floor((FastMath.nextRandomFloat()*6));
+		
+		String file = "";
+		
+		switch (choice)
+		{	
+			case 3:
+			case 4:
+				file = "palletMain2.obj";
+				break;
+			case 5:
+				file = "palletMain3.obj";
+				break;
+			case 0:
+			case 1:
+			case 2:
+			default:
+				file = "palletMain.obj";
+				break;
+		}
+		
+		return file;
 	}
 	
 	public DPallet getTop()
