@@ -84,7 +84,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean infoIconsEnabled = true;
 
-	private boolean DEBUG_MODE = true;
+	public static boolean DEBUG_MODE = true;
 
 	private LoadingWindow loadingScreen;
 	private boolean showLoadingScreen = true;
