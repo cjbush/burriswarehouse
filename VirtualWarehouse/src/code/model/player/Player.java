@@ -16,6 +16,7 @@ import code.model.AnimatedModel;
 import code.model.action.pallet.StackedDPallet;
 import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
+import code.model.player.autocompletion.AutoCompletionHandler;
 import code.model.vehicle.Vehicle;
 import code.util.WaypointCreator;
 import code.world.DeliveryArea;
@@ -50,7 +51,7 @@ public class Player extends AnimatedModel {
 	public static final Quaternion INITIAL_ROTATION = new Quaternion().fromAngleAxis(FastMath.DEG_TO_RAD*90f, new Vector3f(0f,0f,0f));
 	
 	//sets how close the player must be to the vehicle before they can use it
-    public static final float MAX_DISTANCE_ENTER_VEHICLE = 2;
+    public static float MAX_DISTANCE_ENTER_VEHICLE = 2;
     //how close the player must be to product to pick it up
 	public static final float MAX_PRODUCT_PICKUP_DISTANCE = 0.5f;
 	
@@ -79,6 +80,8 @@ public class Player extends AnimatedModel {
 	
 	public static final float vehiclePaddingX = 0.14f;
 	public static final float vehiclePaddingZ = 0.92f;
+	
+	private boolean detectCollisions = true;
 	
 	private BoundingBox2D playerBox;
 	
@@ -109,6 +112,8 @@ public class Player extends AnimatedModel {
 		
 		wp = new WaypointCreator(this);
 	}
+	
+	public void setCollisionDetection(boolean b){ detectCollisions = b;}
 	
 	public void showArrow(String nextAisle, String nextSlot) {
 		
@@ -236,12 +241,12 @@ public class Player extends AnimatedModel {
 		
 		if (inVehicle)
 		{
-			vehicleBeingUsed.checkForPalletPickup();
+			vehicleBeingUsed.checkForPalletPickup(false);
 		}
 		
 		checkVehicleEnterExit(false);
 		
-		checkProductGetDrop();
+		checkProductGetDrop(false);
 		if (KeyBindingManager.getKeyBindingManager().isValidCommand("insert_info", false)){
 			this.insertInfo();
 		}
@@ -277,14 +282,14 @@ public class Player extends AnimatedModel {
 		
 		
 	}
-	public void checkVehicleEnterExit(boolean controllerOverride) {
+	public void checkVehicleEnterExit(boolean override) {
 		
-		if ((KeyBindingManager.getKeyBindingManager().isValidCommand("enter_exit_vehicle", false)||controllerOverride) && !hasProduct)
+		if ((KeyBindingManager.getKeyBindingManager().isValidCommand("enter_exit_vehicle", false)||override) && !hasProduct)
     	{
 
     		if (!inVehicle)
     		{
-    			Vehicle closest = (Vehicle) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getVehicles(), MAX_DISTANCE_ENTER_VEHICLE, this);
+    			Vehicle closest = (Vehicle) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getVehicles(), MAX_DISTANCE_ENTER_VEHICLE, this, override);
     			if (closest != null)
     			{
     				this.stationaryAnim();
@@ -310,9 +315,9 @@ public class Player extends AnimatedModel {
 	/**
 	 * Checks if the player is attempting to pick up or set down product.
 	 */
-	private void checkProductGetDrop() {
+	public void checkProductGetDrop(boolean override) {
 
-		if (KeyBindingManager.getKeyBindingManager().isValidCommand("pickup_place_product", false))
+		if (KeyBindingManager.getKeyBindingManager().isValidCommand("pickup_place_product", false) || override)
 		{
 			//somehow
 			//setActiveAnimation(PICK_UP[NAME_INDX], Controller.RT_CLAMP, .25f);
@@ -320,7 +325,7 @@ public class Player extends AnimatedModel {
 			if (!hasProduct)
 			{
 				//pick up nearest product if player is close enough
-				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this);
+				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this, override);
 				
 				if (closest != null)
 				{
@@ -332,7 +337,7 @@ public class Player extends AnimatedModel {
 			else
 			{
 				//set the product down if player is close enough to the pallet
-				StackedDPallet p = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct);
+				StackedDPallet p = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct, override);
 				if (p != null)
 				{
 					attachProductToPallet(p);
@@ -343,7 +348,7 @@ public class Player extends AnimatedModel {
 	}
 	
 	@SuppressWarnings("unchecked")
-	private Node getClosestWithinDistance(List list, float distance, Node object) {
+	private Node getClosestWithinDistance(List list, float distance, Node object, boolean override) {
 		Node closest = null;
 		float closestDist = distance;
 		for (int i=0; i<list.size(); i++)
@@ -365,7 +370,7 @@ public class Player extends AnimatedModel {
 				dist = object.getWorldTranslation().distance(p.getWorldTranslation());
 			}
 			
-        	if (dist < MAX_PRODUCT_PICKUP_DISTANCE)
+        	if (dist < MAX_PRODUCT_PICKUP_DISTANCE || override)
         	{
 				if (closest != null)
         		{
@@ -556,7 +561,7 @@ public class Player extends AnimatedModel {
      * 
      */
     private void checkForCollision2D(){
-    	
+    	if(!detectCollisions) return;
     	BoundingBox2D[] boxes = warehouseGame.get2DCollidables();
     	this.updateBoundingBox();
     	for(BoundingBox2D b : boxes){    		
