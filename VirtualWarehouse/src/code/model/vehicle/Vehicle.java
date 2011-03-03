@@ -35,7 +35,7 @@ public class Vehicle extends Node {
 	public static final String PALLET_PATH = "data/models/animated/vehicles/autoPalletJack/";
 	// sets how many pallets can be held on the vehicle
 	public static final int MAX_PALLETS = 2;
-	public static final float MAX_DISTANCE_PALLET_PICKUP = .4f;
+	public static final float MAX_DISTANCE_PALLET_PICKUP = 0.4f;
 	public static final float PALLET_FROM_BODY_OFFSET = 0.16f;
 	public static final float PLAYER_ATTACHED_Z_OFFSET = .74f;
 	private Spatial model;
@@ -185,19 +185,19 @@ public class Vehicle extends Node {
 	/*
 	 * Checks for any pallets that the player is trying to pick up.
 	 */
-	public void checkForPalletPickup()
+	public void checkForPalletPickup(boolean override)
 	{
-		if (KeyBindingManager.getKeyBindingManager().isValidCommand("pickupPallet", false)) 
+		if (KeyBindingManager.getKeyBindingManager().isValidCommand("pickupPallet", false) || override) 
 		{
 			if (pallet == null) 
 			{
-				pallet = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this);
+				pallet = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this, override);
 				attachPalletToVehicle(pallet);
 			}
 			else
 			{
-				detachPalletFromVehicle();
-				
+				if(!override)
+					detachPalletFromVehicle();				
 			}
 		}
 	}
@@ -220,7 +220,7 @@ public class Vehicle extends Node {
 		pallet = null;
 	}
 
-	private Node getClosestWithinDistance(List<StackedDPallet> palletsList, float distance, Vehicle vehicle)
+	private Node getClosestWithinDistance(List<StackedDPallet> palletsList, float distance, Vehicle vehicle, boolean override)
 	{
 		Node closest = null;
 		float dist;
@@ -230,8 +230,8 @@ public class Vehicle extends Node {
 			Node p = (Node) palletsList.get(i);
 			
 			dist = vehicle.getWorldTranslation().distance(p.getWorldTranslation());
-			System.out.println(dist);
-			if (dist < MAX_DISTANCE_PALLET_PICKUP) 
+			//System.out.println(dist);
+			if (dist < MAX_DISTANCE_PALLET_PICKUP || override) 
 			{
 				if (closest != null && dist < distance)
 				{

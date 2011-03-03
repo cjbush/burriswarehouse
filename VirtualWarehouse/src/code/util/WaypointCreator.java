@@ -4,8 +4,8 @@ import java.sql.SQLException;
 
 import code.app.VirtualWarehouse;
 import code.app.WarehouseTrainer;
-import code.model.player.AutoCompletionHandler;
 import code.model.player.Player;
+import code.model.player.autocompletion.AutoCompletionHandler;
 
 import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
@@ -32,8 +32,8 @@ public class WaypointCreator {
 		k.set("addGetOffPJWaypoint", KeyInput.KEY_END);
 		k.set("addGetOnPJWaypoint", KeyInput.KEY_PGDN);
 		k.set("nextSection", KeyInput.KEY_DELETE);
-		db = new DatabaseHandler("joseph.cedarville.edu", "PICKWAYPOINT", "warehouse", "vwburr15");
-		sequence = 0;
+		db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse", "vwburr15");
+		sequence = -1;
 		section = 1;
 		this.player = player;
 	}
@@ -53,39 +53,39 @@ public class WaypointCreator {
 			z = player.getLocalTranslation().getZ();
 		}
 		
-		if(k.isValidCommand("addWaypoint")){
+		if(k.isValidCommand("addWaypoint", false)){
 			action = AutoCompletionHandler.FORWARD;
 			sequence++;
 		}
-		if(k.isValidCommand("addPickupWaypoint")){
+		if(k.isValidCommand("addPickupWaypoint", false)){
 			action = AutoCompletionHandler.PICKUPBOX;
 			sequence++;
 		}
-		if(k.isValidCommand("addPutdownWaypoint")){
+		if(k.isValidCommand("addPutdownWaypoint", false)){
 			action = AutoCompletionHandler.PUTDOWNBOX;
 			sequence++;
 		}
-		if(k.isValidCommand("addGetOffPJWaypoint")){
+		if(k.isValidCommand("addGetOffPJWaypoint", false)){
 			action = AutoCompletionHandler.GETOFFPJ;
 			sequence++;
 		}
-		if(k.isValidCommand("addGetOnPJWaypoint")){
+		if(k.isValidCommand("addGetOnPJWaypoint", false)){
 			action = AutoCompletionHandler.GETONPJ;
 			sequence++;
 		}
-		if(k.isValidCommand("nextSection")){
+		if(k.isValidCommand("nextSection", false)){
 			section++;
-			sequence = 0;
+			sequence = -1;
 		}
 		
 		if(action != NO_ACTION){
-			String query = "INSERT INTO PICKWAYPOINT(x, z, section, sequence, action) VALUES("+x+", "+z+", "+ section + ", " + sequence + ", " + action +");";
+			String query = "INSERT INTO PICKWAYPOINT(pickjob, x, z, section, sequence, action) VALUES(1, "+x+", "+z+", "+ section + ", " + sequence + ", " + action +");";
 			System.out.println(query);
-			/*try {
+			try {
 				db.executeQuery(query);
 			} catch (SQLException e) {
 				e.printStackTrace();
-			}*/
+			}
 		}
 	}
 }

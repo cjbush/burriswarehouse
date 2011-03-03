@@ -69,9 +69,14 @@ public class DatabaseHandler {
 	}
 	
 	public ResultSet executeQuery(String query) throws SQLException{
-		ResultSet rs = con.createStatement().executeQuery(query);
+		try{
+			return con.createStatement().executeQuery(query);
+		}
+		catch(SQLException e){
+			con.createStatement().executeUpdate(query);
+			return null;
+		}
 		//rs.next();
-		return rs;
 	}
 	
 	/**
