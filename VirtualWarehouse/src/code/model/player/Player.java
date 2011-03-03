@@ -17,6 +17,7 @@ import code.model.action.pallet.StackedDPallet;
 import code.model.action.pick.Pick;
 import code.model.action.product.DProduct;
 import code.model.vehicle.Vehicle;
+import code.util.WaypointCreator;
 import code.world.DeliveryArea;
 
 import com.jme.bounding.BoundingBox;
@@ -80,6 +81,8 @@ public class Player extends AnimatedModel {
 	public static final float vehiclePaddingZ = 0.92f;
 	
 	private BoundingBox2D playerBox;
+	
+	private WaypointCreator wp;
     
 	public Player(VirtualWarehouse vw) 
 	{
@@ -103,6 +106,8 @@ public class Player extends AnimatedModel {
 		addAnimations();
 		
 		playerBox = new BoundingBox2D();
+		
+		wp = new WaypointCreator(this);
 	}
 	
 	public void showArrow(String nextAisle, String nextSlot) {
@@ -240,6 +245,7 @@ public class Player extends AnimatedModel {
 		if (KeyBindingManager.getKeyBindingManager().isValidCommand("insert_info", false)){
 			this.insertInfo();
 		}
+		wp.update();
 	}
 	
 	/**

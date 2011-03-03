@@ -22,8 +22,18 @@ public class AutoCompletionHandler{
 	private boolean active;
 	private boolean walking;
 	
+	private boolean enabled = false;
+	
+	public static final int FORWARD = 0;
+	public static final int ROTLEFT = 1;
+	public static final int ROTRIGHT = 2;
+	public static final int GETOFFPJ = 3;
+	public static final int GETONPJ = 4;
+	public static final int PICKUPBOX = 5;
+	public static final int PUTDOWNBOX = 6;
+	
 	public AutoCompletionHandler(Player player, int pickjob, int start, int finish){
-		
+		if(!enabled) return;
 		this.path = new ArrayList<Coordinate>();
 		try{
 			db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse", "vwburr15");
@@ -54,6 +64,7 @@ public class AutoCompletionHandler{
 	
 	public boolean isActive(){return this.active;}
 	public void activate(){
+		if(!enabled) return;
 		this.active = true;
 		if(!player.inVehicle())
 			player.setLocalTranslation(start.getX(), .1f, start.getZ());
@@ -63,12 +74,14 @@ public class AutoCompletionHandler{
 	}
 	
 	public void deactivate(){
+		if(!enabled) return;
 		this.active = false;
 		advance();
 		return;
 	}
 	
 	public void advance(){
+		if(!enabled) return;
 		int next = finish.getNext();
 		this.start = path.get(next);
 		this.finish = path.get(start.getNext()-1);		
@@ -76,6 +89,7 @@ public class AutoCompletionHandler{
 	}
 	
 	public void update(){
+		if(!enabled) return;
 		if(!active) return;
 		
 		player.getDebugHud().setAutoCount(counter);

@@ -38,6 +38,7 @@ import com.jmex.game.state.load.TransitionGameState;
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  * 
  */
+
 public class WarehouseTrainer extends FixedFramerateGame {
 
 	private static final Logger logger = Logger.getLogger(WarehouseTrainer.class.getName());
