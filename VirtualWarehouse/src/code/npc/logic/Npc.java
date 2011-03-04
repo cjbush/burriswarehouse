@@ -63,10 +63,11 @@ public class Npc extends AnimatedModel {
 		float z = cd.getZ();
 		float myX = this.getLocalTranslation().getX();
 		float myZ = this.getLocalTranslation().getZ();
-
-		float direction = -(FastMath.atan2(myZ - z, myX - x));
-		setLocalRotation(new Quaternion().fromAngleAxis(direction,
+		if ((Math.abs(myX - x) > .25f) || (Math.abs(myZ - z) > .25f)) {
+			float direction = -(FastMath.atan2(myZ - z, myX - x));
+			setLocalRotation(new Quaternion().fromAngleAxis(direction,
 				Vector3f.UNIT_Y));
+		}
 		
 		// if I'm in the place I want to go, then increment and go to the next place...
 		if ((Math.abs(myX - x) < .1f) && (Math.abs(myZ - z) < .1f)) {
