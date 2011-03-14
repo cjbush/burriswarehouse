@@ -1,0 +1,12 @@
+#summary This page is mostly for Dan, but for the rest of the team as well, because I wanted to help do some research for the level of detail stuff.
+
+= Basically... =
+
+JME has, or can do, what we need. At least, it appears that way. 
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * http://jmonkeyengine.org/wiki/doku.php/starter:hello_lod
+  * http://www.jmonkeyengine.com/doc/com/jme/scene/lod/AreaClodMesh.html
