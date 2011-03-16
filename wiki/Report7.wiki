@@ -4,9 +4,9 @@
 
 ==Caleb Mays, Software Developer==
 
-   * Tasks accomplished: 
+   * Tasks accomplished: The week before spring break wasn't very productive for me; I feel like I wasn't given anything super-specific to do, having said that, I made sure Chris knew that if he needed/wanted help, to ask me. I helped him a little bit, but really, I don't feel like I did very much at all.
    * Future tasks researched: Level of detail things. 
-   * Most immediate upcoming tasks: Start writing the documents for the final project.
+   * Most immediate upcoming tasks: Start writing the documents for the final presentation: the user manual, maintenance manual, etc...
 
 
 ==Dan Jewett, Modeler/Software Developer==
@@ -25,7 +25,7 @@
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x||x||x|| || || ||
-||Caleb Mays||x||x||x|| || || ||
+||Caleb Mays||8||76.5||-6.5|| || || ||
 ||Dan Jewett||9||86.5||+2.5|| ||*Weekly Total*||$0.00||
 ||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
 
