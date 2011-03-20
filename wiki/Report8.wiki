@@ -1,0 +1,38 @@
+#summary Report for 3/14-3/20
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished: Started writing documentation (User Manual basically complete, started Maintenance Manual). Thought about threaded loading, but would like a little bit of advice for how to do it...
+   * Future tasks researched: Threaded loading of models. 
+   * Most immediate upcoming tasks: Start programming threaded loading. Do you (whomever is reading this) think I should divide up the threads based on what "type" is being loaded?? Or...how should I best attack this?? 
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished: Solved many texture problems with misc. objects as well as the warehouse with assistance from my animation teacher.  Fixed the issue with the Camera at the beginning.  Other small misc. fixes fixed before break.  Began solving optimization problems.
+   * Future tasks researched: Rendering, Animation, Texturing, Lighting.
+   * Most immediate upcoming tasks: Finish populating the warehouse with new models, adding permanent positions with new models.  Optimization.  Begin learning the CLOD class and implementing it with our project.
+
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Most immediate upcoming tasks: 
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||x||x||x|| || || ||
+||Caleb Mays||12||88.5||-6.5|| || || ||
+||Dan Jewett||x||86.5||+2.5|| ||*Weekly Total*||$0.00||
+||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - 
+  * Chris - 
+  * Caleb - 
+  * Dan - 
