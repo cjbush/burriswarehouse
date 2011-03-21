@@ -1,21 +1,16 @@
 package code.app;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.logging.Logger;
 
 import code.component.Score;
 import code.component.WarehouseChaseCam;
 import code.gui.LoadingWindow;
-import code.hud.AutoplayHUD;
 import code.hud.DebugHUD;
 import code.hud.InformationBar;
 import code.hud.MessageBox;
@@ -24,14 +19,11 @@ import code.hud.PauseDisplay;
 import code.hud.ScoreDisplay;
 import code.hud.ScoringTimer;
 import code.infoicons.InfoIconManager;
-import code.model.ModelLoader;
 import code.model.SharedMeshManager;
 import code.model.player.Character;
 import code.model.player.Player;
 import code.model.player.RandomPerson;
 import code.npc.logic.Npc;
-import code.research.playback.Grid;
-import code.research.playback.GridNode;
 import code.sound.SoundPlayer;
 import code.util.Coordinate;
 import code.vocollect.VocollectHandler;
@@ -39,36 +31,28 @@ import code.world.DeliveryArea;
 import code.world.WarehouseWorld;
 
 import com.jme.app.AbstractGame.ConfigShowMode;
-import com.jme.bounding.BoundingBox;
 import com.jme.input.ChaseCamera;
 import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 import com.jme.input.MouseInput;
-import com.jme.light.PointLight;
-import com.jme.math.FastMath;
-import com.jme.math.Quaternion;
+import com.jme.light.*;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Camera;
 import com.jme.renderer.ColorRGBA;
 import com.jme.renderer.pass.BasicPassManager;
 import com.jme.renderer.pass.RenderPass;
-import com.jme.scene.CameraNode;
+import com.jme.renderer.pass.ShadowedRenderPass;
 import com.jme.scene.Controller;
 import com.jme.scene.Node;
-import com.jme.scene.state.CullState;
 import com.jme.scene.state.LightState;
 import com.jme.scene.state.ZBufferState;
 import com.jme.system.DisplaySystem;
 import com.jme.util.GameTaskQueue;
 import com.jme.util.GameTaskQueueManager;
 import com.jme.util.Timer;
-import com.jme.util.geom.Debugger;
 import com.jmex.angelfont.BitmapFont;
-import com.jmex.angelfont.BitmapFontLoader;
 import com.jmex.game.state.GameState;
-import com.jmex.model.collada.ColladaImporter;
 
-import java.io.FileInputStream;
 import code.collisions.BoundingBox2D;
 
 /**
@@ -111,6 +95,8 @@ public class VirtualWarehouse extends GameState {
 
 	// the root node of the scene graph
 	private Node rootNode;
+	
+	private Node occluderNode;
 
 	// the root node for the HUD
 	private Node hudNode;
@@ -155,6 +141,8 @@ public class VirtualWarehouse extends GameState {
 	protected BasicPassManager pManager;
 	protected RenderPass rootPass;
 	protected RenderPass hudPass;
+	
+	protected ShadowedRenderPass srp = new ShadowedRenderPass();
 
 	// use sharedNodes for optimizing loading of models
 	private SharedMeshManager sharedMeshManager;
@@ -217,6 +205,10 @@ public class VirtualWarehouse extends GameState {
 
 	public Node getRootNode() {
 		return rootNode;
+	}
+	
+	public Node getOccluderNode() {
+		return occluderNode;
 	}
 
 	public Node getHudNode() {
@@ -513,13 +505,15 @@ public class VirtualWarehouse extends GameState {
 	 * constructor.
 	 */
 	protected void initGame() {
-
+		
 		display.setTitle("Warehouse Trainer");
 
 		pManager = new BasicPassManager();
 
 		// create the root node of the scene graph
 		rootNode = new Node("scene graph root node");
+		
+		occluderNode = new Node("Shadow Node");
 
 		// create a root node for HUD objects
 		hudNode = new Node("HUD root node");
@@ -593,10 +587,6 @@ public class VirtualWarehouse extends GameState {
 		}
 
 		// grid = new Grid(rootNode, this, showGrid);
-
-		// gotta init the characters...make them. this also
-		// creates the path they should take.
-
 	}
 
 	private void buildBoundingBoxes() {
@@ -766,7 +756,6 @@ public class VirtualWarehouse extends GameState {
 
 		// build the warehouse and attach to scene graph
 		world = new WarehouseWorld(this);
-		rootNode.attachChild(world);
 
 		if (infoIconsEnabled) {
 			// build and place the info icons in the warehouse
@@ -775,73 +764,39 @@ public class VirtualWarehouse extends GameState {
 		}
 	}
 
-	private void buildLighting() {
-		// TODO: proper lighting
-		/** Set up a basic, default light. */
-		// DirectionalLight light = new DirectionalLight();
-		// light.setDiffuse(new ColorRGBA(1.0f, 1.0f, 1.0f, 1.0f));
-		// light.setAmbient(new ColorRGBA(0.5f, 0.5f, 0.5f, .5f));
-		// light.setDirection(new Vector3f(0,-1,0));
-		// light.setShadowCaster(true);
-		// light.setEnabled(true);
-
-		PointLight light = new PointLight();
-		light.setDiffuse(new ColorRGBA(0.75f, 0.75f, 0.75f, 0.75f));
-		light.setAmbient(new ColorRGBA(0.3f, 0.3f, 0.3f, 1.0f));
-		light.setLocation(new Vector3f(100.0f, 100.0f, 100.0f));
-		light.setEnabled(true);
-
-		PointLight light2 = new PointLight();
-		light2.setDiffuse(new ColorRGBA(0.75f, 0.75f, 0.75f, 0.75f));
-		light2.setAmbient(new ColorRGBA(0.3f, 0.3f, 0.3f, 1.0f));
-		light2.setLocation(new Vector3f(-100.0f, 100.0f, -100.0f));
-		light2.setEnabled(true);
-
-		/** Attach the light to a lightState and the lightState to rootNode. */
+	private void buildLighting()
+	{
+		//openGL limits lights to eight
 		LightState lightState = display.getRenderer().createLightState();
+	
+		lightState.attach(createPointLight(4.93f,-3.65f));
+		lightState.attach(createPointLight(4.93f,-33.036f));
+		lightState.attach(createPointLight(18.065f,-44.32f));
+		lightState.attach(createPointLight(18.065f,-15.561f));
+		lightState.attach(createPointLight(45.205f,-3.473f));
+		lightState.attach(createPointLight(45.205f,-19.784f));
+		lightState.attach(createPointLight(45.205f,-40.178f));
+		
 		lightState.setEnabled(true);
-		lightState.setGlobalAmbient(new ColorRGBA(.2f, .2f, .2f, 1f));
-		lightState.attach(light);
-		lightState.attach(light2);
+		
 		rootNode.setRenderState(lightState);
+	}
 
-		// MaterialState ms =
-		// DisplaySystem.getDisplaySystem().getRenderer().createMaterialState();
-		// ms.setAmbient(new ColorRGBA(1, 1, 1, 1));
-		// ms.setDiffuse(new ColorRGBA(1, 1, 1, 1));
-		// ms.setSpecular(new ColorRGBA(1, 1, 1, 1));
-		// ms.setMaterialFace(MaterialFace.FrontAndBack);
-		// ms.setShininess(60);
-		// ms.setEnabled(true);
-		// rootNode.setRenderState(ms);
-
-		// /** Set up a basic, default light. */
-		// DirectionalLight light = new DirectionalLight();
-		// light.setDiffuse(new ColorRGBA(1.0f, 1.0f, 1.0f, 1.0f));
-		// light.setAmbient(new ColorRGBA(0.5f, 0.5f, 0.5f, 1.0f));
-		//
-		// //Have light face down and the right/front corner
-		// light.setDirection(new Vector3f(1, -1, 1));
-		// light.setEnabled(true);
-		//
-		// /** Add a second light for more brightness */
-		// DirectionalLight light2 = new DirectionalLight();
-		// light2.setDiffuse(new ColorRGBA(1.0f, 1.0f, 1.0f, 1.0f));
-		// light2.setAmbient(new ColorRGBA(0.5f, 0.5f, 0.5f, 1.0f));
-		//
-		// //Have light face down and the left/back corner
-		// light.setDirection(new Vector3f(-1, -1, -1));
-		// light2.setEnabled(true);
-		//
-		// /** Attach the light to a lightState and the lightState to rootNode.
-		// */
-		// LightState lightState = display.getRenderer().createLightState();
-		// lightState.setGlobalAmbient(new ColorRGBA(1f, 1f, 1f, 0f));
-		// lightState.setEnabled(true);
-		// lightState.attach(light);
-		// lightState.attach(light2);
-		// rootNode.setRenderState(lightState);
-
+	private PointLight createPointLight(float x,float z)
+	{
+		PointLight light = new PointLight();
+		light.setDiffuse(new ColorRGBA(0.98f, 1f, .766f, 1f));
+		light.setAmbient(new ColorRGBA(0.98f, 1f, .766f, 1f));
+		light.setSpecular(new ColorRGBA(0.98f, 1f, .766f, 1f));
+		
+		light.setAttenuate(true);
+		light.setShadowCaster(true);
+		light.setLinear(.2f);
+	
+		light.setLocation(new Vector3f(x, 4.583f, z));
+		light.setEnabled(true);
+		
+		return light;
 	}
 
 	private void makeScene() {
@@ -853,7 +808,19 @@ public class VirtualWarehouse extends GameState {
 		buildLighting();
 		// Add warehouse and objects to the world
 		buildEnvironment();
-
+		
+		rootNode.attachChild(occluderNode);
+		
+		rootNode.setRenderQueueMode(display.getRenderer().QUEUE_OPAQUE);
+		
+		srp.add(rootNode);
+		srp.addOccluder(occluderNode);
+		srp.setRenderShadows(true);
+		srp.setLightingMethod(ShadowedRenderPass.LightingMethod.Modulative);
+		srp.setShadowColor(ColorRGBA.black);
+		
+		pManager.add(srp);
+		
 		rootNode.updateGeometricState(0.0f, true);
 		rootNode.updateRenderState();
 		rootNode.updateWorldBound();

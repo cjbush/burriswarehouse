@@ -23,7 +23,7 @@ public class WaypointCreator {
 	public static boolean enabled;
 	
 	public WaypointCreator(Player player){
-		enabled = VirtualWarehouse.DEBUG_MODE;
+		enabled = false;//VirtualWarehouse.DEBUG_MODE;
 		if(!enabled) return;
 		k = KeyBindingManager.getKeyBindingManager();
 		k.set("addWaypoint", KeyInput.KEY_INSERT);

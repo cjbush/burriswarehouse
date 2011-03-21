@@ -41,13 +41,13 @@ public class WarehouseWorld extends Node {
 	//set which things are loaded into the game
 	//these should probably all be set to true unless debugging
 	public static final boolean loadWarehouseShell = true; //warehouse walls
-	public static final boolean loadWarehouseInsides = true; //racks, pallets, etc...
+	public static final boolean loadWarehouseInsides = false; //racks, pallets, etc...
 	
-	public static final boolean loadRacks = true; //racks
+	public static final boolean loadRacks = false; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
 	public static final boolean fillRacks = true; //put pallets and product on racks
-	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
+	public static final boolean miscPallets = false; //get misc pallets and put them in the warehouse
 	public static final boolean iWantArrow = true;
 	
 	public static final boolean useLocalhost = false;
@@ -96,7 +96,7 @@ public class WarehouseWorld extends Node {
 		if (loadVehicles)
 		{
 			vehicles = new VehicleManagerNode(this);
-			this.attachChild(vehicles);
+			warehouseGame.getOccluderNode().attachChild(vehicles);
 		}
 		
 		//TODO: fix locking warnings?
@@ -337,21 +337,6 @@ public class WarehouseWorld extends Node {
 						object.setLocalRotation(q);
 						
 						object.setName(name);
-						
-						/*fix*/
-						
-						/*
-						palletsList.add(pallet);
-						
-						List<Spatial> productsOnPallet = pallet.getProducts();
-						if (productsOnPallet != null)
-						{
-							for (int n=0; n<productsOnPallet.size(); n++)
-							{
-								productsList.add((Product) productsOnPallet.get(n));
-							}
-						}
-						*/
 						
 						Room r = roomManager.getRoom(translationX, translationZ);
 						if (r != null)

@@ -35,14 +35,7 @@ public class DProduct extends Node
 	private void loadModel(boolean top)
 	{
 		Spatial m;
-		if (!top)
-		{
-			m = ModelLoader.loadModel("obj", "data/models/boxes/generic/box.obj","data/models/boxes/generic/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
-		}
-		else
-		{
-			m = ModelLoader.loadModel("obj", "data/models/boxes/generic/openbox.obj","data/models/boxes/generic/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "object");
-		}
+		m = ModelLoader.loadModel("obj", "data/models/boxes/generic/box.obj","data/models/boxes/generic/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 		this.attachChild(m);
 	}
 	
