@@ -1,16 +1,14 @@
+newmtl lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd dotty_marble_92398723.JPG
+Ni 1.00
 newmtl table2:Grey
 illum 4
-Kd 0.01 0.01 0.01
+Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
+map_Kd texture-marble.jpg
 Ni 1.00
-Ks 1.00 1.00 1.00
-Ns 0.00
-newmtl table2:Grey_001
-illum 4
-Kd 0.77 0.77 0.77
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-Ks 1.57 1.57 1.57
-Ns 0.00
