@@ -41,13 +41,13 @@ public class WarehouseWorld extends Node {
 	//set which things are loaded into the game
 	//these should probably all be set to true unless debugging
 	public static final boolean loadWarehouseShell = true; //warehouse walls
-	public static final boolean loadWarehouseInsides = false; //racks, pallets, etc...
+	public static final boolean loadWarehouseInsides = true; //racks, pallets, etc...
 	
-	public static final boolean loadRacks = false; //racks
+	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
 	public static final boolean fillRacks = true; //put pallets and product on racks
-	public static final boolean miscPallets = false; //get misc pallets and put them in the warehouse
+	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean iWantArrow = true;
 	
 	public static final boolean useLocalhost = false;
@@ -91,7 +91,7 @@ public class WarehouseWorld extends Node {
 		buildWarehouse();		
 		
 		//add tarp walls
-		//addTarpWalls();
+		addTarpWalls();
 		
 		if (loadVehicles)
 		{
@@ -130,8 +130,7 @@ public class WarehouseWorld extends Node {
 		rooms.attachChild(roomMap.get(roomName));
 	}
 	
-	private void buildWarehouse() {
-		
+	private void buildWarehouse() {		
 		warehouseGame.addToLoadingProgress(5, "Establishing Talkman Database Connection...");
 		
 		//DBInfoRetriever dbInfoRetriever = new DBInfoRetriever("joseph.cedarville.edu","talkman","warehouse","vwburr15");
@@ -215,8 +214,10 @@ public class WarehouseWorld extends Node {
 			
 			warehouseGame.addToLoadingProgress(5, "Building Loaded");
 			
+			RoomLoaderThread t;
+			t = new RoomLoaderThread(8, roomManager, warehouseGame, this);
 			
-			if (loadWarehouseInsides)
+			/*if (loadWarehouseInsides)
 			{
 				int itemCounter = 0;
 				warehouseGame.addToLoadingProgress(5, "Loading Warehouse Environment...");
@@ -410,7 +411,7 @@ public class WarehouseWorld extends Node {
 				}
 				
 				warehouseGame.getRootNode().attachChild(rooms);
-			}
+			}*/
 			
 		} catch (Exception e) {
 				 e.printStackTrace();

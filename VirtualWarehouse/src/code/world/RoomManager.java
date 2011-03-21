@@ -139,6 +139,10 @@ public class RoomManager {
 		return currentRoom;
 	}
 	
+	public Room getRoom(int room){
+		return roomsList.get(room);
+	}
+	
 	/**
 	 * Updates the currentRoom variable containing the room that the player is in. 
 	 */

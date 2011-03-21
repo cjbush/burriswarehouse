@@ -40,7 +40,7 @@ public class BetterRecording implements Runnable{
 	
 	@Override
 	public void run() {
-		if(recording)
+		if(recording){
 			current = System.currentTimeMillis();
 			BufferedImage image = robot.createScreenCapture(screenBounds);
 			BufferedImage image2 = new BufferedImage(image.getWidth(), image.getHeight(), BufferedImage.TYPE_3BYTE_BGR);
@@ -52,6 +52,7 @@ public class BetterRecording implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
 	}
 	
 	public void cleanup(){
