@@ -18,13 +18,13 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished: 
-  * Most immediate upcoming tasks: 
+  * Tasks accomplished: Basic functionality of auto completion done. We need to do a little bit of polishing to make it look smoother and perform testing to make sure it is robust. Also created a thread for loading the objects in the warehouse by room, to allow for multithreaded loading.
+  * Most immediate upcoming tasks: Continue work on multithreaded loading and work on data persistence. 
 
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush||x||x||x|| || || ||
+||Chris Bush||12||93||-3|| || || ||
 ||Caleb Mays||12||89.5||-6.5|| || || ||
 ||Dan Jewett||x||98||+2|| ||*Weekly Total*||$0.00||
 ||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
