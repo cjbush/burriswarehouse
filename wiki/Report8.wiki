@@ -11,9 +11,9 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: 
-   * Future tasks researched: 
-   * Most immediate upcoming tasks: 
+   * Tasks accomplished: New Textures (Warehouse Modified).  Modified objects (Arrow, Guard Rails, Garbage to name a few).  Fixed DProduct so it does not have open flaps.  New Lighting and almost completed with shadows.
+   * Future tasks researched: Rendering, Animation, Texturing, Lighting.
+   * Most immediate upcoming tasks: Finish populating the warehouse with new models, adding permanent positions with new models. Need a priority list of what we feel needs to be done.
 
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
@@ -25,8 +25,8 @@
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x||x||x|| || || ||
-||Caleb Mays||12||88.5||-6.5|| || || ||
-||Dan Jewett||x||86.5||+2.5|| ||*Weekly Total*||$0.00||
+||Caleb Mays||12||89.5||-6.5|| || || ||
+||Dan Jewett||x||98||+2|| ||*Weekly Total*||$0.00||
 ||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
 
 
