@@ -21,10 +21,11 @@ public class Recording implements Runnable{
 			e.printStackTrace();
 		}
 		System.out.println("Recording created.");
+		this.run();
 	}
 	
 	public void run(){
-		while(record){
+		
 			Frame f = new Frame();
 			String filename = "C:/images/"+(id++)+".jpg";
 			File file = new File(filename);
@@ -37,7 +38,7 @@ public class Recording implements Runnable{
 			} catch (IOException e) {
 				e.printStackTrace();
 			}	
-		}
+		
 	}
 	
 	public void cleanup(){

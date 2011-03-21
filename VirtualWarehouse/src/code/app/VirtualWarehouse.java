@@ -24,6 +24,7 @@ import code.model.player.Character;
 import code.model.player.Player;
 import code.model.player.RandomPerson;
 import code.npc.logic.Npc;
+import code.research.recording.Recording;
 import code.sound.SoundPlayer;
 import code.util.Coordinate;
 import code.vocollect.VocollectHandler;
@@ -68,7 +69,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean infoIconsEnabled = true;
 
-	public static boolean DEBUG_MODE = true;
+	public static boolean DEBUG_MODE = false;
 
 	private LoadingWindow loadingScreen;
 	private boolean showLoadingScreen = true;
@@ -118,6 +119,8 @@ public class VirtualWarehouse extends GameState {
 
 	// a font to be used for HUD items and labels
 	private BitmapFont font;
+	
+	private Recording recorder;
 
 	// moved to WarehouseTrainer
 	// private int width, height, depth, freq;
@@ -169,6 +172,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean showArrow;
 	private static final boolean showGrid = false;
+	private boolean recording = false;
 
 	// The game starts here by instantiating the game class (i.e. TermProject)
 	// Since TermProject is a JME game class the following methods will be
@@ -306,12 +310,6 @@ public class VirtualWarehouse extends GameState {
 		// sounds.cleanup();
 		// //finished = true;
 		//				
-		// if(isRecording)
-		// {
-		// recorder.close();
-		// }
-		// }
-
 		// if r was pressed, reset position
 		if (KeyBindingManager.getKeyBindingManager().isValidCommand(
 				"position_reset", false)) {
@@ -327,6 +325,17 @@ public class VirtualWarehouse extends GameState {
 				playerNode.getVehicleBeingUsed().setLocalRotation(Player.INITIAL_ROTATION.clone());
 			}
 
+		}
+		
+		if(KeyBindingManager.getKeyBindingManager().isValidCommand("record",false)){
+			if(recording){
+				recorder.cleanup();
+				recording = false;
+			}
+			else{
+				recorder = new Recording();
+				recording = true;
+			}
 		}
 
 		// pause
@@ -482,6 +491,7 @@ public class VirtualWarehouse extends GameState {
 				KeyInput.KEY_R);
 		
 		KeyBindingManager.getKeyBindingManager().set("autocomplete", KeyInput.KEY_F);
+		KeyBindingManager.getKeyBindingManager().set("record",KeyInput.KEY_X);
 
 	}
 
@@ -668,7 +678,7 @@ public class VirtualWarehouse extends GameState {
 	public void cleanup() {
 
 		sounds.cleanup();
-
+		if(recording)recorder.cleanup();
 		if (useVocollect) {
 			VocollectHandler.close();
 		}
