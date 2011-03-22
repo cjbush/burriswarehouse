@@ -42,7 +42,6 @@ public class VehicleHandler extends InputHandler {
         this.player = player;
         setKeyBindings(api);
         setActions(vehicle);
-
     }
 
     /**

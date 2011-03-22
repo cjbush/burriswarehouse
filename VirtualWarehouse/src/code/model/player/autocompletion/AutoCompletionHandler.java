@@ -4,12 +4,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.jme.input.InputHandler;
 import com.jme.math.FastMath;
 import com.jme.math.Matrix3f;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 
 import code.model.player.Player;
+import code.model.player.PlayerHandler;
 import code.util.Coordinate;
 import code.util.DatabaseHandler;
 
@@ -168,6 +170,7 @@ public class AutoCompletionHandler {
 				// if i'm far enough to care about direction...otherwise the 
 				// corners look a little funky...
 				if ((Math.abs(myX - x) > .75f) || (Math.abs(myZ - z) > .75f)) {
+					
 					playerDirection = -(FastMath.atan2(myZ - z, myX - x));
 					player.getVehicleBeingUsed().setLocalRotation(
 						new Quaternion().fromAngleAxis(playerDirection - 1.55f,
@@ -186,19 +189,19 @@ public class AutoCompletionHandler {
 
 				if ((myX < x) && (Math.abs(myX - x) > .07f)) {
 					walking = true;
-					player.setLocalTranslation(myX + .035f, .01f, myZ);
+					player.setLocalTranslation(myX + .035f, .1f, myZ);
 
 				} else if ((myX > x) && (Math.abs(myX - x) > .07f)) {
 					walking = true;
-					player.setLocalTranslation(myX - .035f, .01f, myZ);
+					player.setLocalTranslation(myX - .035f, .1f, myZ);
 				}
 
 				if ((myZ < z) && Math.abs(myZ - z) > .07f) {
 					walking = true;
-					player.setLocalTranslation(myX, .01f, myZ + .035f);
+					player.setLocalTranslation(myX, .1f, myZ + .035f);
 				} else if ((myZ > z) && Math.abs(myZ - z) > .07f) {
 					walking = true;
-					player.setLocalTranslation(myX, .01f, myZ - .035f);
+					player.setLocalTranslation(myX, .1f, myZ - .035f);
 				}
 			} else {
 				walking = false;

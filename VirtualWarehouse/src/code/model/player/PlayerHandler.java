@@ -69,7 +69,7 @@ public class PlayerHandler extends InputHandler {
 	private Component rb;
 	private Component start;
 	private Component back;
-	
+	private float playerHandlerTime;
 	private boolean enabled;
 	
 	/**
@@ -119,7 +119,9 @@ public class PlayerHandler extends InputHandler {
 		
 		System.out.println("Controller buttons mapped.");
     }
-	
+	public PlayerHandler getPlayerHandler(){
+		return this;
+	}
     public void update(float time) {
        /* if (!isEnabled()) {
         	walking = false;
@@ -127,7 +129,7 @@ public class PlayerHandler extends InputHandler {
         }*/
         
         super.update(time);
-        
+        playerHandlerTime = time;
         if(KeyBindingManager.getKeyBindingManager().isValidCommand("autocomplete", false)){
         	player.getACH().activate();
         }
@@ -264,5 +266,11 @@ public class PlayerHandler extends InputHandler {
 	}
 	public void setSpeed(float s){
 		speed = s;
+	}
+	public float getTurnSpeed(){
+		return turnSpeed;
+	}
+	public float getPlayerHandlerTime(){
+		return playerHandlerTime;
 	}
 }

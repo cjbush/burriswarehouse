@@ -214,7 +214,12 @@ public class WarehouseTrainer extends FixedFramerateGame {
 	public void startInGameState() {
 		startInGameState(null);
 	}
-	
+	public void startOptions(){
+		GameState optionsMenu = new OptionMenu(this);
+		optionsMenu.setActive(true);
+		GameStateManager.getInstance().attachChild(optionsMenu);
+
+	}
 	public void startHighScoreState() {
 		GameState highScoreMenu = new HighScoreMenu(this);
 		highScoreMenu.setActive(true);

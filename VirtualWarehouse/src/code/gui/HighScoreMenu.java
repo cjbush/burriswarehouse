@@ -3,18 +3,13 @@ package code.gui;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
 import code.app.WarehouseTrainer;
-import code.app.WarehouseTrainer.Mode;
 import code.component.Score;
 import code.gui.TransitionFadeOut.GoToState;
-
-import com.jme.input.KeyBindingManager;
 import com.jme.input.MouseInput;
 import com.jme.system.DisplaySystem;
 import com.jme.util.Timer;
 import com.jmex.bui.BButton;
-import com.jmex.bui.BComboBox;
 import com.jmex.bui.BContainer;
 import com.jmex.bui.BLabel;
 import com.jmex.bui.BWindow;
@@ -23,12 +18,6 @@ import com.jmex.bui.PolledRootNode;
 import com.jmex.bui.event.ActionEvent;
 import com.jmex.bui.event.ActionListener;
 import com.jmex.bui.layout.GroupLayout;
-import com.jmex.bui.util.Point;
-import com.jmex.game.state.CameraGameState;
-import com.jmex.game.state.GameState;
-import com.jmex.game.state.GameStateManager;
-import com.jmex.game.state.load.TransitionGameState;
-import com.jmex.scene.TimedLifeController;
 
 /**
  * Shows the high score menu.
