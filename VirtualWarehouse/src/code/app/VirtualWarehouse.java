@@ -1,11 +1,15 @@
 package code.app;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 import code.component.Score;
@@ -694,15 +698,19 @@ public class VirtualWarehouse extends GameState {
 					"vwburr15");
 			Statement stmt = con.createStatement();
 
-			String query = "select ID from AutoPickJobs ORDER BY ID desc;";
-			stmt.executeQuery(query);
+			String query = "select count(id) from AutoPickJobs";
+			stmt.execute(query);
 			ResultSet result = stmt.getResultSet();
-
+			
 			// I simply want to know how many characters I need to make.
 			result.next();
-			int numCharacters = result.getInt("ID");
-			characters = new Npc[numCharacters];
-
+			//int numPossibleCharacters = result.getInt("count(id)");
+			
+			Scanner br = new Scanner(new File("numcharacters.cfg"));
+			int characterLimit = br.nextInt();
+			characters = new Npc[characterLimit];
+			
+			
 			// do it.
 
 			/*
@@ -819,17 +827,17 @@ public class VirtualWarehouse extends GameState {
 		// Add warehouse and objects to the world
 		buildEnvironment();
 		
-		rootNode.attachChild(occluderNode);
+//		rootNode.attachChild(occluderNode);
 		
-		rootNode.setRenderQueueMode(display.getRenderer().QUEUE_OPAQUE);
+//		rootNode.setRenderQueueMode(display.getRenderer().QUEUE_OPAQUE);
 		
-		srp.add(rootNode);
-		srp.addOccluder(occluderNode);
-		srp.setRenderShadows(true);
-		srp.setLightingMethod(ShadowedRenderPass.LightingMethod.Modulative);
-		srp.setShadowColor(ColorRGBA.black);
+//		srp.add(rootNode);
+//		srp.addOccluder(occluderNode);
+//		srp.setRenderShadows(true);
+//		srp.setLightingMethod(ShadowedRenderPass.LightingMethod.Modulative);
+//		srp.setShadowColor(ColorRGBA.black);
 		
-		pManager.add(srp);
+//		pManager.add(srp);
 		
 		rootNode.updateGeometricState(0.0f, true);
 		rootNode.updateRenderState();

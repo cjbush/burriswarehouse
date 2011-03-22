@@ -59,6 +59,9 @@ public class MainMenu extends MenuState {
         BButton highScoresButton = new BButton("High Scores");
         highScoresButton.setPreferredSize(100, 70);
         
+        BButton optionsButton = new BButton("Options");
+        optionsButton.setPreferredSize(100, 70);
+        
         BButton quitButton = new BButton("Exit");
         quitButton.setPreferredSize(100, 70);
         
@@ -88,6 +91,13 @@ public class MainMenu extends MenuState {
             }
         });
         
+        optionsButton.addListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                TransitionFadeOut t = new TransitionFadeOut(0.1f, mainMenuState, GoToState.OPTIONS, app);
+                rootNode.addController(t);
+            }
+        });
+        
         quitButton.addListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 app.setFinished();
@@ -97,6 +107,7 @@ public class MainMenu extends MenuState {
         window.add(freeExploreButton);
         window.add(trainingModeButton);
         window.add(highScoresButton);
+        window.add(optionsButton);
         window.add(quitButton);
         
         TransitionFadeIn t = new TransitionFadeIn(0.1f, this, app);

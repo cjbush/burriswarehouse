@@ -96,7 +96,7 @@ public class WarehouseWorld extends Node {
 		if (loadVehicles)
 		{
 			vehicles = new VehicleManagerNode(this);
-			warehouseGame.getOccluderNode().attachChild(vehicles);
+			warehouseGame.getRootNode().attachChild(vehicles);
 		}
 		
 		//TODO: fix locking warnings?

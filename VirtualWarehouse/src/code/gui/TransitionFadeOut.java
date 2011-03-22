@@ -24,7 +24,7 @@ class TransitionFadeOut extends TimedLifeController {
 	private Mode mode;
 	
 	public enum GoToState {
-		MAIN_MENU, IN_GAME, HIGH_SCORES;
+		MAIN_MENU, IN_GAME, HIGH_SCORES, OPTIONS;
 	}
 
 	/**
@@ -75,6 +75,9 @@ class TransitionFadeOut extends TimedLifeController {
 			}
 			else if (nextState.equals(GoToState.HIGH_SCORES)) {
 				app.startHighScoreState();
+			}
+			else if (nextState.equals(GoToState.OPTIONS)){
+				app.startOptions();
 			}
 			else if (nextState.equals(GoToState.MAIN_MENU)) {
 				app.startMainMenuState();
