@@ -705,9 +705,12 @@ public class VirtualWarehouse extends GameState {
 			// I simply want to know how many characters I need to make.
 			result.next();
 			//int numPossibleCharacters = result.getInt("count(id)");
-			
+			int characterLimit = 7;
 			Scanner br = new Scanner(new File("numcharacters.cfg"));
-			int characterLimit = br.nextInt();
+			if (br != null){
+				characterLimit = br.nextInt();	
+			}
+			
 			characters = new Npc[characterLimit];
 			
 			
