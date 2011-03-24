@@ -413,10 +413,10 @@ public class VirtualWarehouse extends GameState {
 			hudNode.updateGeometricState(interpolation, true);
 			
 
-			//for (int i = 0; i < characters.length; i++)
-			//{
-				//characters[i].move();
-			//}
+			for (int i = 0; i < characters.length; i++)
+			{
+				characters[i].move();
+			}
 		}
 
 		if (sounds != null) {
