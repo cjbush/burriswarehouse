@@ -156,7 +156,8 @@ public class WarehouseTrainer extends FixedFramerateGame {
             System.exit(1);
         }
 
-        cam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), 0.01f, 1000.0f);
+        //Note, this is not the same camera as in teh game.  This is just for start up (loading screen).
+        cam.setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), .1f, 1000f);
         cam.update();
         display.getRenderer().setCamera(cam);
         

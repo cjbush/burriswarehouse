@@ -49,6 +49,8 @@ import com.jme.renderer.pass.RenderPass;
 import com.jme.renderer.pass.ShadowedRenderPass;
 import com.jme.scene.Controller;
 import com.jme.scene.Node;
+import com.jme.scene.state.ClipState;
+import com.jme.scene.state.FogState;
 import com.jme.scene.state.LightState;
 import com.jme.scene.state.ZBufferState;
 import com.jme.system.DisplaySystem;
@@ -100,8 +102,6 @@ public class VirtualWarehouse extends GameState {
 
 	// the root node of the scene graph
 	private Node rootNode;
-	
-	private Node occluderNode;
 
 	// the root node for the HUD
 	private Node hudNode;
@@ -136,6 +136,12 @@ public class VirtualWarehouse extends GameState {
 	// player
 	private Camera tpCam;
 	private ChaseCamera chaseCam;
+	
+	private float nearPlane = .01f;
+	private float farPlane = 15f;
+	private float angleOfView = 54.3f;
+	
+	private ColorRGBA mainLight = new ColorRGBA(.954f,.980f,.865f,1f);
 
 	// the timer
 	protected Timer timer;
@@ -213,10 +219,6 @@ public class VirtualWarehouse extends GameState {
 
 	public Node getRootNode() {
 		return rootNode;
-	}
-	
-	public Node getOccluderNode() {
-		return occluderNode;
 	}
 
 	public Node getHudNode() {
@@ -411,10 +413,10 @@ public class VirtualWarehouse extends GameState {
 			hudNode.updateGeometricState(interpolation, true);
 			
 
-			for (int i = 0; i < characters.length; i++)
-			{
-				characters[i].move();
-			}
+			//for (int i = 0; i < characters.length; i++)
+			//{
+				//characters[i].move();
+			//}
 		}
 
 		if (sounds != null) {
@@ -501,14 +503,13 @@ public class VirtualWarehouse extends GameState {
 
 	private void initCameras() {
 		addToLoadingProgress(5, "Creating Cameras...");
-		tpCam = display.getRenderer().createCamera(display.getWidth(),
-				display.getHeight());
-		display.getRenderer().setBackgroundColor(ColorRGBA.lightGray.clone());
-
+		tpCam = display.getRenderer().createCamera(display.getWidth(),display.getHeight());
+		
 		// initialize the cameras using the correct aspect ratio
-		tpCam.setFrustumPerspective(45.0f, (float) display.getWidth()
-				/ (float) display.getHeight(), .1f, 1000.0f);
+		tpCam.setFrustumPerspective(45.0f, (float) display.getWidth() / (float) display.getHeight(), nearPlane, farPlane);
 
+		display.getRenderer().setBackgroundColor(ColorRGBA.lightGray);
+		
 		// Signal that we've changed our cameras' frustums.
 		tpCam.update();
 	}
@@ -526,8 +527,6 @@ public class VirtualWarehouse extends GameState {
 
 		// create the root node of the scene graph
 		rootNode = new Node("scene graph root node");
-		
-		occluderNode = new Node("Shadow Node");
 
 		// create a root node for HUD objects
 		hudNode = new Node("HUD root node");
@@ -536,6 +535,8 @@ public class VirtualWarehouse extends GameState {
 
 		// create the HUDs
 		// minimapHUD = new MinimapHUD(this);
+		
+		
 		debugHUD = new DebugHUD();
 		messageBox = new MessageBox(font);
 		infoBar = new InformationBar(this, font);
@@ -590,7 +591,6 @@ public class VirtualWarehouse extends GameState {
 		// build the autonomous characters.
 		buildBoundingBoxes();
 		buildAutoCharacters();
-
 
 		// start the game
 		makeScene();
@@ -790,6 +790,8 @@ public class VirtualWarehouse extends GameState {
 		//openGL limits lights to eight
 		LightState lightState = display.getRenderer().createLightState();
 	
+		lightState.detachAll();
+		
 		lightState.attach(createPointLight(4.93f,-3.65f));
 		lightState.attach(createPointLight(4.93f,-33.036f));
 		lightState.attach(createPointLight(18.065f,-44.32f));
@@ -806,12 +808,12 @@ public class VirtualWarehouse extends GameState {
 	private PointLight createPointLight(float x,float z)
 	{
 		PointLight light = new PointLight();
-		light.setDiffuse(new ColorRGBA(0.98f, 1f, .766f, 1f));
-		light.setAmbient(new ColorRGBA(0.98f, 1f, .766f, 1f));
-		light.setSpecular(new ColorRGBA(0.98f, 1f, .766f, 1f));
+		light.setDiffuse(mainLight);
+		light.setAmbient(mainLight);
+		light.setSpecular(mainLight);
 		
 		light.setAttenuate(true);
-		light.setShadowCaster(true);
+		light.setShadowCaster(false);
 		light.setLinear(.2f);
 	
 		light.setLocation(new Vector3f(x, 4.583f, z));
@@ -830,17 +832,18 @@ public class VirtualWarehouse extends GameState {
 		// Add warehouse and objects to the world
 		buildEnvironment();
 		
-//		rootNode.attachChild(occluderNode);
+		FogState fs = display.getRenderer().createFogState();
 		
-//		rootNode.setRenderQueueMode(display.getRenderer().QUEUE_OPAQUE);
+		fs.setDensity(0.3f);
+		fs.setColor(ColorRGBA.lightGray);
 		
-//		srp.add(rootNode);
-//		srp.addOccluder(occluderNode);
-//		srp.setRenderShadows(true);
-//		srp.setLightingMethod(ShadowedRenderPass.LightingMethod.Modulative);
-//		srp.setShadowColor(ColorRGBA.black);
+		fs.setStart(farPlane-2);
+		fs.setEnd(farPlane+1);
 		
-//		pManager.add(srp);
+		fs.setDensityFunction(FogState.DensityFunction.Linear);
+		fs.setQuality(FogState.Quality.PerPixel);
+		
+		rootNode.setRenderState(fs);
 		
 		rootNode.updateGeometricState(0.0f, true);
 		rootNode.updateRenderState();
@@ -910,4 +913,18 @@ public class VirtualWarehouse extends GameState {
 		return debugHUD;
 	}
 
+	public float getNearPlane()
+	{
+		return nearPlane;
+	}
+	
+	public float getFarPlane()
+	{
+		return farPlane;
+	}
+	
+	public float getAngleOfView()
+	{
+		return angleOfView;
+	}
 }

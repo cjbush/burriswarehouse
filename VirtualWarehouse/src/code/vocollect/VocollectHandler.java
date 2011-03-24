@@ -50,6 +50,9 @@ public class VocollectHandler extends Thread {
 
     public void run() {
     	//return;
+    	return;
+    	
+    	/*
         //String hostName = "192.168.1.5";
     	String hostName = "joseph.cedarville.edu";
     	//String hostName = "localhost";
@@ -233,7 +236,7 @@ public class VocollectHandler extends Thread {
 			}
 
         }
-                
+        */      
     }
 
     private void setStatus(Status status) {
