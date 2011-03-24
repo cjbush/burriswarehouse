@@ -63,11 +63,11 @@ public class MinimapHUD extends HUD {
 		
 		//set up the camera that is rendering the minimap
 		minimapCamNode = new CameraNode("Minimap Camera Node", tRenderer.getCamera());
-		//minimapCamNode.setLocalTranslation(new Vector3f(warehouseGame.getPlayerNode().getLocalTranslation().getX(), CAMERA_HEIGHT, warehouseGame.getPlayerNode().getLocalTranslation().getZ()));
+
 		minimapCamNode.setLocalTranslation(new Vector3f(0, cameraHeight, 0));
-		minimapCamNode.getCamera().setFrustumPerspective(45.0f, (float)display.getWidth() / (float)display.getHeight(), 1.0f, 1000.0f);
+		minimapCamNode.getCamera().setFrustumPerspective(vw.getAngleOfView(), (float)display.getWidth() / (float)display.getHeight(), vw.getNearPlane(), vw.getFarPlane());
 		minimapCamNode.getCamera().update();
-		//minimapCamNode.lookAt(warehouseGame.getPlayerNode().getWorldTranslation(), Vector3f.UNIT_Y);
+
 		minimapCamNode.lookAt(new Vector3f(4, 0, 4), Vector3f.UNIT_Y);
         minimapCamNode.updateGeometricState(0, true);
 		

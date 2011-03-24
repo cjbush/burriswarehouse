@@ -6,8 +6,7 @@
 		<z1>-15.41</z1>
 		<x2>0.04</x2>
 		<z2>-7.2</z2>
-		<!--<visibleRooms>Produce (b),Loading Dock,Produce Section</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Produce (b),Loading Dock,Produce Section</visibleRooms>
 	</room>
 	<room>
 		<name>Produce Section</name>
@@ -16,18 +15,16 @@
 		<z1>-27.3</z1>
 		<x2>0.04</x2>
 		<z2>-15.41</z2>
-		<!--<visibleRooms>Produce (a),Meat,Produce (b)</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Produce (a),Meat,Produce (b),Dairy (b)</visibleRooms>
 	</room>
 	<room>
 		<name>Meat</name>
 		<temperature>28</temperature>
 		<x1>11.747</x1>
 		<z1>-41.44</z1>
-		<x2>0.04</x2>
+		<x2>0.04</x2>aw
 		<z2>-27.34</z2>
-		<!--<visibleRooms>Produce (b),Produce Section,Receiving Dock (a)</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Product (a),Produce (b),Produce Section,Receiving Dock (a),Dairy (b)</visibleRooms>
 	</room>
 	<room>
 		<name>Produce (b)</name>
@@ -36,8 +33,7 @@
 		<z1>-15.41</z1>
 		<x2>5.31</x2>
 		<z2>-7.2</z2>
-		<!--<visibleRooms>Produce (a),Meat,Loading Dock,Produce Section</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Produce (a),Meat,Loading Dock,Produce Section</visibleRooms>
 	</room>
 	<room>
 		<name>Dairy (a)</name>
@@ -46,8 +42,7 @@
 		<z1>-25.475</z1>
 		<x2>11.9</x2>
 		<z2>-7.673</z2>
-		<!--<visibleRooms>Dairy (b),Loading Dock</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Dairy (b),Loading Dock</visibleRooms>
 	</room>
 	<room>
 		<name>Dairy (b)</name>
@@ -56,8 +51,7 @@
 		<z1>-41.48</z1>
 		<x2>11.9</x2>
 		<z2>-25.475</z2>
-		<!--<visibleRooms>Dairy (a),Receiving Dock (a)</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Dairy (a),Receiving Dock (a),Meat,Produce Section</visibleRooms>
 	</room>
 	<room>
 		<name>Room 6</name>
@@ -66,8 +60,7 @@
 		<z1>-46.57</z1>
 		<x2>24.94</x2>
 		<z2>-28.757</z2>
-		<!--<visibleRooms>Room 7,Receiving Dock (a),Receiving Dock (b)</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Room 7,Receiving Dock (b),Receiving Dock (a)</visibleRooms>
 	</room>
 	<room>
 		<name>Room 7</name>
@@ -76,8 +69,7 @@
 		<z1>-28.757</z1>
 		<x2>24.94</x2>
 		<z2>-7.24</z2>
-		<!--<visibleRooms>Room 6,Loading Dock</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Room 6,Loading Dock,Dairy (b)</visibleRooms>
 	</room>
 	<room>
 		<name>Loading Dock</name>
@@ -86,8 +78,7 @@
 		<z1>-7.2</z1>
 		<x2>0.04</x2>
 		<z2>-0.04</z2>
-		<!--<visibleRooms>Produce (a),Produce (b),Dairy (a),Room 7</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Produce (a),Produce (b),Dairy (a),Room 7</visibleRooms>
 	</room>
 	<room>
 		<name>Receiving Dock (a)</name>
@@ -96,8 +87,7 @@
 		<z1>-48.66</z1>
 		<x2>0.04</x2>
 		<z2>-41.48</z2>
-		<!--<visibleRooms>Meat,Dairy (b),Room 6,Receiving Dock (b)</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Meat,Dairy (b),Receiving Dock (b),Room 6</visibleRooms>
 	</room>
 	<room>
 		<name>Receiving Dock (b)</name>
@@ -106,7 +96,6 @@
 		<z1>-48.66</z1>
 		<x2>24.786</x2>
 		<z2>-46.57</z2>
-		<!--<visibleRooms>Room 6,Receiving Dock (a)</visibleRooms>-->
-		<visibleRooms></visibleRooms>
+		<visibleRooms>Room 6,Receiving Dock (a)</visibleRooms>
 	</room>
 </rooms>

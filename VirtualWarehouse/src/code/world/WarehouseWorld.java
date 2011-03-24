@@ -20,12 +20,17 @@ import code.model.action.product.DProduct;
 import code.model.action.rack.DRack;
 import code.vocollect.DBInfoRetriever;
 
+import com.jme.bounding.BoundingBox;
+import com.jme.bounding.BoundingSphere;
 import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
+import com.jme.scene.TriMesh;
+import com.jme.scene.lod.AreaClodMesh;
+import com.jme.scene.state.RenderState;
 import com.jme.util.CloneImportExport;
 
 /**
@@ -46,7 +51,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
-	public static final boolean fillRacks = true; //put pallets and product on racks
+	public static final boolean fillRacks = false; //put pallets and product on racks
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean iWantArrow = true;
 	
@@ -129,7 +134,7 @@ public class WarehouseWorld extends Node {
 	{
 		rooms.attachChild(roomMap.get(roomName));
 	}
-	
+
 	private void buildWarehouse() {		
 		warehouseGame.addToLoadingProgress(5, "Establishing Talkman Database Connection...");
 		
@@ -171,53 +176,54 @@ public class WarehouseWorld extends Node {
 			float translationX, translationY, translationZ;
 			float scale;
 			float rotationW, rotationX, rotationY, rotationZ;
-			
-			result.next();
-			
-			name = result.getString("name");
-			
-			fileName = result.getString("fileName");
-			folderName = result.getString("folderName");
-			format = result.getString("format");
-			translationX = result.getFloat("translationX");
-			translationY = result.getFloat("translationY");
-			translationZ = result.getFloat("translationZ");
-			scale = result.getFloat("scale");
-			rotationW = result.getFloat("rotationW");
-			rotationX = result.getFloat("rotationX");
-			rotationY = result.getFloat("rotationY");
-			rotationZ = result.getFloat("rotationZ");
-			
+
 			Node object;
 			
 			Renderer render = warehouseGame.getDisplay().getRenderer();
 			
 			if (loadWarehouseShell)
 			{
-				
-				object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", null, false, warehouseGame.getDisplay().getRenderer(), "ignore");
-				if(object != null){
-					object.setLocalScale(scale);
-					object.setLocalTranslation(new Vector3f(translationX, translationY, translationZ));
-					object.setLocalRotation(new Quaternion(rotationX, rotationY, rotationZ, rotationW));
-					object.setName(name);
+				result = stmt.getResultSet();
+				while(result.next())
+				{
+					name = result.getString("name");
 					
-					object.updateWorldBound();
-					object.lock();
+					fileName = result.getString("fileName");
+					folderName = result.getString("folderName");
+					format = result.getString("format");
+					translationX = result.getFloat("translationX");
+					translationY = result.getFloat("translationY");
+					translationZ = result.getFloat("translationZ");
+					scale = result.getFloat("scale");
+					rotationW = result.getFloat("rotationW");
+					rotationX = result.getFloat("rotationX");
+					rotationY = result.getFloat("rotationY");
+					rotationZ = result.getFloat("rotationZ");
+					
+					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", null, false, render, name.equals("warehouseCeiling") ? "object" : "ignore");
+					if(object != null){
+						object.setLocalScale(scale);
+						object.setLocalTranslation(new Vector3f(translationX, translationY, translationZ));
+						object.setLocalRotation(new Quaternion(rotationX, rotationY, rotationZ, rotationW));
+						object.setName(name);
+						
+						object.updateWorldBound();
+						object.lock();
+					}
+					else{
+						logger.info("Could not load warehouse shell database from "+MODEL_DIR + folderName + fileName);
+					}
+					
+					warehouseGame.getRootNode().attachChild(object);
 				}
-				else{
-					logger.info("Could not load warehouse shell database from "+MODEL_DIR + folderName + fileName);
-				}
-				
-				warehouseGame.getRootNode().attachChild(object);
 			}
 			
 			warehouseGame.addToLoadingProgress(5, "Building Loaded");
 			
-			RoomLoaderThread t;
-			t = new RoomLoaderThread(8, roomManager, warehouseGame, this);
+			//RoomLoaderThread t;
+			//t = new RoomLoaderThread(8, roomManager, warehouseGame, this);
 			
-			/*if (loadWarehouseInsides)
+			if (loadWarehouseInsides)
 			{
 				int itemCounter = 0;
 				warehouseGame.addToLoadingProgress(5, "Loading Warehouse Environment...");
@@ -244,7 +250,7 @@ public class WarehouseWorld extends Node {
 					{
 						stmt.executeQuery("select * from MODEL where typeid!='warehouse' and typeid!='rack' and typeid!='object';");
 					}
-				}
+				}				
 				
 				result = stmt.getResultSet();
 				while(result.next())
@@ -403,7 +409,7 @@ public class WarehouseWorld extends Node {
 						}
 						else
 						{							
-							logger.info("no room defined for object " + name);
+							logger.info("no room defined for the particular pallet");
 						}
 						
 						i++;
@@ -411,7 +417,7 @@ public class WarehouseWorld extends Node {
 				}
 				
 				warehouseGame.getRootNode().attachChild(rooms);
-			}*/
+			}
 			
 		} catch (Exception e) {
 				 e.printStackTrace();
