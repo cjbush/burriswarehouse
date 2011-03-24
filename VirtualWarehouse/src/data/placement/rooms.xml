@@ -15,7 +15,7 @@
 		<z1>-27.3</z1>
 		<x2>0.04</x2>
 		<z2>-15.41</z2>
-		<visibleRooms>Produce (a),Meat,Produce (b),Dairy (b)</visibleRooms>
+		<visibleRooms>Produce (a),Meat,Produce (b),Dairy (b),Dairy (a)</visibleRooms>
 	</room>
 	<room>
 		<name>Meat</name>
@@ -51,7 +51,7 @@
 		<z1>-41.48</z1>
 		<x2>11.9</x2>
 		<z2>-25.475</z2>
-		<visibleRooms>Dairy (a),Receiving Dock (a),Meat,Produce Section</visibleRooms>
+		<visibleRooms>Dairy (a),Receiving Dock (a),Meat,Produce Section,Room 6,Room 7</visibleRooms>
 	</room>
 	<room>
 		<name>Room 6</name>
