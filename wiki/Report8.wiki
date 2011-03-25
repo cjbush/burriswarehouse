@@ -26,7 +26,7 @@
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||12||93||-3|| || || ||
 ||Caleb Mays||12||89.5||-6.5|| || || ||
-||Dan Jewett||x||98||+2|| ||*Weekly Total*||$0.00||
+||Dan Jewett||11.5||98||+2|| ||*Weekly Total*||$0.00||
 ||*Totals*|| x || x || x || ||*YTD Total*||$0.00||
 
 
