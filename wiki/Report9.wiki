@@ -11,7 +11,7 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: Camera fixes.  DProduct is completely rewritten.  No longer uses the generic box anymore.  Dynamically creates a box for dynamic textures soon to be.  Re-adjusted the lighting.  Tweaked RandomPerson so people aren't so much giants. Added a ceiling to the warehouse.  CLOD doesn't work, so I added a far clipping plane with fog.  This will only render a certain area.  I also took the original xml file that the first team did and added the surrounding room thing again, but with the clipping plane.
+   * Tasks accomplished: Camera fixes.  DProduct is completely rewritten.  No longer uses the generic box anymore.  Dynamically creates a box for dynamic textures soon to be.  Re-adjusted the lighting.  Tweaked Random Person so people aren't so much giants. Added a ceiling to the warehouse.  CLOD doesn't work, so I added a far clipping plane with fog.  This will only render a certain area.  I also took the original xml file that the first team did and added the surrounding room thing again, but with the clipping plane.
    * Future tasks researched: Rendering, Animation, Texturing, Lighting.
    * Most immediate upcoming tasks: Model Grand Central.  Sound Effects.  Finish populating the warehouse with new models, adding permanent positions with new models.
 
