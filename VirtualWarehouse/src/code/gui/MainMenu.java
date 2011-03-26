@@ -31,12 +31,12 @@ public class MainMenu extends MenuState {
 
 	private BWindow window;
 	
-	private WarehouseTrainer app;
+	//private WarehouseTrainer app;
 	
 	public MainMenu(WarehouseTrainer wt) {
 		super("Main Menu");
 		
-		app = wt;
+		//app = wt;
 		
 		MouseInput.get().setCursorVisible(true);
 		
