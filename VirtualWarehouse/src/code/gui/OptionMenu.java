@@ -23,7 +23,8 @@ import code.gui.TransitionFadeOut.GoToState;
 
 public class OptionMenu extends MenuState {
 	
-	private BWindow window;
+	private BWindow mainWindow;
+	private BWindow backWindow;
 	
 	BTextArea area;
 	BTextField text;
@@ -38,12 +39,12 @@ public class OptionMenu extends MenuState {
 		BuiSystem.init(new PolledRootNode(Timer.getTimer(), null), "/data/gbuiStyle/style2.bss");
         rootNode.attachChild(BuiSystem.getRootNode());
         
-		window = new BWindow(BuiSystem.getStyle(), GroupLayout.makeVStretch());
-		window.setStyleClass("champion");
-        BuiSystem.addWindow(window);
+		mainWindow = new BWindow(BuiSystem.getStyle(), GroupLayout.makeVStretch());
+		mainWindow.setStyleClass("champion");
+        BuiSystem.addWindow(mainWindow);
         
-        window.setSize(180, 280);
-        window.center();
+        mainWindow.setSize(180, 180);
+        mainWindow.center();
         
         area = new BTextArea ("Please enter a number between 0 and 7 for the number of characters");
         area.setPreferredSize(50, 30);
@@ -54,6 +55,14 @@ public class OptionMenu extends MenuState {
         saveButton = new BButton ("save");
         saveButton.setPreferredSize(100, 70);
         saveButton.setLocation(25, 25);
+        
+        
+        backWindow = new BWindow(BuiSystem.getStyle(), GroupLayout.makeVStretch());
+		mainWindow.setStyleClass("champion");
+        BuiSystem.addWindow(backWindow);
+        
+        backWindow.setSize(100, 70);
+        backWindow.setLocation(25, 25);
         
         backButton = new BButton("Back");
         backButton.setPreferredSize(100, 70);
@@ -76,7 +85,6 @@ public class OptionMenu extends MenuState {
 					
 					area.setText("number of characters saved as: " + num);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				
@@ -94,10 +102,10 @@ public class OptionMenu extends MenuState {
             }
         });
         
-        window.add(area);
-        window.add(text);
-        window.add(saveButton);
-        window.add(backButton);
+        mainWindow.add(area);
+        mainWindow.add(text);
+        mainWindow.add(saveButton);
+        backWindow.add(backButton);
 
         TransitionFadeIn t = new TransitionFadeIn(0.1f, this, app);
         rootNode.addController(t);
@@ -106,7 +114,8 @@ public class OptionMenu extends MenuState {
 
 	@Override
 	public void setAlpha(float alpha) {
-		window.setAlpha(alpha);
+		mainWindow.setAlpha(alpha);
+		backWindow.setAlpha(alpha);
 		text.setAlpha(alpha);
 		saveButton.setAlpha(alpha);
 		backButton.setAlpha(alpha);

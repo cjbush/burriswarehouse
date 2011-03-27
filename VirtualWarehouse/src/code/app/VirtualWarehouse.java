@@ -696,14 +696,14 @@ public class VirtualWarehouse extends GameState {
 			// String url = "jdbc:mysql://localhost:3306/vwburr";
 			Connection con = DriverManager.getConnection(url, "warehouse",
 					"vwburr15");
-			Statement stmt = con.createStatement();
+			//Statement stmt = con.createStatement();
 
-			String query = "select count(id) from AutoPickJobs";
-			stmt.execute(query);
-			ResultSet result = stmt.getResultSet();
+			//String query = "select count(id) from AutoPickJobs";
+			//stmt.execute(query);
+			//ResultSet result = stmt.getResultSet();
 			
 			// I simply want to know how many characters I need to make.
-			result.next();
+			//result.next();
 			//int numPossibleCharacters = result.getInt("count(id)");
 			int characterLimit = 7;
 			Scanner br = new Scanner(new File("numcharacters.cfg"));
