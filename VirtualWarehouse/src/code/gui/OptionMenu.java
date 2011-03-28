@@ -1,8 +1,11 @@
 package code.gui;
 
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 import com.jme.input.MouseInput;
 import com.jme.util.Timer;
@@ -51,6 +54,8 @@ public class OptionMenu extends MenuState {
         
         text = new BTextField();
         text.setLocation(100, 25);
+        
+		
         
         saveButton = new BButton ("save");
         saveButton.setPreferredSize(100, 70);
@@ -101,6 +106,23 @@ public class OptionMenu extends MenuState {
         
         backButton.addListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
+            	String woot = text.getText();
+            	if (text.getText().equals("")){
+            		BufferedWriter bw;
+                	
+                	try {
+    					bw = new BufferedWriter (new FileWriter("numcharacters.cfg"));
+    					
+    					String characterLimit = "0";
+    					
+    					bw.write(characterLimit);
+    					bw.close();
+    					
+    					
+    				} catch (IOException e) {
+    					e.printStackTrace();
+    				}
+            	}
             	TransitionFadeOut t = new TransitionFadeOut(0.1f, optionsState, GoToState.MAIN_MENU, app);
                 rootNode.addController(t);
             }
