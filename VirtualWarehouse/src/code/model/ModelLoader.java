@@ -33,6 +33,9 @@ import com.jmex.model.ogrexml.SceneLoader;
 public class ModelLoader {
 
 	private static final Logger logger = Logger.getLogger(ModelLoader.class.getName());
+	
+	private static double totalTimeOBJ = 0.0;
+	private static double totalTimeTRI = 0.0;
 
 	/**
 	 * Loads a model and returns it as a node, determining which load function to use
@@ -221,7 +224,11 @@ public class ModelLoader {
 
 		ObjToJme converter = new ObjToJme();
 		Node model = null;
-
+		
+		double start = System.currentTimeMillis();
+		
+		ByteArrayOutputStream BO = new ByteArrayOutputStream();
+		
 		try {
 			URL objFile = ModelLoader.class.getClassLoader().getResource(
 					path);
@@ -245,7 +252,6 @@ public class ModelLoader {
 				converter.setProperty("mtllib", objFile);
 			}
 			converter.setProperty("texdir",objFile);
-			ByteArrayOutputStream BO = new ByteArrayOutputStream();
 			converter.convert(objFile.openStream(), BO);
 			//load as a TriMesh if single object
 			//model = (TriMesh) BinaryImporter.getInstance().load(
@@ -263,8 +269,24 @@ public class ModelLoader {
 		} catch (ClassCastException e) {
 			//try to load as a TriMesh
 			logger.info("obj could not be loaded - trying as TriMesh");
+			double finish = System.currentTimeMillis();
+			totalTimeOBJ += finish-start;
+			System.out.println("Total time loading OBJ: "+totalTimeOBJ/1000);
+			
+			start = System.currentTimeMillis();
 			model = new Node("TriMesh Holder Node");
-			model.attachChild(loadTriMeshModel(path, mtlPath));
+			//model.attachChild(loadTriMeshModel(path, mtlPath));
+			try {
+				TriMesh object = (TriMesh) BinaryImporter.getInstance().load(new ByteArrayInputStream(BO.toByteArray()));
+				com.jme.util.geom.GeometryTool.minimizeVerts(object, 0);
+				object.lockMeshes();
+				model.attachChild(object);
+			} catch (IOException e1) {
+				return null;
+			}
+			finish = System.currentTimeMillis();
+			totalTimeTRI += finish-start;
+			System.out.println("Total time loading TRI: "+totalTimeTRI/1000);
 			return model;
 		}
 

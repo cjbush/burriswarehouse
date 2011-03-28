@@ -2,8 +2,8 @@ package code.model.action.pallet;
 
 import code.model.ModelLoader;
 import code.model.action.pick.Pick;
-import code.model.action.product.DProduct;
-import code.model.action.product.StackedDProduct;
+import code.model.action.product.Product;
+import code.model.action.product.StackedProduct;
 import code.util.DUtility;
 import code.world.WarehouseWorld;
 
@@ -12,25 +12,25 @@ import com.jme.math.Quaternion;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
 
-public class DPallet extends Node
+public class Pallet extends Node
 {
 	private WarehouseWorld ww;
 	
 	private DUtility util;
 	
-	private StackedDProduct products;
+	private StackedProduct products;
 	
-	public DPallet(WarehouseWorld ww)
+	public Pallet(WarehouseWorld ww)
 	{
 		this(ww,null,null,false,0,null);
 	}
 
-	public DPallet(WarehouseWorld ww, String binNumber, String name, boolean pickable)
+	public Pallet(WarehouseWorld ww, String binNumber, String name, boolean pickable)
 	{
 		this(ww,binNumber,name,pickable,0,null);
 	}
 	
-	public DPallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height,String file)
+	public Pallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height,String file)
 	{
 		util = new DUtility(null,null,.04f,.07f);
 		
@@ -46,7 +46,7 @@ public class DPallet extends Node
 			
 		if (height > 0)
 		{
-			products = new StackedDProduct(height,ww,binNumber,name,pickable);
+			products = new StackedProduct(height,ww,binNumber,name,pickable);
 			
 			float trans1 = util.translation();
 			float trans2 = util.translation();
@@ -61,7 +61,7 @@ public class DPallet extends Node
 		}
 	}
 	
-	private DProduct getTop()
+	private Product getTop()
 	{
 		return this.products.getBox((int)(this.products.getHeight()-1));
 	}
@@ -86,7 +86,7 @@ public class DPallet extends Node
 		return getTop().isPickable();
 	}
 	
-	public StackedDProduct getProducts()
+	public StackedProduct getProducts()
 	{
 		return products;
 	}

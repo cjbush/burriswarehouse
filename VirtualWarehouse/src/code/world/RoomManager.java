@@ -216,5 +216,7 @@ public class RoomManager {
 		
 		return rooms;
 	}
+	
+	public int getNumRooms(){return roomsList.size();}
 
 }

@@ -5,8 +5,9 @@ import java.util.List;
 
 import code.app.VirtualWarehouse;
 import code.model.ModelLoader;
-import code.model.action.pallet.StackedDPallet;
+import code.model.action.pallet.StackedPallet;
 import code.model.player.Player;
+import code.persistence.PersistenceHandler;
 
 import com.jme.bounding.BoundingBox;
 import com.jme.input.InputHandler;
@@ -64,7 +65,7 @@ public class Vehicle extends Node {
 	private Node playerOnOffPositionNode;
 
 	private boolean playerUsingVehicle;
-	private StackedDPallet pallet;
+	private StackedPallet pallet;
 
 	private VirtualWarehouse warehouseGame;
 	private Spatial tempChaseTarget;
@@ -191,7 +192,7 @@ public class Vehicle extends Node {
 		{
 			if (pallet == null) 
 			{
-				pallet = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this, override);
+				pallet = (StackedPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this, override);
 				attachPalletToVehicle(pallet);
 			}
 			else
@@ -216,11 +217,13 @@ public class Vehicle extends Node {
 
 		warehouseGame.getRootNode().attachChild(pallet); //ROOM MANAGER
 		
+		PersistenceHandler.updatePalletLocation(pallet);
+		
 		pallet.setInUse(false);
 		pallet = null;
 	}
 
-	private Node getClosestWithinDistance(List<StackedDPallet> palletsList, float distance, Vehicle vehicle, boolean override)
+	private Node getClosestWithinDistance(List<StackedPallet> palletsList, float distance, Vehicle vehicle, boolean override)
 	{
 		Node closest = null;
 		float dist;
@@ -335,7 +338,7 @@ public class Vehicle extends Node {
 				tempVa).multLocal(velocity * time));
 	}
 
-	private void attachPalletToVehicle(StackedDPallet p)
+	private void attachPalletToVehicle(StackedPallet p)
 	{
 		if (pallet != null) 
 		{

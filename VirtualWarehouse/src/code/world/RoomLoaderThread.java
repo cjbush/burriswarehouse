@@ -1,19 +1,21 @@
 package code.world;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Random;
+
+import code.app.VirtualWarehouse;
+import code.model.ModelLoader;
+import code.model.action.pallet.StackedPallet;
+import code.model.action.rack.Rack;
+import code.util.DatabaseHandler;
+import code.vocollect.DBInfoRetriever;
 
 import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
-import code.model.ModelLoader;
-import code.model.action.pallet.StackedDPallet;
-import code.model.action.rack.DRack;
-
-import code.app.VirtualWarehouse;
-import code.util.DatabaseHandler;
-import code.vocollect.DBInfoRetriever;
 
 public class RoomLoaderThread implements Runnable {
 	private int room;
@@ -32,18 +34,22 @@ public class RoomLoaderThread implements Runnable {
 	private VirtualWarehouse vw;
 	private WarehouseWorld ww;
 	
-	public RoomLoaderThread(int room, RoomManager rooms, VirtualWarehouse vw, WarehouseWorld ww){
+	public RoomLoaderThread(int room, RoomManager rooms, VirtualWarehouse vw, WarehouseWorld ww, DatabaseHandler db){
 		this.vw = vw;
 		this.ww = ww;
 		this.room = room;
 		this.rooms = rooms;
-		db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse","vwburr15");
+		this.db = db;
+		if(this.db == null) this.db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse","vwburr15");
 		vcdb = new DBInfoRetriever("joseph.cedarville.edu", "talkman", "warehouse", "vwburr15");
 		this.run();
 	}
 	
+	public DatabaseHandler getDB(){ return db; }
+	
 	@Override
 	public void run() {
+		double counter = System.currentTimeMillis();
 		String query = "select * from MODEL where typeid!='warehouse'";
 		Room r = rooms.getRoom(room);
 		float x1 = r.getX1();
@@ -73,8 +79,14 @@ public class RoomLoaderThread implements Runnable {
 		
 		try {
 			result = db.executeQuery(query);
-			Node object;
+			Node object = null;
 			Renderer render = vw.getDisplay().getRenderer();
+			
+			if(room == 0){
+				Thread t = new Thread(new UpdateProgressBar(vw));
+				t.start();
+			}
+			
 			while(result.next()){
 				int id = result.getInt("id");
 				name = result.getString("name");
@@ -90,13 +102,18 @@ public class RoomLoaderThread implements Runnable {
 				rotationX = result.getFloat("rotationX");
 				rotationY = result.getFloat("rotationY");
 				rotationZ = result.getFloat("rotationZ");
-				
+					
 				object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", vw.getSharedNodeManager(), true, render, typeid);
 				
 				
+				if (WarehouseWorld.useArrow && name.equals("arrow"))
+				{
+					vw.setArrowNode(object);
+				}
+				
 				if(typeid.equals("rack"))
 				{
-					DRack rack = new DRack(object,name,ww);
+					Rack rack = new Rack(object,name,ww);
 
 					ResultSet rack_result = db.executeQuery("select * from RACK where id = "+id+";");
 				    
@@ -150,6 +167,8 @@ public class RoomLoaderThread implements Runnable {
 				q.fromAngles((float)(rotationX*(Math.PI/180)),(float)(rotationY*(Math.PI/180)),(float)(rotationZ*(Math.PI/180)));
 				object.setLocalRotation(q);
 				
+				//com.jme.util.geom.GeometryTool.minimizeVerts(object, 0);
+				
 				object.setName(name);
 				
 				((Node)roomNodes.getChild(r.getName())).attachChild(object);
@@ -173,10 +192,10 @@ public class RoomLoaderThread implements Runnable {
 					int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 					int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3);
 					
-					StackedDPallet SDP = new StackedDPallet(h1,ww,null,"Misc_Pallet"+i,false,h2);
+					StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,ww,null,"Misc_Pallet"+i,false,h2);
 					SDP.setLocalTranslation(tX, 0f, tZ);
 					
-					r = rooms.getRoom(room);
+					//Room r = ww.getRoomManager().getRoom(tX, tZ);
 					if (r != null)
 					{
 						((Node)roomNodes.getChild(r.getName())).attachChild(SDP);
@@ -195,4 +214,32 @@ public class RoomLoaderThread implements Runnable {
 		}
 	}
 
+}
+
+class UpdateProgressBar implements Runnable{
+
+	double counter = System.currentTimeMillis();
+	double start = System.currentTimeMillis();
+	
+	Random generator = new Random(System.currentTimeMillis());
+	
+	VirtualWarehouse vw;
+	
+	public UpdateProgressBar(VirtualWarehouse vw){
+		this.vw = vw;
+	}
+	
+	@Override
+	public void run() {	
+		while(true){
+			if((System.currentTimeMillis() - start)/1000 >= 65) break;
+			vw.addToLoadingProgress(generator.nextInt(2)+1);		
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 }

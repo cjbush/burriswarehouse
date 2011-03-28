@@ -1,8 +1,8 @@
 package code.model.action.rack;
 
-import code.model.action.pallet.StackedDPallet;
+import code.model.action.pallet.StackedPallet;
 import code.model.action.pick.Pick;
-import code.model.action.product.DProduct;
+import code.model.action.product.Product;
 import code.model.racklabels.BinNumberLabel;
 import code.model.racklabels.CheckDigitLabel;
 import code.model.racklabels.RackAisleLabel;
@@ -18,7 +18,7 @@ import com.jmex.angelfont.BitmapFont;
 import com.jmex.angelfont.BitmapFontLoader;
 
 
-public class DRack extends Node
+public class Rack extends Node
 {
 	//a font to be used for labels
 	private BitmapFont font = BitmapFontLoader.loadDefaultFont();
@@ -32,7 +32,7 @@ public class DRack extends Node
 	
 	private final int totalOnShelf = 4; //the most boxes that can be on a particular shelf
 	
-	private StackedDPallet pallets[][];
+	private StackedPallet pallets[][];
 	private DUtility[] util;
 	
 	private final float spacing = .25f; //spacing used in position
@@ -40,7 +40,7 @@ public class DRack extends Node
 	
 	private float heightOffset; //space between each shelf
 
-	public DRack(Node r, String name, WarehouseWorld ww)
+	public Rack(Node r, String name, WarehouseWorld ww)
 	{
 		this.rack = r;
 		this.rackName = name;
@@ -50,7 +50,7 @@ public class DRack extends Node
 		setRackType(name);
 		setHeightOffset(name);
 		
-		pallets = new StackedDPallet[totalOnShelf][rackHeight];
+		pallets = new StackedPallet[totalOnShelf][rackHeight];
 		
 		util = new DUtility[totalOnShelf];
 		
@@ -140,27 +140,27 @@ public class DRack extends Node
 	}
 	
 	//get the pallets associated
-	public StackedDPallet[][] getPallets()
+	public StackedPallet[][] getPallets()
 	{
 		return pallets;
 	}
 	
-	public StackedDPallet[] getPallets(int row)
+	public StackedPallet[] getPallets(int row)
 	{
 		return pallets[row];
 	}
 	
-	public StackedDPallet[] getPickablePallets()
+	public StackedPallet[] getPickablePallets()
 	{
 		return pallets[0];
 	}
 	
-	public StackedDPallet getPickablePallet()
+	public StackedPallet getPickablePallet()
 	{
 		return pallets[0][0];
 	}
 	
-	public DProduct getPickableProduct()
+	public Product getPickableProduct()
 	{
 		if (isPickable())
 		{
@@ -337,7 +337,7 @@ public class DRack extends Node
 				
 				float rot = util[num-1].rotation();
 				
-				StackedDPallet SDP = new StackedDPallet(h1,this.ww,binNumber,binNumber,tempProduct,h2);
+				StackedPallet SDP = new StackedPallet(-1, h1,this.ww,binNumber,binNumber,tempProduct,h2);
 				
 				pallets[j][i] = SDP;
 				

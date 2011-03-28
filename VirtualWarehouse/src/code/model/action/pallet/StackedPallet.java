@@ -10,13 +10,15 @@ import code.model.action.pick.Pick;
 import code.util.DUtility;
 
 
-public class StackedDPallet extends Node
+public class StackedPallet extends Node
 {
 	private boolean inUse;
 	private Node productNode;
 	
+	private int id;
 	
-	private DPallet palletStack[];
+	
+	private Pallet palletStack[];
 	
 	private float height;
 	
@@ -24,18 +26,21 @@ public class StackedDPallet extends Node
 	
 	private String _p = "_p00";
 	
-	public StackedDPallet(int height, WarehouseWorld ww)
+	public StackedPallet(int height, WarehouseWorld ww)
 	{
-		this(height,ww,null,null,false,0);
+		this(-1, height,ww,null,null,false,0);
 	}
 	
-	public StackedDPallet(int height, WarehouseWorld ww, String binNumber, String name)
+	public StackedPallet(int height, WarehouseWorld ww, String binNumber, String name)
 	{
-		this(height,ww,binNumber,name,false,0);
+		this(-1, height,ww,binNumber,name,false,0);
 	}
 	
-	public StackedDPallet(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, int productHeight)
+	public int getID(){ return id; }
+	
+	public StackedPallet(int id, int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, int productHeight)
 	{		
+		this.id = id;
 		if (height <= 0)
 		{
 			height = 1;
@@ -48,7 +53,7 @@ public class StackedDPallet extends Node
 		
 		this.height = height;
 		
-		palletStack = new DPallet[height];
+		palletStack = new Pallet[height];
 		
 		String palletType = getPalletType();
 		
@@ -56,11 +61,11 @@ public class StackedDPallet extends Node
 		{
 			if (i+1 != height)
 			{
-				palletStack[i] = new DPallet(ww,binNumber,name+_p+i,pickable,0,palletType);
+				palletStack[i] = new Pallet(ww,binNumber,name+_p+i,pickable,0,palletType);
 			}
 			else
 			{
-				palletStack[i] = new DPallet(ww,binNumber,name+_p+i,pickable,productHeight,palletType);
+				palletStack[i] = new Pallet(ww,binNumber,name+_p+i,pickable,productHeight,palletType);
 			}
 			
 			float rot = util.rotation();
@@ -102,7 +107,7 @@ public class StackedDPallet extends Node
 		return file;
 	}
 	
-	public DPallet getTop()
+	public Pallet getTop()
 	{
 		return this.palletStack[(int)(this.height-1)];
 	}
@@ -112,12 +117,12 @@ public class StackedDPallet extends Node
 		return this.height;
 	}
 	
-	public DPallet[] getPallets()
+	public Pallet[] getPallets()
 	{
 		return palletStack;
 	}
 	
-	public DPallet getPallet(int i)
+	public Pallet getPallet(int i)
 	{
 		if (i <= this.height - 1)
 		{

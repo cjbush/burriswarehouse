@@ -13,11 +13,11 @@ import code.app.VirtualWarehouse;
 import code.collisions.BoundingBox2D;
 import code.model.ModelLoader;
 import code.model.TarpWall;
-import code.model.action.pallet.DPallet;
-import code.model.action.pallet.StackedDPallet;
+import code.model.action.pallet.Pallet;
+import code.model.action.pallet.StackedPallet;
 import code.model.action.pick.Pick;
-import code.model.action.product.DProduct;
-import code.model.action.rack.DRack;
+import code.model.action.product.Product;
+import code.model.action.rack.Rack;
 import code.vocollect.DBInfoRetriever;
 
 import com.jme.bounding.BoundingBox;
@@ -53,7 +53,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadObjects = true; //all other objects
 	public static final boolean fillRacks = false; //put pallets and product on racks
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
-	public static final boolean iWantArrow = true;
+	public static final boolean useArrow = true;
 	
 	public static final boolean useLocalhost = false;
 	
@@ -70,8 +70,8 @@ public class WarehouseWorld extends Node {
 	private HashMap<String, Spatial> roomMap;
 	
 	
-	private ArrayList<StackedDPallet> palletsList = new ArrayList<StackedDPallet>();
-	private ArrayList<DProduct> productList = new ArrayList<DProduct>();
+	private ArrayList<StackedPallet> palletsList = new ArrayList<StackedPallet>();
+	private ArrayList<Product> productList = new ArrayList<Product>();
 	private ArrayList<Pick> pickList = new ArrayList<Pick>();
 	
 	private HashMap<String, CloneImportExport> cache = new HashMap<String, CloneImportExport>();
@@ -104,8 +104,6 @@ public class WarehouseWorld extends Node {
 			warehouseGame.getRootNode().attachChild(vehicles);
 		}
 		
-		//TODO: fix locking warnings?
-		
 		//use a hashmap to keep track of room nodes so that they can still be referenced
 		//after disconnecting them from the scene graph
 		roomMap = new HashMap<String, Spatial>();
@@ -135,7 +133,8 @@ public class WarehouseWorld extends Node {
 		rooms.attachChild(roomMap.get(roomName));
 	}
 
-	private void buildWarehouse() {		
+	private void buildWarehouse() {	
+		double start = System.currentTimeMillis();
 		warehouseGame.addToLoadingProgress(5, "Establishing Talkman Database Connection...");
 		
 		//DBInfoRetriever dbInfoRetriever = new DBInfoRetriever("joseph.cedarville.edu","talkman","warehouse","vwburr15");
@@ -162,7 +161,7 @@ public class WarehouseWorld extends Node {
 			con = DriverManager.getConnection(url, "warehouse", "vwburr15");
 			//System.out.println("Connecting to "+url);
 			stmt = con.createStatement();
-			warehouseGame.addToLoadingProgress(5, "Model Database Connection Established");
+			warehouseGame.addToLoadingProgress(5, "Loading Warehouse Building");
 			
 			String query = "select * from MODEL where typeid='warehouse';";
 			
@@ -183,6 +182,7 @@ public class WarehouseWorld extends Node {
 			
 			if (loadWarehouseShell)
 			{
+				double shellStart = System.currentTimeMillis();
 				result = stmt.getResultSet();
 				while(result.next())
 				{
@@ -216,14 +216,23 @@ public class WarehouseWorld extends Node {
 					
 					warehouseGame.getRootNode().attachChild(object);
 				}
+				System.out.println("The warehouse model loaded in "+(System.currentTimeMillis() - shellStart)/1000 + " seconds.");
+				
 			}
 			
-			warehouseGame.addToLoadingProgress(5, "Building Loaded");
+			warehouseGame.addToLoadingProgress(5, "Loading Warehouse Objects");
 			
-			//RoomLoaderThread t;
-			//t = new RoomLoaderThread(8, roomManager, warehouseGame, this);
+			RoomLoaderThread t;
+			t = new RoomLoaderThread(0, roomManager, warehouseGame, this, null);
 			
-			if (loadWarehouseInsides)
+			for(int i=1; i<roomManager.getNumRooms()-1; i++){
+				Thread thread = new Thread(new RoomLoaderThread(i, roomManager, warehouseGame, this, t.getDB()));
+				thread.start();
+			}
+			
+			//System.exit(1);
+			
+			/*if (loadWarehouseInsides)
 			{
 				int itemCounter = 0;
 				warehouseGame.addToLoadingProgress(5, "Loading Warehouse Environment...");
@@ -417,7 +426,9 @@ public class WarehouseWorld extends Node {
 				}
 				
 				warehouseGame.getRootNode().attachChild(rooms);
-			}
+			}*/
+			
+			System.out.println("It took "+((System.currentTimeMillis()-start)/1000)+" seconds to load the warehouse.");
 			
 		} catch (Exception e) {
 				 e.printStackTrace();
@@ -430,7 +441,7 @@ public class WarehouseWorld extends Node {
 		int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 		int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3)+1;
 		
-		StackedDPallet SDP = new StackedDPallet(h1,this,null,"Misc_Pallet"+III,true,h2);
+		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"Misc_Pallet"+III,true,h2);
 		SDP.setLocalTranslation(x, 0f, z);
 		warehouseGame.getRootNode().attachChild(SDP);
 		
@@ -473,7 +484,7 @@ public class WarehouseWorld extends Node {
 		return vehicles.getChildren();
 	}
 	
-	public List<StackedDPallet> getPalletsList() {
+	public List<StackedPallet> getPalletsList() {
 		return palletsList;
 	}
 	
@@ -481,7 +492,7 @@ public class WarehouseWorld extends Node {
 		return pickList;
 	}
 	
-	public List<DProduct> getProductList() {
+	public List<Product> getProductList() {
 		return productList;
 	}
 	

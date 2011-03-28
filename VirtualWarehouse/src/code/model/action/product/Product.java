@@ -22,7 +22,7 @@ import com.jme.scene.state.TextureState;
 import com.jme.system.DisplaySystem;
 import com.jme.util.TextureManager;
 
-public class DProduct extends Node
+public class Product extends Node
 {
 	private String binNumber;
 	private WarehouseWorld ww;
@@ -34,12 +34,12 @@ public class DProduct extends Node
 	
 	private final static String productTextureLocation = "D:/Dan Jewett/Docstoc/Senior Design/VirtualWarehouse/src/data/productTextures/";
 	
-	public DProduct(WarehouseWorld ww)
+	public Product(WarehouseWorld ww)
 	{
 		this(ww,null,null,false);
 	}
 
-	public DProduct(WarehouseWorld ww, String binNumber, String name, boolean top)
+	public Product(WarehouseWorld ww, String binNumber, String name, boolean top)
 	{
 		this.ww = ww;
 		this.setName(name);
@@ -88,47 +88,59 @@ public class DProduct extends Node
 		}
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			return;
 		}
 	}
 	
 	private File getTexture(String binNumber)
 	{
-		File file;
-		if (binNumber != null)
-		{
-			File folder = new File(productTextureLocation+binNumber+"/");
-			Object path[] = ridSVN(folder.list());
-			
-			file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
+		try{
+			File file;
+		
+			if (binNumber != null)
+			{
+				File folder = new File(productTextureLocation+binNumber+"/");
+				Object path[] = ridSVN(folder.list());
+				
+				file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
+			}
+			else
+			{
+				File root = new File(productTextureLocation);
+				Object pick[] = ridSVN(root.list());
+				
+				File folder = new File(root.getPath() + "/" + (String)pick[(int)FastMath.floor(FastMath.nextRandomFloat()*pick.length)]);
+				Object path[] = ridSVN(folder.list());
+				
+				file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
+			}
+	
+			return file;
 		}
-		else
-		{
-			File root = new File(productTextureLocation);
-			Object pick[] = ridSVN(root.list());
-			
-			File folder = new File(root.getPath() + "/" + (String)pick[(int)FastMath.floor(FastMath.nextRandomFloat()*pick.length)]);
-			Object path[] = ridSVN(folder.list());
-			
-			file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
+		catch(Exception e){
+			return null;
 		}
-
-		return file;
 	}
 	
 	private Object[] ridSVN(String[] file)
 	{
-		ArrayList<String> str = new ArrayList<String>();
+		try{
+			ArrayList<String> str = new ArrayList<String>();
 		
-		for (int i=0;i<file.length;i++)
-		{
-			if (!file[i].equals(".svn"))
+		
+			for (int i=0;i<file.length;i++)
 			{
-				str.add(file[i]);
+				if (!file[i].equals(".svn"))
+				{
+					str.add(file[i]);
+				}
 			}
+			
+			return str.toArray();
 		}
-		
-		return str.toArray();
+		catch(Exception e){
+			return null;
+		}
 	}
 	
 	public Pick pickSmallProduct()

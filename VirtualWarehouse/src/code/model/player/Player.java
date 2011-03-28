@@ -13,9 +13,9 @@ import code.component.Score;
 import code.hud.DebugHUD;
 import code.hud.PickErrorDisplay;
 import code.model.AnimatedModel;
-import code.model.action.pallet.StackedDPallet;
+import code.model.action.pallet.StackedPallet;
 import code.model.action.pick.Pick;
-import code.model.action.product.DProduct;
+import code.model.action.product.Product;
 import code.model.player.autocompletion.AutoCompletionHandler;
 import code.model.vehicle.Vehicle;
 import code.util.WaypointCreator;
@@ -325,7 +325,7 @@ public class Player extends AnimatedModel {
 			if (!hasProduct)
 			{
 				//pick up nearest product if player is close enough
-				DProduct closest = (DProduct) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this, override);
+				Product closest = (Product) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getProductList(), MAX_PRODUCT_PICKUP_DISTANCE, this, override);
 				
 				if (closest != null)
 				{
@@ -337,7 +337,7 @@ public class Player extends AnimatedModel {
 			else
 			{
 				//set the product down if player is close enough to the pallet
-				StackedDPallet p = (StackedDPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct, override);
+				StackedPallet p = (StackedPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(), MAX_PRODUCT_PICKUP_DISTANCE, currentProduct, override);
 				if (p != null)
 				{
 					attachProductToPallet(p);
@@ -388,10 +388,10 @@ public class Player extends AnimatedModel {
 		return closest;
 	}
 	
-	private void attachProductToPlayer(DProduct closest) {		
+	private void attachProductToPlayer(Product closest) {		
 		Pick smallBox = null;
 		
-		if (closest instanceof DProduct)
+		if (closest instanceof Product)
 		{
 			//make a smaller box that the player 'picked up' from the pile
 			smallBox = closest.pickSmallProduct();
@@ -432,7 +432,7 @@ public class Player extends AnimatedModel {
     	hasProduct = true;
 	}
 	
-	private void attachProductToPallet(StackedDPallet p) {
+	private void attachProductToPallet(StackedPallet p) {
 		
 		p.unlock();
 		currentProduct.removeFromParent();

@@ -136,9 +136,9 @@ public class GeometryTool {
             mesh.getIndexBuffer().put(inds);
             newCount = mesh.getVertexCount();
         }
-        logger
+        /*logger
                 .info("mesh: " + mesh + " old: " + oldCount + " new: "
-                        + newCount);
+                        + newCount);*/
 
         return result;
     }

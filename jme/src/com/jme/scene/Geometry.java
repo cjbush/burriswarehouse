@@ -813,8 +813,8 @@ public abstract class Geometry extends Spatial implements Serializable, Savable 
     @Override
     public void lockMeshes(Renderer r) {
         if (getDisplayListID() != -1) {
-            logger.warning("This Geometry already has locked meshes."
-                    + "(Use unlockMeshes to clear)");
+            /*logger.warning("This Geometry already has locked meshes."
+                    + "(Use unlockMeshes to clear)");*/
             return;
         }
 
