@@ -57,8 +57,12 @@ public class OptionMenu extends MenuState {
         saveButton.setLocation(25, 25);
         
         
+        mainWindow.add(area);
+        mainWindow.add(text);
+        mainWindow.add(saveButton);
+        
         backWindow = new BWindow(BuiSystem.getStyle(), GroupLayout.makeVStretch());
-		mainWindow.setStyleClass("champion");
+		backWindow.setStyleClass("champion");
         BuiSystem.addWindow(backWindow);
         
         backWindow.setSize(100, 70);
@@ -101,11 +105,9 @@ public class OptionMenu extends MenuState {
                 rootNode.addController(t);
             }
         });
-        
-        mainWindow.add(area);
-        mainWindow.add(text);
-        mainWindow.add(saveButton);
         backWindow.add(backButton);
+       
+        
 
         TransitionFadeIn t = new TransitionFadeIn(0.1f, this, app);
         rootNode.addController(t);
