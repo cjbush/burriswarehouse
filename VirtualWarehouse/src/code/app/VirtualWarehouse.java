@@ -721,7 +721,11 @@ public class VirtualWarehouse extends GameState {
 			int characterLimit = 7;
 			Scanner br = new Scanner(new File("numcharacters.cfg"));
 			if (br != null){
-				characterLimit = br.nextInt();	
+				characterLimit = br.nextInt();
+				// check to make sure negative numbers are no good...
+				if (characterLimit < 0){
+					characterLimit = 0;
+				}
 			}
 			
 			characters = new Npc[characterLimit];
