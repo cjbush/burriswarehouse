@@ -33,6 +33,7 @@ import code.sound.SoundPlayer;
 import code.util.Coordinate;
 import code.vocollect.VocollectHandler;
 import code.world.DeliveryArea;
+import code.world.RoomLoaderThread;
 import code.world.WarehouseWorld;
 
 import com.jme.app.AbstractGame.ConfigShowMode;
@@ -75,7 +76,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean infoIconsEnabled = true;
 
-	public static boolean DEBUG_MODE = false;
+	public static boolean DEBUG_MODE = true;
 
 	private LoadingWindow loadingScreen;
 	private boolean showLoadingScreen = true;
@@ -521,6 +522,7 @@ public class VirtualWarehouse extends GameState {
 	 */
 	protected void initGame() {
 		
+		double totalStart = System.currentTimeMillis();
 		display.setTitle("Warehouse Trainer");
 
 		pManager = new BasicPassManager();
@@ -536,7 +538,7 @@ public class VirtualWarehouse extends GameState {
 		// create the HUDs
 		// minimapHUD = new MinimapHUD(this);
 		
-		
+		double start = System.currentTimeMillis();
 		debugHUD = new DebugHUD();
 		messageBox = new MessageBox(font);
 		infoBar = new InformationBar(this, font);
@@ -570,6 +572,8 @@ public class VirtualWarehouse extends GameState {
 		}
 
 		pManager.add(hudPass);
+		double total = System.currentTimeMillis() - start;
+		System.out.println("It took "+total/1000+" seconds to build the HUD.");
 
 		// Create a ZBuffer to display pixels closest to the camera above
 		// farther ones
@@ -581,24 +585,33 @@ public class VirtualWarehouse extends GameState {
 		// create sharedNode manager to cache models and improve performance
 		sharedMeshManager = new SharedMeshManager();
 
+		start = System.currentTimeMillis();
 		// set up sounds
 		sounds.initGameStuff();
+		System.out.println("It took "+(System.currentTimeMillis()-start)/1000+" seconds to build sounds.");
 
 		scoringTimer = new ScoringTimer();
 		score = new Score(scoringTimer);
 		infoBar.setScoringTimer(scoringTimer);
 
 		// build the autonomous characters.
+		start = System.currentTimeMillis();
 		buildBoundingBoxes();
 		buildAutoCharacters();
-
+		System.out.println("It took "+(System.currentTimeMillis()-start)/1000+" seconds to build autonomous characters.");
+		
 		// start the game
+		start = System.currentTimeMillis();
 		makeScene();
+		System.out.println("It took "+(System.currentTimeMillis()-start)/1000+" seconds to make the scene.");
 		paused = false;
 
 		if (showLoadingScreen) {
 			loadingScreen.dispose();
 		}
+		
+		System.out.println("It took "+(System.currentTimeMillis()-totalStart)/1000+" seconds to load the game.");
+		//System.exit(1);
 
 		// grid = new Grid(rootNode, this, showGrid);
 	}
@@ -861,6 +874,7 @@ public class VirtualWarehouse extends GameState {
 		gameComplete = true;
 	}
 
+	public int loadingProgress = 0;
 	/**
 	 * During system and game initialization, when the loading window is
 	 * displayed, the progress bar can be updated to show the user some idea of
@@ -873,12 +887,17 @@ public class VirtualWarehouse extends GameState {
 	public void addToLoadingProgress(int valueToAdd) {
 		if (loadingScreen != null) {
 			loadingScreen.addProgress(valueToAdd);
-			try {
+			loadingProgress += valueToAdd;
+			/*try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
-			}
+			}*/
 		}
+	}
+	
+	public int getLoadingPercent(){
+		return loadingProgress;
 	}
 
 	/**

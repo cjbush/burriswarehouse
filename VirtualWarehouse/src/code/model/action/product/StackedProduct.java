@@ -7,27 +7,27 @@ import code.world.WarehouseWorld;
 import com.jme.math.Quaternion;
 import com.jme.scene.Node;
 
-public class StackedDProduct extends Node
+public class StackedProduct extends Node
 {
 	private DUtility util;
 	
-	private DProduct productStack[];
+	private Product productStack[];
 	
 	private float height;
 	
 	private String _b = "_b00";
 	
-	public StackedDProduct(int height, WarehouseWorld ww)
+	public StackedProduct(int height, WarehouseWorld ww)
 	{
 		this(height,ww,null,null,false);
 	}
 	
-	public StackedDProduct(int height, WarehouseWorld ww, String binNumber, String name)
+	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name)
 	{
 		this(height,ww,binNumber,name,false);
 	}
 	
-	public StackedDProduct(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable)
+	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable)
 	{		
 		util = new DUtility(20f,null,.01f,.27f);
 		
@@ -39,17 +39,17 @@ public class StackedDProduct extends Node
 		this.height = height;
 		this.setName(name);
 		
-		productStack = new DProduct[height];
+		productStack = new Product[height];
 		
 		for (int i=0;i<height;i++)
 		{
 			if (i+1 != height)
 			{
-				productStack[i] = new DProduct(ww,binNumber,name+_b+i,false);
+				productStack[i] = new Product(ww,binNumber,name+_b+i,false);
 			}
 			else
 			{
-				productStack[i] = new DProduct(ww,binNumber,name+_b+i,pickable);
+				productStack[i] = new Product(ww,binNumber,name+_b+i,pickable);
 			}
 			
 			float rot = util.rotation();
@@ -68,7 +68,7 @@ public class StackedDProduct extends Node
 		return this.height;
 	}
 	
-	public DProduct getBox(int i)
+	public Product getBox(int i)
 	{
 		if (i <= this.height - 1)
 		{
@@ -80,12 +80,12 @@ public class StackedDProduct extends Node
 		}
 	}
 	
-	public DProduct getTop()
+	public Product getTop()
 	{
 		return this.productStack[(int)(this.height-1)];
 	}
 	
-	public DProduct[] getBoxes()
+	public Product[] getBoxes()
 	{
 		return productStack;
 	}
