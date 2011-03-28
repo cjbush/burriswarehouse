@@ -27,8 +27,7 @@ public class AutoCompletionHandler {
 	private boolean walking;
 	private int section;
 	private float playerDirection;
-	protected static final Matrix3f incr = new Matrix3f();
-
+	public static final Vector3f UP = new Vector3f(0, 1, 0);
 	private boolean enabled = true;
 
 	public static final int FORWARD = 0;
@@ -39,6 +38,8 @@ public class AutoCompletionHandler {
 	public static final int PICKUPBOX = 5;
 	public static final int PUTDOWNBOX = 6;
 	public static final int PICKUPPALLET = 7;
+
+
 
 	public AutoCompletionHandler(Player player, int pickjob, int start,
 			int finish) {
@@ -162,19 +163,19 @@ public class AutoCompletionHandler {
 				if ((Math.abs(myX - x) > .25f) || (Math.abs(myZ - z) > .25f)) {
 					playerDirection = -(FastMath.atan2(myZ - z, myX - x));
 					player.setLocalRotation(new Quaternion().fromAngleAxis(
-						playerDirection, Vector3f.UNIT_Y));
+							playerDirection, Vector3f.UNIT_Y));
 				}
 			} else {
 				myX = player.getVehicleBeingUsed().getLocalTranslation().getX();
 				myZ = player.getVehicleBeingUsed().getLocalTranslation().getZ();
-				// if i'm far enough to care about direction...otherwise the 
+				// if i'm far enough to care about direction...otherwise the
 				// corners look a little funky...
 				if ((Math.abs(myX - x) > .75f) || (Math.abs(myZ - z) > .75f)) {
-					
+
 					playerDirection = -(FastMath.atan2(myZ - z, myX - x));
 					player.getVehicleBeingUsed().setLocalRotation(
-						new Quaternion().fromAngleAxis(playerDirection - 1.55f,
-								Vector3f.UNIT_Y));
+							new Quaternion().fromAngleAxis(
+									playerDirection - 1.55f, Vector3f.UNIT_Y));
 				}
 
 			}
@@ -184,8 +185,9 @@ public class AutoCompletionHandler {
 			// if I'm close enough to go on to the next thing...
 			if ((Math.abs(myX - x) < .1f) && (Math.abs(myZ - z) < .1f)) {
 				this.counter++;
+			}
 
-			} else if (!player.inVehicle()) {
+			if (!player.inVehicle()) {
 
 				if ((myX < x) && (Math.abs(myX - x) > .07f)) {
 					walking = true;

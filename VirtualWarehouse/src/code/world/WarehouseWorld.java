@@ -225,7 +225,7 @@ public class WarehouseWorld extends Node {
 			RoomLoaderThread t;
 			t = new RoomLoaderThread(0, roomManager, warehouseGame, this, null);
 			
-			for(int i=1; i<roomManager.getNumRooms()-1; i++){
+			for(int i=1; i<roomManager.getNumRooms(); i++){
 				Thread thread = new Thread(new RoomLoaderThread(i, roomManager, warehouseGame, this, t.getDB()));
 				thread.start();
 			}
