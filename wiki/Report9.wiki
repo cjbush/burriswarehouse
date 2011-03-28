@@ -18,13 +18,13 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished: 
-  * Most immediate upcoming tasks: 
+  * Tasks accomplished: See revision 142. I added basic persistence so that when you move a pallet, it stays moved. I fixed the loading screen so you can actually tell when progress is made during loading. I removed the annoying locked meshes warning JME gives so that we can actually read the console. I worked on acquiring textures for products, but ran into issues with Google. I also finished threaded loading and cut load time down to 60 seconds.
+  * Most immediate upcoming tasks: Add more features to data persistence. Finish getting textures for products.
 
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush||x||x||x|| || || ||
+||Chris Bush||15||108||0|| || || ||
 ||Caleb Mays||13||102.5||-5.5|| || || ||
 ||Dan Jewett||14||112||+4|| ||*Weekly Total*||$3.50||
 ||*Totals*|| x || x || x || ||*YTD Total*||$3.50||
