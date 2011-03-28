@@ -178,7 +178,7 @@ public class RoomLoaderThread implements Runnable {
 			}
 			
 			
-			if (miscPallets)
+			if (miscPallets && room == 0)
 			{
 				result = db.executeQuery("select * from DPallet;");
 				
