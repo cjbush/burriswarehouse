@@ -1,9 +1,7 @@
 package code.world;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,24 +11,19 @@ import code.app.VirtualWarehouse;
 import code.collisions.BoundingBox2D;
 import code.model.ModelLoader;
 import code.model.TarpWall;
-import code.model.action.pallet.Pallet;
 import code.model.action.pallet.StackedPallet;
 import code.model.action.pick.Pick;
 import code.model.action.product.Product;
 import code.model.action.rack.Rack;
+import code.util.DatabaseHandler;
 import code.vocollect.DBInfoRetriever;
 
-import com.jme.bounding.BoundingBox;
-import com.jme.bounding.BoundingSphere;
 import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
-import com.jme.scene.TriMesh;
-import com.jme.scene.lod.AreaClodMesh;
-import com.jme.scene.state.RenderState;
 import com.jme.util.CloneImportExport;
 
 /**
@@ -51,7 +44,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
-	public static final boolean fillRacks = false; //put pallets and product on racks
+	public static final boolean fillRacks = true; //put pallets and product on racks
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean useArrow = true;
 	
@@ -132,9 +125,35 @@ public class WarehouseWorld extends Node {
 	{
 		rooms.attachChild(roomMap.get(roomName));
 	}
+	
+	public void prefetchModels(){
+		System.out.println("Prefecting models...");
+		warehouseGame.addToLoadingProgress(5, "Prefetching models...");
+		ResultSet result = null;
+		try {
+			result = DatabaseHandler.executeQuery("SELECT * FROM MODEL;");
+		
+			Renderer render = warehouseGame.getDisplay().getRenderer();
+			
+			while(result.next()){
+				int id = result.getInt("id");
+				String name = result.getString("name");
+				String typeid = result.getString("typeid");
+				String fileName = result.getString("fileName");
+				String folderName = result.getString("folderName");
+				String format = result.getString("format");
+				ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", true, render, typeid);
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return;
+	}
 
 	private void buildWarehouse() {	
 		double start = System.currentTimeMillis();
+		//prefetchModels();
 		warehouseGame.addToLoadingProgress(5, "Establishing Talkman Database Connection...");
 		
 		//DBInfoRetriever dbInfoRetriever = new DBInfoRetriever("joseph.cedarville.edu","talkman","warehouse","vwburr15");
@@ -153,21 +172,14 @@ public class WarehouseWorld extends Node {
 			url = "jdbc:mysql://localhost:3306/vwburr";
 			dbInfoRetriever = new DBInfoRetriever("localhost","talkman","warehouse","vwburr15");
 		}
-		Connection con;
-		Statement stmt;
 		ResultSet result;
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			con = DriverManager.getConnection(url, "warehouse", "vwburr15");
 			//System.out.println("Connecting to "+url);
-			stmt = con.createStatement();
 			warehouseGame.addToLoadingProgress(5, "Loading Warehouse Building");
 			
 			String query = "select * from MODEL where typeid='warehouse';";
 			
-			stmt.executeQuery(query);
-			
-			result = stmt.getResultSet();
+			result = DatabaseHandler.executeQuery(query);
 			
 			//variables for holding data from XML file
 			String name;
@@ -183,7 +195,6 @@ public class WarehouseWorld extends Node {
 			if (loadWarehouseShell)
 			{
 				double shellStart = System.currentTimeMillis();
-				result = stmt.getResultSet();
 				while(result.next())
 				{
 					name = result.getString("name");
@@ -200,7 +211,7 @@ public class WarehouseWorld extends Node {
 					rotationY = result.getFloat("rotationY");
 					rotationZ = result.getFloat("rotationZ");
 					
-					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", null, false, render, name.equals("warehouseCeiling") ? "object" : "ignore");
+					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", false, render, name.equals("warehouseCeiling") ? "object" : "ignore");
 					if(object != null){
 						object.setLocalScale(scale);
 						object.setLocalTranslation(new Vector3f(translationX, translationY, translationZ));
@@ -222,46 +233,37 @@ public class WarehouseWorld extends Node {
 			
 			warehouseGame.addToLoadingProgress(5, "Loading Warehouse Objects");
 			
-			RoomLoaderThread t;
-			t = new RoomLoaderThread(0, roomManager, warehouseGame, this, null);
+			/*RoomLoaderThread t;
+			t = new RoomLoaderThread(0, roomManager, warehouseGame, this);
+			//t.start();
+			t.run();
 			
 			for(int i=1; i<roomManager.getNumRooms(); i++){
-				Thread thread = new Thread(new RoomLoaderThread(i, roomManager, warehouseGame, this, t.getDB()));
+				Thread thread = new RoomLoaderThread(i, roomManager, warehouseGame, this);
 				thread.start();
-			}
+				//thread.run();
+			}*/
 			
 			//System.exit(1);
 			
-			/*if (loadWarehouseInsides)
+			if (loadWarehouseInsides)
 			{
 				int itemCounter = 0;
 				warehouseGame.addToLoadingProgress(5, "Loading Warehouse Environment...");
-					
-				//Let's use the flags
-				if (loadRacks)
-				{
-					if (loadObjects)
-					{
-						stmt.executeQuery("select * from MODEL where typeid!='warehouse';");
-					}
-					else
-					{
-						stmt.executeQuery("select * from MODEL where typeid!='warehouse' and typeid!='object';");
-					}
-				}
-				else
-				{
-					if (loadObjects)
-					{
-						stmt.executeQuery("select * from MODEL where typeid!='warehouse' and typeid!='rack';");
-					}
-					else
-					{
-						stmt.executeQuery("select * from MODEL where typeid!='warehouse' and typeid!='rack' and typeid!='object';");
-					}
-				}				
 				
-				result = stmt.getResultSet();
+				query = "select * from MODEL where typeid!='warehouse'";
+				
+				if(!loadRacks){
+					query += " and typeid!='racks'";
+				}
+				if(!loadObjects){
+					query += " and typeid!='object'";
+				}
+				
+				query += ";";
+				
+				result = DatabaseHandler.execute(query);
+				
 				while(result.next())
 				{
 					int id = result.getInt("id");
@@ -282,12 +284,12 @@ public class WarehouseWorld extends Node {
 					object = null;
 					
 					//MAIN OBJ loader
-					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", warehouseGame.getSharedNodeManager(), true, render, typeid);
+					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", true, render, typeid);
 					
 					if(object != null)
 					{
 						//Arrow case
-						if (iWantArrow && name.equals("arrow"))
+						if (useArrow && name.equals("arrow"))
 						{
 							warehouseGame.setArrowNode(object);
 						}
@@ -295,12 +297,9 @@ public class WarehouseWorld extends Node {
 						//rack stuff, in one spot, easier to read
 						if(typeid.equals("rack"))
 						{
-							DRack rack = new DRack(object,name,this);
-
-							Statement rack_stmt = con.createStatement();
-							rack_stmt.executeQuery("select * from RACK where id = "+id+";");
+							Rack rack = new Rack(object,name,this);
 							
-							ResultSet rack_result = rack_stmt.getResultSet();
+							ResultSet rack_result = DatabaseHandler.execute("select * from RACK where id = "+id+";");
 						    
 						    String aisle = "";
 					        String label = "";
@@ -394,9 +393,7 @@ public class WarehouseWorld extends Node {
 
 				if (miscPallets)
 				{
-					stmt.executeQuery("select * from DPallet;");
-
-					result = stmt.getResultSet();
+					result = DatabaseHandler.execute("select * from DPallet;");
 					
 					int i = 0;
 					
@@ -408,7 +405,7 @@ public class WarehouseWorld extends Node {
 						int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 						int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3);
 						
-						StackedDPallet SDP = new StackedDPallet(h1,this,null,"Misc_Pallet"+i,false,h2);
+						StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,this,null,"Misc_Pallet"+i,false,h2);
 						SDP.setLocalTranslation(tX, 0f, tZ);
 						
 						Room r = roomManager.getRoom(tX, tZ);
@@ -426,7 +423,7 @@ public class WarehouseWorld extends Node {
 				}
 				
 				warehouseGame.getRootNode().attachChild(rooms);
-			}*/
+			}
 			
 			System.out.println("It took "+((System.currentTimeMillis()-start)/1000)+" seconds to load the warehouse.");
 			

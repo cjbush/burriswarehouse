@@ -45,7 +45,11 @@ public class WarehouseTrainer extends FixedFramerateGame {
 	
 	private static final boolean SHOW_MAIN_MENU = true;
 	
-	private int width, height, depth, freq;
+	private static int width;
+
+	private static int height;
+
+	private int depth, freq;
     private boolean fullscreen;
     private Timer timer;    
     private Camera cam;
@@ -234,11 +238,11 @@ public class WarehouseTrainer extends FixedFramerateGame {
 	}
 	
 	public static int getWidth(){
-		return 0;
+		return width;
 	}
 	
 	public static int getHeight(){
-		return 0;
+		return height;
 	}
 
 	public void setFinished() {

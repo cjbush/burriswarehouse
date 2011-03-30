@@ -6,12 +6,16 @@ import code.gui.TransitionFadeOut.GoToState;
 
 import com.jme.input.KeyBindingManager;
 import com.jme.input.MouseInput;
+import com.jme.renderer.ColorRGBA;
 import com.jme.util.Timer;
 import com.jmex.bui.BButton;
 import com.jmex.bui.BComboBox;
 import com.jmex.bui.BWindow;
 import com.jmex.bui.BuiSystem;
 import com.jmex.bui.PolledRootNode;
+import com.jmex.bui.background.BBackground;
+import com.jmex.bui.background.BlankBackground;
+import com.jmex.bui.background.TintedBackground;
 import com.jmex.bui.event.ActionEvent;
 import com.jmex.bui.event.ActionListener;
 import com.jmex.bui.layout.GroupLayout;
@@ -40,18 +44,25 @@ public class MainMenu extends MenuState {
 		
 		MouseInput.get().setCursorVisible(true);
 		
+		int width = WarehouseTrainer.getWidth();
+		int height = WarehouseTrainer.getHeight();
+		
 		BuiSystem.init(new PolledRootNode(Timer.getTimer(), null), "/data/gbuiStyle/style2.bss");
         rootNode.attachChild(BuiSystem.getRootNode());
         
         window = new BWindow(BuiSystem.getStyle(), GroupLayout.makeVStretch());
         window.setStyleClass("champion");
+        //window.setStyleClass("test");
+        window.setBackground(0, new TintedBackground(new ColorRGBA(255,255,255,255)));
         BuiSystem.addWindow(window);
         
         window.setSize(180, 280);
+        //window.setSize(width, height);
         window.center();
 
         BButton freeExploreButton = new BButton("Start Free Exploration Mode");
-        freeExploreButton.setPreferredSize(100, 70);
+        //freeExploreButton.setPreferredSize(100, 70);
+        freeExploreButton.setSize(100, 70);
         
         BButton trainingModeButton = new BButton("Start Training Mode");
         trainingModeButton.setPreferredSize(100, 70);
@@ -84,7 +95,7 @@ public class MainMenu extends MenuState {
             }
         });
         
-        highScoresButton.addListener(new ActionListener() {
+       highScoresButton.addListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 TransitionFadeOut t = new TransitionFadeOut(0.1f, mainMenuState, GoToState.HIGH_SCORES, app);
                 rootNode.addController(t);
@@ -106,7 +117,7 @@ public class MainMenu extends MenuState {
         
         window.add(freeExploreButton);
         window.add(trainingModeButton);
-        window.add(highScoresButton);
+        //window.add(highScoresButton);
         window.add(optionsButton);
         window.add(quitButton);
         

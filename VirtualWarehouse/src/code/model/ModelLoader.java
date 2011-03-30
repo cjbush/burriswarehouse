@@ -2,10 +2,14 @@ package code.model;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
 import com.jme.bounding.BoundingBox;
@@ -16,11 +20,13 @@ import com.jme.scene.state.BlendState;
 import com.jme.scene.state.CullState;
 import com.jme.system.DisplaySystem;
 import com.jme.util.CloneImportExport;
+import com.jme.util.GameTaskQueueManager;
 import com.jme.util.export.binary.BinaryImporter;
 import com.jme.util.export.xml.XMLImporter;
 import com.jme.util.resource.ClasspathResourceLocator;
 import com.jme.util.resource.ResourceLocatorTool;
 import com.jme.util.resource.SimpleResourceLocator;
+import com.jmex.game.state.GameStateManager;
 import com.jmex.model.ModelFormatException;
 import com.jmex.model.converters.ObjToJme;
 import com.jmex.model.ogrexml.SceneLoader;
@@ -41,16 +47,14 @@ public class ModelLoader {
 	 * Loads a model and returns it as a node, determining which load function to use
 	 * based on the given format. SetBounds defaults to true if not specified.
 	 */
-	public static Node loadModel(String format, String filePath, String folderPath, SharedMeshManager smm, boolean setBounds, Renderer r, String type) {
+	public static Node loadModel(String format, String filePath, String folderPath, boolean setBounds, Renderer r, String type) {
 
 		Node model = null;
 
-		//if a sharedNodeManager is specified
-		if (smm != null)
-		{
-			//if already loaded, get the loaded model instead of loading the file again
-			model = smm.getNode(filePath);
-		}
+		
+		//if already loaded, get the loaded model instead of loading the file again
+		model = SharedMeshManager.getNode(filePath);
+		
 
 		//load the model from file if not already loaded
 		if (model == null)
@@ -96,21 +100,17 @@ public class ModelLoader {
 			}
 
 			//store the model in case it is used again
-			if (smm != null && newModel != null)
+			if (newModel != null)
 			{
-				smm.cacheNode(filePath, newModel);
+				SharedMeshManager.cacheNode(filePath, newModel);
+				System.out.println("Cached model "+filePath);
 
 				//get the shared mesh version if possible
-				model = smm.getNode(filePath);
+				model = SharedMeshManager.getNode(filePath);
 				if (model == null)
 				{
 					model = newModel;
 				}
-			}
-			else if (newModel != null)
-			{
-				//no sharedMeshManager being used
-				model = newModel;
 			}
 
 		}
@@ -128,11 +128,13 @@ public class ModelLoader {
 	}
 
 	public static Node loadModel(String format, String filePath, String folderPath) {
-		return loadModel(format, filePath, folderPath, null, true, null, "ignore");		
+		return loadModel(format, filePath, folderPath, true, null, "ignore");		
 	}
 
-	public static Node loadJmeModel(String path) {
+	private static Node loadJmeModel(String path) {
+		//path = "data/models/world/warehouse/Warehouse.obj";
 		URL url = ModelLoader.class.getClassLoader().getResource(path);
+		//URL url = ResourceLocatorTool.locateResource(ResourceLocatorTool.TYPE_MODEL, path);
 		BinaryImporter bi = new BinaryImporter();
 
 		try {
@@ -149,7 +151,7 @@ public class ModelLoader {
 	/**
 	 * Loads an XML file exported with HottBJ
 	 */
-	public static Node loadXMLModel(String path) {
+	private static Node loadXMLModel(String path) {
 
 		XMLImporter xmlImporter = XMLImporter.getInstance();
 		Node model = null;
@@ -183,7 +185,7 @@ public class ModelLoader {
 	 * Loads an OgreXML scene file. Does not set bounds. All mesh files must be
 	 * in the same folder as the scene file.
 	 */
-	public static Node loadOgreXMLModel(String path) {
+	private static Node loadOgreXMLModel(String path) {
 
 		ResourceLocatorTool.addResourceLocator(
 				ResourceLocatorTool.TYPE_TEXTURE,
@@ -220,18 +222,29 @@ public class ModelLoader {
 	}
 
 
-	public static Node loadObjModel(String path, String mtlPath) {
-
+	private static Node loadObjModel(String path, String mtlPath) {
 		ObjToJme converter = new ObjToJme();
 		Node model = null;
+		URL objFile = ModelLoader.class.getClassLoader().getResource(path);
+		
+		OutputStream fos;
+		
+		String jmePath = "src/"+path;
+		//jmePath.replace(".obj", ".jme");
+		jmePath = jmePath.substring(0, jmePath.length()-4);
+		jmePath += ".jme";
 		
 		double start = System.currentTimeMillis();
 		
 		ByteArrayOutputStream BO = new ByteArrayOutputStream();
 		
 		try {
-			URL objFile = ModelLoader.class.getClassLoader().getResource(
-					path);
+			File jmeFile = new File(jmePath);
+			if(jmeFile.exists()){
+				//System.out.println("JME Model exists. Loading from "+jmePath);
+				jmePath = jmePath.substring(4, jmePath.length());
+				return loadJmeModel(jmePath);
+			}
 			//System.out.println("Loading model from: "+objFile.toString());
 			System.out.println("Loading model from: "+path);
 			if (null != mtlPath && mtlPath.length() > 0) {
@@ -252,13 +265,19 @@ public class ModelLoader {
 				converter.setProperty("mtllib", objFile);
 			}
 			converter.setProperty("texdir",objFile);
-			converter.convert(objFile.openStream(), BO);
+			//converter.convert(objFile.openStream(), BO);
+			System.out.println("Exporting to: "+jmePath);
+			jmeFile = new File(jmePath);
+			jmeFile.createNewFile();
+			fos = new FileOutputStream(jmeFile);
+			converter.convert(objFile.openStream(), fos);
 			//load as a TriMesh if single object
 			//model = (TriMesh) BinaryImporter.getInstance().load(
 			//new ByteArrayInputStream(BO.toByteArray()));
 			//load as a node if multiple objects
-			model=(Node)BinaryImporter.getInstance().load(
-					new ByteArrayInputStream(BO.toByteArray()));
+			/*model=(Node)BinaryImporter.getInstance().load(
+					new ByteArrayInputStream(BO.toByteArray()));*/
+			model = loadJmeModel(path);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -272,18 +291,28 @@ public class ModelLoader {
 			double finish = System.currentTimeMillis();
 			totalTimeOBJ += finish-start;
 			System.out.println("Total time loading OBJ: "+totalTimeOBJ/1000);
-			
 			start = System.currentTimeMillis();
 			model = new Node("TriMesh Holder Node");
-			//model.attachChild(loadTriMeshModel(path, mtlPath));
-			try {
-				TriMesh object = (TriMesh) BinaryImporter.getInstance().load(new ByteArrayInputStream(BO.toByteArray()));
+			model.attachChild(loadTriMeshModel(path, mtlPath));
+			/*try {
+				converter.convert(objFile.openStream(), BO);
+				final TriMesh object = (TriMesh) BinaryImporter.getInstance().load(new ByteArrayInputStream(BO.toByteArray()));
 				com.jme.util.geom.GeometryTool.minimizeVerts(object, 0);
+				
+				/*GameTaskQueueManager.getManager().render(new Callable<Object>(){
+					public Object call() throws Exception{
+						object.lockMeshes();
+						return object;
+					}
+				});
+				
 				object.lockMeshes();
+				
+				
 				model.attachChild(object);
 			} catch (IOException e1) {
 				return null;
-			}
+			}*/
 			finish = System.currentTimeMillis();
 			totalTimeTRI += finish-start;
 			System.out.println("Total time loading TRI: "+totalTimeTRI/1000);
@@ -293,10 +322,17 @@ public class ModelLoader {
 		return model;
 	}
 
-	public static TriMesh loadTriMeshModel(String path, String mtlPath) {
+	private static TriMesh loadTriMeshModel(String path, String mtlPath) {
 
 		ObjToJme converter = new ObjToJme();
-		TriMesh model = null;
+		//TriMesh model = null;
+		
+		TriMesh model = SharedMeshManager.getTriMesh(path);
+		
+		if(model != null){
+			System.out.println("Read TriMesh from cache: "+path);
+			return model;
+		}
 
 		try {
 			URL objFile = ModelLoader.class.getClassLoader().getResource(
@@ -314,6 +350,9 @@ public class ModelLoader {
 			//load as a TriMesh if single object
 			model = (TriMesh) BinaryImporter.getInstance().load(
 					new ByteArrayInputStream(BO.toByteArray()));
+			
+			SharedMeshManager.cacheTriMesh(path, model);
+			System.out.println("Cached TriMesh "+path);
 			//load as a node if multiple objects
 			//model=(Node)BinaryImporter.getInstance().load(
 			//                new ByteArrayInputStream(BO.toByteArray()));

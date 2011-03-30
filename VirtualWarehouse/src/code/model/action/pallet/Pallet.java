@@ -67,8 +67,8 @@ public class Pallet extends Node
 	}
 	
 	private void loadModel(String file)
-	{		
-		Spatial m = ModelLoader.loadModel("obj", "data/models/pallets/main/"+file,"data/models/pallets/main/", ww.getVirtualWarehouse().getSharedNodeManager(), true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "pallet");
+	{			
+		Spatial m = ModelLoader.loadModel("obj", "data/models/pallets/main/"+file,"data/models/pallets/main/", true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "pallet");
 		this.attachChild(m);
 	}
 	

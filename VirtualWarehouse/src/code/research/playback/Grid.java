@@ -65,7 +65,7 @@ public class Grid {
 	private void loadModel() {
 		object = ModelLoader.loadModel("obj",
 				"data/models/miscObj/gridnode/gridnode.obj",
-				"data/models/miscObj/gridnode/", null, true, warehouseGame.getWarehouseWorld().getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
+				"data/models/miscObj/gridnode/", true, warehouseGame.getWarehouseWorld().getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 		ie.saveClone(object);
 	}
 }

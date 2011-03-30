@@ -36,7 +36,7 @@ public class SmallProductBox extends Pick {
 	private void loadModel(SharedMeshManager smm, WarehouseWorld ww) {
 		Spatial productModel = null;
 		productModel = ModelLoader.loadModel("obj", PROD_LOC + PROD_FILE,
-				PROD_LOC, smm, true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
+				PROD_LOC, true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "ignore");
 		this.setLocalTranslation(INITIAL_LOC);
 		attachChild(productModel);
 	}

@@ -1,9 +1,6 @@
 package code.model.player;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +15,7 @@ import code.model.action.pick.Pick;
 import code.model.action.product.Product;
 import code.model.player.autocompletion.AutoCompletionHandler;
 import code.model.vehicle.Vehicle;
+import code.util.DatabaseHandler;
 import code.util.WaypointCreator;
 import code.world.DeliveryArea;
 
@@ -123,11 +121,6 @@ public class Player extends AnimatedModel {
 		float rackLocationX = -1;
 		float rackLocationZ = -1;
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			//String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
-			String url = "jdbc:mysql://localhost:3306/vwburr";
-			Connection con = DriverManager.getConnection(url, "warehouse", "vwburr15");
-			Statement stmt = con.createStatement();
 			String query = "select * from MODEL where id = (select id from RACK where binNumber1 = '"
 					+ nextAisle
 					+ nextSlot
@@ -137,9 +130,8 @@ public class Player extends AnimatedModel {
 					+ "');";
 			// do it.
 			//System.out.println(query);
-			stmt.executeQuery(query);
 			// get the results
-			ResultSet result = stmt.getResultSet();
+			ResultSet result = DatabaseHandler.execute(query);
 			
 			if (result.next()){
 				// sweet! so theoretically, I should have the real x and real y of the place I want to go.
@@ -148,7 +140,6 @@ public class Player extends AnimatedModel {
 				rackLocationZ = result.getFloat("translationZ");
 				//con.close(); //probably...
 			}
-			con.close();
 		} catch (Exception e) {
 			
 			e.printStackTrace();
@@ -262,17 +253,8 @@ public class Player extends AnimatedModel {
  		float X = this.getLocalTranslation().getX();
 		float Z = this.getLocalTranslation().getZ();
 		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
-			//String url = "jdbc:mysql://localhost:3306/vwburr";
-			Connection con = DriverManager.getConnection(url, "warehouse", "vwburr15");
-			Statement stmt = con.createStatement();
 			String query = "insert into DPallet (X_Location, Z_Location) values ('" +X+ "'," + " '"+Z +"');";
-			// do it.
-			//System.out.println(query);
-			stmt.executeUpdate(query);
-			//stmt.executeQuery(query);
-			
+			DatabaseHandler.executeUpdate(query);			
 			warehouseGame.getWarehouseWorld().makeThis(X,Z);
 			
 		} catch (Exception e) {

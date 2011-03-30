@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.Random;
 
 import code.app.VirtualWarehouse;
-import code.model.ModelLoader;
 import code.model.action.pallet.StackedPallet;
 import code.model.action.rack.Rack;
 import code.util.DatabaseHandler;
@@ -16,8 +15,9 @@ import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
+import com.jmex.model.util.ModelLoader;
 
-public class RoomLoaderThread implements Runnable {
+public class RoomLoaderThread extends Thread {
 	private int room;
 	public static final String MODEL_DIR = "data/models/";
 	
@@ -26,7 +26,6 @@ public class RoomLoaderThread implements Runnable {
 	public static final boolean fillRacks = WarehouseWorld.fillRacks;
 	public static final boolean miscPallets = WarehouseWorld.miscPallets;
 	
-	private DatabaseHandler db;
 	private DBInfoRetriever vcdb;
 	private ResultSet result;
 	
@@ -34,18 +33,14 @@ public class RoomLoaderThread implements Runnable {
 	private VirtualWarehouse vw;
 	private WarehouseWorld ww;
 	
-	public RoomLoaderThread(int room, RoomManager rooms, VirtualWarehouse vw, WarehouseWorld ww, DatabaseHandler db){
+	public RoomLoaderThread(int room, RoomManager rooms, VirtualWarehouse vw, WarehouseWorld ww){
 		this.vw = vw;
 		this.ww = ww;
 		this.room = room;
 		this.rooms = rooms;
-		this.db = db;
-		if(this.db == null) this.db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse","vwburr15");
 		vcdb = new DBInfoRetriever("joseph.cedarville.edu", "talkman", "warehouse", "vwburr15");
-		this.run();
+		//this.run();
 	}
-	
-	public DatabaseHandler getDB(){ return db; }
 	
 	@Override
 	public void run() {
@@ -78,7 +73,7 @@ public class RoomLoaderThread implements Runnable {
 		Node roomNodes = rooms.makeRoomNodes();
 		
 		try {
-			result = db.executeQuery(query);
+			result = DatabaseHandler.executeQuery(query);
 			Node object = null;
 			Renderer render = vw.getDisplay().getRenderer();
 			
@@ -86,6 +81,8 @@ public class RoomLoaderThread implements Runnable {
 				Thread t = new Thread(new UpdateProgressBar(vw));
 				t.start();
 			}
+			
+			double totalRackTime = 0;
 			
 			while(result.next()){
 				int id = result.getInt("id");
@@ -103,8 +100,13 @@ public class RoomLoaderThread implements Runnable {
 				rotationY = result.getFloat("rotationY");
 				rotationZ = result.getFloat("rotationZ");
 					
-				object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", vw.getSharedNodeManager(), true, render, typeid);
-				
+				//object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", vw.getSharedNodeManager(), true, render, typeid);
+				try {
+					object = ModelLoader.loadModel(MODEL_DIR+folderName+fileName+"."+format);
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				if (WarehouseWorld.useArrow && name.equals("arrow"))
 				{
@@ -115,7 +117,7 @@ public class RoomLoaderThread implements Runnable {
 				{
 					Rack rack = new Rack(object,name,ww);
 
-					ResultSet rack_result = db.executeQuery("select * from RACK where id = "+id+";");
+					ResultSet rack_result = DatabaseHandler.executeQuery("select * from RACK where id = "+id+";");
 				    
 				    String aisle = "";
 			        String label = "";
@@ -156,7 +158,10 @@ public class RoomLoaderThread implements Runnable {
 					    boolean withProduct = (vcdb.getIsPossiblePickJob(binNumber1) || vcdb.getIsPossiblePickJob(binNumber2));
 					    String binName = binNumber1 != null ? binNumber1 : binNumber2 != null ? binNumber2 : "newRack"+id;
 					    
+					    double fillRacksStart = System.currentTimeMillis();
 					    rack.createThePallets(binName,withProduct);
+					    totalRackTime += System.currentTimeMillis() - fillRacksStart;
+					    //System.out.println("It took "+((System.currentTimeMillis()-fillRacksStart)/1000) + " to fill the racks in room "+room);
 				    }
 				}
 				
@@ -174,13 +179,18 @@ public class RoomLoaderThread implements Runnable {
 				((Node)roomNodes.getChild(r.getName())).attachChild(object);
 				
 				object.updateWorldBound();
-				object.lock();
+				try{
+					object.lock();
+				}
+				catch(NullPointerException e){
+					
+				}
 			}
 			
 			
 			if (miscPallets && room == 0)
 			{
-				result = db.executeQuery("select * from DPallet;");
+				result = DatabaseHandler.executeQuery("select * from DPallet;");
 				
 				int i = 0;
 				
@@ -206,8 +216,8 @@ public class RoomLoaderThread implements Runnable {
 			}
 			
 			vw.getRootNode().attachChild(roomNodes);
-			
-			
+			System.out.println("Total time to fill racks for room "+room+": "+totalRackTime/1000 + " seconds.");
+			//if(room == 3) System.exit(1);			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			System.exit(1);
