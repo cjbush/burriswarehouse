@@ -11,7 +11,6 @@ import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 
 public class WaypointCreator {
-	private DatabaseHandler db;
 	private KeyBindingManager k;
 	private Player player;
 	private int sequence;
@@ -32,7 +31,6 @@ public class WaypointCreator {
 		k.set("addGetOffPJWaypoint", KeyInput.KEY_END);
 		k.set("addGetOnPJWaypoint", KeyInput.KEY_PGDN);
 		k.set("nextSection", KeyInput.KEY_DELETE);
-		db = new DatabaseHandler("joseph.cedarville.edu", "vwburr", "warehouse", "vwburr15");
 		sequence = -1;
 		section = 1;
 		this.player = player;
@@ -82,7 +80,7 @@ public class WaypointCreator {
 			String query = "INSERT INTO PICKWAYPOINT(pickjob, x, z, section, sequence, action) VALUES(1, "+x+", "+z+", "+ section + ", " + sequence + ", " + action +");";
 			System.out.println(query);
 			try {
-				db.executeQuery(query);
+				DatabaseHandler.executeQuery(query);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

@@ -5,6 +5,7 @@ this is the new stylesheet we're going to use
 
 root {
   color: #FFFFFF;
+  background: solid #FFFFFF;
   font: "Dialog" plain 16;
 }
 
@@ -371,4 +372,8 @@ background: solid #66666688;
 }
 menuitem:hover {
 border: 1 solid #336699;
+}
+
+test{
+	background: solid #FFFFFFFF;
 }

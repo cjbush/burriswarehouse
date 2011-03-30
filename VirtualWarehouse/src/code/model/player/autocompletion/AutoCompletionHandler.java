@@ -17,7 +17,6 @@ import code.util.DatabaseHandler;
 
 public class AutoCompletionHandler {
 	private ArrayList<Waypoint> path;
-	private DatabaseHandler db;
 	private ResultSet rs;
 	private Waypoint start;
 	private Waypoint finish;
@@ -45,12 +44,6 @@ public class AutoCompletionHandler {
 			int finish) {
 		if (!enabled)
 			return;
-		try {
-			db = new DatabaseHandler("joseph.cedarville.edu", "vwburr",
-					"warehouse", "vwburr15");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
 		// this.counter = path.indexOf(this.start);
 		this.counter = 0;
@@ -72,7 +65,7 @@ public class AutoCompletionHandler {
 
 		try {
 			this.path = new ArrayList<Waypoint>();
-			rs = db
+			rs = DatabaseHandler
 					.executeQuery("SELECT * FROM PICKWAYPOINT WHERE pickjob = 1 AND section="
 							+ section);
 

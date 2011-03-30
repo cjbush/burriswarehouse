@@ -1,17 +1,13 @@
 package code.app;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+import code.collisions.BoundingBox2D;
 import code.component.Score;
 import code.component.WarehouseChaseCam;
 import code.gui.LoadingWindow;
@@ -31,9 +27,9 @@ import code.npc.logic.Npc;
 import code.research.recording.Recording;
 import code.sound.SoundPlayer;
 import code.util.Coordinate;
+import code.util.DatabaseHandler;
 import code.vocollect.VocollectHandler;
 import code.world.DeliveryArea;
-import code.world.RoomLoaderThread;
 import code.world.WarehouseWorld;
 
 import com.jme.app.AbstractGame.ConfigShowMode;
@@ -41,7 +37,7 @@ import com.jme.input.ChaseCamera;
 import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 import com.jme.input.MouseInput;
-import com.jme.light.*;
+import com.jme.light.PointLight;
 import com.jme.math.Vector3f;
 import com.jme.renderer.Camera;
 import com.jme.renderer.ColorRGBA;
@@ -50,7 +46,6 @@ import com.jme.renderer.pass.RenderPass;
 import com.jme.renderer.pass.ShadowedRenderPass;
 import com.jme.scene.Controller;
 import com.jme.scene.Node;
-import com.jme.scene.state.ClipState;
 import com.jme.scene.state.FogState;
 import com.jme.scene.state.LightState;
 import com.jme.scene.state.ZBufferState;
@@ -60,8 +55,6 @@ import com.jme.util.GameTaskQueueManager;
 import com.jme.util.Timer;
 import com.jmex.angelfont.BitmapFont;
 import com.jmex.game.state.GameState;
-
-import code.collisions.BoundingBox2D;
 
 /**
  * The in-game state of the Virtual Warehouse application.
@@ -622,16 +615,10 @@ public class VirtualWarehouse extends GameState {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
 			// String url = "jdbc:mysql://localhost:3306/vwburr";
-			Connection con = DriverManager.getConnection(url, "warehouse",
-					"vwburr15");
-			Statement stmt = con.createStatement();
-			Statement stmt2 = con.createStatement();
 			String query = "select * from BOUNDINGBOXES ORDER BY ID desc;";
 			String query2 = "select count(id) from DPallet";
-			stmt.executeQuery(query);
-			stmt2.execute(query2);
-			ResultSet result = stmt.getResultSet();
-			ResultSet rs2 = stmt2.getResultSet();
+			ResultSet result = DatabaseHandler.execute(query);
+			ResultSet rs2 = DatabaseHandler.execute(query2);
 			rs2.next();
 			int boxCount = rs2.getInt("count(id)");
 			
@@ -666,8 +653,7 @@ public class VirtualWarehouse extends GameState {
 			// so....this portion of this code specifically wants to get all of the boxes/pallets that are laying around and 
 			// get those into the collision list.
 			String query3 = "select * from DPallet";
-			stmt2.executeQuery(query3);
-			ResultSet rs3 = stmt2.getResultSet();
+			ResultSet rs3 = DatabaseHandler.execute(query3);
 			
 			for (int i = numBoxes; i < boxCount+numBoxes; i++){
 				rs3.next();
@@ -680,8 +666,6 @@ public class VirtualWarehouse extends GameState {
 				float upperZ = zCenter - .3f;
 				boundingBoxes[i] = new BoundingBox2D(leftX, rightX, lowerZ, upperZ);
 			}
-			
-			con.close();
 
 		} catch (Exception e) {
 
@@ -693,7 +677,7 @@ public class VirtualWarehouse extends GameState {
 	}
 
 	public void cleanup() {
-
+		DatabaseHandler.close();
 		sounds.cleanup();
 		if(recording)recorder.cleanup();
 		if (useVocollect) {
@@ -707,8 +691,7 @@ public class VirtualWarehouse extends GameState {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
 			// String url = "jdbc:mysql://localhost:3306/vwburr";
-			Connection con = DriverManager.getConnection(url, "warehouse",
-					"vwburr15");
+			
 			//Statement stmt = con.createStatement();
 
 			//String query = "select count(id) from AutoPickJobs";
@@ -744,12 +727,10 @@ public class VirtualWarehouse extends GameState {
 			 */
 			for (int i = 0; i < characters.length; i++) {
 				ArrayList<Coordinate> ll = new ArrayList<Coordinate>();
-				Statement stmt2 = con.createStatement();
 				String query2 = "select * from AutoPickCoords where AutoPickJobID = "
 						+ "ANY(select ID from AutoPickJobs where AutoPickJobID = "
 						+ (i + 1) + ");";
-				stmt2.execute(query2);
-				ResultSet result2 = stmt2.getResultSet();
+				ResultSet result2 = DatabaseHandler.execute(query2);
 
 				float x, z;
 				while (result2.next()) {
@@ -768,8 +749,6 @@ public class VirtualWarehouse extends GameState {
 				rootNode.attachChild(characters[i]);
 
 			}
-
-			con.close();
 
 		} catch (Exception e) {
 

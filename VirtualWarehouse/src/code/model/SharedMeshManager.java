@@ -1,12 +1,10 @@
 package code.model;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 import com.jme.scene.Node;
 import com.jme.scene.SharedMesh;
-import com.jme.scene.SharedNode;
 import com.jme.scene.Spatial;
 import com.jme.scene.TriMesh;
 import com.jme.scene.shape.Quad;
@@ -21,13 +19,15 @@ import com.jme.scene.state.RenderState;
  */
 public class SharedMeshManager {
 
-	//store filenames and the corresponding model node 
-	HashMap<String, Node> cachedNodes;
-	HashMap<String, Quad> cachedQuads;
+	 //store filenames and the corresponding model node 
+	static HashMap<String, Node> cachedNodes;
+	static HashMap<String, Quad> cachedQuads;
+	static HashMap<String, TriMesh> cachedTriMeshes;
 	
 	public SharedMeshManager() {
 		cachedNodes = new HashMap<String, Node>();
 		cachedQuads = new HashMap<String, Quad>();
+		cachedTriMeshes = new HashMap<String, TriMesh>();
 	}
 	
 	/**
@@ -36,7 +36,7 @@ public class SharedMeshManager {
 	 * @param model
 	 * @return
 	 */
-	public Node getNode(String model) {
+	public static Node getNode(String model) {
 		Node n = null;
 		
 		Node cached = cachedNodes.get(model);
@@ -79,7 +79,7 @@ public class SharedMeshManager {
 	 * @param model
 	 * @param n
 	 */
-	public void cacheNode(String model, Node n) {
+	public static void cacheNode(String model, Node n) {
 		
 		boolean canCache = true;
 		
@@ -100,12 +100,20 @@ public class SharedMeshManager {
 		}
 	}
 	
+	public static void cacheTriMesh(String model, TriMesh m){
+		cachedTriMeshes.put(model, m);
+	}
+	
+	public static TriMesh getTriMesh(String model){
+		return cachedTriMeshes.get(model);
+	}
+	
 	/**
 	 * Stores a Quad in the cache.
 	 * @param model
 	 * @param q
 	 */
-	public void cacheQuad(String model, Quad q) {
+	public static void cacheQuad(String model, Quad q) {
 		cachedQuads.put(model, q);
 	}
 	
@@ -115,7 +123,7 @@ public class SharedMeshManager {
 	 * @param model
 	 * @return
 	 */
-	public SharedMesh getQuad(String model) {
+	public static SharedMesh getQuad(String model) {
 		Quad cached = cachedQuads.get(model);
 		SharedMesh quad = null;
 		if (cached != null)
