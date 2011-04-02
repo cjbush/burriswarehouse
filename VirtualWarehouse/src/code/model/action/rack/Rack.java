@@ -22,6 +22,8 @@ public class Rack extends Node
 {
 	//a font to be used for labels
 	private BitmapFont font = BitmapFontLoader.loadDefaultFont();
+	
+	private String productType;
 
 	private WarehouseWorld ww;
 	private String rackName;
@@ -40,8 +42,9 @@ public class Rack extends Node
 	
 	private float heightOffset; //space between each shelf
 
-	public Rack(Node r, String name, WarehouseWorld ww)
+	public Rack(Node r, String name, WarehouseWorld ww, String productType)
 	{
+		this.productType = productType;
 		this.rack = r;
 		this.rackName = name;
 		this.ww = ww;
@@ -337,7 +340,7 @@ public class Rack extends Node
 				
 				float rot = util[num-1].rotation();
 				
-				StackedPallet SDP = new StackedPallet(-1, h1,this.ww,binNumber,binNumber,tempProduct,h2);
+				StackedPallet SDP = new StackedPallet(-1, h1,this.ww,binNumber,binNumber,tempProduct,h2,productType);
 				
 				pallets[j][i] = SDP;
 				

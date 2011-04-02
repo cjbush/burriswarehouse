@@ -242,8 +242,8 @@ public class InfoIconManager extends Node {
 					
 					
 					//load the model and attach to node
-					Spatial object = null;
-					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName + "/", true, warehouseGame.getDisplay().getRenderer(), "ignore");
+					Node object = null;
+					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName, true, warehouseGame.getDisplay().getRenderer(), "ignore");
 					if (object != null)
 					{
 						Node infoIcon = new BasicInfoIcon(text);
@@ -281,7 +281,7 @@ public class InfoIconManager extends Node {
 					}
 					else
 					{
-						logger.info("info icon model " + name + " could not be loaded at " + MODEL_DIR + folderName + "/" + fileName);
+						logger.info("info icon model " + name + " could not be loaded at " + MODEL_DIR + folderName + fileName);
 					}
 					
 			    }

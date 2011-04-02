@@ -48,11 +48,7 @@ public class VocollectHandler extends Thread {
 		KeyBindingManager.getKeyBindingManager().set("askForMap", KeyInput.KEY_Q);
     }
 
-    public void run() {
-    	//return;
-    	return;
-    	
-    	/*
+    public void run() {    	
         //String hostName = "192.168.1.5";
     	String hostName = "joseph.cedarville.edu";
     	//String hostName = "localhost";
@@ -236,7 +232,7 @@ public class VocollectHandler extends Thread {
 			}
 
         }
-        */      
+             
     }
 
     private void setStatus(Status status) {

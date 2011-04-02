@@ -14,6 +14,7 @@ public class StackedPallet extends Node
 {
 	private boolean inUse;
 	private Node productNode;
+	private String productType;
 	
 	private int id;
 	
@@ -28,18 +29,19 @@ public class StackedPallet extends Node
 	
 	public StackedPallet(int height, WarehouseWorld ww)
 	{
-		this(-1, height,ww,null,null,false,0);
+		this(-1, height,ww,null,null,false,0,"random");
 	}
 	
 	public StackedPallet(int height, WarehouseWorld ww, String binNumber, String name)
 	{
-		this(-1, height,ww,binNumber,name,false,0);
+		this(-1, height,ww,binNumber,name,false,0, "random");
 	}
 	
 	public int getID(){ return id; }
 	
-	public StackedPallet(int id, int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, int productHeight)
+	public StackedPallet(int id, int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, int productHeight, String productType)
 	{		
+		this.productType = productType;
 		this.id = id;
 		if (height <= 0)
 		{
@@ -61,11 +63,11 @@ public class StackedPallet extends Node
 		{
 			if (i+1 != height)
 			{
-				palletStack[i] = new Pallet(ww,binNumber,name+_p+i,pickable,0,palletType);
+				palletStack[i] = new Pallet(ww,binNumber,name+_p+i,pickable,0,palletType, productType);
 			}
 			else
 			{
-				palletStack[i] = new Pallet(ww,binNumber,name+_p+i,pickable,productHeight,palletType);
+				palletStack[i] = new Pallet(ww,binNumber,name+_p+i,pickable,productHeight,palletType, productType);
 			}
 			
 			float rot = util.rotation();

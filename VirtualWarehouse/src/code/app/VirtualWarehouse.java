@@ -204,7 +204,7 @@ public class VirtualWarehouse extends GameState {
 					.getHeight() - 50);
 		}
 
-		this.useVocollect = true;
+		this.useVocollect = false;
 	}
 
 	public DisplaySystem getDisplay() {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="code/autoplay/WarehouseWriter_back.java|code/autoplay/WarehouseReader_back.java" kind="src" path="src"/>
+	<classpathentry excluding="code/autoplay/WarehouseReader_back.java|code/autoplay/WarehouseWriter_back.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/jme"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GBui"/>

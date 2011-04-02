@@ -3,6 +3,7 @@ package code.model;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -21,6 +22,7 @@ import com.jme.scene.state.CullState;
 import com.jme.system.DisplaySystem;
 import com.jme.util.CloneImportExport;
 import com.jme.util.GameTaskQueueManager;
+import com.jme.util.export.binary.BinaryExporter;
 import com.jme.util.export.binary.BinaryImporter;
 import com.jme.util.export.xml.XMLImporter;
 import com.jme.util.resource.ClasspathResourceLocator;
@@ -42,6 +44,18 @@ public class ModelLoader {
 	
 	private static double totalTimeOBJ = 0.0;
 	private static double totalTimeTRI = 0.0;
+	
+	private static boolean rebuildCache = false;
+	
+	public static void rebuildCache(){
+		System.out.println("Model cache will be rebuilt.");
+		rebuildCache = true;
+	}
+	
+	public static void disableCacheRebuild(){
+		System.out.println("Model cache rebuild cancelled.");
+		rebuildCache = false;
+	}
 
 	/**
 	 * Loads a model and returns it as a node, determining which load function to use
@@ -54,7 +68,6 @@ public class ModelLoader {
 		
 		//if already loaded, get the loaded model instead of loading the file again
 		model = SharedMeshManager.getNode(filePath);
-		
 
 		//load the model from file if not already loaded
 		if (model == null)
@@ -146,6 +159,15 @@ public class ModelLoader {
 		catch (IOException e) {
 			return null;
 		}
+		catch (NullPointerException e){
+			url = ModelLoader.class.getClassLoader().getResource(path.substring(4));
+			Node jmeNode = null;
+			try {
+				jmeNode = (Node) bi.load(url);
+			} catch (IOException e1) {
+			}
+			return jmeNode;
+		}
 	}
 
 	/**
@@ -229,20 +251,20 @@ public class ModelLoader {
 		
 		OutputStream fos;
 		
-		String jmePath = "src/"+path;
-		//jmePath.replace(".obj", ".jme");
-		jmePath = jmePath.substring(0, jmePath.length()-4);
+		String jmePath = "src/";
+		jmePath += path.substring(0, path.lastIndexOf('.'));
 		jmePath += ".jme";
+		
+		File jmeFile = new File(jmePath);
 		
 		double start = System.currentTimeMillis();
 		
 		ByteArrayOutputStream BO = new ByteArrayOutputStream();
 		
 		try {
-			File jmeFile = new File(jmePath);
-			if(jmeFile.exists()){
-				//System.out.println("JME Model exists. Loading from "+jmePath);
-				jmePath = jmePath.substring(4, jmePath.length());
+			if(jmeFile.exists() && !rebuildCache){
+				System.out.println("JME Model exists. Loading from "+jmePath);
+				jmePath = path.substring(0, path.lastIndexOf('.'))+".jme";
 				return loadJmeModel(jmePath);
 			}
 			//System.out.println("Loading model from: "+objFile.toString());
@@ -265,19 +287,19 @@ public class ModelLoader {
 				converter.setProperty("mtllib", objFile);
 			}
 			converter.setProperty("texdir",objFile);
-			//converter.convert(objFile.openStream(), BO);
+			converter.convert(objFile.openStream(), BO);
+			model = (Node)BinaryImporter.getInstance().load(new ByteArrayInputStream(BO.toByteArray()));
 			System.out.println("Exporting to: "+jmePath);
-			jmeFile = new File(jmePath);
-			jmeFile.createNewFile();
-			fos = new FileOutputStream(jmeFile);
-			converter.convert(objFile.openStream(), fos);
-			//load as a TriMesh if single object
-			//model = (TriMesh) BinaryImporter.getInstance().load(
-			//new ByteArrayInputStream(BO.toByteArray()));
-			//load as a node if multiple objects
-			/*model=(Node)BinaryImporter.getInstance().load(
-					new ByteArrayInputStream(BO.toByteArray()));*/
-			model = loadJmeModel(path);
+			try {
+				jmeFile.createNewFile();
+				fos = new FileOutputStream(jmeFile);
+				BinaryExporter.getInstance().save(model, fos);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+				System.exit(1);
+			}
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -293,8 +315,8 @@ public class ModelLoader {
 			System.out.println("Total time loading OBJ: "+totalTimeOBJ/1000);
 			start = System.currentTimeMillis();
 			model = new Node("TriMesh Holder Node");
-			model.attachChild(loadTriMeshModel(path, mtlPath));
-			/*try {
+			//model.attachChild(loadTriMeshModel(path, mtlPath));
+			try {
 				converter.convert(objFile.openStream(), BO);
 				final TriMesh object = (TriMesh) BinaryImporter.getInstance().load(new ByteArrayInputStream(BO.toByteArray()));
 				com.jme.util.geom.GeometryTool.minimizeVerts(object, 0);
@@ -304,19 +326,19 @@ public class ModelLoader {
 						object.lockMeshes();
 						return object;
 					}
-				});
+				});*/
 				
 				object.lockMeshes();
 				
+				SharedMeshManager.cacheTriMesh(path, object);
 				
 				model.attachChild(object);
 			} catch (IOException e1) {
 				return null;
-			}*/
+			}
 			finish = System.currentTimeMillis();
 			totalTimeTRI += finish-start;
 			System.out.println("Total time loading TRI: "+totalTimeTRI/1000);
-			return model;
 		}
 
 		return model;

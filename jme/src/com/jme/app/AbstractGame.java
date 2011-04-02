@@ -113,7 +113,7 @@ public abstract class AbstractGame {
     protected GameSettings settings;
 
     /** Renderer used to display the game */
-    protected DisplaySystem display;
+    protected static DisplaySystem display;
 
     //
     // Utility methods common to all game implementations

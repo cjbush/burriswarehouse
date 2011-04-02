@@ -10,7 +10,7 @@ public class PersistenceHandler {
 		try {
 			double x = pallet.getLocalTranslation().getX();
 			double z = pallet.getLocalTranslation().getZ();
-			DatabaseHandler.executeQuery("UPDATE DPallet SET X_Location = "+x+", Z_Location = "
+			DatabaseHandler.execute("UPDATE DPallet SET X_Location = "+x+", Z_Location = "
 					+z + " WHERE id="+pallet.getID());
 			
 			System.out.println("Moved pallet "+pallet.getID()+" to <"+x+", "+z+">.");

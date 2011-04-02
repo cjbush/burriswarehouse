@@ -18,13 +18,15 @@ public class Room {
 	//store some information about the room
 	private String name;
 	private String temperature;
+	private String productType;
 	
 	//list of rooms visible from the current room - used for optimization
 	private ArrayList<String> visibleRooms;
 	
-	public Room(String name, String temperature, float x1, float z1, float x2, float z2, String[] visibleRoomsArray) {
+	public Room(String name, String temperature, float x1, float z1, float x2, float z2, String[] visibleRoomsArray, String productType) {
 		this.name = name;
 		this.temperature = temperature;
+		this.productType = productType;
 		this.x1 = x1;
 		this.z1 = z1;
 		this.x2 = x2; 
@@ -67,6 +69,9 @@ public class Room {
 	
 	public ArrayList<String> getVisibleRoomsList() {
 		return visibleRooms;
+	}
+	public String getProductType(){
+		return productType;
 	}
 
 }
