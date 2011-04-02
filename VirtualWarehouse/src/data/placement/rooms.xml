@@ -6,6 +6,7 @@
 		<z1>-7.2</z1>
 		<x2>0.04</x2>
 		<z2>-0.04</z2>
+		<product>test</product>
 		<visibleRooms>Produce (a),Produce (b),Dairy (a),Room 7</visibleRooms>
 	</room>
 	<room>
@@ -15,6 +16,7 @@
 		<z1>-15.41</z1>
 		<x2>0.04</x2>
 		<z2>-7.2</z2>
+		<product>produce</product>
 		<visibleRooms>Produce (b),Loading Dock,Produce Section</visibleRooms>
 	</room>
 	<room>
@@ -24,6 +26,7 @@
 		<z1>-27.3</z1>
 		<x2>0.04</x2>
 		<z2>-15.41</z2>
+		<product>produce</product>
 		<visibleRooms>Produce (a),Meat,Produce (b),Dairy (b),Dairy (a)</visibleRooms>
 	</room>
 	<room>
@@ -33,6 +36,7 @@
 		<z1>-15.41</z1>
 		<x2>5.31</x2>
 		<z2>-7.2</z2>
+		<product></product>
 		<visibleRooms>Produce (a),Meat,Loading Dock,Produce Section</visibleRooms>
 	</room>
 	<room>
@@ -42,6 +46,7 @@
 		<z1>-41.44</z1>
 		<x2>0.04</x2>aw
 		<z2>-27.34</z2>
+		<product></product>
 		<visibleRooms>Product (a),Produce (b),Produce Section,Receiving Dock (a),Dairy (b)</visibleRooms>
 	</room>
 	<room>
@@ -51,6 +56,7 @@
 		<z1>-25.475</z1>
 		<x2>11.9</x2>
 		<z2>-7.673</z2>
+		<product></product>
 		<visibleRooms>Dairy (b),Loading Dock</visibleRooms>
 	</room>
 	<room>
@@ -60,6 +66,7 @@
 		<z1>-41.48</z1>
 		<x2>11.9</x2>
 		<z2>-25.475</z2>
+		<product>dairy</product>
 		<visibleRooms>Dairy (a),Receiving Dock (a),Meat,Produce Section,Room 6,Room 7</visibleRooms>
 	</room>
 	<room>
@@ -69,6 +76,7 @@
 		<z1>-46.57</z1>
 		<x2>24.94</x2>
 		<z2>-28.757</z2>
+		<product></product>
 		<visibleRooms>Room 7,Receiving Dock (b),Receiving Dock (a)</visibleRooms>
 	</room>
 	<room>
@@ -78,6 +86,7 @@
 		<z1>-48.66</z1>
 		<x2>0.04</x2>
 		<z2>-41.48</z2>
+		<product></product>
 		<visibleRooms>Meat,Dairy (b),Receiving Dock (b),Room 6</visibleRooms>
 	</room>
 	<room>
@@ -87,6 +96,7 @@
 		<z1>-48.66</z1>
 		<x2>24.786</x2>
 		<z2>-46.57</z2>
+		<product></product>
 		<visibleRooms>Room 6,Receiving Dock (a)</visibleRooms>
 	</room>
 	<room>
@@ -96,6 +106,7 @@
 		<z1>-28.757</z1>
 		<x2>24.94</x2>
 		<z2>-7.24</z2>
+		<product></product>
 		<visibleRooms>Room 6,Loading Dock,Dairy (b)</visibleRooms>
 	</room>
 </rooms>

@@ -164,8 +164,8 @@ public class TheServices {
       doubleTerminate = true;
       
       //added for Cedarville database/Vocollect connection
-      //db = new DatabaseHandler("joseph.cedarville.edu","talkman","warehouse","vwburr15");
-      db = new DatabaseHandler("192.168.1.5","talkman","warehouse","vwburr15");
+      db = new DatabaseHandler("joseph.cedarville.edu","talkman","warehouse","vwburr15");
+      //db = new DatabaseHandler("192.168.1.5","talkman","warehouse","vwburr15");
       this.cc = cc;
    }
    /**

@@ -41,7 +41,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadWarehouseShell = true; //warehouse walls
 	public static final boolean loadWarehouseInsides = true; //racks, pallets, etc...
 	
-	public static final boolean loadRacks = true; //racks
+	public static final boolean loadRacks = false; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
 	public static final boolean fillRacks = true; //put pallets and product on racks
@@ -285,7 +285,7 @@ public class WarehouseWorld extends Node {
 					
 					//MAIN OBJ loader
 					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", true, render, typeid);
-					
+					Room r = roomManager.getRoom(translationX, translationZ);
 					if(object != null)
 					{
 						//Arrow case
@@ -297,7 +297,7 @@ public class WarehouseWorld extends Node {
 						//rack stuff, in one spot, easier to read
 						if(typeid.equals("rack"))
 						{
-							Rack rack = new Rack(object,name,this);
+							Rack rack = new Rack(object,name,this,r.getProductType());
 							
 							ResultSet rack_result = DatabaseHandler.execute("select * from RACK where id = "+id+";");
 						    
@@ -353,7 +353,7 @@ public class WarehouseWorld extends Node {
 						
 						object.setName(name);
 						
-						Room r = roomManager.getRoom(translationX, translationZ);
+						
 						if (r != null)
 						{
 							((Node)rooms.getChild(r.getName())).attachChild(object);
@@ -405,7 +405,7 @@ public class WarehouseWorld extends Node {
 						int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 						int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3);
 						
-						StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,this,null,"Misc_Pallet"+i,false,h2);
+						StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,this,null,"Misc_Pallet"+i,false,h2,"random");
 						SDP.setLocalTranslation(tX, 0f, tZ);
 						
 						Room r = roomManager.getRoom(tX, tZ);
@@ -426,6 +426,7 @@ public class WarehouseWorld extends Node {
 			}
 			
 			System.out.println("It took "+((System.currentTimeMillis()-start)/1000)+" seconds to load the warehouse.");
+			ModelLoader.disableCacheRebuild();
 			
 		} catch (Exception e) {
 				 e.printStackTrace();
@@ -438,7 +439,7 @@ public class WarehouseWorld extends Node {
 		int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 		int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3)+1;
 		
-		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"Misc_Pallet"+III,true,h2);
+		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"Misc_Pallet"+III,true,h2,"random");
 		SDP.setLocalTranslation(x, 0f, z);
 		warehouseGame.getRootNode().attachChild(SDP);
 		

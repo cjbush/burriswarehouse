@@ -783,9 +783,9 @@ public class ServerThread
       public void connectTCA(String host, int port, int timeout) throws TCAException{
          try {
         	 port = 3306;
-        	 //host = "joseph.cedarville.edu";
+        	 host = "joseph.cedarville.edu";
         	 //host = "localhost";
-        	 host = "192.168.1.5";
+        	 //host = "192.168.1.5";
         	 String database = "talkman";
 ////            tca.connect(host, port);
 //            tcaSocket = new Socket(host, port);

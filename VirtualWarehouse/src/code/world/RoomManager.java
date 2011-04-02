@@ -66,6 +66,7 @@ public class RoomManager {
 			String temperature;
 			float x1, z1, x2, z2;
 			String visibleRooms;
+			String productType = "random";
 						
 			//read in XML data for the rest of the models and place them in the warehouse
 			NodeList objectList = doc.getElementsByTagName("room");
@@ -108,6 +109,11 @@ public class RoomManager {
 					nl = element.getChildNodes();
 					z2 = Float.parseFloat((((org.w3c.dom.Node) nl.item(0)).getNodeValue().trim()));
 					
+					nodeList = objectElement.getElementsByTagName("product");
+					element = (Element) nodeList.item(0);
+					nl = element.getChildNodes();
+					if(((org.w3c.dom.Node)nl.item(0)) != null) productType = (((org.w3c.dom.Node) nl.item(0)).getNodeValue().trim());
+					
 					nodeList = objectElement.getElementsByTagName("visibleRooms");
 					element = (Element) nodeList.item(0);
 					nl = element.getChildNodes();
@@ -119,7 +125,7 @@ public class RoomManager {
 					}
 	
 					//create a room object with the specified data
-					Room room = new Room(name, temperature, x1, z1, x2, z2, roomsArray);
+					Room room = new Room(name, temperature, x1, z1, x2, z2, roomsArray, productType);
 					roomsList.add(room);
 				}
 			}
@@ -127,6 +133,7 @@ public class RoomManager {
 		
 		catch (Exception e) {
 			 e.printStackTrace();
+			 System.exit(0);
 		}
 	}
 	

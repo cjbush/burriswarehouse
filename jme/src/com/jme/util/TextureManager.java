@@ -490,11 +490,11 @@ final public class TextureManager {
             is = file.openStream();
             return loadImage(fileExt, is, flipped);
         } catch (IOException e) {
-            logger
+            /*logger
                     .log(
                             Level.WARNING,
                             "loadImage(URL file, boolean flipped): defaultTexture used",
-                            e);
+                            e);*/
             return TextureState.getDefaultTextureImage();
         } finally {
             if (is != null) {

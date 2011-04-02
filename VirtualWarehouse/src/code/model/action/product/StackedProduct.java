@@ -10,6 +10,7 @@ import com.jme.scene.Node;
 public class StackedProduct extends Node
 {
 	private DUtility util;
+	private String productType;
 	
 	private Product productStack[];
 	
@@ -19,15 +20,15 @@ public class StackedProduct extends Node
 	
 	public StackedProduct(int height, WarehouseWorld ww)
 	{
-		this(height,ww,null,null,false);
+		this(height,ww,null,null,false, "random");
 	}
 	
 	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name)
 	{
-		this(height,ww,binNumber,name,false);
+		this(height,ww,binNumber,name,false, "random");
 	}
 	
-	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable)
+	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, String productType)
 	{		
 		util = new DUtility(20f,null,.01f,.27f);
 		
@@ -45,11 +46,11 @@ public class StackedProduct extends Node
 		{
 			if (i+1 != height)
 			{
-				productStack[i] = new Product(ww,binNumber,name+_b+i,false);
+				productStack[i] = new Product(ww,binNumber,name+_b+i,false, productType);
 			}
 			else
 			{
-				productStack[i] = new Product(ww,binNumber,name+_b+i,pickable);
+				productStack[i] = new Product(ww,binNumber,name+_b+i,pickable, productType);
 			}
 			
 			float rot = util.rotation();

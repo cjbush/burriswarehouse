@@ -16,23 +16,26 @@ public class Pallet extends Node
 {
 	private WarehouseWorld ww;
 	
+	private String productType;
+	
 	private DUtility util;
 	
 	private StackedProduct products;
 	
 	public Pallet(WarehouseWorld ww)
 	{
-		this(ww,null,null,false,0,null);
+		this(ww,null,null,false,0,null, "random");
 	}
 
 	public Pallet(WarehouseWorld ww, String binNumber, String name, boolean pickable)
 	{
-		this(ww,binNumber,name,pickable,0,null);
+		this(ww,binNumber,name,pickable,0,null, "random");
 	}
 	
-	public Pallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height,String file)
+	public Pallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height,String file, String productType)
 	{
 		util = new DUtility(null,null,.04f,.07f);
+		this.productType = productType;
 		
 		this.ww = ww;
 		this.setName(name);
@@ -46,7 +49,7 @@ public class Pallet extends Node
 			
 		if (height > 0)
 		{
-			products = new StackedProduct(height,ww,binNumber,name,pickable);
+			products = new StackedProduct(height,ww,binNumber,name,pickable, productType);
 			
 			float trans1 = util.translation();
 			float trans2 = util.translation();

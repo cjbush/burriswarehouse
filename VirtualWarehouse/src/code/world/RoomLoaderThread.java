@@ -115,7 +115,7 @@ public class RoomLoaderThread extends Thread {
 				
 				if(typeid.equals("rack"))
 				{
-					Rack rack = new Rack(object,name,ww);
+					Rack rack = new Rack(object,name,ww,"random");
 
 					ResultSet rack_result = DatabaseHandler.executeQuery("select * from RACK where id = "+id+";");
 				    
@@ -202,7 +202,7 @@ public class RoomLoaderThread extends Thread {
 					int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 					int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3);
 					
-					StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,ww,null,"Misc_Pallet"+i,false,h2);
+					StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,ww,null,"Misc_Pallet"+i,false,h2,"random");
 					SDP.setLocalTranslation(tX, 0f, tZ);
 					
 					//Room r = ww.getRoomManager().getRoom(tX, tZ);

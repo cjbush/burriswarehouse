@@ -3,6 +3,7 @@ package code.model.action.product;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.Random;
 
 import com.jme.math.FastMath;
 import com.jme.math.Vector3f;
@@ -24,27 +25,32 @@ import com.jme.util.TextureManager;
 
 public class Product extends Node
 {
+	private String productType;
 	private String binNumber;
 	private WarehouseWorld ww;
 	private boolean pickable;
+	
+	private static int counter = 0;
 	
 	private float width = .39f;
 	private float depth = .39f;
 	private float height = .27f;
 	
-	private final static String productTextureLocation = "D:/Dan Jewett/Docstoc/Senior Design/VirtualWarehouse/src/data/productTextures/";
+	private final static String productTextureLocation = "src/data/productTextures/";
 	
 	public Product(WarehouseWorld ww)
 	{
-		this(ww,null,null,false);
+		this(ww,null,null,false,"random");
 	}
 
-	public Product(WarehouseWorld ww, String binNumber, String name, boolean top)
+	public Product(WarehouseWorld ww, String binNumber, String name, boolean top, String productType)
 	{
 		this.ww = ww;
 		this.setName(name);
 		this.binNumber = binNumber;
-		loadModel(binNumber);
+		//this.productType = productType;
+		this.productType = "produce";
+		loadModel(productType);
 		pickable = top;
 		
 		if (top)
@@ -55,7 +61,7 @@ public class Product extends Node
 	
 	private void loadModel(String num)
 	{
-		Box b = new Box("My box", new Vector3f(-width/2, 0, -depth/2), new Vector3f(width/2, height, depth/2));
+		Box b = new Box("box"+(counter++), new Vector3f(-width/2, 0, -depth/2), new Vector3f(width/2, height, depth/2));
 		
 		createProductTexture(b,num);
 		
@@ -92,19 +98,19 @@ public class Product extends Node
 		}
 	}
 	
-	private File getTexture(String binNumber)
+	private File getTexture(String productType)
 	{
 		try{
 			File file;
 		
-			if (binNumber != null)
-			{
-				File folder = new File(productTextureLocation+binNumber+"/");
-				Object path[] = ridSVN(folder.list());
-				
-				file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
-			}
-			else
+			File folder = new File(productTextureLocation+productType+"/");
+			Object path[] = ridSVN(folder.list());
+			
+			//file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
+			Random generator = new Random(System.currentTimeMillis());
+			file = new File(folder.getPath() + "/" + (generator.nextInt(2)+1) + ".jpg");
+			
+			/*else
 			{
 				File root = new File(productTextureLocation);
 				Object pick[] = ridSVN(root.list());
@@ -113,7 +119,7 @@ public class Product extends Node
 				Object path[] = ridSVN(folder.list());
 				
 				file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
-			}
+			}*/
 	
 			return file;
 		}
@@ -153,9 +159,9 @@ public class Product extends Node
 		return null;
 	}
 
-	public String getBinNumber()
+	public String getProductType()
 	{
-		return binNumber;
+		return productType;
 	}
 	
 	public boolean isPickable()
@@ -166,5 +172,9 @@ public class Product extends Node
 	public String getMainName()
 	{
 		return name;
+	}
+	
+	public String getBinNumber(){
+		return binNumber;
 	}
 }

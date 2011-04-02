@@ -22,6 +22,7 @@ import com.jmex.bui.layout.GroupLayout;
 
 import code.app.WarehouseTrainer;
 import code.gui.TransitionFadeOut.GoToState;
+import code.model.ModelLoader;
 
 
 public class OptionMenu extends MenuState {
@@ -33,6 +34,7 @@ public class OptionMenu extends MenuState {
 	BTextField text;
 	BButton backButton;
 	BButton saveButton;
+	BButton rebuildModelCache;
 	private WarehouseTrainer app;
 	public OptionMenu(WarehouseTrainer wt) {
 		super("Options");
@@ -57,14 +59,18 @@ public class OptionMenu extends MenuState {
         
 		
         
-        saveButton = new BButton ("save");
+        saveButton = new BButton ("Save");
         saveButton.setPreferredSize(100, 70);
         saveButton.setLocation(25, 25);
         
+        rebuildModelCache = new BButton("Rebuild Model Cache");
+        rebuildModelCache.setPreferredSize(100, 70);
+        rebuildModelCache.setLocation(50, 25);
         
         mainWindow.add(area);
         mainWindow.add(text);
         mainWindow.add(saveButton);
+        mainWindow.add(rebuildModelCache);
         
         backWindow = new BWindow(BuiSystem.getStyle(), GroupLayout.makeVStretch());
 		backWindow.setStyleClass("champion");
@@ -77,7 +83,11 @@ public class OptionMenu extends MenuState {
         backButton.setPreferredSize(100, 70);
         backButton.setLocation(25, 25);
         
-        
+        rebuildModelCache.addListener(new ActionListener(){
+        	public void actionPerformed(ActionEvent event){
+        		ModelLoader.rebuildCache();
+        	}
+        });
         
         saveButton.addListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
