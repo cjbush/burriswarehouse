@@ -166,6 +166,9 @@ public class ModelLoader {
 				jmeNode = (Node) bi.load(url);
 			} catch (IOException e1) {
 			}
+			catch(NullPointerException e2){
+				System.exit(0);
+			}
 			return jmeNode;
 		}
 	}

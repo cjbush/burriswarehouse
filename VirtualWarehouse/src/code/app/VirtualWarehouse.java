@@ -191,7 +191,7 @@ public class VirtualWarehouse extends GameState {
 		// Start the WarehouseTrainer
 		WarehouseTrainer app = new WarehouseTrainer();
 		app.setConfigShowMode(ConfigShowMode.AlwaysShow);
-		app.setConfigShowMode(ConfigShowMode.ShowIfNoConfig);
+		//app.setConfigShowMode(ConfigShowMode.ShowIfNoConfig);
 		app.start();
 
 	}
