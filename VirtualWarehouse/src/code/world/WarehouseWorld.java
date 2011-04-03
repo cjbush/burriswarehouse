@@ -41,7 +41,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadWarehouseShell = true; //warehouse walls
 	public static final boolean loadWarehouseInsides = true; //racks, pallets, etc...
 	
-	public static final boolean loadRacks = false; //racks
+	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
 	public static final boolean fillRacks = true; //put pallets and product on racks
@@ -254,7 +254,7 @@ public class WarehouseWorld extends Node {
 				query = "select * from MODEL where typeid!='warehouse'";
 				
 				if(!loadRacks){
-					query += " and typeid!='racks'";
+					query += " and typeid!='rack'";
 				}
 				if(!loadObjects){
 					query += " and typeid!='object'";
