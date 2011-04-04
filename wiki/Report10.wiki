@@ -17,13 +17,13 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished: 
-  * Most immediate upcoming tasks:
+  * Tasks accomplished: Fixed pallet pickup issues and data persistence with random pallets. Fixed loading issue with loading jme binary files from filesystem. Got loading time down to ~65 seconds on my machine. Fixed various bounding box issues with pallets around the warehouse floor. Designed method for implementing Vocollect feedback for autocompletion.
+  * Most immediate upcoming tasks: Implement Vocollect feedback for auto completion, add support for rack-based pallets for data persistence. Optimize.
 
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush||x||108||0|| || || ||
+||Chris Bush||16||124||+4|| || || ||
 ||Caleb Mays||12||114.5||-5.5|| || || ||
 ||Dan Jewett||12||124||+4|| ||*Weekly Total*||||
 ||*Totals*|| x || x || x || ||*YTD Total*||$3.50||
