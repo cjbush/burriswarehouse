@@ -38,6 +38,7 @@ public class StackedPallet extends Node
 	}
 	
 	public int getID(){ return id; }
+	public void setID(int id){ this.id = id; }
 	
 	public StackedPallet(int id, int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, int productHeight, String productType)
 	{		
