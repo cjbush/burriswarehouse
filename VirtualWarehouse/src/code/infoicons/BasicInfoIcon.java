@@ -34,14 +34,14 @@ public class BasicInfoIcon extends Node {
 	}
 	
 	public void makeActive() {
-		logger.info(this.getName() + " active!");
+		//logger.info(this.getName() + " active!");
 		//pause the icon to show that it is active
 		tempSt = (SpatialTransformer) this.getController(0);
 		this.removeController(0);
 	}
 	
 	public void makeUnActive() {
-		logger.info(this.getName() + " unactive!");
+		//logger.info(this.getName() + " unactive!");
 		//make the icon move again to show that the player is
 		//no longer close enough to activate it
 		this.addController(tempSt);

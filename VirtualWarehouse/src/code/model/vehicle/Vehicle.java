@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import code.app.VirtualWarehouse;
+import code.collisions.BoundingBox2D;
 import code.model.ModelLoader;
 import code.model.action.pallet.StackedPallet;
 import code.model.player.Player;
@@ -72,6 +73,7 @@ public class Vehicle extends Node {
 	private Spatial tempPlayerCollisionModel;
 	
 	private Player player;
+	public static int lastPalletPicked = -2;
 
 	// temporary vector for the rotation
 	private static final Vector3f tempVa = new Vector3f();
@@ -207,9 +209,11 @@ public class Vehicle extends Node {
 	{
 		pallet.unlock();
 		pallet.removeFromParent();
+		
+		float x = this.getWorldTranslation().x;
+		float z = this.getWorldTranslation().z;
 
-		Vector3f translation = new Vector3f(this.getWorldTranslation().x, 0f,
-				this.getWorldTranslation().z);
+		Vector3f translation = new Vector3f(x, 0f, z);
 		Quaternion rotation = this.getLocalRotation().clone();
 
 		pallet.setLocalTranslation(translation);
@@ -218,7 +222,12 @@ public class Vehicle extends Node {
 		warehouseGame.getRootNode().attachChild(pallet); //ROOM MANAGER
 		
 		PersistenceHandler.updatePalletLocation(pallet);
-		
+		VirtualWarehouse.setBoundingBoxByID(pallet.getID(), new BoundingBox2D(pallet.getID(), x, z));
+		lastPalletPicked  = pallet.getID();
+		if(lastPalletPicked == -1){
+			lastPalletPicked = -2;
+			pallet.setID(-2);
+		}
 		pallet.setInUse(false);
 		pallet = null;
 	}
@@ -314,7 +323,6 @@ public class Vehicle extends Node {
 	}
 
 	public void processCollisions() {
-
 		if (velocity > 0) {
 			velocity = -.2f;
 		} else if (velocity < 0) {
@@ -342,6 +350,11 @@ public class Vehicle extends Node {
 	{
 		if (pallet != null) 
 		{
+			BoundingBox2D b = VirtualWarehouse.getBoundingBoxByID(p.getID());
+			if(b != null){
+				b = new BoundingBox2D(p.getID(), -10, -10);
+				VirtualWarehouse.setBoundingBoxByID(p.getID(), b);
+			}
 			p.unlock();
 			p.removeFromParent();
 

@@ -58,7 +58,7 @@ public class VehicleHandler extends InputHandler {
         keyboard.set("turnLeft", KeyInput.KEY_A);
 
         // the keyboard thing for being able to pick up the pallets.
-        keyboard.set("pickupPallet", KeyInput.KEY_P);
+        keyboard.set("pickupPallet", KeyInput.KEY_V);
     }
 
     /**

@@ -5,11 +5,21 @@ public class BoundingBox2D {
 	private float rightX;
 	private float lowerZ;
 	private float upperZ;
+	private int id;
 
 	public BoundingBox2D() {
 	}
 	
+	public BoundingBox2D(int id, float x, float z){
+		this.id = id;
+		this.leftX = x - .275f;
+		this.rightX = x + .275f;
+		this.lowerZ = z +.275f;
+		this.upperZ = z - .275f;
+	}
+	
 	public BoundingBox2D(float leftX, float rightX, float lowerZ, float upperZ) {
+		this.id = -1;
 		this.leftX = leftX;
 		this.rightX = rightX;
 		this.lowerZ = lowerZ;
@@ -46,6 +56,10 @@ public class BoundingBox2D {
 
 	public float getUpperZ() {
 		return upperZ;
+	}
+	
+	public int getID(){
+		return id;
 	}
 
 	

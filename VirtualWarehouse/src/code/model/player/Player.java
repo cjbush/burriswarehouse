@@ -550,6 +550,7 @@ public class Player extends AnimatedModel {
     		if(playerBox.isCollidingWith(b)){
     			
     			if(this.inVehicle()){
+    				if(b.getID() == Vehicle.lastPalletPicked) return;
     				this.getVehicleBeingUsed().processCollisions();
     				/*float playerX = this.getVehicleBeingUsed().getLocalTranslation().getX();
     				float playerZ = this.getVehicleBeingUsed().getLocalTranslation().getZ();

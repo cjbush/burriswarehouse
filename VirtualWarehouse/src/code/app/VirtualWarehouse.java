@@ -172,7 +172,7 @@ public class VirtualWarehouse extends GameState {
 	private boolean useVocollect = false;
 	private DeliveryArea deliveryArea;
 
-	private BoundingBox2D [] boundingBoxes;
+	private static BoundingBox2D [] boundingBoxes;
 
 	private boolean showArrow;
 	private static final boolean showGrid = false;
@@ -657,14 +657,9 @@ public class VirtualWarehouse extends GameState {
 			
 			for (int i = numBoxes; i < boxCount+numBoxes; i++){
 				rs3.next();
-				float xCenter = rs3.getFloat("X_Location");
-				float zCenter = rs3.getFloat("Z_Location");
-				
-				float leftX = xCenter - .3f;
-				float rightX = xCenter + .3f;
-				float lowerZ = zCenter +.3f;
-				float upperZ = zCenter - .3f;
-				boundingBoxes[i] = new BoundingBox2D(leftX, rightX, lowerZ, upperZ);
+				float x = rs3.getFloat("X_Location");
+				float z = rs3.getFloat("Z_Location");
+				boundingBoxes[i] = new BoundingBox2D(rs3.getInt("id"), x, z);
 			}
 
 		} catch (Exception e) {
@@ -909,6 +904,22 @@ public class VirtualWarehouse extends GameState {
 	
 	public BoundingBox2D[] get2DCollidables(){
 		return boundingBoxes;
+	}
+	
+	public static BoundingBox2D getBoundingBoxByID(int id){
+		for(int i=0; i<boundingBoxes.length; i++){
+			if(boundingBoxes[i].getID() == id) return boundingBoxes[i];
+		}
+		return null;
+	}
+	
+	public static void setBoundingBoxByID(int id, BoundingBox2D b){
+		for(int i=0; i<boundingBoxes.length; i++){
+			if(boundingBoxes[i].getID() == id){
+				boundingBoxes[i] = b;
+				return;
+			}
+		}
 	}
 	
 	public DebugHUD getDebugHUD(){
