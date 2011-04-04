@@ -135,6 +135,7 @@ public class AutoCompletionHandler {
 
 		if (action == GETONPJ) {
 			player.checkVehicleEnterExit(true);
+			walking = false;
 			counter++;
 		} else if (action == GETOFFPJ) {
 			player.checkVehicleEnterExit(true);
