@@ -10,8 +10,9 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: 
-   * Most immediate upcoming tasks: 
+   * Tasks accomplished: Began modeling Grand Central (ran into a few problems).  Modified the Product class with Chris.  Helped Caleb at the beginning of the week with some bugs/modifying pallet class.
+   * Future tasks researched:  Rendering, Animation, Texturing, Lighting
+   * Most immediate upcoming tasks: Finish modeling Grand Central. Obtain some textures manually for products.  Modeling the floor bins.  Sound Effects. Finish populating the warehouse with new models, adding permanent positions with new models.
 
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
@@ -24,7 +25,7 @@
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x||108||0|| || || ||
 ||Caleb Mays||12||114.5||-5.5|| || || ||
-||Dan Jewett||x||112||+4|| ||*Weekly Total*||$3.50||
+||Dan Jewett||12||124||+4|| ||*Weekly Total*||||
 ||*Totals*|| x || x || x || ||*YTD Total*||$3.50||
 
 
