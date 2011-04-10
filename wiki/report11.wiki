@@ -1,0 +1,37 @@
+#summary Report for 3/4-4/10
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished: 17 NPCs in the database. Some walk up to the wrap machines, and then go back to the racks. Most of them are in the produce and meat and dairy sections. Also, wrote most of the installation manual. 
+   * Most immediate upcoming tasks: Finish Maintenance Manual and Installation manual.  
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished: 
+   * Future tasks researched:  
+   * Most immediate upcoming tasks: 
+
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Most immediate upcoming tasks: 
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||x||124||+4|| || || ||
+||Caleb Mays||12||126.5||-5.5|| || || ||
+||Dan Jewett||x||124||+4|| ||*Weekly Total*||||
+||*Totals*|| x || x || x || ||*YTD Total*||$3.50||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - 
+  * Chris - 
+  * Caleb - 
+  * Dan - 
