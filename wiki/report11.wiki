@@ -5,7 +5,7 @@
 ==Caleb Mays, Software Developer==
 
    * Tasks accomplished: 17 NPCs in the database. Some walk up to the wrap machines, and then go back to the racks. Most of them are in the produce and meat and dairy sections. Also, wrote most of the installation manual. 
-   * Most immediate upcoming tasks: Finish Maintenance Manual and Installation manual.  
+   * Most immediate upcoming tasks: Finish Maintenance Manual and Installation manual. Look at modifying GUI -- I'm thinking mostly the color scheme...
 
 
 ==Dan Jewett, Modeler/Software Developer==
