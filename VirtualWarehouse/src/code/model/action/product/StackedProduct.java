@@ -20,12 +20,12 @@ public class StackedProduct extends Node
 	
 	public StackedProduct(int height, WarehouseWorld ww)
 	{
-		this(height,ww,null,null,false, "random");
+		this(height,ww,null,null,false,null);
 	}
 	
 	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name)
 	{
-		this(height,ww,binNumber,name,false, "random");
+		this(height,ww,binNumber,name,false,null);
 	}
 	
 	public StackedProduct(int height, WarehouseWorld ww, String binNumber, String name, boolean pickable, String productType)
