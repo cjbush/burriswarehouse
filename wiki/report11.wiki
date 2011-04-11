@@ -10,9 +10,8 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: 
-   * Future tasks researched:  
-   * Most immediate upcoming tasks: 
+   * Tasks accomplished: A problem of out of memory error that was creeping may have been fixed.  I deleted 3 huge bump map files that really just made the warehouse look nicer, but was not necessary.  Fixed Rack/Pallet/StackedPallet/Product/StackedProduct.  There are now dynamic product Textures.  One issue right now with rack product textures (Check Wiki).  Finalized Grand Central, though still a transparency issue with some planes which makes it look ugly (Check Wiki).  Floor Bin Modeling Completed.
+   * Most immediate upcoming tasks: Finalizing (What Else Needs Done?). Sound Effects. Adding permanent positions with new models. Finish populating the warehouse with new models.
 
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
@@ -25,7 +24,7 @@
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x||124||+4|| || || ||
 ||Caleb Mays||12||126.5||-5.5|| || || ||
-||Dan Jewett||x||124||+4|| ||*Weekly Total*||||
+||Dan Jewett||14||138||+6|| ||*Weekly Total*||||
 ||*Totals*|| x || x || x || ||*YTD Total*||$3.50||
 
 
