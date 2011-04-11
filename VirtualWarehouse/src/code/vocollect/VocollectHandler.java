@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 
+import code.app.VirtualWarehouse;
 import code.hud.MessageBox;
+import code.model.player.Player;
 
 /** 
  * This is the client-side component of the Vocollect client/server communication socket.
@@ -173,6 +175,7 @@ public class VocollectHandler extends Thread {
 				case 8: //LUTPicked
 					//add one to current pick counter since we just completed a job
 					currentPickJob++;
+					Player.ach.advance();
 					//was this the last job?
 					if (currentPickJob >= numPickJobs) {
 						setStatus(Status.PICKINGDONE);

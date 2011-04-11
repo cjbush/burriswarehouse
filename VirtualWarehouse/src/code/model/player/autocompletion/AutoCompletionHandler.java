@@ -4,18 +4,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.jme.input.InputHandler;
+import code.app.VirtualWarehouse;
+import code.hud.AutoCompletionHUD;
+import code.model.player.Player;
+import code.util.DatabaseHandler;
+
 import com.jme.math.FastMath;
-import com.jme.math.Matrix3f;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 
-import code.model.player.Player;
-import code.model.player.PlayerHandler;
-import code.util.Coordinate;
-import code.util.DatabaseHandler;
-
-public class AutoCompletionHandler {
+public class AutoCompletionHandler extends Thread{
 	private ArrayList<Waypoint> path;
 	private ResultSet rs;
 	private Waypoint start;
@@ -24,6 +22,8 @@ public class AutoCompletionHandler {
 	private Player player;
 	private boolean active;
 	private boolean walking;
+	private boolean paused = false;
+	private long pauseStart;
 	private int section;
 	private float playerDirection;
 	public static final Vector3f UP = new Vector3f(0, 1, 0);
@@ -40,8 +40,7 @@ public class AutoCompletionHandler {
 
 
 
-	public AutoCompletionHandler(Player player, int pickjob, int start,
-			int finish) {
+	public AutoCompletionHandler(Player player, int pickjob, int start, int finish) {
 		if (!enabled)
 			return;
 
@@ -56,6 +55,7 @@ public class AutoCompletionHandler {
 	public boolean isActive() {
 		return this.active;
 	}
+
 
 	public void activate() {
 		if (!enabled)
@@ -72,7 +72,7 @@ public class AutoCompletionHandler {
 			while (rs.next()) {
 				Waypoint w = new Waypoint(rs.getFloat(3), rs.getFloat(4), rs
 						.getInt(2), rs.getString(5), rs.getInt(6),
-						rs.getInt(7), rs.getInt(8));
+						rs.getInt(7), rs.getInt(8), rs.getString(9), rs.getString(10), rs.getDouble(11));
 				path.add(w);
 			}
 
@@ -125,8 +125,30 @@ public class AutoCompletionHandler {
 		player.getDebugHud().setAutoCount(counter);
 
 		Waypoint w = path.get(this.counter);
+		
+		if(paused){
+			if(System.currentTimeMillis() - pauseStart > (w.getSleepTime()*1000)){
+				paused = false;
+				w.setSleepTime(0);
+			}
+			else{
+				return;
+			}
+		}
+		
+		if(w.getSleepTime()>0){
+			pauseStart = System.currentTimeMillis();
+			paused = true;
+			walking = false;
+			player.stationaryAnim();
+			return;
+		}
 
 		int action = w.getAction();
+		
+		VirtualWarehouse.getAutoHUD().setVocollectPrompt("Vocollect Prompt: "+w.getVocollectPrompt());
+		VirtualWarehouse.getAutoHUD().setVocollectResponse("Vocollect Response: "+w.getVocollectResponse());
+		
 
 		float x = w.getX();
 		float z = w.getZ();
