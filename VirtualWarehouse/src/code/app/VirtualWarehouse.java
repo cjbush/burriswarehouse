@@ -11,6 +11,7 @@ import code.collisions.BoundingBox2D;
 import code.component.Score;
 import code.component.WarehouseChaseCam;
 import code.gui.LoadingWindow;
+import code.hud.AutoCompletionHUD;
 import code.hud.DebugHUD;
 import code.hud.InformationBar;
 import code.hud.MessageBox;
@@ -69,7 +70,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean infoIconsEnabled = true;
 
-	public static boolean DEBUG_MODE = true;
+	public static boolean DEBUG_MODE = false;
 
 	private LoadingWindow loadingScreen;
 	private boolean showLoadingScreen = true;
@@ -78,6 +79,8 @@ public class VirtualWarehouse extends GameState {
 
 	// HUD node for displaying debug information
 	private DebugHUD debugHUD;
+	
+	private static AutoCompletionHUD autoHUD;
 
 	// HUD for Minimap
 	private MinimapHUD minimapHUD;
@@ -533,6 +536,7 @@ public class VirtualWarehouse extends GameState {
 		
 		double start = System.currentTimeMillis();
 		debugHUD = new DebugHUD();
+		autoHUD = new AutoCompletionHUD();
 		messageBox = new MessageBox(font);
 		infoBar = new InformationBar(this, font);
 		pauseDisplay = new PauseDisplay(font);
@@ -563,6 +567,8 @@ public class VirtualWarehouse extends GameState {
 		if (DEBUG_MODE) {
 			hudNode.attachChild(debugHUD);
 		}
+		
+		hudNode.attachChild(autoHUD);
 
 		pManager.add(hudPass);
 		double total = System.currentTimeMillis() - start;
@@ -924,6 +930,10 @@ public class VirtualWarehouse extends GameState {
 	
 	public DebugHUD getDebugHUD(){
 		return debugHUD;
+	}
+	
+	public static AutoCompletionHUD getAutoHUD(){
+		return autoHUD;
 	}
 
 	public float getNearPlane()

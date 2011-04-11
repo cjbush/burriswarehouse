@@ -55,7 +55,7 @@ public class Player extends AnimatedModel {
 	
 	private VirtualWarehouse warehouseGame;
 	private InputHandler input;
-	private AutoCompletionHandler ach;
+	public static AutoCompletionHandler ach;
 	
 	private Spatial collisionModel;
 	

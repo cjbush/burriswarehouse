@@ -8,8 +8,11 @@ public class Waypoint {
 	private int section;
 	private int sequence;
 	private int action;
+	private String VocollectPrompt;
+	private String VocollectResponse;
+	private double sleepTime;
 	
-	public Waypoint(float x, float z, int pickjob, String description, int section, int sequence, int action){
+	public Waypoint(float x, float z, int pickjob, String description, int section, int sequence, int action, String vp, String vr, double t){
 		this.setX(x);
 		this.setZ(z);
 		this.setPickjob(pickjob);
@@ -17,6 +20,9 @@ public class Waypoint {
 		this.setSection(section);
 		this.setSequence(sequence);
 		this.setAction(action);
+		this.setVocollectPrompt(vp);
+		this.setVocollectResponse(vr);
+		this.setSleepTime(t);
 	}
 
 	public void setX(float x) {
@@ -73,5 +79,29 @@ public class Waypoint {
 
 	public int getAction() {
 		return action;
+	}
+
+	public void setVocollectPrompt(String vocollectPrompt) {
+		VocollectPrompt = vocollectPrompt;
+	}
+
+	public String getVocollectPrompt() {
+		return VocollectPrompt;
+	}
+
+	public void setVocollectResponse(String vocollectResponse) {
+		VocollectResponse = vocollectResponse;
+	}
+
+	public String getVocollectResponse() {
+		return VocollectResponse;
+	}
+
+	public void setSleepTime(double sleepTime) {
+		this.sleepTime = sleepTime;
+	}
+
+	public double getSleepTime() {
+		return sleepTime;
 	}
 }
