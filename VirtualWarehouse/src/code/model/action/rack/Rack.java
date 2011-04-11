@@ -7,6 +7,7 @@ import code.model.racklabels.BinNumberLabel;
 import code.model.racklabels.CheckDigitLabel;
 import code.model.racklabels.RackAisleLabel;
 import code.util.DUtility;
+import code.world.Room;
 import code.world.WarehouseWorld;
 
 import com.jme.bounding.BoundingBox;
@@ -31,6 +32,8 @@ public class Rack extends Node
 	
 	private int rackHeight; //how high up to go
 	private String rackType; //single, double, for special cases
+	
+	private int smallRackHeight = 4;
 	
 	private final int totalOnShelf = 4; //the most boxes that can be on a particular shelf
 	
@@ -84,6 +87,11 @@ public class Rack extends Node
 	//attaches an aisle to the rack
 	public void attachAisleLabel(String text, String position) 
 	{
+		if (rackHeight == smallRackHeight)
+		{
+			return;
+		}
+		
 		rack.updateGeometricState(0, true);
 		
 		RackAisleLabel t = new RackAisleLabel(text, font, ww.getVirtualWarehouse().getSharedNodeManager());
@@ -108,6 +116,11 @@ public class Rack extends Node
 	//attaches a bin label to the rack
 	public void attachBinLabel(String binNumber, String checkNumber, String position)
 	{
+		if (rackHeight == smallRackHeight)
+		{
+			return;
+		}
+		
 		rack.updateGeometricState(0, true);
 		
 		BinNumberLabel binLabel = new BinNumberLabel(binNumber, font, ww.getVirtualWarehouse().getSharedNodeManager());
@@ -201,9 +214,9 @@ public class Rack extends Node
 	{
 		rackHeight = 0;
 		
-		if (name.equals("racksSingleRaised147"))
+		if (name.toLowerCase().indexOf("rackssingleraised147") > -1)
 		{
-			rackHeight = 3;
+			rackHeight = smallRackHeight;
 		}
 		else
 		{
@@ -254,7 +267,7 @@ public class Rack extends Node
 		//for how tall it is
 		for (int i=0; i<rackHeight; i++)
 		{
-			int h1;//rack height
+			int h1;//pallet height
 			int h2;//box height
 			boolean tempProduct = false;//product associated
 			
@@ -277,13 +290,13 @@ public class Rack extends Node
 			for (int j=0; j<num; j++)
 			{
 				//usual case, if it is the normal height offset
-				if (heightOffset == .82)
+				if (heightOffset == .82f)
 				{
 					if (i==0) //if it is the ground layer
 					{
 						h1 = random(1,2);
 						h2 = 1;
-						tempProduct = true; //withProduct
+						tempProduct = withProduct;
 					}
 					else
 					{
@@ -293,21 +306,36 @@ public class Rack extends Node
 				}
 				else //there cant be as many on the raised racks, special case
 				{
-					if (i+1==rackHeight)
+					if (rackHeight != smallRackHeight)
 					{
-						h1 = random(3,8);
-						h2 = random(3,8);
-					}
-					else if (i==0)
-					{
-						h1 = random(1,2);
-						h2 = 1;
-						tempProduct = true; //withProduct
+						if (i+1==rackHeight)
+						{
+							h1 = random(3,8);
+							h2 = random(3,8);
+						}
+						else if (i==0)
+						{
+							h1 = random(1,2);
+							h2 = 1;
+							tempProduct = withProduct;
+						}
+						else
+						{
+							h1 = random(1,2);
+							h2 = 1;
+						}
 					}
 					else
 					{
-						h1 = random(1,2);
-						h2 = 1;
+						if (i+1==rackHeight)
+						{
+							h1 = random(10,20);
+						}
+						else
+						{
+							h1 = random(5,10);
+						}
+						h2 = 0;
 					}
 				}
 				
@@ -340,13 +368,13 @@ public class Rack extends Node
 				
 				float rot = util[num-1].rotation();
 				
-				StackedPallet SDP = new StackedPallet(-1, h1,this.ww,binNumber,binNumber,tempProduct,h2,productType);
+				StackedPallet SDP = new StackedPallet(-1, h1,this.ww,binNumber,rackName+"_"+j+i,tempProduct,h2,productType);
 				
 				pallets[j][i] = SDP;
 				
 				SDP.setLocalTranslation(positions[num-1][j].x+trans1, 0f+heightOffset*i, positions[num-1][j].z+trans2);
 				SDP.setLocalRotation(new Quaternion().fromAngles(0f,(float)(rot*(Math.PI/180)),0f));
-				
+
 				rack.attachChild(SDP);
 			}
 		}

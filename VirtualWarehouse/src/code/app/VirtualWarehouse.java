@@ -805,7 +805,7 @@ public class VirtualWarehouse extends GameState {
 		
 		light.setAttenuate(true);
 		light.setShadowCaster(false);
-		light.setLinear(.2f);
+		light.setLinear(.26f);
 	
 		light.setLocation(new Vector3f(x, 4.583f, z));
 		light.setEnabled(true);

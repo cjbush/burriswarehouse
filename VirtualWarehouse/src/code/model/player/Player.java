@@ -253,7 +253,7 @@ public class Player extends AnimatedModel {
  		float X = this.getLocalTranslation().getX();
 		float Z = this.getLocalTranslation().getZ();
 		try {
-			String query = "insert into DPallet (X_Location, Z_Location) values ('" +X+ "'," + " '"+Z +"');";
+			String query = "insert into DPallet (X_Location, Z_Location, isRandom, isPickable) values ('" +X+ "'," + " '"+Z +"'," + " '1', '0');";
 			DatabaseHandler.executeUpdate(query);			
 			warehouseGame.getWarehouseWorld().makeThis(X,Z);
 			

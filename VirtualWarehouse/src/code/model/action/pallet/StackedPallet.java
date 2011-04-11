@@ -18,7 +18,6 @@ public class StackedPallet extends Node
 	
 	private int id;
 	
-	
 	private Pallet palletStack[];
 	
 	private float height;

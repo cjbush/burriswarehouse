@@ -30,8 +30,6 @@ public class Product extends Node
 	private WarehouseWorld ww;
 	private boolean pickable;
 	
-	private static int counter = 0;
-	
 	private float width = .39f;
 	private float depth = .39f;
 	private float height = .27f;
@@ -40,16 +38,18 @@ public class Product extends Node
 	
 	public Product(WarehouseWorld ww)
 	{
-		this(ww,null,null,false,"random");
+		this(ww,null,null,false,null);
 	}
 
 	public Product(WarehouseWorld ww, String binNumber, String name, boolean top, String productType)
 	{
 		this.ww = ww;
 		this.setName(name);
+		
 		this.binNumber = binNumber;
-		//this.productType = productType;
-		this.productType = "produce";
+		
+		this.productType = productType;
+		
 		loadModel(productType);
 		pickable = top;
 		
@@ -61,27 +61,38 @@ public class Product extends Node
 	
 	private void loadModel(String num)
 	{
-		Box b = new Box("box"+(counter++), new Vector3f(-width/2, 0, -depth/2), new Vector3f(width/2, height, depth/2));
+		Box b = new Box("My box", new Vector3f(-width/2, 0, -depth/2), new Vector3f(width/2, height, depth/2));
 		
 		createProductTexture(b,num);
 		
 		this.attachChild(b);
 	}
 	
-	private void createProductTexture(Box b, String num)
+	private void createProductTexture(Box b, String str)
 	{
+		DisplaySystem d = ww.getVirtualWarehouse().getDisplay();
+		
 		try
 		{
-			DisplaySystem d = ww.getVirtualWarehouse().getDisplay();
-			
 			TextureState ts = d.getRenderer().createTextureState();
 			
-			File f = getTexture(num);
+			File f = getTexture(str);
 			
 			Texture t = TextureManager.loadTexture(f.toURI().toURL(),Texture.MinificationFilter.BilinearNearestMipMap,Texture.MagnificationFilter.Bilinear);
 			
 			ts.setTexture(t);
 			
+			b.setRenderState(ts);
+			
+			b.updateRenderState();
+		}
+		catch (Exception e)
+		{
+			//e.printStackTrace();
+			//System.out.println(str);
+		}
+		finally
+		{
 			MaterialState ms = d.getRenderer().createMaterialState();
 			
 			ms.setDiffuse(new ColorRGBA(.294f, .180f, .081f, 1f));
@@ -89,64 +100,47 @@ public class Product extends Node
 			b.setRenderState(ms);
 			
 			b.updateRenderState();
-			
-			b.setRenderState(ts);
-		}
-		catch (Exception e)
-		{
-			return;
 		}
 	}
 	
 	private File getTexture(String productType)
 	{
-		try{
-			File file;
+		File file;
 		
+		if (productType != null)
+		{
 			File folder = new File(productTextureLocation+productType+"/");
 			Object path[] = ridSVN(folder.list());
 			
-			//file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
-			Random generator = new Random(System.currentTimeMillis());
-			file = new File(folder.getPath() + "/" + (generator.nextInt(2)+1) + ".jpg");
+			file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
+		}
+		else
+		{
+			File root = new File(productTextureLocation);
+			Object pick[] = ridSVN(root.list());
 			
-			/*else
-			{
-				File root = new File(productTextureLocation);
-				Object pick[] = ridSVN(root.list());
-				
-				File folder = new File(root.getPath() + "/" + (String)pick[(int)FastMath.floor(FastMath.nextRandomFloat()*pick.length)]);
-				Object path[] = ridSVN(folder.list());
-				
-				file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
-			}*/
-	
-			return file;
+			File folder = new File(root.getPath() + "/" + (String)pick[(int)FastMath.floor(FastMath.nextRandomFloat()*pick.length)]);
+			Object path[] = ridSVN(folder.list());
+			
+			file = new File(folder.getPath() + "/" + (String)path[(int)FastMath.floor(FastMath.nextRandomFloat()*path.length)]);
 		}
-		catch(Exception e){
-			return null;
-		}
+
+		return file;
 	}
 	
 	private Object[] ridSVN(String[] file)
 	{
-		try{
-			ArrayList<String> str = new ArrayList<String>();
+		ArrayList<String> str = new ArrayList<String>();
 		
-		
-			for (int i=0;i<file.length;i++)
+		for (int i=0;i<file.length;i++)
+		{
+			if (!file[i].equals(".svn"))
 			{
-				if (!file[i].equals(".svn"))
-				{
-					str.add(file[i]);
-				}
+				str.add(file[i]);
 			}
-			
-			return str.toArray();
 		}
-		catch(Exception e){
-			return null;
-		}
+		
+		return str.toArray();
 	}
 	
 	public Pick pickSmallProduct()
@@ -174,7 +168,8 @@ public class Product extends Node
 		return name;
 	}
 	
-	public String getBinNumber(){
+	public String getBinNumber()
+	{
 		return binNumber;
 	}
 }

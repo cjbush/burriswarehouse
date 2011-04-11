@@ -44,7 +44,7 @@ public class WarehouseWorld extends Node {
 	public static final boolean loadRacks = true; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
-	public static final boolean fillRacks = false; //put pallets and product on racks
+	public static final boolean fillRacks = true; //put pallets and product on racks
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean useArrow = true;
 	
@@ -297,7 +297,7 @@ public class WarehouseWorld extends Node {
 						//rack stuff, in one spot, easier to read
 						if(typeid.equals("rack"))
 						{
-							Rack rack = new Rack(object,name,this,r.getProductType());
+							Rack rack = new Rack(object,name+"_"+id,this,r.getProductType());
 							
 							ResultSet rack_result = DatabaseHandler.execute("select * from RACK where id = "+id+";");
 						    
@@ -402,10 +402,12 @@ public class WarehouseWorld extends Node {
 						float tX = result.getFloat("X_Location");
 						float tZ = result.getFloat("Z_Location");
 						
-						int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
-						int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3);
+						boolean isPickable = result.getBoolean("isPickable");
 						
-						StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,this,null,"Misc_Pallet"+i,false,h2,"random");
+						int h1 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
+						int h2 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*3);
+						
+						StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,this,null,"Misc_Pallet"+i,isPickable,h2,null);
 						SDP.setLocalTranslation(tX, 0f, tZ);
 						
 						Room r = roomManager.getRoom(tX, tZ);
@@ -439,7 +441,7 @@ public class WarehouseWorld extends Node {
 		int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 		int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3)+1;
 		
-		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"Misc_Pallet"+III,true,h2,"random");
+		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"New_Misc_Pallet"+III,true,h2,null);
 		SDP.setLocalTranslation(x, 0f, z);
 		warehouseGame.getRootNode().attachChild(SDP);
 		
