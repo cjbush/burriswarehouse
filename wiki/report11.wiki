@@ -17,7 +17,7 @@
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
   * Tasks accomplished: Implemented Vocollect prompts and responses for Auto Completion. Worked on Maintenance Manual on Google Docs.
-  * Most immediate upcoming tasks: Documentation, testing, bug fixing
+  * Most immediate upcoming tasks: Documentation, testing, bug fixing; Finish filling in database entries for auto completion prompts
 
 ==Time and Financial Report==
 
