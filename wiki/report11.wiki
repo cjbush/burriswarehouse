@@ -10,7 +10,7 @@
 
 ==Dan Jewett, Modeler/Software Developer==
 
-   * Tasks accomplished: A problem with the out of memory error that was creeping may have been fixed.  I deleted 3 huge bump map files that really just made the warehouse look nicer, but was not necessary.  Fixed Rack/StackedPallet/Pallet/StackedProduct/Product.  There is now loading of dynamic product Textures.  There is one issue right now with rack product textures (Check Wiki, Box Problems).  Finalized Grand Central, though there is still a transparency issue with some planes which makes it look ugly (Check Wiki, Model Grand Central).  Floor Bin Modeling is Completed.
+   * Tasks accomplished: A problem with the out of memory error that was creeping may have been fixed.  I deleted 3 huge bump map files that really just made the warehouse look nicer, but was not necessary.  There is now loading of dynamic product Textures.  There is one issue right now with rack product textures (Check Wiki, Box Problems).  Finalized Grand Central, though there is still a transparency issue with some planes which makes it look ugly (Check Wiki, Model Grand Central).  Floor Bin Modeling is Completed.
    * Most immediate upcoming tasks: Finalizing (What Else Needs Done?). Sound Effects. Adding permanent positions with new models. Finish populating the warehouse with new models.
 
 
