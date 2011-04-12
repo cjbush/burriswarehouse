@@ -28,7 +28,9 @@ public class Rack extends Node
 
 	private WarehouseWorld ww;
 	private String rackName;
+	
 	private Node rack;
+	private Node SDPs;
 	
 	private int rackHeight; //how high up to go
 	private String rackType; //single, double, for special cases
@@ -262,8 +264,10 @@ public class Rack extends Node
 	}
 	
 	//create pallets in the racks
-	public void createThePallets(String binNumber, boolean withProduct)
+	public Node createThePallets(String binNumber, boolean withProduct)
 	{
+		SDPs = new Node();
+		
 		//for how tall it is
 		for (int i=0; i<rackHeight; i++)
 		{
@@ -375,8 +379,10 @@ public class Rack extends Node
 				SDP.setLocalTranslation(positions[num-1][j].x+trans1, 0f+heightOffset*i, positions[num-1][j].z+trans2);
 				SDP.setLocalRotation(new Quaternion().fromAngles(0f,(float)(rot*(Math.PI/180)),0f));
 
-				rack.attachChild(SDP);
+				SDPs.attachChild(SDP);
 			}
 		}
+		
+		return SDPs;
 	}
 }

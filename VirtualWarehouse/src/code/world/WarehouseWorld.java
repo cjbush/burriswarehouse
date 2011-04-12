@@ -283,11 +283,19 @@ public class WarehouseWorld extends Node {
 					
 					object = null;
 					
+					Node sdps = null; //stacked pallets associated with racks
+					
 					//MAIN OBJ loader
 					object = ModelLoader.loadModel(format, MODEL_DIR + folderName + fileName, MODEL_DIR + folderName+"/", true, render, typeid);
 					Room r = roomManager.getRoom(translationX, translationZ);
 					if(object != null)
 					{
+						
+						Quaternion q = new Quaternion();
+						q.fromAngles((float)(rotationX*(Math.PI/180)),(float)(rotationY*(Math.PI/180)),(float)(rotationZ*(Math.PI/180)));
+						
+						Vector3f translation = new Vector3f(translationX, translationY, translationZ);
+						
 						//Arrow case
 						if (useArrow && name.equals("arrow"))
 						{
@@ -340,23 +348,30 @@ public class WarehouseWorld extends Node {
 							    boolean withProduct = (dbInfoRetriever.getIsPossiblePickJob(binNumber1) || dbInfoRetriever.getIsPossiblePickJob(binNumber2));
 							    String binName = binNumber1 != null ? binNumber1 : binNumber2 != null ? binNumber2 : "newRack"+id;
 							    
-							    rack.createThePallets(binName,withProduct);
+							    sdps = rack.createThePallets(binName,withProduct);
+							    
+							    sdps.setLocalScale(scale);
+							    sdps.setLocalTranslation(translation);
+								sdps.setLocalRotation(q);
+								
+								sdps.setName(name+"_sdps");
 						    }
 						}
 						
 						object.setLocalScale(scale);
-						object.setLocalTranslation(new Vector3f(translationX, translationY, translationZ));
-						
-						Quaternion q = new Quaternion();
-						q.fromAngles((float)(rotationX*(Math.PI/180)),(float)(rotationY*(Math.PI/180)),(float)(rotationZ*(Math.PI/180)));
+						object.setLocalTranslation(translation);
 						object.setLocalRotation(q);
 						
 						object.setName(name);
-						
-						
+							
 						if (r != null)
 						{
 							((Node)rooms.getChild(r.getName())).attachChild(object);
+							
+							if (sdps != null)//attach the associates stacked pallets, but not with the rack, with the rooms
+							{
+								((Node)rooms.getChild(r.getName())).attachChild(sdps);
+							}
 						}
 						else
 						{							
