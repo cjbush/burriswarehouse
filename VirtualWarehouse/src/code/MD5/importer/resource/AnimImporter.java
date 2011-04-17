@@ -22,6 +22,11 @@ import code.MD5.resource.anim.Frame;
  *
  * @author Yi Wang (Neakor)
  * @version Modified date: 02-19-2009 22:45 EST
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Takes a RandomPerson object to construct the animation of random textures to apply to MD5 model
  */
 public class AnimImporter extends ResourceImporter<IMD5Animation> {
 	/**

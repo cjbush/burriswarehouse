@@ -11,6 +11,11 @@ import com.jme.scene.state.CullState;
 /**
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * No longer using this.  Still here just in case
  *
  */
 public class TarpWall extends Node

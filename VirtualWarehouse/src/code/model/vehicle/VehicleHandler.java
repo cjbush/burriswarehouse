@@ -11,6 +11,13 @@ import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 import com.jme.scene.Controller;
 
+/**
+ * VehicleHandlers handles input from the keyboard or controller for moving the vehicle
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class VehicleHandler extends InputHandler {
     //the vehicle we are going to control
     private Vehicle vehicle;

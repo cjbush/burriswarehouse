@@ -12,13 +12,23 @@ import com.jme.math.Quaternion;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
 
+/**
+ * The Base Class for a Pallet
+ * Creates StackedProducts on top of a pallet
+ * 
+ * Rack->StackedPallets->[Pallets]->StackedProducts->Product
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Pallet extends Node
 {
 	private WarehouseWorld ww;
 	
-	private DUtility util;
+	private DUtility util; //a utility for randomness
 	
-	private StackedProduct products;
+	private StackedProduct products; //the products on top of the pallet
 	
 	public Pallet(WarehouseWorld ww)
 	{
@@ -32,46 +42,49 @@ public class Pallet extends Node
 	
 	public Pallet(WarehouseWorld ww, String binNumber, String name, boolean pickable,int height,String file, String productType)
 	{
-		util = new DUtility(null,null,.04f,.07f);
+		util = new DUtility(null,null,.04f,.07f); //.04 random tranlation of the product stack, the height for the stackedproducts
 		
 		this.ww = ww;
 		this.setName(name);
 
-		if (file == null)
+		if (file == null) //if no file is associated for the color, give it the default
 		{
 			file = "palletMain.obj";
 		}
 		
 		loadModel(file);
 			
-		if (height > 0)
+		if (height > 0) //if there are products on top of the pallet
 		{
-			products = new StackedProduct(height,ww,binNumber,name,pickable,productType);
+			products = new StackedProduct(height,ww,binNumber,name,pickable,productType); //make a new product stack
 			
-			float trans1 = util.translation();
+			float trans1 = util.translation(); //make some random translation
 			float trans2 = util.translation();
 			
-			products.setLocalTranslation(trans1, util.getH(), trans2);
+			products.setLocalTranslation(trans1, util.getH(), trans2); //translate the product stack
 
-			this.attachChild(products);
+			this.attachChild(products); //attach the product stack
 		}
 		else
 		{
-			products = null;
+			products = null; //otherwise no product stack associated with this
 		}
 	}
 	
+	//get the top product box
 	private Product getTop()
 	{
 		return this.products.getBox((int)(this.products.getHeight()-1));
 	}
 	
+	//load the model
 	private void loadModel(String file)
 	{			
 		Spatial m = ModelLoader.loadModel("obj", "data/models/pallets/main/"+file,"data/models/pallets/main/", true, ww.getVirtualWarehouse().getDisplay().getRenderer(), "pallet");
 		this.attachChild(m);
 	}
 	
+	//simulate a pick
 	public Pick pickSmallProduct()
 	{
 		if (isPickable() && this.products != null)
@@ -81,21 +94,25 @@ public class Pallet extends Node
 		return null;
 	}
 	
+	//if it is pickable
 	public boolean isPickable()
 	{
 		return getTop().isPickable();
 	}
 	
+	//get the StackedProducts
 	public StackedProduct getProducts()
 	{
 		return products;
 	}
 	
+	//get the binNumber
 	public String getBinNumber()
 	{
 		return getTop().getBinNumber();
 	}
 	
+	//get the Name
 	public String getMainName()
 	{
 		return getTop().getMainName();

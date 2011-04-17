@@ -6,6 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * Instead of making millions of calls to making the database, use one DatabaseHandler to handle db connections
+ * and sql commands
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class DatabaseHandler {
 	
 	private static String host = "joseph.cedarville.edu";

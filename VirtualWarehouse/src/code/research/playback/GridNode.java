@@ -9,6 +9,13 @@ import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
 import com.jme.scene.Spatial;
 
+/**
+ * A plane used for showing the grid (not used)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 @SuppressWarnings("serial")
 public class GridNode extends Node{
 	private boolean usable;

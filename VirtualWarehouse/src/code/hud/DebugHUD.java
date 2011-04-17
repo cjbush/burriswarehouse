@@ -12,6 +12,11 @@ import com.jmex.font2d.Text2D;
  * information life FPS.
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Small changes, such as seeing the player's location
  */
 public class DebugHUD extends HUD {
 

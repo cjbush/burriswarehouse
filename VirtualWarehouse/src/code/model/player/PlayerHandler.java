@@ -15,6 +15,12 @@ import com.jme.math.Vector3f;
  * A Third Person Input Handler.
  * @author VirtualVille Team (Richard Bradt, Gabe Greve, Eric Smith, and Ben Wiley)
  * Modified by VirtualWarehouse team
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Added more functionality to the Handler
+ * 
  */
 public class PlayerHandler extends InputHandler {
 	

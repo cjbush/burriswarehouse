@@ -1,5 +1,14 @@
 package code.collisions;
 
+/**
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * All objects now have a 2D box around them for collision checking
+ * This optimizes the game incredibly, instead of doing mathematical collision checking--
+ * Checking every single object in the scene graph, being way too costly in time.
+ * 
+ */
+
 public class BoundingBox2D {
 	private float leftX;
 	private float rightX;

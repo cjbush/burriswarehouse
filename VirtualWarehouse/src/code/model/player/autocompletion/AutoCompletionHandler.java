@@ -13,7 +13,19 @@ import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
 
-public class AutoCompletionHandler extends Thread{
+import code.model.player.Player;
+import code.model.player.PlayerHandler;
+import code.util.Coordinate;
+import code.util.DatabaseHandler;
+
+/**
+ * The AutoCompletionHandler handles the auto completion of the main character, simulating one particular part of the pick job
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
+public class AutoCompletionHandler {
 	private ArrayList<Waypoint> path;
 	private ResultSet rs;
 	private Waypoint start;

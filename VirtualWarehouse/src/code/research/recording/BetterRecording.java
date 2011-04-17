@@ -10,6 +10,14 @@ import java.util.concurrent.TimeUnit;
 import com.xuggle.mediatool.IMediaWriter;
 import com.xuggle.mediatool.ToolFactory;
 
+/**
+ * Takes screenshots of the game and creates a movie from it
+ * Can be used for ingame footage
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class BetterRecording implements Runnable{
 	
 	Robot robot;

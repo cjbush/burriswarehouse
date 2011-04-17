@@ -37,6 +37,11 @@ import com.jmex.model.ogrexml.SceneLoader;
  * Contains methods for loading models of various formats into JME as nodes.
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Many new optimizations take place, such as loading models as JME's native format (.jme) versus .obj, etc.
  */
 public class ModelLoader {
 
@@ -98,13 +103,15 @@ public class ModelLoader {
 			
 			if (newModel != null && r != null)
 			{
-				if (type.equals("object") || type.equals("rack"))
+				//Update, since there are some objects that we want to see the backsides of them, (like a garbage can) we added a quick check
+				//To see what type of culling to add
+				if (type.equals("object") || type.equals("rack")) //if it is a normal object or rack, we should not cull it, so we can see the backsides
 				{
 					CullState cs = r.createCullState();
 					cs.setCullFace(CullState.Face.None);
 					newModel.setRenderState(cs);
 				}
-				else
+				else //otherwise cull for optimization (really doesn't optimize much, but a little)
 				{
 					CullState cs = r.createCullState();
 					cs.setCullFace(CullState.Face.Back);

@@ -9,8 +9,10 @@ import net.java.games.input.ControllerEnvironment;
 import net.java.games.input.Component.Identifier;
 
 /**
- * @author Chris Bush
- *
+ * A test for a controller (not used)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
  */
 public class ControllerTest {
 

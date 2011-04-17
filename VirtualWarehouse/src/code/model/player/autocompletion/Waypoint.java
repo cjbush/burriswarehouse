@@ -1,5 +1,12 @@
 package code.model.player.autocompletion;
 
+/**
+ * Waypoint is one particular point of the pick job during the auto-complete process
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Waypoint {
 	private float x;
 	private float z;

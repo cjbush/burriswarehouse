@@ -45,6 +45,10 @@ import com.jme.math.Vector3f;
  * traveling forward).
  * @author Mark Powell
  *
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * 
  */
 public class VehicleRotateAction extends KeyInputAction {
     public static final int RIGHT = 0;

@@ -5,6 +5,14 @@ import net.java.games.input.Controller;
 import net.java.games.input.ControllerEnvironment;
 import net.java.games.input.Component.Identifier;
 
+/**
+ * A controller interface (used with an XBox 360 controller)
+ * This was never fully implemented
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class ControllerHandler extends PlayerHandler{
 	private Controller gamePad;
 	private boolean enabled;

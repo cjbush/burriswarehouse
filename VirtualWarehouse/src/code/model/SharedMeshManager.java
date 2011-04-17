@@ -16,6 +16,11 @@ import com.jme.scene.state.RenderState;
  * reloaded from the file for every instance of the model in the warehouse.
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * More Optimization Fixes
  */
 public class SharedMeshManager {
 

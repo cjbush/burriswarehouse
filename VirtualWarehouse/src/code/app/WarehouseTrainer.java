@@ -37,6 +37,12 @@ import com.jmex.game.state.load.TransitionGameState;
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Implements the new things created in VirtualWarehouse
+ * @see VirtualWarehouse
+ * 
  */
 
 public class WarehouseTrainer extends FixedFramerateGame {

@@ -40,12 +40,17 @@ import com.jmex.angelfont.BitmapFontLoader;
 /**
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
- *
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Lots of changes to the player for better control and of course a better model
+ * 
  */
 @SuppressWarnings("serial")
 public class Player extends AnimatedModel {
 	
-	public static final Vector3f INITIAL_LOCATION = new Vector3f(10.0f, .1f, -5.0f);
+	public static final Vector3f INITIAL_LOCATION = new Vector3f(10.0f, .1f, -5.0f); //initial location of the Player
 	public static final Quaternion INITIAL_ROTATION = new Quaternion().fromAngleAxis(FastMath.DEG_TO_RAD*90f, new Vector3f(0f,0f,0f));
 	
 	//sets how close the player must be to the vehicle before they can use it
@@ -209,26 +214,6 @@ public class Player extends AnimatedModel {
         delta.set(collisionModel.getLocalTranslation().subtract(lastPosition));
 		//checkForCollision();
         checkForCollision2D();
-		
-		//first try at collision detection
-		//check for collisions between player and walls/solid objects
-//		if (playerNode.hasCollision(world.getCollidables(), false))
-//		{
-//			logger.info("collision!!!");
-//			playerNode.getLocalTranslation().set(thirdLastPosition);
-//			playerNode.getLocalRotation().set(lastRotation);
-//			playerNode.updateGeometricState(0, true);
-//			// if (playerNode.hasCollision(collidables, false)) {
-//			//     logger.info("another collision!");
-//			// }
-//			
-//		}
-//		playerNode.updateGeometricState(0, true);
-//		//keep track of the last few positions for collision detection
-//		lastRotation = playerNode.getLocalRotation().clone();
-//		thirdLastPosition.set(new Vector3f(secondLastPosition.getX(), secondLastPosition.getY(), secondLastPosition.getZ()));
-//		secondLastPosition.set(new Vector3f(lastPosition.getX(), lastPosition.getY(), lastPosition.getZ()));
-//		lastPosition.set(playerNode.getLocalTranslation());
 		
 		if (inVehicle)
 		{
@@ -552,27 +537,7 @@ public class Player extends AnimatedModel {
     			if(this.inVehicle()){
     				if(b.getID() == Vehicle.lastPalletPicked) return;
     				this.getVehicleBeingUsed().processCollisions();
-    				/*float playerX = this.getVehicleBeingUsed().getLocalTranslation().getX();
-    				float playerZ = this.getVehicleBeingUsed().getLocalTranslation().getZ();
-	    			float diffRightX = Math.abs(playerBox.getRightX()-b.getRightX());
-	    			float diffLeftX = Math.abs(playerBox.getLeftX()-b.getLeftX());
-	    			float top = Math.abs(playerBox.getUpperZ()-b.getUpperZ());
-	    			float bottom = Math.abs(playerBox.getLowerZ()-b.getLowerZ());
-	    			
-	    			if (diffRightX <= diffLeftX && diffRightX <= top && diffRightX<= bottom){
-	    				this.getVehicleBeingUsed().setLocalTranslation(playerBox.getRightX()+diffRightX, .1f, playerZ);
-	    			}
-	    			
-	    			else if (diffLeftX <= diffRightX && diffLeftX <= top && diffLeftX <= bottom){
-	    				this.getVehicleBeingUsed().setLocalTranslation(playerBox.getLeftX()-diffLeftX, .1f, playerZ);
-	    			}
-	    			
-	    			else if (top <= bottom && top <= diffRightX && top <= diffLeftX){
-	    				this.getVehicleBeingUsed().setLocalTranslation(playerX, .1f, playerBox.getUpperZ()-top);
-	    			}
-	    			else if (bottom <= top && bottom <= diffRightX && bottom <= diffLeftX){
-	    				this.getVehicleBeingUsed().setLocalTranslation(playerX, .1f, playerBox.getLowerZ()+bottom);
-	    			}*/
+
 	    			updateBoundingBox();
     			}
     			else{
@@ -752,11 +717,6 @@ public class Player extends AnimatedModel {
 		this.addAnimation(Character.DRIVING_PALLET_ANIM[Character.NAME_INDX],Character.DRIVING_PALLET_ANIM[Character.FILE_INDX]);
 		
 		this.addAnimation(Character.PICK_UP[Character.NAME_INDX],Character.PICK_UP[Character.FILE_INDX]);
-		
-		//this.addAnimation(GRAB_ANIM_FILE[NAME_INDX], GRAB_ANIM_FILE[FILE_INDX]);
-		//this.addAnimation(WALKING_GRAB[NAME_INDX], WALKING_GRAB[FILE_INDX]);
-		//this.addAnimation(WALKING_BACK_GRAB[NAME_INDX], WALKING_BACK_GRAB[FILE_INDX]);
-		//this.addAnimation(GRAB_PJ[NAME_INDX], GRAB_PJ[FILE_INDX]);
 	}
 	
 	public void grabPalletJack()

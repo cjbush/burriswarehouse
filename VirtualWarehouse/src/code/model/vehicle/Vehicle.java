@@ -31,6 +31,11 @@ import com.jme.util.Timer;
  * 
  * @author Mark Powell - modified by VirtualWarehouse team
  * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Added functionality, smoother driving, smoother collisions for picking up pallets
+ * 
  */
 public class Vehicle extends Node {
 
@@ -192,10 +197,10 @@ public class Vehicle extends Node {
 	{
 		if (KeyBindingManager.getKeyBindingManager().isValidCommand("pickupPallet", false) || override) 
 		{
-			if (pallet == null) 
+			if (pallet == null) //if we aren't carrying a pallet
 			{
-				pallet = (StackedPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this, override);
-				attachPalletToVehicle(pallet);
+				pallet = (StackedPallet) getClosestWithinDistance(warehouseGame.getWarehouseWorld().getPalletsList(),MAX_DISTANCE_PALLET_PICKUP, this, override); //obtain the closet pallet
+				attachPalletToVehicle(pallet); //attach it
 			}
 			else
 			{
@@ -205,6 +210,7 @@ public class Vehicle extends Node {
 		}
 	}
 
+	//detaches the pallet from the pallet jack
 	private void detachPalletFromVehicle()
 	{
 		pallet.unlock();
@@ -232,6 +238,7 @@ public class Vehicle extends Node {
 		pallet = null;
 	}
 
+	//get the closet pallet with where you are at
 	private Node getClosestWithinDistance(List<StackedPallet> palletsList, float distance, Vehicle vehicle, boolean override)
 	{
 		Node closest = null;
@@ -259,6 +266,7 @@ public class Vehicle extends Node {
 		return closest;
 	}
 
+	//put the player on the vehicle
 	public void attachPlayerToVehicle(Player player) {
 
 		this.unlock();
@@ -292,6 +300,7 @@ public class Vehicle extends Node {
 		warehouseGame.getChaseCam().setTarget(this);
 	}
 
+	//move the player off the vehicle
 	public void removePlayerFromVehicle(Player player) {
 
 		// set the input handler back the one used before the player got in the
@@ -346,9 +355,10 @@ public class Vehicle extends Node {
 				tempVa).multLocal(velocity * time));
 	}
 
+	//attach the pallet to the vehicle
 	private void attachPalletToVehicle(StackedPallet p)
 	{
-		if (pallet != null) 
+		if (pallet != null) //if there is not a pallet that the jack is carrying
 		{
 			BoundingBox2D b = VirtualWarehouse.getBoundingBoxByID(p.getID());
 			if(b != null){

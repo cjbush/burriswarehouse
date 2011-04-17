@@ -17,6 +17,17 @@ import com.jme.renderer.Renderer;
 import com.jme.scene.Node;
 import com.jmex.model.util.ModelLoader;
 
+/**
+ * When optimizing the game to load faster, we tried to use threads
+ * This did not work, but still here just in case.
+ * We went many other different routes (such as the .jme solution)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * (Not used)
+ * 
+ */
+
 public class RoomLoaderThread extends Thread {
 	private int room;
 	public static final String MODEL_DIR = "data/models/";

@@ -62,13 +62,18 @@ import com.jmex.game.state.GameState;
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * The app includes lighting the scene, newer camera updates, capabilities of recording ingame, bounding boxes, and more.
+ * 
  */
 public class VirtualWarehouse extends GameState {
 
 	private static final Logger logger = Logger
 			.getLogger(VirtualWarehouse.class.getName());
 
-	private boolean infoIconsEnabled = true;
+	private boolean infoIconsEnabled = false; //change if you want annoying icons
 
 	public static boolean DEBUG_MODE = false;
 
@@ -122,11 +127,7 @@ public class VirtualWarehouse extends GameState {
 	private BitmapFont font;
 	
 	private Recording recorder;
-
-	// moved to WarehouseTrainer
-	// private int width, height, depth, freq;
-	// private boolean fullscreen;
-
+	
 	// Our camera objects for viewing the scene
 	// tpCam: the third person camera which is attached to the chaseCam and
 	// follows the
@@ -134,10 +135,15 @@ public class VirtualWarehouse extends GameState {
 	private Camera tpCam;
 	private ChaseCamera chaseCam;
 	
+	//near plane, how close to view things
 	private float nearPlane = .01f;
+	//far plane, how far the camera should see
 	private float farPlane = 15f;
+	//angle of view, angle of the camera - standard cameras view at 54.3 degrees.  Changing this will result in some cool effects, but not normal viewing
 	private float angleOfView = 54.3f;
 	
+	//the main lighting color scheme in the warehouse.  Observed and created by Dan Jewett
+	//This is what I feel the most realistic lighting scheme from being there and observing pictures.
 	private ColorRGBA mainLight = new ColorRGBA(.954f,.980f,.865f,1f);
 
 	// the timer
@@ -148,10 +154,12 @@ public class VirtualWarehouse extends GameState {
 	// specifies if a game has been successfully completed
 	private boolean gameComplete;
 
+	//rendering nodes, probably shouldn't be changed
 	protected BasicPassManager pManager;
 	protected RenderPass rootPass;
 	protected RenderPass hudPass;
 	
+	//Began implenting shadows, though it seemed to slow down the game.  Not implemented all the way yet.
 	protected ShadowedRenderPass srp = new ShadowedRenderPass();
 
 	// use sharedNodes for optimizing loading of models
@@ -168,7 +176,7 @@ public class VirtualWarehouse extends GameState {
 	private boolean paused = false;
 
 	// the sound player
-	SoundPlayer sounds = new SoundPlayer();
+	SoundPlayer sounds = new SoundPlayer(this);
 
 	// the Vocollect Handler
 	VocollectHandler vh;
@@ -222,7 +230,8 @@ public class VirtualWarehouse extends GameState {
 		return hudNode;
 	}
 
-	public Node getPlayerNode() {
+	//Update - Dan Jewett:  Return type from Node to Player
+	public Player getPlayerNode() {
 		return playerNode;
 	}
 
@@ -278,6 +287,7 @@ public class VirtualWarehouse extends GameState {
 		return useVocollect;
 	}
 
+	//Gets the arrow node, the arrow pointing which way to go
 	public Node getArrowNode() {
 		return arrow;
 	}
@@ -306,13 +316,6 @@ public class VirtualWarehouse extends GameState {
 		GameTaskQueueManager.getManager().getQueue(GameTaskQueue.UPDATE)
 				.execute();
 
-		// moved to cleanup()
-		// //if escape was pressed, we exit
-		// if (KeyBindingManager.getKeyBindingManager().isValidCommand("exit",
-		// false)) {
-		// sounds.cleanup();
-		// //finished = true;
-		//				
 		// if r was pressed, reset position
 		if (KeyBindingManager.getKeyBindingManager().isValidCommand(
 				"position_reset", false)) {
@@ -381,8 +384,8 @@ public class VirtualWarehouse extends GameState {
 				minimapHUD.update();
 			}
 
-			//Fix because they are dumb
-			if (world.getRoomManager() != null) {
+			if (world.getRoomManager() != null)
+			{
 				world.getRoomManager().findCurrentRoom(); // needs to be called
 				// before the
 				// infobar is
@@ -404,12 +407,13 @@ public class VirtualWarehouse extends GameState {
 				deliveryArea.checkForPlayer();
 			}
 
+			//rendering
 			pManager.updatePasses(interpolation);
 
 			rootNode.updateGeometricState(interpolation, true);
 			hudNode.updateGeometricState(interpolation, true);
 			
-
+			//update the npc characters position
 			for (int i = 0; i < characters.length; i++)
 			{
 				characters[i].move();
@@ -436,15 +440,6 @@ public class VirtualWarehouse extends GameState {
 			String nextSlot = vh.getSlot();
 			playerNode.showArrow(nextAisle, nextSlot);
 		} 
-		else 
-		{
-			//Node arrow = this.getArrowNode();
-			//arrow.setLocalScale(0f);
-		}
-		
-
-	
-
 	}
 
 	public void render(float interpolation) {
@@ -496,6 +491,11 @@ public class VirtualWarehouse extends GameState {
 		KeyBindingManager.getKeyBindingManager().set("autocomplete", KeyInput.KEY_F);
 		KeyBindingManager.getKeyBindingManager().set("record",KeyInput.KEY_X);
 
+		
+		//
+		//
+		//WE SHOULD MOVE ALL KEYBOARD CONTROLS HERE
+		//
 	}
 
 	private void initCameras() {
@@ -626,16 +626,14 @@ public class VirtualWarehouse extends GameState {
 			ResultSet result = DatabaseHandler.execute(query);
 			ResultSet rs2 = DatabaseHandler.execute(query2);
 			rs2.next();
-			int boxCount = rs2.getInt("count(id)");
-			
+			int boxCount = rs2.getInt("count(id)");			
 			
 			// I simply want to know how many characters I need to make.
 			result.first();
 			int numBoxes = result.getInt("ID");
 			boundingBoxes = new BoundingBox2D[numBoxes + boxCount];
 			
-			
-			
+
 			// this particular loop just wants to get all of the very static things (the rows of racks, mostly)
 			// these things shouldn't move, so that's why we put a box around the rows, instead of having to get
 			// where the thing
@@ -647,10 +645,6 @@ public class VirtualWarehouse extends GameState {
 				float upperZ = result.getFloat("upperZ");
 				
 				boundingBoxes[i] = new BoundingBox2D(leftX, rightX, lowerZ, upperZ);
-				/*boundingBoxes[i].setLeftX(leftX);
-				boundingBoxes[i].setRightX(rightX);
-				boundingBoxes[i].setLowerZ(lowerZ);
-				boundingBoxes[i].setUpperZ(upperZ);*/
 			}
 			
 			// now I want to get all of the pallets from the DPallet table on the db because I need to have a bounding box around those
@@ -782,6 +776,12 @@ public class VirtualWarehouse extends GameState {
 		}
 	}
 
+	/**
+	 * @author Dan Jewett
+	 * Builds a new lighting scheme
+	 * Builds EIGHT lights (openGL limits to only eight lights)
+	 * based on locations in the warehouse that made sense.
+	 */
 	private void buildLighting()
 	{
 		//openGL limits lights to eight
@@ -802,6 +802,14 @@ public class VirtualWarehouse extends GameState {
 		rootNode.setRenderState(lightState);
 	}
 
+	/**
+	 * @author Dan Jewett
+	 * Creates a generic point Light given the position
+	 * If you want to experiment with shadows, change setShadowCaster to true
+	 * Diffuse light - main light color that is given off
+	 * Ambient light - light that surrounds the other light 
+	 * Specular light - the shiny color of the light
+	 */
 	private PointLight createPointLight(float x,float z)
 	{
 		PointLight light = new PointLight();
@@ -809,16 +817,19 @@ public class VirtualWarehouse extends GameState {
 		light.setAmbient(mainLight);
 		light.setSpecular(mainLight);
 		
-		light.setAttenuate(true);
+		light.setAttenuate(true);//needs to be true for some reason.  Just do it because I said so.
 		light.setShadowCaster(false);
-		light.setLinear(.26f);
+		light.setLinear(.26f);//how much to decay the light, more realistic.
+							  //super realisitc light is actually quadratic, but since openGL limits to eight lights, 
+							  //the warehouse was too dark.
 	
 		light.setLocation(new Vector3f(x, 4.583f, z));
-		light.setEnabled(true);
+		light.setEnabled(true);//duh
 		
 		return light;
 	}
 
+	//Update - Dan Jewett:  added a fog effect in the far plane to make it a "smooth" transition from the scene into the nothingness of the far plane
 	private void makeScene() {
 
 		// Add player
@@ -829,18 +840,20 @@ public class VirtualWarehouse extends GameState {
 		// Add warehouse and objects to the world
 		buildEnvironment();
 		
+		//Create a fog state
 		FogState fs = display.getRenderer().createFogState();
 		
+		//A good number I came up with
 		fs.setDensity(0.3f);
-		fs.setColor(ColorRGBA.lightGray);
+		fs.setColor(ColorRGBA.lightGray); //we want it to be the same as the background color, so it looks right
 		
-		fs.setStart(farPlane-2);
-		fs.setEnd(farPlane+1);
+		fs.setStart(farPlane-2); //start it a little before the farPlane
+		fs.setEnd(farPlane+1); //end it a little after.
 		
-		fs.setDensityFunction(FogState.DensityFunction.Linear);
-		fs.setQuality(FogState.Quality.PerPixel);
+		fs.setDensityFunction(FogState.DensityFunction.Linear); //Quadratic decays too fast, linear is best
+		fs.setQuality(FogState.Quality.PerPixel); //Faster than perVertex, and we aren't going for real fog here, just a transition into the far plane
 		
-		rootNode.setRenderState(fs);
+		rootNode.setRenderState(fs); //add the fog.
 		
 		rootNode.updateGeometricState(0.0f, true);
 		rootNode.updateRenderState();
@@ -936,16 +949,19 @@ public class VirtualWarehouse extends GameState {
 		return autoHUD;
 	}
 
+	//Get the near plane
 	public float getNearPlane()
 	{
 		return nearPlane;
 	}
 	
+	//get the far plane
 	public float getFarPlane()
 	{
 		return farPlane;
 	}
 	
+	//get the angle of view
 	public float getAngleOfView()
 	{
 		return angleOfView;

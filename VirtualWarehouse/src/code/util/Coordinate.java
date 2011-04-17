@@ -1,5 +1,12 @@
 package code.util;
 
+/**
+ * Contains a coordinate
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Coordinate {
 	private float X;
 	private float Z;

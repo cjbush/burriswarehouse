@@ -35,6 +35,11 @@ import code.MD5.resource.mesh.primitive.Weight;
  *
  * @author Yi Wang (Neakor)
  * @version Modified date: 02-19-2009 23:06 EST
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Takes a RandomPerson object to construct the Mesh and to apply the random textures to the MD5 model.
  */
 public class MeshImporter extends ResourceImporter<IMD5Node> {
 	/**
@@ -108,6 +113,8 @@ public class MeshImporter extends ResourceImporter<IMD5Node> {
 	/**
 	 * Process the information in md5mesh file.
 	 * @throws IOException Thrown when errors occurred during file reading.
+	 * 
+	 * Update - Dan Jewett:  Takes the RandomPerson object and as soon as it finds a "mesh" token, it processes the mesh with the RandomPerson
 	 */
 	private void processSkin(RandomPerson rp) throws IOException {
 		String sval = null;
@@ -131,7 +138,7 @@ public class MeshImporter extends ResourceImporter<IMD5Node> {
 					this.processJoints();
 				} else if(sval.equals("mesh")) {
 					this.reader.nextToken();
-					this.processMesh(meshIndex,rp);
+					this.processMesh(meshIndex,rp);//update
 					meshIndex++;
 				}
 			}
@@ -176,6 +183,9 @@ public class MeshImporter extends ResourceImporter<IMD5Node> {
 	 * Process the information to construct a single <code>Mesh</code>.
 	 * @param meshIndex The <code>Integer</code> index of the mesh.
 	 * @throws IOException Thrown when errors occurred during file reading.
+	 * 
+	 * Update - Dan Jewett:  This is the code that actually modifies the MD5 object using the RandomPerson object, instead of what is contained
+	 * in the MD5 file
 	 */
 	private void processMesh(int meshIndex, RandomPerson rp) throws IOException {
 		// Make sure we clear the weight indices list since meshes are separated.
@@ -187,9 +197,10 @@ public class MeshImporter extends ResourceImporter<IMD5Node> {
 					this.reader.nextToken();
 					this.texture = this.reader.sval;
 					
+					//The update, if it is not null (if it is null, then it will do what it normally does
 					if (rp != null)
 					{
-						this.texture = rp.renameTexture(this.texture);
+						this.texture = rp.renameTexture(this.texture); //the texture will be the location in RandomPerson.
 					}
 					
 				} else if(this.reader.sval.equals("numverts")) {

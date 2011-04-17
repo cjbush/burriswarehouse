@@ -10,6 +10,13 @@ import java.awt.image.BufferedImage;
 
 import code.app.WarehouseTrainer;
 
+/**
+ * Creates images (not used)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Frame {
 	public BufferedImage image;
 	private GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();

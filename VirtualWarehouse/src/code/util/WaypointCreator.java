@@ -10,6 +10,13 @@ import code.model.player.autocompletion.AutoCompletionHandler;
 import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 
+/**
+ * Creates Waypoints dynamically
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class WaypointCreator {
 	private KeyBindingManager k;
 	private Player player;

@@ -5,6 +5,13 @@ import java.sql.SQLException;
 import code.model.action.pallet.StackedPallet;
 import code.util.DatabaseHandler;
 
+/**
+ * Allows the user to modify the misc pallet's (or later, any other object) location in the database
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class PersistenceHandler {	
 	public static void updatePalletLocation(StackedPallet pallet){
 		try {

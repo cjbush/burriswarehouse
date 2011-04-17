@@ -30,6 +30,9 @@ import com.jmex.scene.TimedLifeController;
  * 
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
  */
 public class MainMenu extends MenuState {
 

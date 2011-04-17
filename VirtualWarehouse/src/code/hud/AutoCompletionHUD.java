@@ -3,6 +3,14 @@ package code.hud;
 import com.jmex.font2d.Font2D;
 import com.jmex.font2d.Text2D;
 
+/**
+ * An Autocompletion HUD for the game
+ * Shows a textual representation of what the vocollect is saying
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 @SuppressWarnings("serial")
 public class AutoCompletionHUD extends HUD {
 	private Text2D VocollectPrompt;

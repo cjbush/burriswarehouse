@@ -12,5 +12,12 @@ import org.lwjgl.util.input.ControllerAdapter;
 
 import com.jme.input.joystick.lwjgl.*;
 
+/**
+ * Not much here :)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class JMEControllerTest{	
 }
