@@ -174,7 +174,7 @@ public class ModelLoader {
 			} catch (IOException e1) {
 			}
 			catch(NullPointerException e2){
-				System.exit(0);
+				loadObjModel(path, path, true);
 			}
 			return jmeNode;
 		}
@@ -253,8 +253,12 @@ public class ModelLoader {
 
 	}
 
+	
+	private static Node loadObjModel(String path, String mtlPath){
+		return loadObjModel(path, mtlPath, false);
+	}
 
-	private static Node loadObjModel(String path, String mtlPath) {
+	private static Node loadObjModel(String path, String mtlPath, boolean override) {
 		ObjToJme converter = new ObjToJme();
 		Node model = null;
 		URL objFile = ModelLoader.class.getClassLoader().getResource(path);
@@ -272,7 +276,7 @@ public class ModelLoader {
 		ByteArrayOutputStream BO = new ByteArrayOutputStream();
 		
 		try {
-			if(jmeFile.exists() && !rebuildCache){
+			if(jmeFile.exists() && !rebuildCache && !override){
 				System.out.println("JME Model exists. Loading from "+jmePath);
 				jmePath = path.substring(0, path.lastIndexOf('.'))+".jme";
 				return loadJmeModel(jmePath);

@@ -5,18 +5,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import code.app.VirtualWarehouse;
-import code.hud.AutoCompletionHUD;
 import code.model.player.Player;
 import code.util.DatabaseHandler;
 
 import com.jme.math.FastMath;
 import com.jme.math.Quaternion;
 import com.jme.math.Vector3f;
-
-import code.model.player.Player;
-import code.model.player.PlayerHandler;
-import code.util.Coordinate;
-import code.util.DatabaseHandler;
 
 /**
  * The AutoCompletionHandler handles the auto completion of the main character, simulating one particular part of the pick job
@@ -93,7 +87,13 @@ public class AutoCompletionHandler {
 				deactivate();
 			}
 
-			this.start = path.get(0);
+			try{
+				this.start = path.get(0);
+			}
+			catch(IndexOutOfBoundsException e){
+				deactivate();
+				return;
+			}
 			this.finish = path.get(path.size() - 1);
 
 			this.active = true;
@@ -102,10 +102,6 @@ public class AutoCompletionHandler {
 			}
 
 			else {
-				// I think instead of doing this, you should take either take
-				// the player off the vehicle, reset player and vehicle,
-				// and start from the beginning, or you should just start from
-				// where the player got on the vehicle... -CM
 				player.getVehicleBeingUsed().setLocalTranslation(start.getX(),
 						.1f, start.getZ());
 			}
@@ -168,11 +164,13 @@ public class AutoCompletionHandler {
 		float myX, myZ;
 
 		if (action == GETONPJ) {
-			player.checkVehicleEnterExit(true);
+			if(!player.inVehicle())
+				player.checkVehicleEnterExit(true);
 			walking = false;
 			counter++;
 		} else if (action == GETOFFPJ) {
-			player.checkVehicleEnterExit(true);
+			if(player.inVehicle())
+				player.checkVehicleEnterExit(true);
 			counter++;
 		} else if (action == PICKUPBOX) {
 			player.checkProductGetDrop(true);
@@ -210,7 +208,6 @@ public class AutoCompletionHandler {
 
 			walking = false;
 
-			// if I'm close enough to go on to the next thing...
 			if ((Math.abs(myX - x) < .1f) && (Math.abs(myZ - z) < .1f)) {
 				this.counter++;
 			}

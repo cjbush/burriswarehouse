@@ -84,7 +84,7 @@ public class SoundPlayer {
         //bind a key for muting/unmuting the volume
         KeyBindingManager.getKeyBindingManager().set("toggle_sound", KeyInput.KEY_X);
         
-        KeyBindingManager.getKeyBindingManager().set("horn", KeyInput.KEY_H);
+        KeyBindingManager.getKeyBindingManager().set("horn", KeyInput.KEY_SPACE);
     }
     
     //run this in the JME app simpleUpdate() (or equivalent) routine
