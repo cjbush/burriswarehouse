@@ -1,6 +1,9 @@
 package code.sound;
 
 import java.net.URL;
+
+import code.app.VirtualWarehouse;
+
 import com.jme.input.KeyBindingManager;
 import com.jme.input.KeyInput;
 import com.jmex.audio.AudioSystem;
@@ -15,6 +18,16 @@ import java.io.*;
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  *
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Added a horn
+ * 
+ * From the looks of this, the team before PickSim has developed a class that is really well developed
+ * and has the potential to be used for some really well developed sound effects.
+ * 
+ * Needs to be cleaned up a bit though, it is disorganized. - Dan
+ * 
  */
 public class SoundPlayer {
 	
@@ -24,6 +37,13 @@ public class SoundPlayer {
     private AudioStream as;
     
     private boolean playSounds = true;
+    
+    private VirtualWarehouse game;
+    
+    public SoundPlayer(VirtualWarehouse vw)
+    {
+    	game = vw;
+    }
     
     //run this in the JME app simpleInitGame() (or equivalent) routine
     public void initGameStuff() {
@@ -63,7 +83,8 @@ public class SoundPlayer {
 
         //bind a key for muting/unmuting the volume
         KeyBindingManager.getKeyBindingManager().set("toggle_sound", KeyInput.KEY_X);
-
+        
+        KeyBindingManager.getKeyBindingManager().set("horn", KeyInput.KEY_H);
     }
     
     //run this in the JME app simpleUpdate() (or equivalent) routine
@@ -85,6 +106,14 @@ public class SoundPlayer {
 				mute();
 			}
 		}
+    	
+    	if (game.getPlayerNode().inVehicle())
+    	{
+    		if(KeyBindingManager.getKeyBindingManager().isValidCommand("horn", false))
+    		{
+    			playSound("horn.wav");
+    		}
+    	}
     }
     
     private AudioTrack getMusic(URL resource) {

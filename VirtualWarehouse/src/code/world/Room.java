@@ -6,6 +6,14 @@ import java.util.ArrayList;
  * Stores information about a particular room in the warehouse.
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * @See rooms.xml
+ * Added productType to each room/area
+ * Modified the visible rooms quite a bit
+ * 
  */
 public class Room {
 	

@@ -5,6 +5,14 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * Takes screenshots of the game and creates a movie from it
+ * Can be used for ingame footage (see BetterRecording)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Recording implements Runnable{
 	private int id = 0;	
 	private boolean record;

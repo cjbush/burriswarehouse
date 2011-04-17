@@ -17,6 +17,11 @@ import com.jme.system.DisplaySystem;
 /**
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * We are no longer using this.  But still here in case.
  *
  */
 public class MinimapHUD extends HUD {

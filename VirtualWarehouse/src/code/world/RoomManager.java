@@ -20,6 +20,14 @@ import code.app.VirtualWarehouse;
  * Manages the data that defines the rooms in the warehouse and loads it from an XML file.
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * @See rooms.xml
+ * Added productType to each room/area
+ * Modified the visible rooms quite a bit
+ * 
  */
 public class RoomManager {
 	

@@ -14,6 +14,9 @@ import com.jme.scene.Spatial;
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  *
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ *
  */
 public class SmallProductBox extends Pick {
 

@@ -31,6 +31,20 @@ import com.jme.util.CloneImportExport;
  * and the objects inside the warehouse).
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * This class is your daddy!  You will spend much of your time here.
+ * 
+ * What we did:
+ * 	Added miscPallets flag - for cluttered misc pallets scattered through the warehouse
+ * 	Added ability to dynamically add misc pallets in the game wherever you are standing (could be modified for any object)
+ * 	Ability to fetch .jme models
+ * 	Optimize buildWarehouse()
+ * 	Moved rack code to its own class for a cleaner function
+ * 	Removed ArpWalls, but could be added back in (why?)
+ * 
  */
 public class WarehouseWorld extends Node {
 	
@@ -38,10 +52,10 @@ public class WarehouseWorld extends Node {
 
 	//set which things are loaded into the game
 	//these should probably all be set to true unless debugging
-	public static final boolean loadWarehouseShell = true; //warehouse walls
+	public static final boolean loadWarehouseShell = false; //warehouse walls
 	public static final boolean loadWarehouseInsides = true; //racks, pallets, etc...
 	
-	public static final boolean loadRacks = true; //racks
+	public static final boolean loadRacks = false; //racks
 	public static final boolean loadVehicles = true; //palletjacks
 	public static final boolean loadObjects = true; //all other objects
 	public static final boolean fillRacks = true; //put pallets and product on racks
@@ -71,7 +85,7 @@ public class WarehouseWorld extends Node {
 	
 	private VirtualWarehouse warehouseGame;
 	
-	private int III = 0;
+	private int newMiscPalletIndex = 0; //the counter for new misc pallets
 	
 	public WarehouseWorld(VirtualWarehouse vw) {
 		
@@ -126,6 +140,7 @@ public class WarehouseWorld extends Node {
 		rooms.attachChild(roomMap.get(roomName));
 	}
 	
+	//get .jme models for quicker load time
 	public void prefetchModels(){
 		System.out.println("Prefecting models...");
 		warehouseGame.addToLoadingProgress(5, "Prefetching models...");
@@ -406,6 +421,7 @@ public class WarehouseWorld extends Node {
 					}
 				}
 
+				//create misc pallets
 				if (miscPallets)
 				{
 					result = DatabaseHandler.execute("select * from DPallet;");
@@ -417,7 +433,7 @@ public class WarehouseWorld extends Node {
 						float tX = result.getFloat("X_Location");
 						float tZ = result.getFloat("Z_Location");
 						
-						boolean isPickable = result.getBoolean("isPickable");
+						boolean isPickable = result.getBoolean("isPickable");//for floor bins (the produce section)
 						
 						int h1 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 						int h2 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*3);
@@ -451,16 +467,17 @@ public class WarehouseWorld extends Node {
 		
 	}
 	
+	//creates a misc pallet dynamically
 	public void makeThis(float x, float z)
 	{
 		int h1 = (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
 		int h2 = (int)Math.round((double)FastMath.nextRandomFloat()*3)+1;
 		
-		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"New_Misc_Pallet"+III,true,h2,null);
+		StackedPallet SDP = new StackedPallet(-1, h1,this,null,"New_Misc_Pallet"+newMiscPalletIndex,true,h2,null);
 		SDP.setLocalTranslation(x, 0f, z);
 		warehouseGame.getRootNode().attachChild(SDP);
 		
-		III += 1;
+		newMiscPalletIndex += 1;
 	}
 	
 	private void addTarpWalls() 

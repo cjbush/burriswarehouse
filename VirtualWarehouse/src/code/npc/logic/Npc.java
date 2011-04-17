@@ -13,10 +13,15 @@ import code.model.player.Character;
 import code.model.player.RandomPerson;
 import code.util.Coordinate;
 
+/**
+ * NPC class extends an animated model, and is used to control and make our NPC characters.
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Npc extends AnimatedModel {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -2393676632933569642L;
 
 	private ArrayList<Coordinate> path;
@@ -188,12 +193,5 @@ public class Npc extends AnimatedModel {
 
 		this.addAnimation(Character.PICK_UP[Character.NAME_INDX],
 				Character.PICK_UP[Character.FILE_INDX]);
-
-		// this.addAnimation(GRAB_ANIM_FILE[NAME_INDX],
-		// GRAB_ANIM_FILE[FILE_INDX]);
-		// this.addAnimation(WALKING_GRAB[NAME_INDX], WALKING_GRAB[FILE_INDX]);
-		// this.addAnimation(WALKING_BACK_GRAB[NAME_INDX],
-		// WALKING_BACK_GRAB[FILE_INDX]);
-		// this.addAnimation(GRAB_PJ[NAME_INDX], GRAB_PJ[FILE_INDX]);
 	}
 }

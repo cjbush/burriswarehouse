@@ -23,6 +23,9 @@ import javax.swing.SwingConstants;
  * 
  * @author VirtualVille Team (Richard Bradt, Gabe Greve, Eric Smith, and Ben Wiley)
  * Modified by Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
  */
 public class LoadingWindow extends JWindow {
 

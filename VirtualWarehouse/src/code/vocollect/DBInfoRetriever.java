@@ -13,7 +13,13 @@ import java.util.Random;
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  *
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Added a couple functionality changes
+ * 
  */
+
 public class DBInfoRetriever {
 
 	private String host;

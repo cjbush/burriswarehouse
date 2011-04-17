@@ -17,6 +17,11 @@ import com.jme.math.Vector3f;
  * @author Yi Wang (Neakor)
  * @version Creation date: 11-18-2008 12:29 EST
  * @version Modified date: 02-19-2009 22:41 EST
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Takes a RandomPerson object to determine which random textures to apply to MD5 model
  */
 public abstract class ResourceImporter<T> {
 	/**

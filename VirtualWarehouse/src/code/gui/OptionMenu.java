@@ -24,6 +24,12 @@ import code.app.WarehouseTrainer;
 import code.gui.TransitionFadeOut.GoToState;
 import code.model.ModelLoader;
 
+/**
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Gives the user some basic run time options
+ * 
+ */
 
 public class OptionMenu extends MenuState {
 	

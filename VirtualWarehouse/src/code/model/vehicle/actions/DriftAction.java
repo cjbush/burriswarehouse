@@ -41,6 +41,10 @@ import code.model.vehicle.Vehicle;
  * DriftAction defines the action that occurs by default each frame. 
  * It obtains the velocity of the vehicle and translates the vehicle by this value.
  * @author Mark Powell
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ *
  *
  */
 public class DriftAction extends KeyInputAction {

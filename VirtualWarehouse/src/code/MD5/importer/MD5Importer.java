@@ -32,6 +32,11 @@ import code.MD5.interfaces.IMD5Node;
  *
  * @author Yi Wang (Neakor)
  * @version Modified date: 02-19-2008 22:17 EST
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Takes a RandomPerson object to determine which random textures to apply to MD5 model
  */
 public class MD5Importer {
 	/**

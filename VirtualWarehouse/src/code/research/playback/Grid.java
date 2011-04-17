@@ -19,6 +19,13 @@ import com.jme.scene.Node;
 import com.jme.scene.Spatial;
 import com.jme.util.CloneImportExport;
 
+/**
+ * A grid system used for implementing autocompletion and collisions (not used)
+ * 
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ */
+
 public class Grid {
 	private GridNode[][] grid;
 	private double wLength = 48;

@@ -32,6 +32,11 @@ import code.model.player.RandomPerson;
  * correctly with md5 models. The use of any other model type will probably generate exceptions.</b> 
  * 
  * @author Jordan Hinshaw, Aaron Ramsey, Matt Kent
+ * 
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * Many updates, such as taking a RandomPerson object, fading "smoothly" from animation to animation, etc.
  */
 public abstract class AnimatedModel extends Node
 {
@@ -67,7 +72,7 @@ public abstract class AnimatedModel extends Node
 			int repeatType, Vector3f forwardVector, Vector3f rightVector, Vector3f upVector,
 			RandomPerson randomPerson)
 	{
-		myPerson = randomPerson;
+		myPerson = randomPerson; //make a randomPerson object
 		
 		animations = new Hashtable<String, String>();
 		importer = MD5Importer.getInstance();
@@ -160,7 +165,7 @@ public abstract class AnimatedModel extends Node
 		}
 		else if(!animName.equals(activeAnimation))
 		{
-			animController.fadeTo(animName, fade, true);
+			animController.fadeTo(animName, fade, true); //added a fade to smoothly go from one animation to another
 			animController.setRepeatType(repeatType);
 			animController.setSpeed(speed);
 			activeAnimation = animName;
@@ -268,7 +273,7 @@ public abstract class AnimatedModel extends Node
 		{
 			MD5Importer importer = MD5Importer.getInstance();
 			
-			if (randomPerson == null)
+			if (randomPerson == null) //load the model with either a randomPerson or no randomPerson
 			{
 				importer.load(modelMesh, meshName, modelAnim, animName, repeatType);
 			}

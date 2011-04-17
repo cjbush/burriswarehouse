@@ -18,6 +18,10 @@ import com.jme.util.geom.BufferUtils;
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
  *
+ * Update
+ * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
+ * 
+ * No longer using this.  We went a different route
  */
 public class AutoplayHUD extends HUD {
 
