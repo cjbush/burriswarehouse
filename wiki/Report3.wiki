@@ -1,5 +1,5 @@
 #summary Report for 2/1-2/7
-#labels Phase-Design,Phase-Implementation,Featured
+#labels Phase-Design,Phase-Implementation
 
 =Report=
 
