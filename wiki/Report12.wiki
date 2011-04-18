@@ -1,0 +1,36 @@
+#summary Report for 4/4-4/10
+
+=Report=
+
+==Caleb Mays, Software Developer==
+
+   * Tasks accomplished:
+   * Most immediate upcoming tasks:
+
+
+==Dan Jewett, Modeler/Software Developer==
+
+   * Tasks accomplished:  Box problem fixed, resolved missing textures and resized swingarm as asked for.  Added a horn sound effect as well as commenting all of my code (that I had not done) and added headers for PickSim on all of the code I thought we wrote.  I wrote four tutorials/manuals of things that I had done that may help next years team as far as graphics go (GUY.md5, Exporting OBJ Models from Maya, Baking Textures and Warehouse.ma).  I also added permanent positions to many misc. objects scattered across the warehouse.
+   * Most immediate upcoming tasks: Presentation, Posters, testing, oh my!
+
+
+==Chris Bush, Team Leader/Software Developer/Network Specialist==
+
+  * Tasks accomplished: 
+  * Most immediate upcoming tasks: 
+
+==Time and Financial Report==
+
+||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
+||Chris Bush||x||136||+4|| || || ||
+||Caleb Mays||x||126.5||-5.5|| || || ||
+||Dan Jewett||12||150||+6|| ||*Weekly Total*||||
+||*Totals*|| x || x || 4.5 || ||*YTD Total*||$3.50||
+
+
+=Meeting Notes / Task Assignments=
+
+  * General - 
+  * Chris - 
+  * Caleb - 
+  * Dan - 
