@@ -16,16 +16,16 @@
 
 ==Chris Bush, Team Leader/Software Developer/Network Specialist==
 
-  * Tasks accomplished: 
-  * Most immediate upcoming tasks: 
+  * Tasks accomplished: Edited installation manual, began Vocollect installation/maintenance manual, edited templates for issue tracking to more easily identify bugs, fixed autocompletion rollover crash bug, discovered three other bugs (see issue 34, issue 38, and issue 39)
+  * Most immediate upcoming tasks: Resolve issue 38 and issue 39, continue editing and creating documentation, finish autocompletion Vocollect prompts, continue debugging & testing
 
 ==Time and Financial Report==
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
-||Chris Bush||x||136||+4|| || || ||
+||Chris Bush||12||148||+4|| || || ||
 ||Caleb Mays||5||131.5||-12.5|| || || ||
 ||Dan Jewett||12||150||+6|| ||*Weekly Total*||||
-||*Totals*|| x || x || 4.5 || ||*YTD Total*||$3.50||
+||*Totals*|| 29 || 429.5 || -2.5 || ||*YTD Total*||$3.50|| 
 
 
 =Meeting Notes / Task Assignments=
