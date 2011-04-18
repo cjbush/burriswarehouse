@@ -19,4 +19,14 @@
 		<rotationY>0</rotationY>
 		<rotationZ>0</rotationZ>
 	</AutoPalletJack>
+		<AutoPalletJack>
+		<name>PalletJack3</name>
+		<scale>1</scale>
+		<translationX>53.0</translationX>
+		<translationY>0.01</translationY>
+		<translationZ>-5.45</translationZ>
+		<rotationX>0</rotationX>
+		<rotationY>0</rotationY>
+		<rotationZ>0</rotationZ>
+	</AutoPalletJack>
 </vehicles>

@@ -310,7 +310,7 @@ public class Rack extends Node
 	{
 		if (name.toLowerCase().indexOf("raised") > -1) //if it is a raised rack
 		{
-			heightOffset = 0.42f; //the height offsets are smaller
+			heightOffset = 0.46f; //the height offsets are smaller
 		}
 		else
 		{
