@@ -470,6 +470,7 @@ public class VirtualWarehouse extends GameState {
 	 */
 	protected void initSystem() {
 
+		DatabaseHandler.open();
 		MouseInput.get().setCursorVisible(false);
 
 		initCameras();
@@ -678,6 +679,8 @@ public class VirtualWarehouse extends GameState {
 		if (useVocollect) {
 			VocollectHandler.close();
 		}
+		rootNode.detachAllChildren();
+		this.rootNode = null;
 	}
 
 	private void buildAutoCharacters() {

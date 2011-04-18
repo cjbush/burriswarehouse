@@ -50,6 +50,9 @@ public class ModelLoader {
 	private static double totalTimeOBJ = 0.0;
 	private static double totalTimeTRI = 0.0;
 	
+	private static String path;
+	private static String mtlpath;
+	
 	private static boolean rebuildCache = false;
 	
 	public static void rebuildCache(){
@@ -69,6 +72,9 @@ public class ModelLoader {
 	public static Node loadModel(String format, String filePath, String folderPath, boolean setBounds, Renderer r, String type) {
 
 		Node model = null;
+		
+		path = filePath;
+		mtlpath = folderPath;
 
 		
 		//if already loaded, get the loaded model instead of loading the file again
@@ -174,7 +180,9 @@ public class ModelLoader {
 			} catch (IOException e1) {
 			}
 			catch(NullPointerException e2){
-				loadObjModel(path, path, true);
+				e.printStackTrace();
+				//return null;
+				return loadObjModel(ModelLoader.path, ModelLoader.mtlpath, true);
 			}
 			return jmeNode;
 		}
