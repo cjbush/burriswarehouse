@@ -57,6 +57,11 @@ public class AutoCompletionHandler {
 		this.active = false;
 		this.section = 1;
 	}
+	
+	public void reset(){
+		this.counter = 0;
+		this.section = 1;
+	}
 
 	public boolean isActive() {
 		return this.active;

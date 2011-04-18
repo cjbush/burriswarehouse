@@ -24,7 +24,7 @@ public class DatabaseHandler {
 	private static String url = "jdbc:mysql://"+host+":"+port+"/"+database;	
 	private static Connection con;
 	
-	static{
+	public static void open(){
 		try {
 			con = DriverManager.getConnection(url, userName, password);
 		} catch (SQLException e) {
