@@ -7,6 +7,9 @@ package code.collisions;
  * This optimizes the game incredibly, instead of doing mathematical collision checking--
  * Checking every single object in the scene graph, being way too costly in time.
  * 
+ * Make sure the coordinates for the BOUNDING boxes are correct, other wise, the
+ * character will "collide" with something not there at all. 
+ * 
  */
 
 public class BoundingBox2D {

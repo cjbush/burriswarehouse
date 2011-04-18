@@ -16,6 +16,17 @@ import code.util.Coordinate;
 /**
  * NPC class extends an animated model, and is used to control and make our NPC characters.
  * 
+ * Each character is given a path from the database, and on the update is moved along that path. The
+ * path is made up for Coordinates (X,Z). The first coordinate is the starting location for the character,
+ * and the character immediately starts moving toward the next coordinate. When the character is
+ * close to (not exactly at, because for some reason the character would just stop moving) the 
+ * next point, the counter increments, indicating that the character is now supposed to be moving toward
+ * the 3rd point in the pick path, and so on. 
+ * 
+ * For the database coordinates, it best to have the coordinates be as close to right angles as possible.
+ * This keeps the characer from walking sideways and facing weird angles. The number of autocompletionjobs
+ * there are is number of NPCs that could be walking around.
+ * 
  * @author PickSim Team (Chris Bush, Dan Jewett, Caleb Mays)
  * 
  */
