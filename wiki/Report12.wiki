@@ -4,8 +4,8 @@
 
 ==Caleb Mays, Software Developer==
 
-   * Tasks accomplished:
-   * Most immediate upcoming tasks:
+   * Tasks accomplished: Unfortunately, I found myself quite busy this week with some other classes and life stuff, so I wasn't able to put as much time into documenting as I would have liked. Added comments to collision detection classes and NPC classes (ones which I wrote). 
+   * Most immediate upcoming tasks: Test and adjust the collision detection specifically around the air door guards. Try to make it a little easier to drive through those; presentation stuff. 
 
 
 ==Dan Jewett, Modeler/Software Developer==
@@ -23,7 +23,7 @@
 
 ||*Hours*||*Week*||*YTD*||*+/-*|| ||*Parts Purchased During Current Week*||*Cost*||
 ||Chris Bush||x||136||+4|| || || ||
-||Caleb Mays||x||126.5||-5.5|| || || ||
+||Caleb Mays||5||131.5||-12.5|| || || ||
 ||Dan Jewett||12||150||+6|| ||*Weekly Total*||||
 ||*Totals*|| x || x || 4.5 || ||*YTD Total*||$3.50||
 
