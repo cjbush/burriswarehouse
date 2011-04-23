@@ -47,7 +47,13 @@ public class Rack extends Node
 	private int rackHeight; //how high up to go (normally it is six)
 	private String rackType; //single, double, for special cases
 	
-	private int smallRackHeight = 4; //(constant smallest seems to be four)
+	private int smallRackHeight = 4; //constant smallest seems to be four
+	private int smallSpecialHeight = 3; //constant for the special Raised Rack Height
+	private int normalHeight = 6; //constant for the normal height
+	
+	private float normalHeightOffset = .82f;
+	private float smallHeightOffset = 1.6f;
+	private float largeHeightOffset = .88f;
 	
 	private final int totalOnShelf = 4; //the most boxes that can be on a particular shelf
 	
@@ -58,6 +64,8 @@ public class Rack extends Node
 	private Vector3f positions[][]; //positions of racks
 	
 	private float heightOffset; //space between each shelf
+	
+	private boolean reallySpecial;
 	
 	//Here are some cases
 	//If it randomly came to one total on the shelf, the format will look like this
@@ -98,6 +106,7 @@ public class Rack extends Node
 		this.rackName = name;
 		this.ww = ww;
 		
+		setReallySpecial(name);
 		setRackHeight(name);
 		setRackType(name);
 		setHeightOffset(name);
@@ -270,18 +279,33 @@ public class Rack extends Node
 		return getPickablePallet().getMainName();
 	}
 	
+	//sets if the rack is really special (racksDoubleRaised206, racksSingleRaised206)
+	private void setReallySpecial(String name)
+	{
+		rackHeight = 0;
+		
+		reallySpecial = name.toLowerCase().indexOf("raised206") > -1; //if it is, there are some extreme special cases
+	}
+	
 	//sets the rack height, because of the special case
 	private void setRackHeight(String name)
 	{
 		rackHeight = 0;
 		
-		if (name.toLowerCase().indexOf("rackssingleraised147") > -1) //if it is a single rack, it is a smaller height
+		if (reallySpecial)
 		{
-			rackHeight = smallRackHeight;
+			rackHeight = smallSpecialHeight;
 		}
 		else
 		{
-			rackHeight = 6;
+			if (name.toLowerCase().indexOf("rackssingleraised147") > -1) //if it is a single rack, it is a smaller height
+			{
+				rackHeight = smallRackHeight;
+			}
+			else
+			{
+				rackHeight = normalHeight;
+			}
 		}
 	}
 	
@@ -290,7 +314,7 @@ public class Rack extends Node
 	{
 		if (name.toLowerCase().indexOf("single") > -1) //if it is a single rack
 		{
-			if (name.indexOf("103") > -1 || name.indexOf("106") > -1) // but in is in the 100 series
+			if (name.indexOf("103") > -1 || name.indexOf("106") > -1 || reallySpecial) // but in is in the 100 series (or it is a special raised rack)
 			{
 				rackType = "single two"; //two products can fit
 			}
@@ -308,13 +332,17 @@ public class Rack extends Node
 	//sets the height of set because of the special case, racks being raised
 	private void setHeightOffset(String name)
 	{
-		if (name.toLowerCase().indexOf("raised") > -1) //if it is a raised rack
+		if (reallySpecial)
 		{
-			heightOffset = 0.46f; //the height offsets are smaller
+			heightOffset = largeHeightOffset; //these racks have a much bigger offset between the shelves
+		}
+		else if (name.toLowerCase().indexOf("raised") > -1) //if it is a raised rack
+		{
+			heightOffset = smallHeightOffset; //the height offsets are smaller
 		}
 		else
 		{
-			heightOffset = 0.82f; //otherwise they are normal
+			heightOffset = normalHeightOffset; //otherwise they are normal
 		}
 	}
 	
@@ -338,6 +366,8 @@ public class Rack extends Node
 			
 			int num; //how many products to put on the shelf
 			
+			float start = reallySpecial ? 2.46f : 0f;
+			
 			if (rackType.equals("single")) //special case, only one product can fit on these small racks
 			{
 				num = 1;
@@ -355,7 +385,7 @@ public class Rack extends Node
 			for (int j=0; j<num; j++)
 			{
 				//usual case, if it is the normal height between the shelves
-				if (heightOffset == .82f)
+				if (heightOffset == normalHeightOffset)
 				{
 					if (i==0) //if it is the ground row
 					{
@@ -369,7 +399,7 @@ public class Rack extends Node
 						h2 = random(1,2); //1 to 2 products
 					}
 				}
-				else //there can be many pallets and products on the raised racks (especially top row), special case
+				else if (heightOffset == smallHeightOffset)//there can be many pallets and products on the raised racks (especially top row), special case
 				{
 					if (rackHeight != smallRackHeight) //if the rackHeight is not the small one
 					{
@@ -401,6 +431,19 @@ public class Rack extends Node
 							h1 = random(3,7); //not as many pallets
 						}
 						h2 = 0; //NO products on these (according to the pictures)
+					}
+				}
+				else //special raised case
+				{
+					if (i+1==rackHeight) //top row
+					{
+						h1 = random(1,2); //1 to 2 pallets
+						h2 = 1; //1 product
+					}
+					else
+					{
+						h1 = random(1,3); //1 to 3 pallets
+						h2 = random(0,2); //0 to 2 products
 					}
 				}
 				
@@ -439,7 +482,7 @@ public class Rack extends Node
 				
 				pallets[j][i] = SDP; //put it in our array
 				
-				SDP.setLocalTranslation(positions[num-1][j].x+trans1, 0f+heightOffset*i, positions[num-1][j].z+trans2); //translate it
+				SDP.setLocalTranslation(positions[num-1][j].x+trans1, start+heightOffset*i, positions[num-1][j].z+trans2); //translate it
 				SDP.setLocalRotation(new Quaternion().fromAngles(0f,(float)(rot*(Math.PI/180)),0f)); //rotate it
 
 				SDPs.attachChild(SDP); //attach it to our node to return

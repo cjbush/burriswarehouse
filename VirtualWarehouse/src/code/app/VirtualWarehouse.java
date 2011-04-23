@@ -75,7 +75,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean infoIconsEnabled = false; //change if you want annoying icons
 
-	public static boolean DEBUG_MODE = false;
+	public static boolean DEBUG_MODE = true;
 
 	private LoadingWindow loadingScreen;
 	private boolean showLoadingScreen = true;
@@ -568,8 +568,10 @@ public class VirtualWarehouse extends GameState {
 		if (DEBUG_MODE) {
 			hudNode.attachChild(debugHUD);
 		}
-		
-		hudNode.attachChild(autoHUD);
+		else
+		{
+			hudNode.attachChild(autoHUD);
+		}
 
 		pManager.add(hudPass);
 		double total = System.currentTimeMillis() - start;

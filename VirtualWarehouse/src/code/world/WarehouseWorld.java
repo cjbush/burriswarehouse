@@ -62,6 +62,8 @@ public class WarehouseWorld extends Node {
 	public static final boolean miscPallets = true; //get misc pallets and put them in the warehouse
 	public static final boolean useArrow = true;
 	
+	public static final String rackNames[] = {}; //if there is nothing in here, then it will load them all (and quicker, only for debug!)
+	
 	public static final boolean useLocalhost = false;
 	
 	private static final Logger logger = Logger.getLogger(WarehouseWorld.class.getName());
@@ -295,6 +297,25 @@ public class WarehouseWorld extends Node {
 					rotationX = result.getFloat("rotationX");
 					rotationY = result.getFloat("rotationY");
 					rotationZ = result.getFloat("rotationZ");
+					
+					if (rackNames.length != 0 && typeid.equals("rack"))
+					{
+						boolean f = false;
+						
+						for (int r=0;r<rackNames.length;r++)
+						{
+							if (rackNames[r].equals(name))
+							{
+								f = true;
+								break;
+							}
+						}
+						
+						if (!f)
+						{
+							continue;
+						}
+					}
 					
 					object = null;
 					
