@@ -454,10 +454,21 @@ public class WarehouseWorld extends Node {
 						float tX = result.getFloat("X_Location");
 						float tZ = result.getFloat("Z_Location");
 						
+						boolean isRandom = result.getBoolean("isRandom");
 						boolean isPickable = result.getBoolean("isPickable");//for floor bins (the produce section)
 						
-						int h1 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
-						int h2 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*3);
+						int h1, h2;
+						
+						if (!isRandom)
+						{
+							h1 = 1;
+							h2 = 0;
+						}
+						else
+						{
+							h1 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*4)+1;
+							h2 = isPickable ? 1 : (int)Math.round((double)FastMath.nextRandomFloat()*3);
+						}
 						
 						StackedPallet SDP = new StackedPallet(result.getInt("id"), h1,this,null,"Misc_Pallet"+i,isPickable,h2,null);
 						SDP.setLocalTranslation(tX, 0f, tZ);

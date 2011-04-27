@@ -75,7 +75,7 @@ public class VirtualWarehouse extends GameState {
 
 	private boolean infoIconsEnabled = false; //change if you want annoying icons
 
-	public static boolean DEBUG_MODE = true;
+	public static boolean DEBUG_MODE = false;
 
 	private LoadingWindow loadingScreen;
 	private boolean showLoadingScreen = true;
@@ -138,7 +138,7 @@ public class VirtualWarehouse extends GameState {
 	//near plane, how close to view things
 	private float nearPlane = .01f;
 	//far plane, how far the camera should see
-	private float farPlane = 8f;
+	private float farPlane = 12f;
 	//angle of view, angle of the camera - standard cameras view at 54.3 degrees.  Changing this will result in some cool effects, but not normal viewing
 	private float angleOfView = 54.3f;
 	
