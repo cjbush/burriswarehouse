@@ -138,7 +138,7 @@ public class VirtualWarehouse extends GameState {
 	//near plane, how close to view things
 	private float nearPlane = .01f;
 	//far plane, how far the camera should see
-	private float farPlane = 15f;
+	private float farPlane = 8f;
 	//angle of view, angle of the camera - standard cameras view at 54.3 degrees.  Changing this will result in some cool effects, but not normal viewing
 	private float angleOfView = 54.3f;
 	
@@ -215,7 +215,7 @@ public class VirtualWarehouse extends GameState {
 					.getHeight() - 50);
 		}
 
-		this.useVocollect = false;
+		this.useVocollect = enableTrainingMode;
 	}
 
 	public DisplaySystem getDisplay() {

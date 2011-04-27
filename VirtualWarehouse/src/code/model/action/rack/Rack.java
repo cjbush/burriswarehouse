@@ -52,7 +52,7 @@ public class Rack extends Node
 	private int normalHeight = 6; //constant for the normal height
 	
 	private float normalHeightOffset = .82f;
-	private float smallHeightOffset = 1.6f;
+	private float smallHeightOffset = 0.46f;
 	private float largeHeightOffset = .88f;
 	
 	private final int totalOnShelf = 4; //the most boxes that can be on a particular shelf
@@ -281,9 +281,7 @@ public class Rack extends Node
 	
 	//sets if the rack is really special (racksDoubleRaised206, racksSingleRaised206)
 	private void setReallySpecial(String name)
-	{
-		rackHeight = 0;
-		
+	{		
 		reallySpecial = name.toLowerCase().indexOf("raised206") > -1; //if it is, there are some extreme special cases
 	}
 	

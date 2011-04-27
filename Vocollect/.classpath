@@ -2,12 +2,12 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="bin"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Vocollect"/>
-	<classpathentry kind="lib" path="lib/Tcf.jar"/>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.10-bin.jar"/>
-	<classpathentry kind="lib" path="lib/BurrisEdiFunctions.jar"/>
-	<classpathentry kind="lib" path="lib/log4j-1.2.13.jar"/>
-	<classpathentry kind="lib" path="lib/td.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Vocollect"/>
+	<classpathentry exported="true" kind="lib" path="lib/Tcf.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mysql-connector-java-5.1.10-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/BurrisEdiFunctions.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-1.2.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/td.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
