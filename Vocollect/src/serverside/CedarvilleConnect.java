@@ -27,11 +27,15 @@ public class CedarvilleConnect extends Thread {
 			while (true) {
                 mySocket = server.accept();
                 System.out.println("Accepted " + mySocket.getInetAddress());
-                System.out.flush();
+                //System.out.flush();
                 serviceConnection(mySocket);
             }
 		} catch (IOException e) {
 			System.out.println("Unable to listen on port " + listenPort);
+			e.printStackTrace();
+		}
+		catch(Exception e){
+			System.out.println("There was a problem with the connection on port " + listenPort);
 			e.printStackTrace();
 		}
 	}

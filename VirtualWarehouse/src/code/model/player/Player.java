@@ -372,13 +372,24 @@ public class Player extends AnimatedModel {
 				List<String> pickList = warehouseGame.getPickList();
 				String pickNumber = pickList.get(0);
 				System.out.println("picked from bin " + binNumber + " looking for " + pickNumber);
-				//List<String> pickList = warehouseGame.getPickList(); 
-				if (closest.getBinNumber().equals(pickList.get(0)))
+				//List<String> pickList = warehouseGame.getPickList();
+				hasCorrectProduct = false;
+				if(binNumber.substring(0,1).equals(pickNumber.substring(0,1))){
+					System.out.println("Correct aisle");
+					int b = Integer.parseInt(binNumber.substring(2));
+					int p = Integer.parseInt(pickNumber.substring(2));
+					System.out.println("Comparing bin "+b+" with pick "+p);
+					if(Math.abs(b-p) <= 2){
+						System.out.println("correct pick");
+						hasCorrectProduct = true;
+					}
+				}
+				/*if (binNumber.equals(pickNumber))
 				{
 					System.out.println("correct pick");
 					hasCorrectProduct = true;
-				}
-				else
+				}*/
+				if(!hasCorrectProduct)
 				{
 					System.out.println("wrong pick");
 					warehouseGame.getScore().incrementBoxesPickedWrong();
