@@ -26,5 +26,6 @@
 	<classpathentry kind="lib" path="lib/slf4j-api.jar"/>
 	<classpathentry kind="lib" path="lib/xuggle-xuggler-test.jar"/>
 	<classpathentry kind="lib" path="lib/xuggle-xuggler.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Vocollect"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

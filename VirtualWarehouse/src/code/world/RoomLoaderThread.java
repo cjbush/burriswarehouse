@@ -49,7 +49,8 @@ public class RoomLoaderThread extends Thread {
 		this.ww = ww;
 		this.room = room;
 		this.rooms = rooms;
-		vcdb = new DBInfoRetriever("joseph.cedarville.edu", "talkman", "warehouse", "vwburr15");
+		//vcdb = new DBInfoRetriever("joseph.cedarville.edu", "talkman", "warehouse", "vwburr15");
+		vcdb = new DBInfoRetriever();
 		//this.run();
 	}
 	

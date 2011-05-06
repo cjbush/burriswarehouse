@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+import serverside.CedarvilleConnect;
+
 import code.collisions.BoundingBox2D;
 import code.component.Score;
 import code.component.WarehouseChaseCam;
@@ -27,6 +29,7 @@ import code.model.player.RandomPerson;
 import code.npc.logic.Npc;
 import code.research.recording.Recording;
 import code.sound.SoundPlayer;
+import code.util.ConfigurationManager;
 import code.util.Coordinate;
 import code.util.DatabaseHandler;
 import code.vocollect.VocollectHandler;
@@ -81,6 +84,8 @@ public class VirtualWarehouse extends GameState {
 	private boolean showLoadingScreen = true;
 
 	private DisplaySystem display;
+	
+	private CedarvilleConnect vocollectListener;
 
 	// HUD node for displaying debug information
 	private DebugHUD debugHUD;
@@ -469,7 +474,7 @@ public class VirtualWarehouse extends GameState {
 	 * constructor.
 	 */
 	protected void initSystem() {
-
+		ConfigurationManager.read("app.cfg");
 		DatabaseHandler.open();
 		MouseInput.get().setCursorVisible(false);
 
@@ -518,6 +523,9 @@ public class VirtualWarehouse extends GameState {
 	 * constructor.
 	 */
 	protected void initGame() {
+		
+		vocollectListener = new CedarvilleConnect(42211);
+		vocollectListener.start();
 		
 		double totalStart = System.currentTimeMillis();
 		display.setTitle("Warehouse Trainer");
@@ -613,6 +621,7 @@ public class VirtualWarehouse extends GameState {
 		}
 		
 		System.out.println("It took "+(System.currentTimeMillis()-totalStart)/1000+" seconds to load the game.");
+		
 		//System.exit(1);
 
 		// grid = new Grid(rootNode, this, showGrid);
@@ -620,10 +629,7 @@ public class VirtualWarehouse extends GameState {
 
 	private void buildBoundingBoxes() {
 		
-		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
-			// String url = "jdbc:mysql://localhost:3306/vwburr";
+		try {			
 			String query = "select * from BOUNDINGBOXES ORDER BY ID desc;";
 			String query2 = "select count(id) from DPallet";
 			ResultSet result = DatabaseHandler.execute(query);
@@ -687,20 +693,8 @@ public class VirtualWarehouse extends GameState {
 
 	private void buildAutoCharacters() {
 
-		try {
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
-			String url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
-			// String url = "jdbc:mysql://localhost:3306/vwburr";
-			
-			//Statement stmt = con.createStatement();
-
-			//String query = "select count(id) from AutoPickJobs";
-			//stmt.execute(query);
-			//ResultSet result = stmt.getResultSet();
-			
+		try {					
 			// I simply want to know how many characters I need to make.
-			//result.next();
-			//int numPossibleCharacters = result.getInt("count(id)");
 			int characterLimit = 7;
 			Scanner br = new Scanner(new File("numcharacters.cfg"));
 			if (br != null){
@@ -717,10 +711,9 @@ public class VirtualWarehouse extends GameState {
 			// do it.
 
 			/*
-			 * so. here's the deal. This simply looks at the characters.length,
-			 * which is how many characters I want to make (it also happens to
-			 * be how many paths I want to create. Then, we look to see how many
-			 * items are in each path (query2). From there, we simply look
+			 * This simply looks at the characters.length, which is how many characters 
+			 * I want to make (it also happens to be how many paths I want to create. 
+			 * Then, we look to see how many items are in each path (query2). From there, we simply look
 			 * through that list and get the X and Z(Y) locations that we need.
 			 * We put those into an array list, and then get them into the
 			 * people's information through the constructor.

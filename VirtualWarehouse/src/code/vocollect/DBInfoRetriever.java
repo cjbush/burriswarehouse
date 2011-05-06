@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
 
+import code.util.ConfigurationManager;
+
 /**
  * 
  * @author Virtual Warehouse Team (Jordan Hinshaw, Matt Kent, Aaron Ramsey)
@@ -22,23 +24,66 @@ import java.util.Random;
 
 public class DBInfoRetriever {
 
-	private String host;
-	private String database;
-	private String userName;
-	private String password;
-	private String table;
+	private static String host;
+	private static String database;
+	private static String userName;
+	private static String password;
+	private static int port;
+	
 	private String url;
 	private Connection con;
 	private Statement stmt;
-	private int port;
 	private HashMap<String, String> data;
+	
+	public static void setParameters(){
+		host= ConfigurationManager.get("server");
+		database = ConfigurationManager.get("vocollectdb");
+		userName = ConfigurationManager.get("mysqluser");
+		password = ConfigurationManager.get("mysqlpass");
+		port = Integer.parseInt(ConfigurationManager.get("vocollectdbport"));
+	}
+	
+	public DBInfoRetriever(){
+		setParameters();
+		this.data = new HashMap<String, String>();
+		try {
+			this.url = "jdbc:mysql://" + host + ":" + port + "/" + database;
+		    Class.forName ("com.mysql.jdbc.Driver").newInstance ();
+		    this.con = DriverManager.getConnection (url, userName, password);
+		    System.out.println ("Database connection established");
+		    this.stmt = con.createStatement();
+		} catch (InstantiationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		finally {
+				
+		}
+		try {
+			loadHashMap();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+	}
 			
-	public DBInfoRetriever(String host, String database, String userName, String password) {
-		this.host = host;
-		this.database = database;
-		this.userName = userName;
-		this.password = password;
-		this.port = 3306;
+	public DBInfoRetriever(String host, String database, String userName, String password, Integer port) {
+		DBInfoRetriever.host = host;
+		DBInfoRetriever.database = database;
+		DBInfoRetriever.userName = userName;
+		DBInfoRetriever.password = password;
+		DBInfoRetriever.port = port;
 		this.data = new HashMap<String, String>();
 		try {
 			this.url = "jdbc:mysql://" + host + ":" + port + "/" + database;
@@ -154,8 +199,8 @@ public class DBInfoRetriever {
 
 	
 	public static void main(String[] args) throws SQLException {
-		//DBInfoRetriever test = new DBInfoRetriever("joseph.cedarville.edu","talkman","warehouse","vwburr15");
-		DBInfoRetriever test = new DBInfoRetriever("localhost","talkman","warehouse","vwburr15");
+		ConfigurationManager.read("server.cfg");
+		DBInfoRetriever test = new DBInfoRetriever();
 		System.out.println(test.getCheckDigit("1C021"));
 	}
 }

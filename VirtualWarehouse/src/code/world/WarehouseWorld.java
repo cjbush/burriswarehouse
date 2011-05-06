@@ -180,15 +180,13 @@ public class WarehouseWorld extends Node {
 		warehouseGame.addToLoadingProgress(5, "Establishing Model Database Connection...");
 		
 		String url;
-		DBInfoRetriever dbInfoRetriever;
-		if(!useLocalhost){
-			url = "jdbc:mysql://joseph.cedarville.edu:3306/vwburr";
+		DBInfoRetriever dbInfoRetriever = new DBInfoRetriever();
+		/*if(!useLocalhost){
 			dbInfoRetriever = new DBInfoRetriever("joseph.cedarville.edu", "talkman", "warehouse", "vwburr15");
 		}
 		else{
-			url = "jdbc:mysql://localhost:3306/vwburr";
 			dbInfoRetriever = new DBInfoRetriever("localhost","talkman","warehouse","vwburr15");
-		}
+		}*/
 		ResultSet result;
 		try {
 			//System.out.println("Connecting to "+url);

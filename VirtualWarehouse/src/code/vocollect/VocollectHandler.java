@@ -10,6 +10,7 @@ import com.jme.input.KeyInput;
 import code.app.VirtualWarehouse;
 import code.hud.MessageBox;
 import code.model.player.Player;
+import code.util.ConfigurationManager;
 
 /** 
  * This is the client-side component of the Vocollect client/server communication socket.
@@ -51,12 +52,8 @@ public class VocollectHandler extends Thread {
     }
 
     public void run() {    	
-        //String hostName = "192.168.1.5";
-    	String hostName = "joseph.cedarville.edu";
-    	//String hostName = "localhost";
-    	//String hostName = "163.11.210.22";
-    	
-        int portNum = 42211; // shouldn't this be 9090??
+    	String hostName = ConfigurationManager.get("server");    	
+        int portNum = Integer.parseInt(ConfigurationManager.get("vocollectport"));
 
         
 		try {

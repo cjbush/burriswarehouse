@@ -1,8 +1,12 @@
 package code.app;
 
 import java.util.logging.Level;
+
 import java.util.logging.Logger;
 import java.util.concurrent.Callable;
+
+import serverside.CedarvilleConnect;
+import serverside.CedarvilleConnectThreaded;
 
 import code.component.Score;
 import code.gui.*;
@@ -28,6 +32,8 @@ import com.jmex.game.state.GameState;
 import com.jmex.game.state.GameStateManager;
 import com.jmex.game.state.load.LoadingGameState;
 import com.jmex.game.state.load.TransitionGameState;
+
+
 
 /**
  * The main launching point for the Virtual Warehouse game. It initializes the system,
@@ -146,6 +152,7 @@ public class WarehouseTrainer extends FixedFramerateGame {
         depth = settings.getDepth();
         freq = settings.getFrequency();
         fullscreen = settings.isFullscreen();
+        
         
         try {
             display = DisplaySystem.getDisplaySystem(settings.getRenderer());
