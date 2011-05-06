@@ -118,11 +118,7 @@ public class Player extends AnimatedModel {
 	
 	public void setCollisionDetection(boolean b){ detectCollisions = b;}
 	
-	public void showArrow(String nextAisle, String nextSlot) {
-		
-		//DBInfoRetriever dbInfoRetriever = new DBInfoRetriever(
-			//	"joseph.cedarville.edu", "talkman", "warehouse", "vwburr15");
-		
+	public void showArrow(String nextAisle, String nextSlot) {		
 		float rackLocationX = -1;
 		float rackLocationZ = -1;
 		try {

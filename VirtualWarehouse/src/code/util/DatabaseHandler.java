@@ -15,16 +15,15 @@ import java.util.ArrayList;
  */
 
 public class DatabaseHandler {
-	
-	private static String host = "joseph.cedarville.edu";
-	private static String database = "vwburr";
-	private static String userName = "warehouse";
-	private static String password = "vwburr15";
-	private static int port = 3306;
-	private static String url = "jdbc:mysql://"+host+":"+port+"/"+database;	
 	private static Connection con;
 	
 	public static void open(){
+		String host = ConfigurationManager.get("server");
+		String database = ConfigurationManager.get("mysqldb");
+		String userName = ConfigurationManager.get("mysqluser");
+		String password = ConfigurationManager.get("mysqlpass");
+		int port = Integer.parseInt(ConfigurationManager.get("mysqlport"));
+		String url = "jdbc:mysql://"+host+":"+port+"/"+database;	
 		try {
 			con = DriverManager.getConnection(url, userName, password);
 		} catch (SQLException e) {
