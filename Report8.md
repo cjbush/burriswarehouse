@@ -1,0 +1,37 @@
+# Report #
+
+## Caleb Mays, Software Developer ##
+
+  * Tasks accomplished: Started writing documentation (User Manual basically complete, started Maintenance Manual). Thought about threaded loading, but would like a little bit of advice for how to do it...
+  * Future tasks researched: Threaded loading of models.
+  * Most immediate upcoming tasks: Start programming threaded loading. Do you (whomever is reading this) think I should divide up the threads based on what "type" is being loaded?? Or...how should I best attack this??
+
+
+## Dan Jewett, Modeler/Software Developer ##
+
+  * Tasks accomplished: New Textures (Warehouse Modified).  Modified objects (Arrow, Guard Rails, Garbage to name a few).  Fixed DProduct so it does not have open flaps.  New Lighting and almost completed with shadows.
+  * Future tasks researched: Rendering, Animation, Texturing, Lighting.
+  * Most immediate upcoming tasks: Finish populating the warehouse with new models, adding permanent positions with new models. Need a priority list of what we feel needs to be done.
+
+
+## Chris Bush, Team Leader/Software Developer/Network Specialist ##
+
+  * Tasks accomplished: Basic functionality of auto completion done. We need to do a little bit of polishing to make it look smoother and perform testing to make sure it is robust. Also created a thread for loading the objects in the warehouse by room, to allow for multithreaded loading.
+  * Most immediate upcoming tasks: Continue work on multithreaded loading and work on data persistence.
+
+## Time and Financial Report ##
+
+|**Hours**|**Week**|**YTD**|**+/-**| |**Parts Purchased During Current Week**|**Cost**|
+|:--------|:-------|:------|:------|:|:--------------------------------------|:-------|
+|Chris Bush|12|93|-3|  |  |  |
+|Caleb Mays|12|89.5|-6.5|  |  |  |
+|Dan Jewett|11.5|98|+2|  |**Weekly Total**|$0.00|
+|**Totals**| x | x | x |  |**YTD Total**|$0.00|
+
+
+# Meeting Notes / Task Assignments #
+
+  * General -
+  * Chris -
+  * Caleb -
+  * Dan -

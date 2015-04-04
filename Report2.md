@@ -1,0 +1,41 @@
+# Report #
+
+## Caleb Mays, Software Developer ##
+
+  * Tasks accomplished: Implemented the way point system with Npcs. Characters are now walking and moving through the warehouse.
+
+  * Future tasks researched: Spent a few minutes looking at collision detection issues.
+
+  * Most immediate upcoming tasks: Two things: Finish entering paths and way-points so that a reasonable number of characters populate the warehouse, and look into collision detection problems, specifically when riding a pallet jack.
+
+
+## Dan Jewett, Modeler/Software Developer ##
+
+  * Tasks accomplished: Searched through code trying to figure out what goes on behind the scenes to fix the texture problems.  Worked with Dr. Shomper trying to figure out problems.  Found out it is in the rendering of our game.  Continue tweaking NPC's.  Now models are "black and white" and not mixed.  Other changes within RandomPerson class.  Adding more variations of the textures.
+
+  * Future tasks researched: Rendering, Animation, Texturing.
+
+  * Most immediate upcoming tasks: Fix rendering problems.  Figure out other ways to make the game run much faster.  Increase clutter in warehouse.  Finalize the variations for textures.
+
+## Chris Bush, Team Leader/Software Developer/Network Specialist ##
+
+  * Tasks accomplished: Profiled and debugged application to discover major performance issue and continued work on data-driven controller interface.
+  * Future tasks researched: Researched collision detection in order to resolve performance issue.
+  * Most immediate upcoming tasks: Assist with collision detection fix and finish controller interface by 2/7.
+
+## Time and Financial Report ##
+
+|**Hours**|**Week**|**YTD**|**+/-**| |**Parts Purchased During Current Week**|**Cost**|
+|:--------|:-------|:------|:------|:|:--------------------------------------|:-------|
+|Chris Bush|10|22|-2|  |  |  |
+|Caleb Mays|12|25|+1|  |  |  |
+|Dan Jewett|10|29|+5|  |**Weekly Total**|$0.00|
+|**Totals**|22|76|+4|  |**YTD Total**|$0.00|
+
+
+# Meeting Notes / Task Assignments #
+
+  * General - Set up labels for issue tracking; Do code profiling to figure out where resources are being used the most (use TPTP)
+  * Chris - Set up wiki page to match milestones to release dates; Commit code for controller interface
+  * Caleb - Implement meaningful NPC paths using waypoints rather than random movement in the warehouse; Get them moving by 1/31
+  * Dan - Check where NPC's are being placed in the scene graph

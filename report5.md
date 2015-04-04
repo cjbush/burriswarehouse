@@ -1,0 +1,37 @@
+# Report #
+
+## Caleb Mays, Software Developer ##
+
+  * Tasks accomplished: Totally finished the collision detection boxes. All the the bounding boxes are in the db now (at least, to my knowledge). Worked on a few misc bugs. Helped Chris quite a bit with the auto-completion task. The design is done, and the implementation has begun. Chris can explain it best, because he's been doing the actual coding...
+  * Future tasks researched:
+  * Most immediate upcoming tasks:
+
+
+## Dan Jewett, Modeler/Software Developer ##
+
+  * Tasks accomplished: Moved MD5 from code.model.player to code.  Added Action folder for future Pick and current Rack, Products and Pallets (named D something).  Currently these new files are called D(Something) and once fully tested will be replaced with last years code.  I cleaned a lot of old not used code (in particular collisionModel).  New models updated.  Fixes with Culling and Clipping that I had a problem with last week (Lots of fixes and changes in ModelLoader).  This also fixed my ProductStack clipping problem.  As mentioned, my major task accomplished was redesigning the Pallet and Product problem.  Now we have Pallet's, which can access PalletStacks, which can have Products, or Stacked products on them.  Picking sort of works.
+  * Future tasks researched: Rendering, Animation, Texturing
+  * Most immediate upcoming tasks: Make everything work:  pallets on pallet jacks, picking, and the final design with these pallets and products under the racks, in an organized clutter fashion.  Finish populating the warehouse with new models, adding permanent positions with new models and the new StackedRack/StackedProduct models now implemented.
+
+
+## Chris Bush, Team Leader/Software Developer/Network Specialist ##
+
+  * Tasks accomplished: Worked on autocompletion. I'd say we're around 50% done with it. We should have more than enough time to finish it in time for our milestone.
+  * Most immediate upcoming tasks: Finish autocompletion. I need Caleb's assistance with path traversal.
+
+## Time and Financial Report ##
+
+|**Hours**|**Week**|**YTD**|**+/-**| |**Parts Purchased During Current Week**|**Cost**|
+|:--------|:-------|:------|:------|:|:--------------------------------------|:-------|
+|Chris Bush| 12 | 55  |-5|  |  |  |
+|Caleb Mays|12|60.5|+.5|  |  |  |
+|Dan Jewett|13|64|+4|  |**Weekly Total**|$0.00|
+|**Totals**| 37 | 179.5 | -0.5 |  |**YTD Total**|$0.00|
+
+
+# Meeting Notes / Task Assignments #
+
+  * General -
+  * Chris -
+  * Caleb -
+  * Dan -

@@ -1,0 +1,28 @@
+# Introduction #
+
+The goal of February is to increase clutter of the warehouse.  Depending on circumstances of problems and successes of code, importing/exporting models, etc., my minimal expectations for the amount of clutter in the virtual warehouse as oppose to the real warehouse is 30% by the end of the month.  This will include, for certain, an updated pallet and box graphics, models from the computer graphics class (may not look nice) and some textures on the ground and walls.  I am hoping of course to make this number more like 60%, with nicely texture objects, animations on the ones that need animated, nicely modeled models, etc.  Perfection would be detailed on walls and ceiling as well as lots of misc. small objects.  This would make it 100%, but definitely not probable by the end of February.
+
+Testing would occur as the graphics are placed in.  Testing on my end isn't too complicated as all that is needed is to make sure that visually the object looks good and is placed in the correct location.  Testing occurs then on the fly as oppose to say a week of testing.
+
+# Details #
+My plans are as follows:
+
+Modeled objects
+  * **1/31/10 - 2/6/10**
+  * Get the models that are already done into the warehouse.  This includes maybe retexturing and other necessities to make them look good.  If these models require animation, that part may be pushed into the next week.
+
+Animate already done models and research
+  * **2/7/10 - 2/13/10**
+  * Begin and finish models that require animation from the Graphics class.  (Hopefully rigging will not take as long)  Figure out mistakes from all of the past two weeks that will happen.  Research other models that need to be in the warehouse
+
+Buy or make models that are not done
+  * **2/7/10 - 2/13/10**
+  * Model anything else we need.  The texturing may or may not be gotten to this week.
+
+Texturing/Animation/Mistakes
+  * **2/14/10 - 2/20/10**
+  * Texture these models that were made, add animations if necessary.  Account for mistakes that will happen from past few weeks.
+
+Spill Week
+  * **2/21/10 - 2/27/10**
+  * Since life isn't perfect, anything that is still need to be figured out, or accomplished, the buffer week is here.  This will be anything with characters, new models, anything.

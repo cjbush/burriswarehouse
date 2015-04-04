@@ -1,0 +1,35 @@
+# Report #
+
+## Caleb Mays, Software Developer ##
+
+  * Tasks accomplished: Unfortunately, I found myself quite busy this week with some other classes and life stuff, so I wasn't able to put as much time into documenting as I would have liked. Added comments to collision detection classes and NPC classes (ones which I wrote).
+  * Most immediate upcoming tasks: Test and adjust the collision detection specifically around the air door guards. Try to make it a little easier to drive through those; presentation stuff.
+
+
+## Dan Jewett, Modeler/Software Developer ##
+
+  * Tasks accomplished:  Box problem fixed, resolved missing textures and resized swingarm as asked for.  Added a horn sound effect as well as commenting all of my code (that I had not done) and added headers for PickSim on all of the code I thought we wrote.  I wrote four tutorials/manuals of things that I had done that may help next years team as far as graphics go (GUY.md5, Exporting OBJ Models from Maya, Baking Textures and Warehouse.ma).  I also added permanent positions to many misc. objects scattered across the warehouse.
+  * Most immediate upcoming tasks: Presentation, Posters, testing, oh my!
+
+
+## Chris Bush, Team Leader/Software Developer/Network Specialist ##
+
+  * Tasks accomplished: Edited installation manual, began Vocollect installation/maintenance manual, edited templates for issue tracking to more easily identify bugs, fixed autocompletion rollover crash bug, discovered three other bugs (see [issue 34](https://code.google.com/p/burriswarehouse/issues/detail?id=34), [issue 38](https://code.google.com/p/burriswarehouse/issues/detail?id=38), and [issue 39](https://code.google.com/p/burriswarehouse/issues/detail?id=39))
+  * Most immediate upcoming tasks: Resolve [issue 38](https://code.google.com/p/burriswarehouse/issues/detail?id=38) and [issue 39](https://code.google.com/p/burriswarehouse/issues/detail?id=39), continue editing and creating documentation, finish autocompletion Vocollect prompts, continue debugging & testing
+
+## Time and Financial Report ##
+
+|**Hours**|**Week**|**YTD**|**+/-**| |**Parts Purchased During Current Week**|**Cost**|
+|:--------|:-------|:------|:------|:|:--------------------------------------|:-------|
+|Chris Bush|12|148|+4|  |  |  |
+|Caleb Mays|5 |131.5|-12.5|  |  |  |
+|Dan Jewett|12|150|+6|  |**Weekly Total**|  |
+|**Totals**| 29 | 429.5 | -2.5 |  |**YTD Total**|$3.50|
+
+
+# Meeting Notes / Task Assignments #
+
+  * General -
+  * Chris -
+  * Caleb -
+  * Dan -

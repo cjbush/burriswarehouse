@@ -1,0 +1,35 @@
+# Report #
+
+## Caleb Mays, Software Developer ##
+
+  * Tasks accomplished: 17 NPCs in the database. Some walk up to the wrap machines, and then go back to the racks. Most of them are in the produce and meat and dairy sections. Also, wrote most of the installation manual.
+  * Most immediate upcoming tasks: Finish Maintenance Manual and Installation manual. Look at modifying GUI -- I'm thinking mostly the color scheme...
+
+
+## Dan Jewett, Modeler/Software Developer ##
+
+  * Tasks accomplished: A problem with the out of memory error that was creeping may have been fixed.  I deleted 3 huge bump map files that really just made the warehouse look nicer, but was not necessary.  Fixed Rack/StackedPallet/Pallet/StackedProduct/Product.  There is now loading of dynamic product Textures.  There is one issue right now with rack product textures (Check Wiki, Box Problems).  Finalized Grand Central, though there is still a transparency issue with some planes which makes it look ugly (Check Wiki, Model Grand Central).  Floor Bin Modeling is Completed.
+  * Most immediate upcoming tasks: Finalizing (What Else Needs Done?). Sound Effects. Adding permanent positions with new models. Finish populating the warehouse with new models.
+
+
+## Chris Bush, Team Leader/Software Developer/Network Specialist ##
+
+  * Tasks accomplished: Implemented Vocollect prompts and responses for Auto Completion. Worked on Maintenance Manual on Google Docs.
+  * Most immediate upcoming tasks: Documentation, testing, bug fixing; Finish filling in database entries for auto completion prompts
+
+## Time and Financial Report ##
+
+|**Hours**|**Week**|**YTD**|**+/-**| |**Parts Purchased During Current Week**|**Cost**|
+|:--------|:-------|:------|:------|:|:--------------------------------------|:-------|
+|Chris Bush|12|136|+4|  |  |  |
+|Caleb Mays|12|126.5|-5.5|  |  |  |
+|Dan Jewett|14|138|+6|  |**Weekly Total**|  |
+|**Totals**| 38 | 400.5 | 4.5 |  |**YTD Total**|$3.50|
+
+
+# Meeting Notes / Task Assignments #
+
+  * General -
+  * Chris -
+  * Caleb -
+  * Dan -

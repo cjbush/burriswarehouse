@@ -1,0 +1,37 @@
+# Report #
+
+## Caleb Mays, Software Developer ##
+
+  * Tasks accomplished: Added another character into the warehouse, and will continue to add characters when I can; not going to be a huge priority. I know they work. Worked on my "issues" to get a better idea of what needs to be done, and divided them up into sub-tasks with approximate times.
+  * Future tasks researched: Began thinking through collision detection. Chris and I came up with a basic design.
+  * Most immediate upcoming tasks: Figure out "collision detection" with a custom bounding box system.
+
+
+## Dan Jewett, Modeler/Software Developer ##
+
+  * Tasks accomplished: Variations of characters completed.  This includes clothing (pants, shirts), skinning (arms), fixing variations of heights, and facial (hair, race, facial hair, etc).  There are 26 of them.  Provides plenty of randomness now.  Began the modeling development in increasing clutter in warehouse.
+  * Future tasks researched: Rendering, Animation, Texturing
+  * Most immediate upcoming tasks: Fix rendering problems. Figure out other ways to make the game run much faster. Increase clutter in warehouse.
+
+## Chris Bush, Team Leader/Software Developer/Network Specialist ##
+
+  * Tasks accomplished: Began design and implementation of new collision detection. Began design of autocompletion. See project plan for details.
+  * Future tasks researched: Collision detection methods
+  * Most immediate upcoming tasks: Continue implementation of collision detection, then move on to auto-completion.
+
+## Time and Financial Report ##
+
+|**Hours**|**Week**|**YTD**|**+/-**| |**Parts Purchased During Current Week**|**Cost**|
+|:--------|:-------|:------|:------|:|:--------------------------------------|:-------|
+|Chris Bush|9 |31|-5|  |  |  |
+|Caleb Mays|10|35|-1|  |  |  |
+|Dan Jewett|9 |38|+2|  |**Weekly Total**|$0.00|
+|**Totals**|38|76|-4|  |**YTD Total**|$0.00|
+
+
+# Meeting Notes / Task Assignments #
+
+  * General - Estimate time left on tasks so we can get a big picture view of time estimates. Finish by Wednesday 2/2/11. Also reply to email about Ed Krupka's visit.
+  * Chris -
+  * Caleb -
+  * Dan -

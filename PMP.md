@@ -1,0 +1,174 @@
+# 1. Introduction #
+## 1.1 Project overview ##
+### 1.1a Context ###
+
+Burris Logistics is a frozen goods storage and shipping company. They operate several warehouses, mostly along the Eastern Seaboard, that are responsible for loading and unloading outgoing and incoming shipments, respectively, and storing the received products until such a time as they will be shipped elsewhere. Since Burris specializes in refrigerated and frozen goods, all of their warehouses are refrigerated. Each warehouse has several different temperature zones that must be maintained at a given temperature based on the requirements of the product stored in that section of the warehouse.
+
+This project concerns the internal workings of the Burris warehouse in Elkton, Maryland. Most of the tasks in the warehouse can be grouped into two broad categories: inbound and outbound.  All of the goods that are received from incoming shipments must be unloaded, processed, and then moved to the proper storage location. Conversely, whenever a shipment leaves from the warehouse, the correct products must be collected from their storage locations, prepared for shipping, and loaded onto the truck.
+
+Warehouse workers are assigned to the various parts of each process, along with some other tasks that do not fit directly into either category.  In particular, there are warehouse workers assigned to unloading incoming good from a truck and processing them. There are also workers assigned to taking these goods and placing them in the correct storage location. Furthermore, there are workers assigned to collecting goods that must be placed on an outbound truck and place these collected goods in the correct loading dock. There are workers assigned to the processing of collected goods, ensuring that the correct goods were collected; and there are workers assigned to preparing and loading the goods onto the truck. There are also workers that are assigned to replenishing the pick-up location of each product that is collected for outgoing shipments.
+
+Initially, this project will mainly concern the job of the workers assigned to the collecting of goods to be placed on the loading dock for outgoing shipments. These workers are called “pickers” or “selectors” (see definitions).  Burris uses a voice recognition system, called Vocollect, to direct the pickers through their assigned tasks. The Vocollect system gives commands and then waits for the worker to confirm the command and/or give it more information, as required for any given situation. The most common sequence is where the picker is (1) told to go to a certain location in the warehouse, designated by aisle and bin numbers. (2) Once the worker has reached the given location he must relay a series of number, called check digits, that are used to double check that the worker has, in fact, reached the correct bin.
+
+(3) Once the picker relays the correct check digits (s)he is told the how much product to pick up. The worker picks up the given amount of products and places them on the pallet or pallets that the goods will eventually be shipped on. (4) The picker then confirms that (s)he picked up the given amount of product. The process then repeats as the worker is directed to a new bin location for the next selection. Steps (1)-(4) are repeated until the picker has completed the pick job, at which point the worker places some labels on the product and drops the pallet or pallets off at the loading dock. The worker then tells the Vocollect system that (s)he is ready to begin another pick job, at which point a new pick task is assigned.
+
+The rate at which Burris pays each worker is based, in part, on his or her productivity. This is done using a set of Engineering Labor Standards which specify how much time an average worker takes to complete a given task. Worker pay is partially based on productivity relative to the ELS.
+
+### 1.1b Application (what will/should it do) ###
+
+This project will produce a video-game-like application that can be used to help train warehouse workers, specifically the selector, on how to do their jobs. The application should accurately model the Elkton warehouse and relevant equipment used by selectors. The application should interface with the Vocollect technology so that the users can learn how to properly interact with the technology. The application should also be able to train the users in the proper use and operation of the needed equipment.
+
+Initially, the application should simulate the daily tasks of a picker. However, the application should be developed in such a way that will provide the ability to generalize the application for any or all warehouse tasks.
+
+### 1.1c User(s) ###
+
+The primary users will consist primarily of two parties: the warehouse trainers and the warehouse trainees. The trainers are well-versed in the inner workings of the warehouse and must become familiar with this application to understand its capabilities and limitations. The trainees may have some knowledge of various warehouse jobs based on previous employment, but will most likely have little to no experience with the Vocollect technology or Burris-specific procedures. Both parties may also have varying computer skills, according to their various backgrounds.
+
+### 1.1d Purpose (usefulness) ###
+
+This application will help Burris train new employees for working in the warehouse. In particular, this application will help train those who have little to no experience with Vocollect, the process of completing selection tasks, or the layout of the warehouse.
+
+## 1.2 Project Deliverables ##
+
+  * Documentation
+    * Detailing how to use the application
+    * Code documentation for further development and/or debugging purposes
+  * Application
+    * A functional application that accomplishes at least the requirements described above. This includes a connector for the Vocollect known as the JSL, the actual virtual warehouse application, a database for pick jobs to be used for the Vocollect, and an already built layout for the Elkton warehouse.
+
+## 1.3 Reference Materials ##
+
+  * Educational References
+    * _Software Engineering: A Practitioner’s Approach_, 7th Edition, Roger S. Pressman. McGraw-Hill, 2005.
+  * Documentation
+    * Blender tutorials found online at http://en.wikibooks.org/wiki/Blender_3D:_Noob_to_Pro
+    * _Blender 3D: Architecture, Buildings, and Scenery: Create photorealistic 3D architectural visualizations of buildings, interiors, and environmental scenery_, Alan Brito. Packt Publishing Ltd., 2008. Accessible online at http://proquest.safaribooksonline.com/9781847193674
+    * JME Documentation http://jmonkeyengine.org/wiki/doku.php/jme2
+    * Vocollect Documentation
+    * Maya Documentation
+  * Application References
+    * The Virtual 'Ville project and team members (for JME usage)
+    * Jordan Hinshaw
+    * Aaron Ramsey
+    * Matt Kent
+  * Customer References
+    * Ed Krupka, Burris Logistics
+    * Josh Krukpa, Burris Logistics
+    * Kenneth Wayts
+    * Peggy Maher-Daniels
+  * Advisor References
+    * Dr. Keith Shomper
+## 1.4 Definitions and Acronyms ##
+_Much thanks for this section is owed to Amaya Dixit, who provided many of the definitions listed in this section._
+
+•       aisle – Any passageway within a storage area.
+
+> o   main aisle – A passageway to permit the flow of equipment, supplies, and personnel; it generally runs the length of the building and is wide enough to permit vehicles to pass.
+
+> o   cross-aisle – A passageway at right angles to main aisles and access aisles, used for the movement of supplies, equipment and personnel.
+
+•       Argent (APT) - ELS system used by Burris to calculate the amount of pay a worker receives. This payment is based on the amount of work the worker actually achieves, based on time usage and efficiency
+
+•       check code - a several-digit number that is used to verify that a picker as reached the correct pick bin. The check code will be printed on a magnetic label. The labels are periodically moved so that the picker does not know the check code before they reach the pick bin. These are sometimes referred to as check digits.
+
+•       cycle-counting – A method of taking physical inventory in which only a percentage of items are counted at a time but eventually all inventory is counted.
+
+•       Engineered Labor Standards (ELS) -  refers to the field of study or practices that deals with standardizing the amount of pay one receives based on the amount of work one does
+
+•       facing – the position in a block or rack occupied by a warehousing product from which a worker can access a product.
+
+> o    multi-facing – When multiple facings are allocated for a high volume item. This facilitates continuous picking, reduced stoppages and to allow the replenishment operator time to replenish other items. Labels for multi-faced products are colored red/orange.
+
+•       Grand Central - a printing and logistics center where picker receive labels to place on their selected product
+
+•       hauler/freight runner – A person who runs freight after it has been received on the dock and tagged and takes it to the designated aisles where they will be put away.
+
+•       item/stock keeping unit – A warehousing item that must be stored and accounted for separately. A single stock-keeping unit may have to be stored in different lots for the purpose of quality control, maintaining stock rotation, isolation or quarantine.
+
+•       loader – A person who loads an outbound load after the product has been selected, checked, tagged and wrapped. He is responsible for inspecting the trailer, making sure the trailer is swept clean, loading the pallets in the correct sequence and in correct orientation to allow all pallets to fit in the trailer.
+
+•       loading dock - the location in the warehouse where goods are loaded onto a truck for transportation to another facility
+
+•       order picker – A person who works in the warehouse with the responsibility of collecting the correct quantity of the correct item from a designated location. Also known as order selector. Both names are usually shortened simply to picker or selector, respectively.
+
+•       pallet - literally, the piece of wood (crate) on which items are stacked when they are shipped and stored; generally, this term can refer to the whole stack including both the wood crate and the goods located on that stack.
+
+> o   double pallet jacks – Used for frequent movement of pallet loads over distances such as movement between departments and storage areas.
+
+•       pallet jack - a vehicle with forks that can be raised and lowered. It the primary tool used by pickers to transport pallets (crates) and place product on them.
+
+•       pallet overhang – The portion of a pallet that extends beyond rack beams into the aisle or the back of the rack.
+
+•       pallet pattern – The arrangement of the items in a unitized load. Cases per layer (Tier) multiplied by Number of layers (High).
+
+•       pick bin - the location where a single product is stored. A picker collects his assigned goods from their associated pick bins.
+
+•       pick job - a single task, given to a picker, where the picker must gather specific goods, place them on one or two pallets, and deliver those pallets to a shipping dock. A picker's day consists of numerous pick jobs.
+
+•       pick location - synonym for pick bin
+
+•       pick-line/pick path – An arrangement of stock-keeping units in some orderly system to facilitate selecting or picking items to satisfy orders.
+
+•       Predetermined Time Standards (PDT) – A collection of time values developed by experienced time analysts who agreed on basic factors, concepts, and constraints underlying their system.
+
+•       putaway – A person who puts pallets up in storage once they are received and tagged.
+
+•       racks – Metal framework upon which units or unitized loads are placed.
+
+> o   single deep pallet rack – Also known as selective pallet rack. Originally designed for pallet storage but can also be designed to accept decking or cross bracing to allow for placing multiple items per level without pallets in case of slower moving items.
+
+> o   double deep pallet racks – It allows for storing two pallets deep. Widely used in the Elkton Location for storing high volume items and to provide for high volume storage for our vendors.
+
+•       Raymond Reach Truck – also known as a high-low. A vehicle with forks that can be raised and lowered, this is distinguished by the fact that the forks can be raise high enough to reach the top bin of a rack. This is the vehicle used by warehouse workers assigned to refill the pick bins.
+
+•       Raymond Walkie -  the specific brand name/type of pallet jack used at the Elkton warehouse
+
+•       receiver – A person who checks the item# or scans the UPC for that item, verifies and enters date codes, enters the correct quantity per pallet into his scan gun, and assigns that information to a Pallet Identification tag or a PID label.
+
+•       replenishment crew – A person(s) who drop/let down pallets from storage into a selection bin to facilitate case picking.
+
+•       RF scan gun – A handheld scanning device used for data collection. It works on a wireless transfer of data between a data collection device such as a barcode scanner and data processing device or controller.
+
+•       stack-ability – the ability of a load to sustain the weight of one or more loads when stacked.
+
+•       stacking height – the number of unit loads (e.g. pallets) that can be stacked on top of each other efficiently without the danger of stack falling.
+
+•       Stock-up/Drop/Replenishment/Let-down – Lowering pallet(s) of product from its position in a stack or storage rack to a selection bin location to allow for case picking.
+
+•       V4 – also known as the Warehouse Management System (WMS). Burris' management system. It is essentially a black box that contains and manages all of the essential Burris information (in databases) and system processes. It is written in COBOL.
+
+•       Vocollect - an audio and voice recognition system that allows the warehouse worker to receive instructions and report his progress as he completes his task. See vocollect.com for more details.
+
+•       voice directed picking – A picking system in which pickers are directed to the proper pick aisle, item to pick, quantity to pick, and more by voice commands transmitted via radio frequency directly to their headphones. Voice directed picking frees the picker’s hand for picking and eliminates manual reading errors.
+
+•       WMS  (Warehouse Management System) – A software suite of databases and applications to keep track of warehouse stores and activities.
+
+
+
+**Other Information:**
+
+The location number system used by V4:
+
+![http://burriswarehouse.googlecode.com/files/img1.png](http://burriswarehouse.googlecode.com/files/img1.png)
+
+
+# 2. Management #
+
+## 2.1 Managerial objectives and priorities ##
+
+  * Priorities:
+    * Functionality – the original project was to create the design and basic functionality. The goal of this project is to add to that capability.
+    * Usability – to make the application more usable to the customer
+    * Efficiency – improving performance of the final product.
+    * Educational – to provide a learning experience for us as designers
+
+## 2.2 Monitoring and controlling mechanisms ##
+
+  * Team meetings
+> We will meet at least once per week as a team to discuss task scheduling, weekly goals, potential project risks, and risk mitigation. Meetings will preferably run no longer than one hour.
+
+> In addition to at least one hour per week of team meeting, we will meet with Dr. Shomper to discuss project progress and future goals.
+
+  * Policy enforcement
+
+> Team members will receive one reprimand for a policy violation. Subsequent violations for the same policy violation will be reported to Dr. Shomper.
